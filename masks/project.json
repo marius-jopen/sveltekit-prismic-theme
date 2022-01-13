@@ -1,139 +1,36 @@
 {
-	"Main": {
-	  "title": {
-		"type": "StructuredText",
-		"config": {
-		  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-		  "label": "Title"
+	"Main" : {
+	  "title" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Title"
 		}
 	  },
-	  "uid": {
-		"type": "UID",
-		"config": {
-		  "label": "UID"
+	  "uid" : {
+		"type" : "UID",
+		"config" : {
+		  "label" : "UID"
 		}
 	  },
-	  "thumbnail": {
-		"type": "Image",
-		"config": {
-		  "constraint": {},
-		  "thumbnails": [
-			{
-			  "name": "Big",
-			  "width": 2500,
-			  "height": null
-			},
-			{
-			  "name": "Medium",
-			  "width": 1500,
-			  "height": null
-			},
-			{
-			  "name": "Small",
-			  "width": 750,
-			  "height": null
-			}
-		  ],
-		  "label": "Thumbnail"
-		}
-	  },
-	  "body": {
-		"type": "Slices",
-		"fieldset": "Slice zone",
-		"config": {
-		  "labels": {},
-		  "choices": {
-			"paragraph_slice": {
-			  "type": "Slice",
-			  "fieldset": "Paragraph Slice",
-			  "description": "Paragraph Slice",
-			  "icon": "format_color_text",
-			  "non-repeat": {
-				"long_text": {
-				  "type": "StructuredText",
-				  "config": {
-					"multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-					"label": "Long Text"
-				  }
-				}
-			  },
-			  "repeat": {}
-			},
-			"image_slice": {
-			  "type": "Slice",
-			  "fieldset": "Image Slice",
-			  "description": "Image Slice",
-			  "icon": "image",
-			  "non-repeat": {
-				"image": {
-				  "type": "Image",
-				  "config": {
-					"constraint": {},
-					"thumbnails": [
-					  {
-						"name": "Big",
-						"width": 2500,
-						"height": null
-					  },
-					  {
-						"name": "Medium",
-						"width": 1500,
-						"height": null
-					  },
-					  {
-						"name": "Small",
-						"width": 750,
-						"height": null
-					  }
-					],
-					"label": "Image"
-				  }
-				}
-			  },
-			  "repeat": {}
-			},
-			"video_slice": {
-			  "type": "Slice",
-			  "fieldset": "Video Slice",
-			  "description": "Video Slice",
-			  "icon": "ondemand_video",
-			  "display": "list",
-			  "non-repeat": {
-				"video": {
-				  "type": "Link",
-				  "config": {
-					"select": "media",
-					"label": "Video"
-				  }
-				},
-				"preview_image": {
-				  "type": "Image",
-				  "config": {
-					"constraint": {},
-					"thumbnails": [
-					  {
-						"name": "Big",
-						"width": 2500,
-						"height": null
-					  },
-					  {
-						"name": "Medium",
-						"width": 1500,
-						"height": null
-					  },
-					  {
-						"name": "Small",
-						"width": 750,
-						"height": null
-					  }
-					],
-					"label": "Preview Image"
-				  }
-				}
-			  },
-			  "repeat": {}
-			}
-		  }
+	  "thumbnail" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : { },
+		  "thumbnails" : [ {
+			"name" : "Big",
+			"width" : 2500,
+			"height" : null
+		  }, {
+			"name" : "Medium",
+			"width" : 1500,
+			"height" : null
+		  }, {
+			"name" : "Small",
+			"width" : 750,
+			"height" : null
+		  } ],
+		  "label" : "Thumbnail"
 		}
 	  }
 	}

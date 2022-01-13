@@ -30,9 +30,9 @@
 </script>
 
 <script>
-	import HeadlineSimple from '$lib/addons/slices/headlines/headlineSimple.svelte'
-	import FilterItems from '$lib/items/filterItems.svelte'
-    import LoopItems from '$lib/items/loopItems.svelte'
+	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
+	import FilterItems from '$lib/modules/items/filterItems.svelte'
+    import LoopItems from '$lib/modules/items/loopItems.svelte'
 
     export let document
     export let allItems

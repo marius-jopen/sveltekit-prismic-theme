@@ -14,10 +14,10 @@
 
 <script>
 	import '../app.postcss'
-    import NavigationBarSimple from '$lib/ui-lib-custom/navigations/desktop-simple/bar.svelte'
-	import NavigationBarSimpleSpacer from '$lib/ui-lib-custom/navigations/desktop-simple/spacer.svelte'
-	import NavigationMobileSimple from '$lib/ui-lib-custom/navigations/mobile-simple/mobileNav.svelte'
-	import NavigationMobileSimpleSpacer from '$lib/ui-lib-custom/navigations/mobile-simple/spacer.svelte'
+    import NavigationBarSimple from '$lib/modules/navigations/desktop-simple/bar.svelte'
+	import NavigationBarSimpleSpacer from '$lib/modules/navigations/desktop-simple/spacer.svelte'
+	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+	import NavigationMobileSimpleSpacer from '$lib/modules/navigations/mobile-simple/spacer.svelte'
 
     export let document
 </script>

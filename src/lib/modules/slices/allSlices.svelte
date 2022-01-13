@@ -1,7 +1,7 @@
 <script>
-	import ImageSimple from "$lib/addons/slices/images/imageSimple.svelte"
-	import VideoSimple from "$lib/addons/slices/videos/videoSimple.svelte"
-	import ParagraphRichtext from "$lib/addons/slices/paragraphs/paragraphRichtext.svelte"
+	import ImageSimple from "$lib/modules/slices/images/imageSimple.svelte"
+	import VideoSimple from "$lib/modules/slices/videos/videoSimple.svelte"
+	import ParagraphRichtext from "$lib/modules/slices/paragraphs/paragraphRichtext.svelte"
 
 	export let slices
 

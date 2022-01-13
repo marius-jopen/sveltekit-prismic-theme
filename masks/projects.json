@@ -7,20 +7,20 @@
 		  "label" : "Title"
 		}
 	  },
-	  "project_order" : {
+	  "order" : {
 		"type" : "Group",
 		"config" : {
 		  "fields" : {
-			"selected_project" : {
+			"selected" : {
 			  "type" : "Link",
 			  "config" : {
 				"select" : "document",
 				"customtypes" : [ "project" ],
-				"label" : "Selected Project"
+				"label" : "Selected"
 			  }
 			}
 		  },
-		  "label" : "Project Order"
+		  "label" : "Order"
 		}
 	  }
 	}

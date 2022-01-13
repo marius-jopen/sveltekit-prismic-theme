@@ -3,7 +3,6 @@
     import Client from '../../../utils/client'
 
     export async function load({ page }) {
-
 		const type = 'project'
 
         const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
@@ -30,9 +29,9 @@
 </script>
 
 <script>
-	import HeadlineSimple from '$lib/addons/slices/headlines/headlineSimple.svelte'
-	import FilterItems from '$lib/items/filterItems.svelte'
-    import LoopItems from '$lib/items/loopItems.svelte'
+	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
+	import FilterItems$lib/ui-lib-custom/items/filterItems.svelte.svelte'
+    import LoopItems$lib/ui-lib-custom/items/loopItems.svelte.svelte'
 
     export let filteredItems
     export let currentTag

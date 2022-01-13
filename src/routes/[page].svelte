@@ -15,7 +15,7 @@
 </script>
 
 <script>
-	import AllSlices from '$lib/addons/slices/allSlices.svelte'
+	import AllSlices from '$lib/modules/slices/allSlices.svelte'
 
     export let document
 </script>

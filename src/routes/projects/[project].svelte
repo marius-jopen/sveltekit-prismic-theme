@@ -31,9 +31,9 @@
 </script>
 
 <script>
-    import LoopItems from '$lib/items/loopItems.svelte'
-	import HeadlineSimple from '$lib/addons/slices/headlines/headlineSimple.svelte'
-	import ImageSimple from "$lib/addons/slices/images/imageSimple.svelte"
+    import LoopItems from '$lib/modules/items/loopItems.svelte'
+	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
+	import ImageSimple from "$lib/modules/slices/images/imageSimple.svelte"
 
     export let document
 	export let sortedItems
