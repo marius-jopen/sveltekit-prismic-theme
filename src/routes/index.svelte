@@ -15,13 +15,11 @@
 </script>
 
 <script>
-	import AllSlices from '$lib/addons/slices/allSlices.svelte'
+	import HeadlineSimple from '$lib/addons/slices/headlines/headlineSimple.svelte'
+	import ImageSimple from "$lib/addons/slices/images/imageSimple.svelte"
 
     export let document
 </script>
 
-<div class="text-3xl py-16 border-b border-lines text-center">
-    {document.data.title[0].text}
-</div>
-
-<AllSlices slices={document.data.body} />
+<HeadlineSimple inputHeadline={document.data.title[0].text} />
+<ImageSimple inputImage={document.data.image} />

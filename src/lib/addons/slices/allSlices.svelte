@@ -1,14 +1,14 @@
 <script>
-	import ImageSlice from "$lib/addons/slices/imageSlice.svelte"
-	import VideoSlice from "$lib/addons/slices/videoSlice.svelte"
-	import ParagraphSlice from "$lib/addons/slices/paragraphSlice.svelte"
+	import ImageSimple from "$lib/addons/slices/images/imageSimple.svelte"
+	import VideoSimple from "$lib/addons/slices/videos/videoSimple.svelte"
+	import ParagraphRichtext from "$lib/addons/slices/paragraphs/paragraphRichtext.svelte"
 
 	export let slices
 
 	const sliceTypes = {
-		image_slice: ImageSlice,
-		video_slice: VideoSlice,
-		paragraph_slice: ParagraphSlice
+		image_simple: ImageSimple,
+		video_simple: VideoSimple,
+		paragraph_richtext: ParagraphRichtext
 	}
 </script>
 

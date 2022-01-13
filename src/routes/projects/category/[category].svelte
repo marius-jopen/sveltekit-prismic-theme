@@ -30,6 +30,7 @@
 </script>
 
 <script>
+	import HeadlineSimple from '$lib/addons/slices/headlines/headlineSimple.svelte'
 	import FilterItems from '$lib/items/filterItems.svelte'
     import LoopItems from '$lib/items/loopItems.svelte'
 
@@ -39,9 +40,6 @@
 	export let type
 </script>
 
-<div class="text-3xl py-16 border-b border-lines text-center">
-    {currentTag}
-</div>
-
+<HeadlineSimple inputHeadline={currentTag} />
 <FilterItems items={allItems.results} type={type} />
 <LoopItems items={filteredItems} type={type} />

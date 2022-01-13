@@ -1,5 +1,5 @@
 <script>
-    import Item from '$lib/items/item.svelte'
+    import Item from '$lib/items/singleItems/itemHover.svelte'
 
     export let items
 	export let type
