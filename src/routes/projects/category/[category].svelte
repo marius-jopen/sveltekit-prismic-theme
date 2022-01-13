@@ -30,8 +30,8 @@
 
 <script>
 	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
-	import FilterItems$lib/ui-lib-custom/items/filterItems.svelte.svelte'
-    import LoopItems$lib/ui-lib-custom/items/loopItems.svelte.svelte'
+	import FilterItems from '$lib/modules/items/filterItems.svelte'
+    import LoopItems from '$lib/modules/items/loopItems.svelte'
 
     export let filteredItems
     export let currentTag
