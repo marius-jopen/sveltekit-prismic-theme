@@ -1,9 +1,11 @@
 <script>
     import Lazy from '$lib/addons/lazyload/lazy.svelte'
+
     export let item
+	export let type
 </script>
 
-<a sveltekit:prefetch href="/projects/{item.uid}" class="block relative w-full sm:w-1/3">
+<a sveltekit:prefetch href="/{type}s/{item.uid}" class="block relative w-full sm:w-1/3">
     <Lazy height={500} offset={200} fadeOption={{delay: 100, duration: 500}}>
         <img class="w-full object-cover h-70vw sm:h-40vw" src="{item.data.thumbnail.Small.url}" alt="{item.data.thumbnail.alt}">
 

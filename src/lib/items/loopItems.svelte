@@ -1,10 +1,12 @@
 <script>
     import Item from '$lib/items/item.svelte'
+
     export let items
+	export let type
 </script>
 
 <div class="flex flex-wrap">
     {#each items as item}
-        <Item item={item} />
+        <Item item={item} type={type} />
     {/each}
 </div>

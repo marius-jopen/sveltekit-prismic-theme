@@ -3,16 +3,18 @@
     import Client from '../utils/client'
 
     export async function load({ page }) {
+		const type = 'project'
+
         const pageName = page.path.replace('/', '')
 
-        const document = await Client.getSingle(pageName)
+		const document = await Client.getSingle(pageName)
 
         const allItems = await Client.query(
-            Prismic.Predicates.at("document.type", "project"),
+            Prismic.Predicates.at("document.type", type),
         )
 
-        const sortedItems = document.data.project_order.map(i => {
-			const uid = i.selected_project.uid
+        const sortedItems = document.data.order.map(i => {
+			const uid = i.selected.uid
             return allItems.results.find(p => p.uid === uid)
         })
 
@@ -20,7 +22,8 @@
             props: {
 				sortedItems,
                 document,
-                allItems
+                allItems,
+				type
             }
         }
     }
@@ -33,13 +36,12 @@
     export let document
     export let allItems
     export let sortedItems
-
-	allItems = allItems.results
+	export let type
 </script>
 
 <div class="text-3xl py-16 border-b border-lines text-center">
     {document.data.title[0].text}
 </div>
 
-<FilterItems items={allItems} />
-<LoopItems items={sortedItems} />
+<FilterItems items={allItems.results} type={type} />
+<LoopItems items={sortedItems} type={type} />

@@ -1,5 +1,6 @@
 <script>
 	export let items
+	export let type
 
 	let filterItemsRaw = []
 
@@ -16,7 +17,7 @@
 
 <div class="justify-center flex flex-col sm:flex-row w-full py-3 px-4 border-b border-lines">
     {#each filteredItems as filterItem}
-        <a class="text-center py-1 sm:py-0 ml-4 text-lg textHoverGrey" href="/projects/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
+        <a class="text-center py-1 sm:py-0 ml-4 text-lg textHoverGrey" href="/{type}s/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
             {filterItem}
         </a>
     {/each}

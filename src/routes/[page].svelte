@@ -8,8 +8,7 @@
 
         return {
             props: {
-                document,
-                pageName
+                document
             }
         }
     }
