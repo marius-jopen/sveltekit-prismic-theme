@@ -31,16 +31,11 @@
 </script>
 
 <script>
-    import LoopItems from '$lib/modules/items/loopItems.svelte'
 	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
 	import ImageSimple from "$lib/modules/slices/images/imageSimple.svelte"
 
     export let document
-	export let sortedItems
-	export let type
 </script>
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
 <ImageSimple inputImage={document.data.thumbnail} />
-<HeadlineSimple inputHeadline={"All Projects"} />
-<LoopItems items={sortedItems} type={type} />
