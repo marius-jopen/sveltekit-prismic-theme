@@ -1,40 +1,44 @@
 <script context="module">
-    import FilterProjects from '$lib/projects/filterProjects.svelte'
-    import ProjectLoop from '$lib/projects/projectLoop.svelte'
-    import Prismic from "@prismicio/client";
-    import Client from '../../../utils/client';
+	import Prismic from "@prismicio/client"
+    import Client from '../../../utils/client'
 
     export async function load({ page }) {
-        const tagName = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+        const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
-        const filteredProjects = await Client.query(
-            Prismic.Predicates.at("document.tags", [tagName])
+        const tags = await Client.query(
+            Prismic.Predicates.at("document.tags", [currentTag])
         )
 
-        const allProjects = await Client.query(
+		const filteredItems = tags.results.filter(item => item.type == 'project');
+
+        const allItems = await Client.query(
             Prismic.Predicates.at("document.type", "project"),
         )
 
         return {
             props: {
-                filteredProjects,
-                allProjects,
-                tagName
+                filteredItems,
+                allItems,
+                currentTag
             }
         }
     }
 </script>
 
 <script>
-    export let filteredProjects
-    export let tagName
-    export let allProjects
+	import FilterItems from '$lib/items/filterItems.svelte'
+    import LoopItems from '$lib/items/loopItems.svelte'
+
+    export let filteredItems
+    export let currentTag
+    export let allItems
+
+	allItems = allItems.results
 </script>
 
-
 <div class="text-3xl py-16 border-b border-lines text-center">
-    {tagName}
+    {currentTag}
 </div>
 
-<FilterProjects projects={allProjects.results} />
-<ProjectLoop projects={filteredProjects.results} />
+<FilterItems items={allItems} />
+<LoopItems items={filteredItems} />

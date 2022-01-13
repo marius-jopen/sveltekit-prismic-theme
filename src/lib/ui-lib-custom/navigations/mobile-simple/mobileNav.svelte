@@ -1,6 +1,7 @@
 <script>
-    import Hamburger from 'svelte-hamburgers';
-	import { fade } from 'svelte/transition';
+    import Hamburger from 'svelte-hamburgers'
+	import { fade } from 'svelte/transition'
+
     export let data
 
     let open = false

@@ -1,6 +1,7 @@
 <script>
-	export let placeholder = null;
-	const placeholderClass = 'svelte-lazy-placeholder';
+	export let placeholder = null
+
+	const placeholderClass = 'svelte-lazy-placeholder'
 </script>
 
 <div class={placeholderClass}>

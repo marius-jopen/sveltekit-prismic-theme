@@ -1,19 +1,22 @@
 <script context="module">
-    import AllSlices from '$lib/addons/slices/allSlices.svelte'
-    import Client from '../utils/client';
+    import Client from '../utils/client'
 
     export async function load() {
         const pageName = 'home'
-        const document = await Client.getSingle(pageName);
+
+        const document = await Client.getSingle(pageName)
+
         return {
             props: {
                 document
             }
-        };
+        }
     }
 </script>
-  
+
 <script>
+	import AllSlices from '$lib/addons/slices/allSlices.svelte'
+
     export let document
 </script>
 

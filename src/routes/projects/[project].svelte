@@ -1,8 +1,6 @@
 <script context="module">
-    import AllSlices from '$lib/addons/slices/allSlices.svelte'
-    import Client from '../../utils/client';
-    import Prismic from "@prismicio/client";
-    import Lazy from '$lib/addons/lazyload/lazy.svelte';
+    import Client from '../../utils/client'
+    import Prismic from "@prismicio/client"
 
     export async function load({ page }) {
         const pageName = page.params.project
@@ -19,11 +17,14 @@
                 pageName,
                 allProjects,
             }
-        };
+        }
     }
 </script>
 
 <script>
+	import AllSlices from '$lib/addons/slices/allSlices.svelte'
+	import Lazy from '$lib/addons/lazyload/lazy.svelte';
+
     export let document
 </script>
 

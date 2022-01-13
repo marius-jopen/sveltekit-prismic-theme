@@ -1,5 +1,6 @@
 <script>
-    import PrismicDom from 'prismic-dom';
+    import PrismicDom from 'prismic-dom'
+
     export let slice
 </script>
 

@@ -6,6 +6,7 @@
     <a sveltekit:prefetch class="text-lg textHoverGrey" href="/">
         {data.website_title[0].text}
     </a>
+
     <div>
 		{#each data.navigation_top as navItem}
 			<a sveltekit:prefetch class="ml-4 text-lg textHoverGrey" href="/{navItem.uid[0].text}">

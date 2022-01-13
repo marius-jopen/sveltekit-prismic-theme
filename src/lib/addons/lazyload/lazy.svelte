@@ -1,64 +1,64 @@
 <script>
-	import { fade, blur } from 'svelte/transition';
-	import Placeholder from './placeholder.svelte';
+	import { fade, blur } from 'svelte/transition'
+	import Placeholder from './placeholder.svelte'
 
-	export let height = 500;
-	export let offset = 500;
-	export let resetHeightDelay = 0;
-	export let onload = null;
-	export let placeholder = null;
+	export let height = 500
+	export let offset = 500
+	export let resetHeightDelay = 0
+	export let onload = null
+	export let placeholder = null
 	export let fadeOption = {
 	  delay: 0,
 	  duration: 300,
-	};
+	}
 
-	let className = '';
+	let className = ''
 
-	export { className as class };
+	export { className as class }
 
-	const rootClass = 'svelte-lazy' + (className ? ' ' + className : '');
-	const contentClass = 'svelte-lazy-content';
+	const rootClass = 'svelte-lazy' + (className ? ' ' + className : '')
+	const contentClass = 'svelte-lazy-content'
 
-	let loaded = false;
-	let contentDisplay = '';
+	let loaded = false
+	let contentDisplay = ''
 
 	$: contentStyle = contentDisplay === 'hide'
 	  ? 'display: none'
-	  : '';
+	  : ''
 
 	function load(node) {
-	  	setHeight(node);
+	  	setHeight(node)
 
 	  	const loadHandler = throttle(e => {
-			const nodeTop = node.getBoundingClientRect().top;
-			const expectedTop = getContainerHeight(e) + offset;
+			const nodeTop = node.getBoundingClientRect().top
+			const expectedTop = getContainerHeight(e) + offset
 
 			if (nodeTop <= expectedTop) {
-				loaded = true;
-				resetHeight(node);
-				onload && onload(node);
-				removeListeners();
+				loaded = true
+				resetHeight(node)
+				onload && onload(node)
+				removeListeners()
 			}
-	  	}, 200);
+	  	}, 200)
 
-		loadHandler();
-		addListeners();
+		loadHandler()
+		addListeners()
 
 		function addListeners() {
-			document.addEventListener('scroll', loadHandler, true);
-			window.addEventListener('resize', loadHandler);
+			document.addEventListener('scroll', loadHandler, true)
+			window.addEventListener('resize', loadHandler)
 		}
 
 		function removeListeners() {
-			document.removeEventListener('scroll', loadHandler, true);
-			window.removeEventListener('resize', loadHandler);
+			document.removeEventListener('scroll', loadHandler, true)
+			window.removeEventListener('resize', loadHandler)
 		}
 
 		return {
 			destroy: () => {
-				removeListeners();
+				removeListeners()
 			},
-		};
+		}
 	}
 
 	function setHeight(node) {

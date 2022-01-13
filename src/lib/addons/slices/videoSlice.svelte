@@ -1,5 +1,6 @@
 <script>
-    import Lazy from '$lib/addons/lazyload/lazy.svelte';
+    import Lazy from '$lib/addons/lazyload/lazy.svelte'
+
     export let slice
 </script>
 
