@@ -3,6 +3,8 @@
     import Client from '../utils/client'
 
     export async function load({ page }) {
+		const setup = await Client.getSingle('setup')
+
 		const type = 'project'
 
         const pageName = page.path.replace('/', '')
@@ -23,22 +25,33 @@
 				sortedItems,
                 document,
                 allItems,
-				type
+				type,
+				setup
             }
         }
     }
 </script>
 
 <script>
+	import NavigationSlot from '$lib/modules/navigations/desktop-slot/desktopSlotBar.svelte'
+	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+
 	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
 	import FilterItems from '$lib/modules/items/filterItems.svelte'
+	import FilterItemsTop from '$lib/modules/items/filterItemsTop.svelte'
     import LoopItems from '$lib/modules/items/loopItems.svelte'
 
     export let document
     export let allItems
     export let sortedItems
 	export let type
+	export let setup
 </script>
+
+<NavigationSlot data={setup.data}>
+	<FilterItemsTop items={allItems.results} type={type} />
+</NavigationSlot>
+<NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
 <FilterItems items={allItems.results} type={type} />
