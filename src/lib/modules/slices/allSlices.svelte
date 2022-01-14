@@ -3,6 +3,7 @@
 	import VideoSimple from "$lib/modules/slices/videos/videoSimple.svelte"
 	import ParagraphRichtext from "$lib/modules/slices/paragraphs/paragraphRichtext.svelte"
 	import fullPageBackground from "$lib/modules/slices/navigations/fullPageBackground.svelte"
+	import mouseMoveLoop from "$lib/modules/slices/galleries/mouseMove/mouseMoveLoop.svelte"
 
 	export let slices
 
@@ -10,7 +11,8 @@
 		image_simple: ImageSimple,
 		video_simple: VideoSimple,
 		paragraph_richtext: ParagraphRichtext,
-		navigation_fullpage_background: fullPageBackground
+		navigation_fullpage_background: fullPageBackground,
+		gallery_mouse_move: mouseMoveLoop
 	}
 </script>
 

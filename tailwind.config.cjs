@@ -12,7 +12,7 @@ module.exports = {
 		fontFamily,
 		extend: {
 			colors: {
-			  'lines': 'rgb(229 229 229)',
+			  'lines': 'rgb(30 30 30)',
 			  'fonts': 'rgb(30 30 30)',
 			},
 			height: {

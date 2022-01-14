@@ -13,7 +13,7 @@
 	let linkIndex = 0
 </script>
 
-<div class="h-screen relative">
+<div class="h-screen relative border-b border-lines">
 	<div class="text-center flex flex-col h-full justify-center">
 		{#each navigation as item, navIndex}
 			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
