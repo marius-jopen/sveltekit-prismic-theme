@@ -28,7 +28,7 @@
         divided = 3
     }
     $: if(outerWidth < 1000) {
-        divided = 3
+        divided = 0.7
     }
     $: if(outerWidth < 600) {
         divided = 0.7
