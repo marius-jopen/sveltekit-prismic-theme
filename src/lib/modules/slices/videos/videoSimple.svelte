@@ -5,13 +5,19 @@
 
 	let videoUrl
 	let videoPoster
+	let videoVimeo
 
 	if (slice == undefined){
 		videoUrl = inputVideoUrl
 		videoPoster = inputVideoPoster
 	} else {
 		videoUrl = slice.primary.video.url
+		videoVimeo = slice.primary.vimeo[0].text
 		videoPoster = slice.primary.preview_image.Big.url
+
+		if(videoVimeo) {
+			videoUrl = videoVimeo
+		}
 	}
 </script>
 

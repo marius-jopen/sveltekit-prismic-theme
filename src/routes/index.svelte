@@ -24,3 +24,4 @@
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
 <ImageSimple inputImage={document.data.image} />
+<ParagraphRichtext inputParagraph={document.data.long_text} />
