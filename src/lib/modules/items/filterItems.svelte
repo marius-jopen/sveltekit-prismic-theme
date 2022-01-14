@@ -15,9 +15,9 @@
 	})
 </script>
 
-<div class="justify-center flex flex-col sm:flex-row w-full py-3 px-4 border-b border-lines">
+<div class="justify-center flex flex-col sm:flex-row w-full py-3 px-4 border-b border-lines bg-white">
     {#each filteredItems as filterItem}
-        <a class="text-center py-1 sm:py-0 ml-4 text-lg textHoverGrey" href="/{type}s/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
+        <a class="text-center py-1 sm:py-0 ml-6 text-lg textHoverGrey" href="/{type}s/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
             {filterItem}
         </a>
     {/each}

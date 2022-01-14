@@ -2,7 +2,7 @@
 	export let data
 </script>
 
-<div class="hidden sm:flex fixed w-full z-50 justify-between py-3 px-4 border-b border-lines bg-white bg-opacity-70 backdrop-blur-2xl">
+<div class="hidden sm:flex fixed w-full z-50 justify-between py-3 px-4 border-b border-lines bg-white">
     <a sveltekit:prefetch class="text-lg textHoverGrey" href="/">
         {data.website_title[0].text}
     </a>

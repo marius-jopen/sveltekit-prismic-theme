@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/collapse.css" />
 </svelte:head>
 
-<div class="sm:hidden flex h-12 top-0 fixed w-screen z-50 px-2 border-b border-lines bg-white bg-opacity-70 backdrop-blur-2xl justify-between cursor-pointer">
+<div class="sm:hidden flex h-12 top-0 fixed w-screen z-50 px-2 border-b border-lines bg-white justify-between cursor-pointer">
     <a sveltekit:prefetch on:click="{close}" class="text-lg pt-2" href="/">
         {data.website_title[0].text}
     </a>
@@ -33,7 +33,7 @@
 </div>
 
 {#if open == true}
-    <div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-white bg-opacity-70 backdrop-blur-2xl flex-col justify-center" transition:fade>
+    <div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-white flex-col justify-center" transition:fade>
         <div class="flex flex-col text-center text-lg -mt-20">
 			{#each data.navigation_top as navItem}
 				<a sveltekit:prefetch on:click="{close}" class="py-1" href="/{navItem.uid[0].text}">

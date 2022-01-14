@@ -18,6 +18,8 @@
 	import AllSlices from '$lib/modules/slices/allSlices.svelte'
 
     export let document
+
+	console.log(document)
 </script>
 
 <AllSlices slices={document.data.body} />
