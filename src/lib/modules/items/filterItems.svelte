@@ -22,7 +22,7 @@
 		</a>
 
 		{#each filteredItems as filterItem}
-			<a class="sm:text-center py-1 sm:py-0 ml-6 text-lg textHoverGrey" href="/{type}s/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
+			<a class="sm:text-center py-1 sm:py-0 ml-6 text-lg textHoverGrey last:mr-6 sm:last:mr-0" href="/{type}s/category/{filterItem.replace(" ", '-').toLowerCase()}" sveltekit:prefetch >
 				{filterItem}
 			</a>
 		{/each}
