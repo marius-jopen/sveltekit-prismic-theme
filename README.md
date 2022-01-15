@@ -3,16 +3,23 @@
 - Prismic as CMS
 - TailwindCSS as CSS-framework
 - Netlify to deploy the website
-
-It comes shipped with many components like navigations, project-loops, image galleries and other effects which I build and collect from time to time.
+- Library of custom components
 
 ## Setting up SvelteKit
 1. Run npm install
 ```
 npm install
 ```
+This is it!
 
-2.
+
+2. Connect to Prismic
+[client.js](src/utils/client.js)
+Change the api-endpoint to your own:
+'https://mj-theme.cdn.prismic.io/api/v2' -> 'https://YOUR-PRISMIC-URL.cdn.prismic.io/api/v2'
+
+
+
 
 ## 1: Setting up Prismic
 In the folder **masks** are JSON files.
