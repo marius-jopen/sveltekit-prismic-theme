@@ -1,13 +1,18 @@
 <script>
 	export let slice
     export let inputNavigation
+	export let mobileImageInput
 
+	console.log(slice)
 	let navigation
+	let image
 
 	if (slice == undefined){
 		navigation = inputNavigation
+		image = mobileImageInput
 	} else {
 		navigation = slice.items
+		image = slice.primary.mobile_image
 	}
 
 	let linkIndex = 0
@@ -23,11 +28,15 @@
 		{/each}
 	</div>
 
-	{#each navigation as item, navIndex}
-		<div class="hidden w-full h-full absolute top-0 left-0 -z-10" class:active="{navIndex === linkIndex}" >
-			<img src="{item.image.Big.url}" alt="{item.image.alt}" class="w-full h-full object-cover">
-		</div>
-	{/each}
+	<div class="hidden sm:block">
+		{#each navigation as item, navIndex}
+			<div class="hidden w-full h-full absolute top-0 left-0 -z-10" class:active="{navIndex === linkIndex}" >
+				<img src="{item.image.Big.url}" alt="{item.image.alt}" class="w-full h-full object-cover">
+			</div>
+		{/each}
+	</div>
+
+	<img src="{image.Big.url}" alt="{image.alt}" class="sm:hidden w-full h-full absolute top-0 left-0 -z-10 object-cover">
 </div>
 
 <style lang="postcss">
