@@ -7,20 +7,30 @@
 		  "label" : "Title"
 		}
 	  },
-	  "order" : {
-		"type" : "Group",
+	  "uid" : {
+		"type" : "UID",
 		"config" : {
-		  "fields" : {
-			"selected" : {
-			  "type" : "Link",
-			  "config" : {
-				"select" : "document",
-				"customtypes" : [ "product" ],
-				"label" : "Selected"
-			  }
-			}
-		  },
-		  "label" : "Order"
+		  "label" : "UID"
+		}
+	  },
+	  "thumbnail" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : { },
+		  "thumbnails" : [ {
+			"name" : "Big",
+			"width" : 2500,
+			"height" : null
+		  }, {
+			"name" : "Medium",
+			"width" : 1500,
+			"height" : null
+		  }, {
+			"name" : "Small",
+			"width" : 750,
+			"height" : null
+		  } ],
+		  "label" : "Thumbnail"
 		}
 	  }
 	}

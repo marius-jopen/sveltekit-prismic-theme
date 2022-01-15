@@ -24,7 +24,6 @@
 			  "fieldset" : "Image Simple",
 			  "description" : "Image Simple",
 			  "icon" : "image",
-			  "display" : "list",
 			  "non-repeat" : {
 				"image" : {
 				  "type" : "Image",
@@ -54,7 +53,6 @@
 			  "fieldset" : "Video Simple",
 			  "description" : "Video Simple",
 			  "icon" : "ondemand_video",
-			  "display" : "list",
 			  "non-repeat" : {
 				"video" : {
 				  "type" : "Link",
@@ -82,6 +80,13 @@
 					} ],
 					"label" : "Preview Image"
 				  }
+				},
+				"vimeo" : {
+				  "type" : "StructuredText",
+				  "config" : {
+					"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label" : "Vimeo"
+				  }
 				}
 			  },
 			  "repeat" : { }
@@ -98,6 +103,143 @@
 				  "config" : {
 					"multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
 					"label" : "Long Text"
+				  }
+				}
+			  },
+			  "repeat" : { }
+			},
+			"navigation_fullpage_background" : {
+			  "type" : "Slice",
+			  "fieldset" : "Navigation Fullpage Background",
+			  "description" : "Navigation Fullpage Background",
+			  "icon" : "add_to_queue",
+			  "non-repeat" : {
+				"mobile_image" : {
+				  "type" : "Image",
+				  "config" : {
+					"constraint" : { },
+					"thumbnails" : [ {
+					  "name" : "Big",
+					  "width" : 2500,
+					  "height" : null
+					}, {
+					  "name" : "Medium",
+					  "width" : 1500,
+					  "height" : null
+					}, {
+					  "name" : "Small",
+					  "width" : 750,
+					  "height" : null
+					} ],
+					"label" : "Mobile Image"
+				  }
+				}
+			  },
+			  "repeat" : {
+				"image" : {
+				  "type" : "Image",
+				  "config" : {
+					"constraint" : { },
+					"thumbnails" : [ {
+					  "name" : "Big",
+					  "width" : 2500,
+					  "height" : null
+					}, {
+					  "name" : "Medium",
+					  "width" : 1500,
+					  "height" : null
+					}, {
+					  "name" : "Small",
+					  "width" : 750,
+					  "height" : null
+					} ],
+					"label" : "Image"
+				  }
+				},
+				"name" : {
+				  "type" : "StructuredText",
+				  "config" : {
+					"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label" : "Name"
+				  }
+				},
+				"slug" : {
+				  "type" : "StructuredText",
+				  "config" : {
+					"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label" : "Slug"
+				  }
+				}
+			  }
+			},
+			"gallery_mouse_move" : {
+			  "type" : "Slice",
+			  "fieldset" : "Gallery Mouse Move",
+			  "description" : "Gallery Mouse Move",
+			  "icon" : "call_made",
+			  "display" : "list",
+			  "non-repeat" : { },
+			  "repeat" : {
+				"image" : {
+				  "type" : "Image",
+				  "config" : {
+					"constraint" : { },
+					"thumbnails" : [ {
+					  "name" : "Big",
+					  "width" : 2500,
+					  "height" : null
+					}, {
+					  "name" : "Medium",
+					  "width" : 1500,
+					  "height" : null
+					}, {
+					  "name" : "Small",
+					  "width" : 750,
+					  "height" : null
+					} ],
+					"label" : "Image"
+				  }
+				}
+			  }
+			},
+			"video_controls" : {
+			  "type" : "Slice",
+			  "fieldset" : "Video Controls",
+			  "description" : "Video Controls",
+			  "icon" : "slow_motion_video",
+			  "non-repeat" : {
+				"preview_image" : {
+				  "type" : "Image",
+				  "config" : {
+					"constraint" : { },
+					"thumbnails" : [ {
+					  "name" : "Big",
+					  "width" : 2500,
+					  "height" : null
+					}, {
+					  "name" : "Medium",
+					  "width" : 1500,
+					  "height" : null
+					}, {
+					  "name" : "Small",
+					  "width" : 750,
+					  "height" : null
+					} ],
+					"label" : "Preview Image"
+				  }
+				},
+				"video" : {
+				  "type" : "Link",
+				  "config" : {
+					"select" : "media",
+					"label" : "Video"
+				  }
+				},
+				"vimeo" : {
+				  "type" : "StructuredText",
+				  "config" : {
+					"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label" : "Vimeo"
 				  }
 				}
 			  },
