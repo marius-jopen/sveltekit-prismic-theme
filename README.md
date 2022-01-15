@@ -8,6 +8,7 @@
 ## Setting up Prismic
 Prismic is an easy to use CMS which has a free plan for developers and small projects.
 You can set up an account here: [Prismic](https://prismic.io/)
+
 Do not yet create any fields. We will get back to that later.
 
 Once you have your account you should create the folllowing pages:
