@@ -57,6 +57,29 @@ Each file contains the content of one page in Prismic. You can copy and paste th
 
 ![JSON in Prismic](/static/readme/prismic-json.png)
 
+Well done!
+
+Now we have all the pages and all the fields which we need.
+
+Feel free to add more fields or pages in the future. This is only a starting point for a website.
+
+No you can add some basic content into your CMS. Like this we can check if everything worked, once we connect and run SvelteKit.
+
+## Setting up SvelteKit
+This one is super easy. Just run the npm install.
+```
+npm install
+```
+
+Then set up the connection to Prismic.
+Because your Prismic account is availabale is not private, we do not need a token and can just access it with linking to the public API.
+
+Change the api-endpoint to your own in this file [client.js](src/utils/client.js) to something like this 'https://YOUR-PRISMIC-URL.cdn.prismic.io/api/v2'.
+
+If you now run npm run dev, you should see the website running!
+```
+npm run dev
+```
 
 
 
