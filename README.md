@@ -10,13 +10,11 @@
 ```
 npm install
 ```
-This is it!
 
 
 2. Connect to Prismic
-   - [client.js](src/utils/client.js)
-   - Change the api-endpoint to your own:
-   - 'https://mj-theme.cdn.prismic.io/api/v2' -> 'https://YOUR-PRISMIC-URL.cdn.prismic.io/api/v2'
+   - Change the api-endpoint to your own in this file [client.js](src/utils/client.js)
+   - 'https://YOUR-PRISMIC-URL.cdn.prismic.io/api/v2'
 
 
 
