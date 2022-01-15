@@ -1,12 +1,17 @@
-# Starting Theme for Sveltekit with Prismic and Tailwind
+# Starting Theme for SvelteKit with Prismic and Tailwind
+- This theme uses Sveltekit as JS-framework
+- Prismic as CMS
+- TailwindCSS as CSS-framework
+- Netlify to deplay the website
 
-## Setting up the environment
 
-1.
+## Setting up SvelteKit
+1. Run npm install
 ```
 npm install
 ```
 
+2.
 
 ## 1: Setting up Prismic
 In the folder **masks** are JSON files.
