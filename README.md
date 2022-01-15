@@ -101,14 +101,30 @@ npm run dev
 ```
 
 ## Connect to Netlify
-
+In this repository, things re set up that you can deploy the website easily on Netlify.
+This took me quite some time because it was not clear which dependencies I needed to install.
+Nothing to worry about. It should just work.
 
 ## Structure of SvelteKit
+There are two main folders for you when you develop this website.
 
+Both are in the [src](src) folder.
+
+1. [Routes](src/routes)
+You should know the basics of how to use SvelteKit, so I will not go too deep inside.
+
+For each page in Prismic is a template file.
+- [index.svelte](src/routes/index.svelte)
+   - This is the welcome page and is connected to the **home** page in Prismic
+
+-
+
+2. [Lib](src/lib)
 
 ## How the components work
 
 
+## How to use CSS and Tailwind
 
 
 
