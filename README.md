@@ -12,22 +12,28 @@ You can set up an account here: [Prismic](https://prismic.io/)
 Do not yet create any fields. We will get back to that later.
 
 Once you have your account you should create the folllowing pages:
-- Home
-   - **Single Page**
-   - Will be the front page of your website
 
-- Setup
-   - **Single Page**
-   - Will hold general information which can be accessed all over the website. For example a navigation, the SEO image or text…
+### Home
+   **Single Page**
 
-- Page
-   - **Repeating Page**
-   - This is a template which will used for all pages which are not projects, products or blog posts.
-   - It contains a slice field which lets you click together website content from already built components. You can compare it with the **ACF Flexible Content** field which we know from Wordpress.
+   Will be the front page of your website
 
-- Projects
-   - **Single Page**
-   - Has a list which allows you to sort the projects
+### Setup
+   **Single Page**
+
+   Will hold general information which can be accessed all over the website. For example a navigation, the SEO image or text…
+
+### Page
+   **Repeating Page**
+
+   This is a template which will used for all pages which are not projects, products or blog posts.
+
+   It contains a slice field which lets you click together website content from already built components. You can compare it with the **ACF Flexible Content** field which we know from Wordpress.
+
+### Projects
+   **Single Page**
+
+   Has a list which allows you to sort the projects
 
 - Project
    - Repeating Page
