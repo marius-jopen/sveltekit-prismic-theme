@@ -9,6 +9,29 @@
 Prismic is an easy to use CMS which has a free plan for developers and small projects.
 You can set up an account here: [Prismic](https://prismic.io/)
 
+Once you have your account you should create the folllowing pages:
+- Home
+   - **Single Page**
+   - Will be the front page of your website
+
+- Setup
+   - **Single Page**
+   - Will hold general information which can be accessed all over the website. For example a navigation, the SEO image or text…
+
+- Page
+   - **Repeating Page**
+   - This is a template which will used for all pages which are not projects, products or blog posts.
+   - It contains a slice field which lets you click together website content from already built components. You can compare it with the **ACF Flexible Content** field which we know from Wordpress.
+
+- Projects
+   - **Single Page**
+   - Has a list which allows you to sort the projects
+
+- Project
+   - Repeating Page
+   -
+
+
 ## Setting up SvelteKit
 1. Run npm install
 ```
