@@ -121,7 +121,7 @@ For each page in Prismic is a template file.
 It is also connected to the **setup** page in Prismic to get the data of the navigation. It is also possible to include the navigation globally in the [__layout.svelte](src/routes/__layout.svelte). But to have more control, I put the navigation into each page.
 
 ### projects.svelte
-[products.svelte](src/routes/projects.svelte): This is the page which get the content (in this case the list of posts) from Prismic.
+[projects.svelte](src/routes/projects.svelte): This is the page which get the content (in this case the list of posts) from Prismic.
 
 The cool thing here is that you can just copy and paste this page and call it **products.svelte**.
 Then you only need to change the
@@ -133,6 +133,11 @@ to
 const type = 'product'
 ```
 and it is conneced to the products page.
+
+### products.svelte
+[products.svelte](src/routes/products.svelte): Like just mentioned above, this is exactly the same page template like in **projects**. And only with changing one variable you can connect it to any **repeating page** from Prismic. Like this you could easily create a blog into the website.
+
+### [page].svelte
 
 ## How the components work
 
