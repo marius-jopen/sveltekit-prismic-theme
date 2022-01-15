@@ -26,7 +26,6 @@
 	import ParagraphRichtext from "$lib/modules/slices/paragraphs/paragraphRichtext.svelte"
 
     export let document
-
 	export let setup
 </script>
 

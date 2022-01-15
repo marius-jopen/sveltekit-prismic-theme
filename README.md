@@ -114,8 +114,11 @@ Both are in the [src](src) folder.
 You should know the basics of how to use SvelteKit, so I will not go too deep inside.
 
 For each page in Prismic is a template file.
-- [index.svelte](src/routes/index.svelte)
-   - This is the welcome page and is connected to the **home** page in Prismic
+
+### index.svelte
+[index.svelte](src/routes/index.svelte)
+
+This is the welcome page and is connected to the **home** page in Prismic
 
 -
 
