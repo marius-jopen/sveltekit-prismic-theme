@@ -4,3 +4,6 @@
 In the folder **masks** are JSON files with the fields for Prismic.
 You can copy and paste them into the JSON section on a prismic page.
 Then the fields will be generated in the backend and are ready to be filled.
+
+![JSON in Prismic](/static/readme/json-prismic.png)
+
