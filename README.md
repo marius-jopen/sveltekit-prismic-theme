@@ -77,20 +77,24 @@ Feel free to add more fields or pages in the future. This here is only a startin
 Just upload some images and texts and play around with it a bit.
 Like this we can check if everything worked, once we connect and run SvelteKit.
 
-You will notice that there is **slice section** in the Pages page. No need to use it now. We will get back to that later.
+You will notice that there is **slice section** in the Pages page. No need to use it now. We will also get back to that later.
 
 ## Setting up SvelteKit
-This one is super easy. Just run the npm install.
+
+### Install SvelteKit
+Now it is time to set up SvelteKit. This is super easy. Just run the npm install.
 ```
 npm install
 ```
 
+### Connect Prismic
 Then set up the connection to Prismic.
 
 Because your Prismic account is not private, we do not need a token and can just access it with linking to the public API.
 
 Change the api-endpoint to your own in this file [client.js](src/utils/client.js) to something like this 'https://YOUR-PRISMIC-URL.cdn.prismic.io/api/v2'.
 
+### Run the website
 If you now run npm run dev, you should see the website running!
 ```
 npm run dev
