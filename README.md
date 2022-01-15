@@ -116,13 +116,23 @@ You should know the basics of how to use SvelteKit, so I will not go too deep in
 For each page in Prismic is a template file.
 
 ### index.svelte
-[index.svelte](src/routes/index.svelte)
+[index.svelte](src/routes/index.svelte): This is the welcome page and is connected to the **home** page in Prismic
 
-This is the welcome page and is connected to the **home** page in Prismic
+It is also connected to the **setup** page in Prismic to get the data of the navigation. It is also possible to include the navigation globally in the [__layout.svelte](src/routes/__layout.svelte). But to have more control, I put the navigation into each page.
 
--
+### projects.svelte
+[products.svelte](src/routes/projects.svelte): This is the page which get the content (in this case the list of posts) from Prismic.
 
-2. [Lib](src/lib)
+The cool thing here is that you can just copy and paste this page and call it **products.svelte**.
+Then you only need to change the
+```
+const type = 'project'
+```
+to
+```
+const type = 'product'
+```
+and it is conneced to the products page.
 
 ## How the components work
 
