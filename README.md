@@ -2,8 +2,9 @@
 - This theme uses Sveltekit as JS-framework
 - Prismic as CMS
 - TailwindCSS as CSS-framework
-- Netlify to deplay the website
+- Netlify to deploy the website
 
+It comes shipped with many components like navigations, project-loops, image galleries and other effects which I build and collect from time to time.
 
 ## Setting up SvelteKit
 1. Run npm install
