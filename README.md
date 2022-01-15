@@ -55,7 +55,7 @@ In the folder [masks](masks) are JSON files.
 
 Each file contains the content of one page in Prismic. You can copy and paste them into the JSON section on a prismic page. Then the fields will be generated in the backend and are ready to be filled.
 
-![JSON in Prismic](/static/readme/json-prismic.png)
+![JSON in Prismic](/static/readme/prismic-json.png)
 
 
 
