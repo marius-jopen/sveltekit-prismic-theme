@@ -1,4 +1,4 @@
-# Starting Theme for SvelteKit with Prismic and Tailwind
+# Starting Theme for SvelteKit with Prismic, Tailwind, Netlify & Custom Built Components
 - This theme uses Sveltekit as JS-framework
 - Prismic as CMS
 - TailwindCSS as CSS-framework
