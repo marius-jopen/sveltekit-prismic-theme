@@ -46,16 +46,15 @@ Once you have your account you should create the folllowing pages.
    - This is exactly the same page like the **Project** page. It just holds product information instead.
    - No need to create this page, if you do not want to use a shop.
 
-Now you have all the pages. Next step is to crete the fields.
+
+Now you have all the pages. Next step is to create the fields.
 
 This can be a tiring process. But fortunately Prismic allows us to copy and paste the fields as JSON file into each page.
 
 In the folder [masks](masks) are JSON files.
-Each file contains the content of one page in Prismic.
-You can copy and paste them into the JSON section on a prismic page.
-Then the fields will be generated in the backend and are ready to be filled.
 
-It will then look like this:
+Each file contains the content of one page in Prismic. You can copy and paste them into the JSON section on a prismic page. Then the fields will be generated in the backend and are ready to be filled.
+
 ![JSON in Prismic](/static/readme/json-prismic.png)
 
 
