@@ -162,11 +162,11 @@
 		opacity: 0 !important;
 	}
 
-	@media screen and (max-width: 640px) {
+	/* @media screen and (max-width: 640px) {
 		.hideControlsSoft {
 			opacity: 1 !important;
 		}
-	}
+	} */
 
 	progress::-webkit-progress-bar {
 		background-color: rgba(0,0,0,0.2);

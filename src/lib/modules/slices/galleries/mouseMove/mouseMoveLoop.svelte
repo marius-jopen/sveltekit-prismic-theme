@@ -27,9 +27,6 @@
     $: if(outerWidth > 1000) {
         divided = 2
     }
-    // $: if(outerWidth < 1000) {
-    //     divided = 0.7
-    // }
     $: if(outerWidth < 1000) {
         divided = 3
     }
