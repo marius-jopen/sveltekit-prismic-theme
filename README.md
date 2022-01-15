@@ -9,6 +9,8 @@
 Prismic is an easy to use CMS which has a free plan for developers and small projects.
 You can set up an account here: [Prismic](https://prismic.io/)
 
+
+### Create pages in Prismic
 Once you have your account you should **create the folllowing pages**.
 
 **Do not yet create any fields. We will get back to that later.**
@@ -49,7 +51,7 @@ Once you have your account you should **create the folllowing pages**.
 
 Now you have all the pages.
 
-**Next step is to create the fields.**
+### Create the fields in Prismic
 
 This can be a tiring process.
 
@@ -66,14 +68,16 @@ Then the fields will be generated in the backend and are ready to be filled. Awe
 ![JSON in Prismic](/static/readme/prismic-json.png)
 
 
-
 Now we have all the pages with all the fields which we need.
 
 Feel free to add more fields or pages in the future. This here is only a starting point for a website.
 
-**Now you can add some basic content into your CMS.**
+### Add some basic content into Prismic
 
+Just upload some images and texts and play around with it a bit.
 Like this we can check if everything worked, once we connect and run SvelteKit.
+
+You will notice that there is **slice section** in the Pages page. No need to use it now. We will get back to that later.
 
 ## Setting up SvelteKit
 This one is super easy. Just run the npm install.
