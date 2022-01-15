@@ -110,10 +110,12 @@ There are two main folders for you when you develop this website.
 
 Both are in the [src](src) folder.
 
-1. [Routes](src/routes)
-You should know the basics of how to use SvelteKit, so I will not go too deep inside.
+1. [Routes](src/routes) (Contains all the page templates)
+1. [Lib](src/lib) (Contains all the custom compnents, like navigation, image-modules etc…)
 
-For each page in Prismic is a template file.
+You should know the basics of how to use SvelteKit, so I will not go too deep inside this now.
+
+We start in the **routes** folder first:
 
 ### index.svelte
 [index.svelte](src/routes/index.svelte): This is the welcome page and is connected to the **home** page in Prismic
@@ -137,7 +139,23 @@ and it is conneced to the products page.
 ### products.svelte
 [products.svelte](src/routes/products.svelte): Like just mentioned above, this is exactly the same page template like in **projects**. And only with changing one variable you can connect it to any **repeating page** from Prismic. Like this you could easily create a blog into the website.
 
-### [page].svelte
+### [page).svelte
+[[page].svelte](src/routes/[page].svelte):
+This is the template page which is used for all pages which are not projects, products etc. For example it is good to use if for an about page, temrs and conditions, or any other page which does not get repeated many times on the website.
+
+In this page setup I included the **Slicer**. The Slicer gives the user the possibility to arrange the content on this page in a very flexible way.
+
+It is very similar to the **Flexible Content Field** from [ACF](https://www.advancedcustomfields.com/resources/flexible-content/) which is used for Wordpress.
+
+
+![Slices in Prismic](/static/readme/slices-prismic.png)
+
+
+
+
+
+
+
 
 ## How the components work
 
