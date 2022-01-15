@@ -5,6 +5,10 @@
 - Netlify to deploy the website
 - Library of custom components
 
+## Setting up Prismic
+Prismic is an easy to use CMS which has a free plan for developers and small projects.
+You can set up an account here: [Prismic](https://prismic.io/)
+
 ## Setting up SvelteKit
 1. Run npm install
 ```
