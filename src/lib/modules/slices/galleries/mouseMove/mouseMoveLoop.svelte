@@ -24,14 +24,14 @@
     let result
 
     $: divided = 3
-    $: if(outerWidth > 1000) {
+    $: if(outerWidth > 1100) {
         divided = 3
     }
-    $: if(outerWidth < 1000) {
-        divided = 0.7
-    }
-    $: if(outerWidth < 600) {
-        divided = 0.7
+    // $: if(outerWidth < 1000) {
+    //     divided = 0.7
+    // }
+    $: if(outerWidth < 1100) {
+        divided = 0.4
     }
     $: itemWidthVirtual = 100 / divided
     $: number = loop.length
