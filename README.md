@@ -1,5 +1,13 @@
 # Starting Theme for Sveltekit with Prismic and Tailwind
 
+## Setting up the environment
+
+1.
+```
+npm install
+```
+
+
 ## 1: Setting up Prismic
 In the folder **masks** are JSON files.
 Each file contains the content of one page in Prismic.
@@ -12,7 +20,7 @@ You need to make a difference between Single pages and Repeating Pages.
 
 ### Single Pages:
 - Home
-   - The files is called index.json
+   - The file is called index.json and serves as the welcome page of the website.
 
 - Projects
    - Is the overview page of all the projects. Here projects can be sorted.
