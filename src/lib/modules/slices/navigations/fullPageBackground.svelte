@@ -3,7 +3,6 @@
     export let inputNavigation
 	export let mobileImageInput
 
-	console.log(slice)
 	let navigation
 	let image
 
