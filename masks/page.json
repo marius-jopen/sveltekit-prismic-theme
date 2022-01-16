@@ -96,8 +96,15 @@
 			  "fieldset" : "Paragraph Richtext",
 			  "description" : "Paragraph Richtext",
 			  "icon" : "format_color_text",
-			  "display" : "list",
 			  "non-repeat" : {
+				"textalignment" : {
+				  "type" : "Select",
+				  "config" : {
+					"options" : [ "text-left", "text-right", "text-center", "text-justify" ],
+					"default_value" : "text-left",
+					"label" : "Text Alignment"
+				  }
+				},
 				"long_text" : {
 				  "type" : "StructuredText",
 				  "config" : {
