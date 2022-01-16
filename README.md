@@ -139,7 +139,7 @@ and it is conneced to the products page.
 ### products.svelte
 [products.svelte](src/routes/products.svelte): Like just mentioned above, this is exactly the same page template like in **projects**. And only with changing one variable you can connect it to any **repeating page** from Prismic. Like this you could easily create a blog into the website.
 
-### [page).svelte
+### [page].svelte
 [[page].svelte](src/routes/[page].svelte):
 This is the template page which is used for all pages which are not projects, products etc. For example it is good to use if for an about page, temrs and conditions, or any other page which does not get repeated many times on the website.
 
