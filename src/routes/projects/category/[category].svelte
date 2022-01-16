@@ -37,7 +37,7 @@
 
 	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
 	import FilterItems from '$lib/modules/items/filterItems.svelte'
-	import FilterItemsTop from '$lib/modules/items/filterItemsTop.svelte'
+	import FilterItemsTopFull from '$lib/modules/items/filterItemsTopFull.svelte'
     import LoopItems from '$lib/modules/items/loopItems.svelte'
 
     export let filteredItems
@@ -48,10 +48,9 @@
 </script>
 
 <NavigationSlot data={setup.data}>
-	<FilterItemsTop items={allItems.results} type={type} />
+	<FilterItemsTopFull items={allItems.results} type={type} />
 </NavigationSlot>
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={currentTag} />
-<FilterItems items={allItems.results} type={type} />
 <LoopItems items={filteredItems} type={type} />
