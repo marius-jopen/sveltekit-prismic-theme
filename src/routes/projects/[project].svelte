@@ -1,6 +1,5 @@
 <script context="module">
     import Client from '../../utils/client'
-    import Prismic from "@prismicio/client"
 
     export async function load({ page }) {
 		const setup = await Client.getSingle('setup')
@@ -11,21 +10,9 @@
 
         const document = await Client.getByUID(type, pageName)
 
-		const itemPage = await Client.getSingle(type + 's')
-
-		const allItems = await Client.query(
-            Prismic.Predicates.at("document.type", type),
-        )
-
-        const sortedItems = itemPage.data.order.map(i => {
-			const uid = i.selected.uid
-            return allItems.results.find(p => p.uid === uid)
-        })
-
         return {
             props: {
                 document,
-				sortedItems,
 				type,
 				setup
             }
