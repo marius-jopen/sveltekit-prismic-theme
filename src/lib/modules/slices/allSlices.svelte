@@ -6,10 +6,12 @@
 	import fullPageBackground from "$lib/modules/slices/navigations/fullPageBackground.svelte"
 	import mouseMoveLoop from "$lib/modules/slices/galleries/mouseMove/mouseMoveLoop.svelte"
 	import Marquee from "$lib/modules/slices/galleries/sliders/sliderMarquee.svelte"
+	import SliderBasicLoop from "$lib/modules/slices/galleries/sliders/sliderBasic/sliderBasicLoop.svelte"
 
 	export let slices
 
 	const sliceTypes = {
+		slider_basic: SliderBasicLoop,
 		marquee: Marquee,
 		image_simple: ImageSimple,
 		video_simple: VideoSimple,

@@ -28,7 +28,7 @@
 		gap: '2',
 		start: '2',
 		arrows: false,
-		focus  : 'center',
+		focus: 'center',
   		perPage: 3,
 		direction: direction,
 		pagination: false,
@@ -37,7 +37,7 @@
 		}
 	}}>
 		<SplideSlide>
-			<div class="text-3xl">
+			<div class="text-xl">
 				{text}
 			</div>
 		</SplideSlide>

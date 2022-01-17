@@ -11,6 +11,6 @@
 	}
 </script>
 
-<div class="text-3xl py-16 border-b border-lines text-center">
+<div class="text-xl py-3 border-b border-lines text-center">
     {headline}
 </div>

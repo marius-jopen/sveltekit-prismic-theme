@@ -1,4 +1,6 @@
 <script>
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/dist/css/splide.min.css';
     import SliderBasicItem from '$lib/modules/slices/galleries/sliders/sliderBasic/sliderBasicItem.svelte'
 
     export let slice
@@ -13,8 +15,16 @@
 	}
 </script>
 
-<div class="border-b border-lines w-screen parent overflow-x-scroll md:overflow-x-hidden" bind:clientWidth={windowWidth} on:mousemove={handleMousemove}>
+<div class="border-b border-lines">
+	<Splide
+	options={{
+		type: 'loop',
+		focus: 'center',
+	}}>
 	{#each loop as item}
-		<SliderBasicItem />
-	{/each}
+		<SplideSlide>
+			<SliderBasicItem item={item} />
+		</SplideSlide>
+		{/each}
+	</Splide>
 </div>
