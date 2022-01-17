@@ -70,6 +70,37 @@
 		  },
 		  "label" : "Navigation Top"
 		}
+	  },
+	  "navigation_bottom" : {
+		"type" : "Group",
+		"config" : {
+		  "fields" : {
+			"title" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "Title"
+			  }
+			},
+			"uid1" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "UID"
+			  }
+			},
+			"target" : {
+			  "type" : "Boolean",
+			  "config" : {
+				"placeholder_false" : "internal",
+				"placeholder_true" : "external",
+				"default_value" : true,
+				"label" : "Target"
+			  }
+			}
+		  },
+		  "label" : "Navigation Bottom"
+		}
 	  }
 	}
   }
