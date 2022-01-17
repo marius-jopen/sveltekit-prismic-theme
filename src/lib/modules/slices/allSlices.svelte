@@ -5,10 +5,12 @@
 	import ParagraphRichtext from "$lib/modules/slices/paragraphs/paragraphRichtext.svelte"
 	import fullPageBackground from "$lib/modules/slices/navigations/fullPageBackground.svelte"
 	import mouseMoveLoop from "$lib/modules/slices/galleries/mouseMove/mouseMoveLoop.svelte"
+	import Marquee from "$lib/modules/slices/galleries/sliders/sliderMarquee.svelte"
 
 	export let slices
 
 	const sliceTypes = {
+		marquee: Marquee,
 		image_simple: ImageSimple,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
