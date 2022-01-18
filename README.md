@@ -225,21 +225,18 @@ I group the components into four categories:
 1. ### functionality
    - Those are compnents which serve a specific function. For example a hover-effect which gets reused on some pages. The lazy-load function which I did not include yet. A back button. All those little helpful things which can be reused on all different pages.
 
-2. ### items
+	- Also the [Slicer](src/lib/modules/slices/allSlices.svelte) is included. It can be called from any page which has a Slicer set up in Prismic. This file understands which slices you use on your page and displays the needed slices underneath each other. Like this you could have a structure like this:
+		- Headline
+		- Paragraph
+		- Headline
+		- Image
+		- Paragraph
+
+2. ### modulesStatic
    - Those components are connected to the repeating pages. For example templates for items, loops, filters and all that.
 
-3. ### navigations
-   - Some different navigations to chose from. Why not?
-
-4. ### slices
+4. ### modulesFlex
    - Here you can find all the compnents which you can reuse to build the website. For example a headline module, or a to-images-next-to-each-other-module, or a parapgraph module. It is an ongoing collection which I will extend in the future.
-
-   - Also the [Slicer](src/lib/modules/slices/allSlices.svelte) is included. It can be called from any page which has a Slicer set up in Prismic. This file understands which slices you use on your page and displays the needed slices underneath each other. Like this you could have a structure like this:
-      - Headline
-	  - Paragraph
-      - Headline
-	  - Image
-	  - Paragraph
 
    - Each Component in this folder can be added manually to the website like here. Or be integrated with the Slicer in Prismic.
 	```
