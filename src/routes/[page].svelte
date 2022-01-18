@@ -18,16 +18,16 @@
 </script>
 
 <script>
-	import NavigationSimpleBar from '$lib/modules/navigations/desktop-simple/desktopSimpleBar.svelte'
-	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import AllSlices from '$lib/modules/slices/allSlices.svelte'
+	import ModulesSlices from '$lib/functionality/ModulesSlices.svelte'
 
     export let document
     export let setup
 </script>
 
-<NavigationSimpleBar data={setup.data} />
+<NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<AllSlices slices={document.data.body} />
+<ModulesSlices slices={document.data.body} />

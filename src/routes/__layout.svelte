@@ -14,7 +14,7 @@
 
 <script>
 	import '../app.postcss'
-	import Footer from '$lib/modules/navigations/footer-simple/footerSimple.svelte'
+	import Footer from '$lib/modulesStatic/navigations/footer/FooterSimple.svelte'
 
 	export let document
 </script>

@@ -1,5 +1,5 @@
 <script>
-    import MouseMoveitem from '$lib/modules/slices/galleries/mouseMove/mouseMoveItem.svelte'
+    import MouseMoveitem from '$lib/modulesFlex/galleries/mouseMove/MouseMoveItem.svelte'
 
     export let slice
     export let inputLoop

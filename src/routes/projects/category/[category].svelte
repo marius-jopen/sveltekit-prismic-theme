@@ -32,13 +32,12 @@
 </script>
 
 <script>
-	import NavigationSlot from '$lib/modules/navigations/desktop-slot/desktopSlotBar.svelte'
-	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
-	import FilterItems from '$lib/modules/items/filterItems.svelte'
-	import FilterItemsTopFull from '$lib/modules/items/filterItemsTopFull.svelte'
-    import LoopItems from '$lib/modules/items/loopItems.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import FilterItemsFull from '$lib/modulesStatic/items/filterItems/FilterItemsFull.svelte'
+    import LoopItemsSimple from '$lib/modulesStatic/items/loopItems/LoopItemsSimple.svelte'
 
     export let filteredItems
     export let currentTag
@@ -47,10 +46,10 @@
 	export let setup
 </script>
 
-<NavigationSlot data={setup.data}>
-	<FilterItemsTopFull items={allItems.results} type={type} />
-</NavigationSlot>
+<NavigationDesktopSlot data={setup.data}>
+	<FilterItemsFull items={allItems.results} type={type} />
+</NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={currentTag} />
-<LoopItems items={filteredItems} type={type} />
+<LoopItemsSimple items={filteredItems} type={type} />

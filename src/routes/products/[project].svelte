@@ -34,20 +34,20 @@
 </script>
 
 <script>
-	import NavigationSlot from '$lib/modules/navigations/desktop-slot/desktopSlotBar.svelte'
-	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
-	import ImageSimple from "$lib/modules/slices/images/imageSimple.svelte"
-	import BackHistory from "$lib/modules/functionality/backHistory.svelte"
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import ImageSimple from "$lib/modulesFlex/images/ImageSimple.svelte"
+	import BackHistory from "$lib/functionality/BackHistory.svelte"
 
     export let document
 	export let setup
 </script>
 
-<NavigationSlot data={setup.data}>
+<NavigationDesktopSlot data={setup.data}>
 	<BackHistory />
-</NavigationSlot>
+</NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />

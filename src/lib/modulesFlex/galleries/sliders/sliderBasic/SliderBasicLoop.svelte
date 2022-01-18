@@ -1,7 +1,7 @@
 <script>
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
-    import SliderBasicItem from '$lib/modules/slices/galleries/sliders/sliderBasic/sliderBasicItem.svelte'
+    import SliderBasicItem from '$lib/modulesFlex/galleries/sliders/sliderBasic/SliderBasicItem.svelte'
 
     export let slice
     export let inputLoop

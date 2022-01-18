@@ -18,18 +18,18 @@
 </script>
 
 <script>
-	import NavigationSimpleBar from '$lib/modules/navigations/desktop-simple/desktopSimpleBar.svelte'
-	import NavigationMobileSimple from '$lib/modules/navigations/mobile-simple/mobileNav.svelte'
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import HeadlineSimple from '$lib/modules/slices/headlines/headlineSimple.svelte'
-	import ImageSimple from "$lib/modules/slices/images/imageSimple.svelte"
-	import ParagraphRichtext from "$lib/modules/slices/paragraphs/paragraphRichtext.svelte"
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import ImageSimple from "$lib/modulesFlex/images/ImageSimple.svelte"
+	import ParagraphRichtext from "$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte"
 
     export let document
 	export let setup
 </script>
 
-<NavigationSimpleBar data={setup.data} />
+<NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline="{document.data.title[0].text}" />
