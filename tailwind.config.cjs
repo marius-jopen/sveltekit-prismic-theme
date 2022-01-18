@@ -15,6 +15,10 @@ module.exports = {
 			  'lines': 'rgb(30 30 30)',
 			  'fonts': 'rgb(30 30 30)',
 			},
+			margin: {
+				'1px': '1px',
+				'2px': '2px',
+			},
 			height: {
 				'100vw': '100vw',
 				'90vw': '90vw',

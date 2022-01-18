@@ -37,9 +37,8 @@
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
-	import ImageSimple from "$lib/modulesFlex/images/ImageSimple.svelte"
 	import BackHistory from "$lib/functionality/BackHistory.svelte"
+	import ProductColumn from "$lib/modulesStatic/items/product/productColumn/ProductColumn.svelte"
 
     export let document
 	export let setup
@@ -50,5 +49,4 @@
 </NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
-<ImageSimple inputImage={document.data.thumbnail} />
+<ProductColumn input={document.data} />
