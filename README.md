@@ -7,6 +7,11 @@
 
 <br>
 
+Preview here:
+[sveltekit-prismic-theme.netlify.app](https://sveltekit-prismic-theme.netlify.app/)
+
+<br>
+
 ## Setting up Prismic
 Prismic is an easy to use CMS which has a free plan for developers and small projects.
 

@@ -27,8 +27,6 @@
 
     export let document
 	export let setup
-
-	console.log(setup)
 </script>
 
 <NavigationSimpleBar data={setup.data} />
