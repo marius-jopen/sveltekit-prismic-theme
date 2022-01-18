@@ -17,8 +17,10 @@
 	}
 </script>
 
-<div class="pt-1 pb-5 border-b border-lines">
-	<div class="px-4 {textAlignment}">
-		{@html PrismicDom.RichText.asHtml(paragraph)}
+{#if paragraph.length}
+	<div class="pt-1 pb-5 border-b border-lines">
+		<div class="px-4 {textAlignment}">
+			{@html PrismicDom.RichText.asHtml(paragraph)}
+		</div>
 	</div>
-</div>
+{/if}
