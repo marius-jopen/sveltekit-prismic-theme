@@ -10,6 +10,8 @@
 Preview here:
 [sveltekit-prismic-theme.netlify.app](https://sveltekit-prismic-theme.netlify.app/)
 
+I am currently developing this theme. So maybe you will run into a bug. Or maybe something is unfinished. Or maybe I changed something which I described differently in this tutorial. Maybe I did not update the [masks](masks) folder.
+
 <br>
 
 ## Setting up Prismic
