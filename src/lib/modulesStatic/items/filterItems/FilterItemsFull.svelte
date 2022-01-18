@@ -5,6 +5,7 @@
 	export let type
 
 	let filterItemsRaw = []
+	let filterState = false
 
 	items.forEach(function (item) {
 		item.tags.forEach(function (item) {
@@ -16,10 +17,11 @@
 		return index === self.indexOf(elem);
 	})
 
-	let filterState = false
+	filteredItems.sort()
+
     function filter() {
         if(filterState == false)
-		filterState = true
+			filterState = true
         else {
 			filterState = false
         }

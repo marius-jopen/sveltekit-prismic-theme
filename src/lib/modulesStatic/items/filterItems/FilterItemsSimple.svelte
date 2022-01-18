@@ -13,6 +13,8 @@
 	let filteredItems = filterItemsRaw.filter(function(elem, index, self) {
 		return index === self.indexOf(elem);
 	})
+
+	filteredItems.sort()
 </script>
 
 <div class="overflow-scroll sm:overflow-auto width-full border-b border-lines bg-white sm:flex sm:justify-center">
