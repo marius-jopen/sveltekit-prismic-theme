@@ -18,6 +18,8 @@
 </script>
 
 <script>
+	import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
+
 	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
@@ -28,6 +30,8 @@
     export let document
 	export let setup
 </script>
+
+<SeoExport document={document.data} />
 
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />

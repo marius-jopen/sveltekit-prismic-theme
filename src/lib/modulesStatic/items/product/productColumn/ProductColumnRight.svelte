@@ -8,4 +8,5 @@
 <div>
 	<HeadlineSimple inputHeadline={input.title[0].text} />
 	<ParagraphRichtextNarrow inputParagraph={input.description} inputTextAlignment={"text-left"}/>
+	<ParagraphRichtextNarrow inputParagraph={input.description} inputTextAlignment={"text-left"}/>
 </div>

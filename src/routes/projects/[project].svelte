@@ -21,6 +21,8 @@
 </script>
 
 <script>
+	import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
+
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
@@ -31,6 +33,8 @@
     export let document
 	export let setup
 </script>
+
+<SeoExport document={document.data} />
 
 <NavigationDesktopSlot data={setup.data}>
 	<BackHistory />
