@@ -7,11 +7,13 @@
 	import MouseMoveLoop from "$lib/modulesFlex/galleries/mouseMove/MouseMoveLoop.svelte"
 	import SliderMarquee from "$lib/modulesFlex/galleries/sliders/SliderMarquee.svelte"
 	import SliderBasicLoop from "$lib/modulesFlex/galleries/sliders/sliderBasic/SliderBasicLoop.svelte"
+	import SliderPanoramaText from "$lib/modulesFlex/galleries/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
 
 	export let slices
 
 	const sliceTypes = {
 		slider_basic: SliderBasicLoop,
+		slider_panorama_text: SliderPanoramaText,
 		marquee: SliderMarquee,
 		image_simple: ImageSimple,
 		video_simple: VideoSimple,
