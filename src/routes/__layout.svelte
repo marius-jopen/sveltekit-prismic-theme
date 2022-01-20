@@ -14,7 +14,7 @@
 
 <script>
 	import '../app.postcss'
-	import Footer from '$lib/modulesStatic/navigations/footer/FooterSimple.svelte'
+	import FooterCenter from '$lib/modulesStatic/navigations/footer/FooterSimpleCenter.svelte'
 	import { setupData } from '$lib/functionality/seo/SeoStore.js'
 
 	export let document
@@ -25,5 +25,5 @@
 <main>
 	<slot />
 
-	<Footer data={document.data} />
+	<FooterCenter data={document.data} />
 </main>
