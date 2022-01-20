@@ -14,6 +14,7 @@ module.exports = {
 			colors: {
 			  'lines': 'rgb(30 30 30)',
 			  'fonts': 'rgb(30 30 30)',
+			  'background': 'rgb(255 255 255)',
 			},
 			margin: {
 				'1px': '1px',

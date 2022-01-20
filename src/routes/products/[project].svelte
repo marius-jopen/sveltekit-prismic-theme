@@ -40,7 +40,7 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
 	import BackHistory from "$lib/functionality/BackHistory.svelte"
-	import ProductColumn from "$lib/modulesStatic/items/product/productColumn/ProductColumn.svelte"
+	import LayoutColumn from "$lib/modulesStatic/items/layout/layoutColumn/LayoutColumn.svelte"
 
     export let document
 	export let setup
@@ -53,4 +53,4 @@
 </NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
-<ProductColumn input={document.data} />
+<LayoutColumn input={document.data} />

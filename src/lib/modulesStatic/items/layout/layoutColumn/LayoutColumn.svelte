@@ -1,7 +1,7 @@
 <script>
-	import ProductColumnLeft from '$lib/modulesStatic/items/product/productColumn/ProductColumnLeft.svelte'
-	import ProductColumnRight from '$lib/modulesStatic/items/product/productColumn/ProductColumnRight.svelte'
-	import ProductColumnMobile from '$lib/modulesStatic/items/product/productColumn/ProductColumnMobile.svelte'
+	import LayoutColumnLeft from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnLeft.svelte'
+	import LayoutColumnRight from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnRight.svelte'
+	import LayoutColumnMobile from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnMobile.svelte'
 
 	export let input
 </script>
@@ -9,15 +9,15 @@
 <div class="parent relative z-10">
 	<div class="block w-full content">
 		<div class="block md:hidden">
-			<ProductColumnMobile input={input} />
+			<LayoutColumnMobile input={input} />
 		</div>
 
 		<div class="hidden md:block w-1/2 float-left relative h-full border-lines border-r">
-			<ProductColumnLeft input={input} />
+			<LayoutColumnLeft input={input} />
 		</div>
 
 		<div class="right-box md:w-1/2 float-left sm:sticky">
-			<ProductColumnRight input={input} />
+			<LayoutColumnRight input={input} />
 		</div>
 	</div>
 

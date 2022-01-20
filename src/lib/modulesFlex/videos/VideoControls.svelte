@@ -110,7 +110,7 @@
 		{/if}
 	</div>
 
-	<div class:hideControlsSoft="{hideControl === true}" class="border-lines border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-white w-full z-10 px-4 text-lg pt-1 flex justify-between">
+	<div class:hideControlsSoft="{hideControl === true}" class="border-lines border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >
 				{#if paused}

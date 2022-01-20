@@ -34,7 +34,7 @@
 
 {#if filterState == true}
 	<div transition:fade>
-		<div class="box z-0 w-full bg-white left-0 top-0 fixed flex flex-col justify-center ">
+		<div class="box z-0 w-full bg-background left-0 top-0 fixed flex flex-col justify-center ">
 			<div class="text-center py-3 px-4 flex flex-col">
 				<a class="text-center py-1 sm:py-0 ml-6 text-lg textHoverGrey" href="/{type}s" sveltekit:prefetch >
 					All

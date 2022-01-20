@@ -2,7 +2,7 @@
 	export let data
 </script>
 
-<div class="text-lg hidden sm:flex fixed w-full z-20 justify-between py-3 px-4 border-b border-lines bg-white">
+<div class="text-lg hidden sm:flex fixed w-full z-20 justify-between py-3 px-4 border-b border-lines bg-background">
     <div class="absolute left-4 z-30" >
         <slot></slot>
     </div>
