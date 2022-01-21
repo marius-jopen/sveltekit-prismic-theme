@@ -7,37 +7,20 @@
 		  "label" : "Title"
 		}
 	  },
-	  "uid" : {
-		"type" : "UID",
+	  "order" : {
+		"type" : "Group",
 		"config" : {
-		  "label" : "UID"
-		}
-	  },
-	  "thumbnail" : {
-		"type" : "Image",
-		"config" : {
-		  "constraint" : { },
-		  "thumbnails" : [ {
-			"name" : "Big",
-			"width" : 2500,
-			"height" : null
-		  }, {
-			"name" : "Medium",
-			"width" : 1500,
-			"height" : null
-		  }, {
-			"name" : "Small",
-			"width" : 750,
-			"height" : null
-		  } ],
-		  "label" : "Thumbnail"
-		}
-	  },
-	  "description" : {
-		"type" : "StructuredText",
-		"config" : {
-		  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-		  "label" : "Description"
+		  "fields" : {
+			"selected" : {
+			  "type" : "Link",
+			  "config" : {
+				"select" : "document",
+				"customtypes" : [ "product" ],
+				"label" : "Selected"
+			  }
+			}
+		  },
+		  "label" : "Order"
 		}
 	  }
 	}
