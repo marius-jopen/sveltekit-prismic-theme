@@ -1,32 +1,29 @@
 <script context="module">
-    // import Client from '../utils/client'
+	export const load = async ({ fetch }) => {
+		try {
+			const res = await fetch('/api/home', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
 
-    // export async function load() {
-	// 	const setup = await Client.getSingle('setup')
+			const data = await res.json()
 
-    //     const pageName = 'home'
-	// 	const language = 'de-de'
-
-    //     const document = await Client.getSingle(pageName, { lang: language })
-
-    //     return {
-    //         props: {
-    //             document,
-	// 			setup
-    //         }
-    //     }
-    // }
+			return {
+				props: {
+					data,
+				},
+			}
+		} catch (err) {
+			console.error(err)
+		}
+	}
 </script>
 
 <script>
-	// import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
-
-    export let document
-
-	console.log(document)
+	export let data
+	console.log(data)
 </script>
-
-<!-- <SeoExport document={document.data} /> -->
-
 
 INDEX
