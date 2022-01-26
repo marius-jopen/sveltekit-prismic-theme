@@ -8,16 +8,17 @@ const config = {
 	preprocess: preprocess({
 		postcss: {
 			plugins: [
-				tailwind,
+				tailwind, 
 				autoprefixer
 			]
 		}
 	}),
-
+	
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		adapter: adapter()
+		adapter: adapter(),
+		// adapter: adapter()
 	}
 };
 

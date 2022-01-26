@@ -1,30 +1,32 @@
-<!-- <script context="module">
-  export const load = async ({ fetch }) => {
-    try {
-      const res = await fetch('/api/home', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-      const data = await res.json()
-      return {
-        props: {
-          data,
-        },
-      }
-    } catch (err) {
-      console.error(err)
+<script context="module">
+    import Client from '../utils/client'
+
+    export async function load() {
+		const setup = await Client.getSingle('setup')
+
+        const pageName = 'home'
+		const language = 'de-de'
+
+        const document = await Client.getSingle(pageName, { lang: language })
+
+        return {
+            props: {
+                document,
+				setup
+            }
+        }
     }
-  }
 </script>
 
 <script>
-  export let data
-  console.log(data)
+	import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
+
+    export let document
+
+	console.log(document)
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p> -->
+<SeoExport document={document.data} />
+
 
 INDEX

@@ -1,0 +1,106 @@
+{
+	"Main" : {
+	  "website_title" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Website Title"
+		}
+	  },
+	  "uid" : {
+		"type" : "UID",
+		"config" : {
+		  "label" : "Setup"
+		}
+	  },
+	  "seo_text" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+		  "label" : "SEO Text"
+		}
+	  },
+	  "seo_image" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : { },
+		  "thumbnails" : [ {
+			"name" : "Big",
+			"width" : 2500,
+			"height" : null
+		  }, {
+			"name" : "Medium",
+			"width" : 1500,
+			"height" : null
+		  }, {
+			"name" : "Small",
+			"width" : 750,
+			"height" : null
+		  } ],
+		  "label" : "SEO Image"
+		}
+	  },
+	  "navigation_top" : {
+		"type" : "Group",
+		"config" : {
+		  "fields" : {
+			"title" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "Title"
+			  }
+			},
+			"uid" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "UID"
+			  }
+			},
+			"target" : {
+			  "type" : "Boolean",
+			  "config" : {
+				"placeholder_false" : "internal",
+				"placeholder_true" : "external",
+				"default_value" : false,
+				"label" : "Target"
+			  }
+			}
+		  },
+		  "label" : "Navigation Top"
+		}
+	  },
+	  "navigation_bottom" : {
+		"type" : "Group",
+		"config" : {
+		  "fields" : {
+			"title" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "Title"
+			  }
+			},
+			"uid1" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "UID"
+			  }
+			},
+			"target" : {
+			  "type" : "Boolean",
+			  "config" : {
+				"placeholder_false" : "internal",
+				"placeholder_true" : "external",
+				"default_value" : true,
+				"label" : "Target"
+			  }
+			}
+		  },
+		  "label" : "Navigation Bottom"
+		}
+	  }
+	}
+  }

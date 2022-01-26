@@ -1,0 +1,410 @@
+{
+	"Main": {
+	  "title": {
+		"type": "StructuredText",
+		"config": {
+		  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label": "Title"
+		}
+	  },
+	  "uid": {
+		"type": "UID",
+		"config": {
+		  "label": "UID"
+		}
+	  },
+	  "body": {
+		"type": "Slices",
+		"fieldset": "Slice zone",
+		"config": {
+		  "labels": null,
+		  "choices": {
+			"image_simple": {
+			  "type": "Slice",
+			  "fieldset": "Image Simple",
+			  "description": "Image Simple",
+			  "icon": "image",
+			  "non-repeat": {
+				"image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Image"
+				  }
+				}
+			  },
+			  "repeat": {}
+			},
+			"video_simple": {
+			  "type": "Slice",
+			  "fieldset": "Video Simple",
+			  "description": "Video Simple",
+			  "icon": "ondemand_video",
+			  "non-repeat": {
+				"video": {
+				  "type": "Link",
+				  "config": {
+					"select": "media",
+					"label": "Video"
+				  }
+				},
+				"preview_image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Preview Image"
+				  }
+				},
+				"vimeo": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label": "Vimeo"
+				  }
+				}
+			  },
+			  "repeat": {}
+			},
+			"paragraph_richtext": {
+			  "type": "Slice",
+			  "fieldset": "Paragraph Richtext",
+			  "description": "Paragraph Richtext",
+			  "icon": "format_color_text",
+			  "non-repeat": {
+				"textalignment": {
+				  "type": "Select",
+				  "config": {
+					"options": [
+					  "text-left",
+					  "text-right",
+					  "text-center",
+					  "text-justify"
+					],
+					"default_value": "text-left",
+					"label": "Text Alignment"
+				  }
+				},
+				"long_text": {
+				  "type": "StructuredText",
+				  "config": {
+					"multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+					"label": "Long Text"
+				  }
+				}
+			  },
+			  "repeat": {}
+			},
+			"navigation_fullpage_background": {
+			  "type": "Slice",
+			  "fieldset": "Navigation Fullpage Background",
+			  "description": "Navigation Fullpage Background",
+			  "icon": "add_to_queue",
+			  "non-repeat": {
+				"mobile_image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Mobile Image"
+				  }
+				}
+			  },
+			  "repeat": {
+				"image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Image"
+				  }
+				},
+				"name": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label": "Name"
+				  }
+				},
+				"slug": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label": "Slug"
+				  }
+				}
+			  }
+			},
+			"gallery_mouse_move": {
+			  "type": "Slice",
+			  "fieldset": "Gallery Mouse Move",
+			  "description": "Gallery Mouse Move",
+			  "icon": "call_made",
+			  "display": "list",
+			  "non-repeat": {},
+			  "repeat": {
+				"image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Image"
+				  }
+				}
+			  }
+			},
+			"video_controls": {
+			  "type": "Slice",
+			  "fieldset": "Video Controls",
+			  "description": "Video Controls",
+			  "icon": "slow_motion_video",
+			  "non-repeat": {
+				"preview_image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Preview Image"
+				  }
+				},
+				"video": {
+				  "type": "Link",
+				  "config": {
+					"select": "media",
+					"label": "Video"
+				  }
+				},
+				"vimeo": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label": "Vimeo"
+				  }
+				}
+			  },
+			  "repeat": {}
+			},
+			"marquee": {
+			  "type": "Slice",
+			  "fieldset": "Marquee",
+			  "description": "Marquee",
+			  "icon": "fiber_smart_record",
+			  "non-repeat": {
+				"direction": {
+				  "type": "Select",
+				  "config": {
+					"options": [
+					  "ltr",
+					  "rtl"
+					],
+					"default_value": "ltr",
+					"label": "Direction"
+				  }
+				},
+				"text": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1,heading2,heading3,heading4,heading5,heading6",
+					"label": "Text"
+				  }
+				}
+			  },
+			  "repeat": {}
+			},
+			"slider_basic": {
+			  "type": "Slice",
+			  "fieldset": "Slider Basic",
+			  "description": "Slider Basic",
+			  "icon": "done_all",
+			  "non-repeat": {},
+			  "repeat": {
+				"image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Image"
+				  }
+				}
+			  }
+			},
+			"slider_panorama_text": {
+			  "type": "Slice",
+			  "fieldset": "Slider Panorama Text",
+			  "description": "Slider Panorama Text",
+			  "icon": "gps_not_fixed",
+			  "display": "list",
+			  "non-repeat": {},
+			  "repeat": {
+				"image": {
+				  "type": "Image",
+				  "config": {
+					"constraint": {},
+					"thumbnails": [
+					  {
+						"name": "Big",
+						"width": 2500,
+						"height": null
+					  },
+					  {
+						"name": "Medium",
+						"width": 1500,
+						"height": null
+					  },
+					  {
+						"name": "Small",
+						"width": 750,
+						"height": null
+					  }
+					],
+					"label": "Image"
+				  }
+				},
+				"link": {
+				  "type": "Link",
+				  "config": {
+					"allowTargetBlank": true,
+					"label": "Link"
+				  }
+				},
+				"caption": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+					"label": "Caption"
+				  }
+				},
+				"video": {
+				  "type": "Link",
+				  "config": {
+					"select": "media",
+					"label": "Video"
+				  }
+				},
+				"video_source": {
+				  "type": "StructuredText",
+				  "config": {
+					"single": "heading1, heading2, heading3, heading4, heading5, heading6",
+					"label": "Video Source"
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
