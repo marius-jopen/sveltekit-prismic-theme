@@ -1,32 +1,32 @@
 <script context="module">
-    import Client from '../utils/client'
+    // import Client from '../utils/client'
 
-    export async function load() {
-		const setup = await Client.getSingle('setup')
+    // export async function load() {
+	// 	const setup = await Client.getSingle('setup')
 
-        const pageName = 'home'
-		const language = 'de-de'
+    //     const pageName = 'home'
+	// 	const language = 'de-de'
 
-        const document = await Client.getSingle(pageName, { lang: language })
+    //     const document = await Client.getSingle(pageName, { lang: language })
 
-        return {
-            props: {
-                document,
-				setup
-            }
-        }
-    }
+    //     return {
+    //         props: {
+    //             document,
+	// 			setup
+    //         }
+    //     }
+    // }
 </script>
 
 <script>
-	import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
+	// import SeoExport from '$lib/functionality/seo/SeoExport.svelte'
 
     export let document
 
 	console.log(document)
 </script>
 
-<SeoExport document={document.data} />
+<!-- <SeoExport document={document.data} /> -->
 
 
 INDEX
