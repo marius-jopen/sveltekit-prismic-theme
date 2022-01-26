@@ -5,8 +5,6 @@ import { InMemoryCache } from '@apollo/client/cache/cache.cjs.js'
 const uri = `https://mj-theme.prismic.io/graphql`
 
 export const client = new ApolloClient({
-	link: PrismicLink({
-		uri
-	}),
-	cache: new InMemoryCache(),
+  link: PrismicLink({ uri }),
+  cache: new InMemoryCache(),
 })
