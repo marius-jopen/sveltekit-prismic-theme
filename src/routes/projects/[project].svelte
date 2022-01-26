@@ -1,9 +1,15 @@
 <script context="module">
-	export const load = async ({ fetch }) => {
+	export const load = async ({ fetch, page }) => {
 		try {
+			const pageName = page.params.project // Needs to be adjusted
+			const language = "de-de"
+
 			const res = await fetch('/api/project', {
 				method: 'POST',
-				body: JSON.stringify({ value: "betterfly" }),
+				body: JSON.stringify({
+					slug: pageName,
+					lang: language
+				}),
 				headers: {
 					'Content-Type': 'application/json',
 				},
@@ -27,4 +33,4 @@
 	console.log(data)
 </script>
 
-INDEX
+PROJECT

@@ -1,9 +1,15 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
 		try {
+			const pageName = 'home'
+			const language = "en-gb"
+
 			const res = await fetch('/api/home', {
 				method: 'POST',
-				body: JSON.stringify({ value: "home" }),
+				body: JSON.stringify({
+					value: pageName,
+					lang: language
+				}),
 				headers: {
 					'Content-Type': 'application/json',
 				},

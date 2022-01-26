@@ -5,14 +5,15 @@ export const post = async ({ body }) => {
 	try {
 		const query = gql`
 			query($slug: String!) {
-				project (uid: $slug, lang:"en-gb") {
+				project (uid: $slug, lang: $lang) {
 					title
 				}
 			}
 		`
 
 		const variables = {
-			slug: body.value,
+			slug: body.slug,
+			lang: body.lang
 		}
 
 		const { data } = await client.query({
