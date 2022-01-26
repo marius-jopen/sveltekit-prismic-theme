@@ -3,6 +3,7 @@
 		try {
 			const res = await fetch('/api/home', {
 				method: 'POST',
+				body: JSON.stringify({ value: "home" }),
 				headers: {
 					'Content-Type': 'application/json',
 				},
