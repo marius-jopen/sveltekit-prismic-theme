@@ -1,13 +1,11 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
 		try {
-			const pageName = 'home'
 			const language = "en-gb"
 
-			const res = await fetch('/api/home', {
+			const res = await fetch('api/home', { // Path needs to be adjusted
 				method: 'POST',
 				body: JSON.stringify({
-					value: pageName,
 					lang: language
 				}),
 				headers: {
@@ -30,6 +28,7 @@
 
 <script>
 	export let data
+
 	console.log(data)
 </script>
 

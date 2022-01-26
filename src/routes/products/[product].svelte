@@ -1,10 +1,10 @@
 <script context="module">
 	export const load = async ({ fetch, page }) => {
 		try {
-			const pageName = page.params.project // Needs to be adjusted
+			const pageName = page.params.product // Needs to be adjusted
 			const language = "en-gb"
 
-			const res = await fetch('../api/project', { // Path needs to be adjusted
+			const res = await fetch('../api/product', { // Path needs to be adjusted
 				method: 'POST',
 				body: JSON.stringify({
 					slug: pageName,
@@ -29,9 +29,13 @@
 </script>
 
 <script>
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import ParagraphRichtext from '$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte'
+
 	export let data
 
 	console.log(data)
 </script>
 
-PROJECT
+<HeadlineSimple inputHeadline={data.product.title[0].text} />
+<ParagraphRichtext inputParagraph={data.product.description} inputTextAlignment={"text-left"}/>

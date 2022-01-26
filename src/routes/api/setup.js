@@ -4,15 +4,23 @@ import gql from 'graphql-tag';
 export const post = async ({ body }) => {
 	try {
 		const query = gql`
-			query($slug: String!, $lang: String!) {
-				project (uid: $slug, lang: $lang) {
-					title
+			query($lang: String!) {
+				allSetups(lang: $lang) {
+					edges {
+						node {
+							website_title
+								navigation_top {
+								title
+								target
+								uid
+							}
+						}
+					}
 				}
 			}
 		`
 
 		const variables = {
-			slug: body.slug,
 			lang: body.lang
 		}
 
