@@ -1,3 +1,6 @@
+CURRENTLY DOING SOME MAJOR CHANGES.
+So please don't use the theme right now.
+
 # Starting Theme for SvelteKit with Prismic, Tailwind, Netlify & Custom Built Components
 - This theme uses Sveltekit as JS-framework
 - Prismic as CMS
