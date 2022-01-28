@@ -5,9 +5,8 @@ export const post = async ({ body }) => {
 	try {
 		const query = gql`
 			query($slug: String!, $lang: String!) {
-				product (uid: $slug, lang: $lang) {
+				page (uid: $slug, lang: $lang) {
 					title
-					description
 				}
 			}
 		`

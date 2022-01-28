@@ -29,6 +29,8 @@
 <script>
 	export let data
 
+	data = data.allHomes.edges[0].node
+
 	console.log(data)
 </script>
 

@@ -31,6 +31,8 @@
 <script>
 	export let data
 
+	data = data.project
+
 	console.log(data)
 </script>
 
