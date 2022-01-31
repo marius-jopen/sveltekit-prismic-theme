@@ -132,7 +132,7 @@
 
 		<div class="progress-box w-full hidden sm:block">
 			<progress
-			class="appearance-none cursor-pointer pr-4 block w-full h-0.5 mt-2.5"
+			class="cursor-pointer pr-4"
 			value="{(time / duration) || 0}"
 			on:mousemove={handleMove}
 			on:touchmove|preventDefault={handleMove}
@@ -160,6 +160,15 @@
 <style lang="postcss">
 	.hideControlsSoft {
 		opacity: 0 !important;
+	}
+
+	progress {
+		display: block;
+		width: 100%;
+		padding-top: 11px;
+		padding-bottom: 4px;
+		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	progress::-webkit-progress-bar {
