@@ -37,13 +37,15 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/items/filterItems/FilterItemsFull.svelte'
-    import LoopItemsSimple from '$lib/modulesStatic/items/loopItems/LoopItemsSimple.svelte'
+    import LoopItemsListSort from '$lib/modulesStatic/items/loopItems/LoopItemsListSort.svelte'
 
     export let document
 	export let setup
     export let allItems
     export let sortedItems
 	export let type
+
+	console.log(sortedItems)
 </script>
 
 <NavigationDesktopSlot data={setup.data}>
@@ -52,4 +54,4 @@
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
-<LoopItemsSimple items={sortedItems} type={type} />
+<LoopItemsListSort items={sortedItems} type={type} />
