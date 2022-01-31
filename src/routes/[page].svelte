@@ -1,39 +1,32 @@
 <script context="module">
-	export const load = async ({ fetch, page }) => {
-		try {
-			const pageName = page.params.page // Needs to be adjusted
-			const language = "en-gb"
+    import Client from '../utils/client'
 
-			const res = await fetch('../api/page', { // Path needs to be adjusted
-				method: 'POST',
-				body: JSON.stringify({
-					slug: pageName,
-					lang: language
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
+    export async function load({ page }) {
+		const setup = await Client.getSingle('setup')
 
-			const data = await res.json()
+        const pageName = page.params.page
 
-			return {
-				props: {
-					data,
-				},
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+        const document = await Client.getByUID('page', pageName)
+
+        return {
+            props: {
+                document,
+				setup
+            }
+        }
+    }
 </script>
 
 <script>
-	export let data
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
+	import ModulesSlices from '$lib/functionality/ModulesSlices.svelte'
 
-	data = data.page
-
-	console.log(data)
+    export let document
+    export let setup
 </script>
 
-PAGE
+<NavigationDesktopSimple data={setup.data} />
+<NavigationMobileSimple data={setup.data} />
+
+<ModulesSlices slices={document.data.body} />

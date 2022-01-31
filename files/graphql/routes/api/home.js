@@ -1,18 +1,22 @@
-import { client } from '$lib/functionality/api/client.js'
+import { client } from '$lib/client.js'
 import gql from 'graphql-tag';
 
 export const post = async ({ body }) => {
 	try {
 		const query = gql`
-			query($slug: String!, $lang: String!) {
-				page (uid: $slug, lang: $lang) {
-					title
+			query($lang: String!) {
+				allHomes(lang: $lang) {
+					edges {
+						node {
+							title
+							long_text
+						}
+					}
 				}
 			}
 		`
 
 		const variables = {
-			slug: body.slug,
 			lang: body.lang
 		}
 

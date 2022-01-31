@@ -1,40 +1,55 @@
 <script context="module">
-	export const load = async ({ fetch, page }) => {
-		try {
-			const language = "en-gb"
+	import Prismic from "@prismicio/client"
+    import Client from '../../../utils/client'
 
-			const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+    export async function load({ page }) {
+		const setup = await Client.getSingle('setup')
 
-			const res = await fetch('../../api/projects-category', { // Path needs to be adjusted
-				method: 'POST',
-				body: JSON.stringify({
-					tag: currentTag,
-					lang: language
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
+		const type = 'project'
 
-			const data = await res.json()
+        const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
-			return {
-				props: {
-					data,
-				},
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+        const tags = await Client.query(
+            Prismic.Predicates.at("document.tags", [currentTag])
+        )
+
+		const filteredItems = tags.results.filter(item => item.type == type);
+
+        const allItems = await Client.query(
+            Prismic.Predicates.at("document.type", type),
+        )
+
+        return {
+            props: {
+                filteredItems,
+                allItems,
+                currentTag,
+				type,
+				setup
+            }
+        }
+    }
 </script>
 
 <script>
-	export let data
+	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	data = data.allProjects.edges
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import FilterItemsFull from '$lib/modulesStatic/items/filterItems/FilterItemsFull.svelte'
+    import LoopItemsSimple from '$lib/modulesStatic/items/loopItems/LoopItemsSimple.svelte'
 
-	console.log(data)
+    export let filteredItems
+    export let currentTag
+    export let allItems
+	export let type
+	export let setup
 </script>
 
-CATEGORY
+<NavigationDesktopSlot data={setup.data}>
+	<FilterItemsFull items={allItems.results} type={type} />
+</NavigationDesktopSlot>
+<NavigationMobileSimple data={setup.data} />
+
+<HeadlineSimple inputHeadline={currentTag} />
+<LoopItemsSimple items={filteredItems} type={type} />

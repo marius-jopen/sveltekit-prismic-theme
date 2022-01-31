@@ -1,37 +1,55 @@
 <script context="module">
-	export const load = async ({ fetch }) => {
-		try {
-			const language = "en-gb"
+    import Prismic from "@prismicio/client"
+    import Client from '../utils/client'
 
-			const res = await fetch('api/projects', { // Path needs to be adjusted
-				method: 'POST',
-				body: JSON.stringify({
-					lang: language
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
+    export async function load({ page }) {
+		const setup = await Client.getSingle('setup')
 
-			const data = await res.json()
+		const type = 'project'
 
-			return {
-				props: {
-					data,
-				},
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+        const pageName = page.path.replace('/', '')
+
+		const document = await Client.getSingle(pageName)
+
+        const allItems = await Client.query(
+            Prismic.Predicates.at("document.type", type),
+        )
+
+        const sortedItems = document.data.order.map(i => {
+			const uid = i.selected.uid
+            return allItems.results.find(p => p.uid === uid)
+        })
+
+        return {
+            props: {
+				sortedItems,
+                document,
+                allItems,
+				type,
+				setup
+            }
+        }
+    }
 </script>
 
 <script>
-	export let data
+	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import FilterItemsFull from '$lib/modulesStatic/items/filterItems/FilterItemsFull.svelte'
+    import LoopItemsSimple from '$lib/modulesStatic/items/loopItems/LoopItemsSimple.svelte'
 
-	data = data.allProjects.edges[0].node
-
-	console.log(data)
+    export let document
+	export let setup
+    export let allItems
+    export let sortedItems
+	export let type
 </script>
 
-PROJECTS
+<NavigationDesktopSlot data={setup.data}>
+	<FilterItemsFull items={allItems.results} type={type} />
+</NavigationDesktopSlot>
+<NavigationMobileSimple data={setup.data} />
+
+<HeadlineSimple inputHeadline={document.data.title[0].text} />
+<LoopItemsSimple items={sortedItems} type={type} />

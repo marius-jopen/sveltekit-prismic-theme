@@ -1,4 +1,4 @@
-import { client } from '$lib/functionality/api/client.js'
+import { client } from '$lib/client.js'
 import gql from 'graphql-tag';
 
 export const post = async ({ body }) => {
