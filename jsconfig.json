@@ -2,8 +2,6 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"$api": ["files/routes/api"],
-			"$api/*": ["files/routes/api/*"],
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		}
