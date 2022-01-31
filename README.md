@@ -1,7 +1,6 @@
-Currently adding GraphQL
+Starter Theme for SvelteKit & Prismic
 <br>
-https://sveltekit-prismic-theme.netlify.app/
-<br>
-https://sveltekit-prismic-theme-dev.netlify.app/
-<br>
-Testing GIT
+- Easy deployment on Netlify
+- Tailwind CSS
+- Custom Components
+- GraphQL included and working. But deativated.

@@ -1,37 +1,37 @@
 <script context="module">
-	export const load = async ({ fetch }) => {
-		try {
-			const language = "en-gb"
+    import Client from '../utils/client'
 
-			const res = await fetch('api/home', { // Path needs to be adjusted
-				method: 'POST',
-				body: JSON.stringify({
-					lang: language
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
+    export async function load() {
+		const setup = await Client.getSingle('setup')
 
-			const data = await res.json()
+        const document = await Client.getSingle('home')
 
-			return {
-				props: {
-					data,
-				},
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+        return {
+            props: {
+                document,
+				setup
+            }
+        }
+    }
 </script>
 
 <script>
-	export let data
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import ImageSimple from '$lib/modulesFlex/images/ImageSimple.svelte'
+	import ParagraphRichtext from '$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte'
 
-	data = data.allHomes.edges[0].node
+    export let document
+	export let setup
 
-	console.log(data)
+	console.log(document)
+	console.log(setup)
 </script>
 
-INDEX
+<NavigationDesktopSimple data={setup.data} />
+<NavigationMobileSimple data={setup.data} />
+
+<HeadlineSimple inputHeadline={document.data.title[0].text} />
+<ImageSimple inputImage={document.data.image} />
+<ParagraphRichtext inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />

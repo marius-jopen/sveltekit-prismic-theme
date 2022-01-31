@@ -1,39 +1,38 @@
 <script context="module">
-	export const load = async ({ fetch, page }) => {
-		try {
-			const pageName = page.params.project // Needs to be adjusted
-			const language = "en-gb"
+    import Client from '../../utils/client'
 
-			const res = await fetch('../api/project', { // Path needs to be adjusted
-				method: 'POST',
-				body: JSON.stringify({
-					slug: pageName,
-					lang: language
-				}),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
+    export async function load({ page }) {
+		const setup = await Client.getSingle('setup')
 
-			const data = await res.json()
+		const type = 'project'
 
-			return {
-				props: {
-					data,
-				},
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+        const pageName = page.params.project
+
+        const document = await Client.getByUID(type, pageName)
+
+        return {
+            props: {
+                document,
+				type,
+				setup
+            }
+        }
+    }
 </script>
 
 <script>
-	export let data
+	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
+	import LayoutCover from '$lib/modulesStatic/items/layout/layoutCover/LayoutCover.svelte'
+	import BackHistory from "$lib/functionality/BackHistory.svelte"
 
-	data = data.project
-
-	console.log(data)
+    export let document
+	export let setup
 </script>
 
-PROJECT
+<NavigationDesktopSlot data={setup.data}>
+	<BackHistory />
+</NavigationDesktopSlot>
+<NavigationMobileSimple data={setup.data} />
+
+<LayoutCover input={document} />
