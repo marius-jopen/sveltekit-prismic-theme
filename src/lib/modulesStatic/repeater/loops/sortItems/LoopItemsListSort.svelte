@@ -1,65 +1,88 @@
 <script>
     import ItemAccordeonList from '$lib/modulesStatic/repeater/singleItems/ItemAccordeonList.svelte'
-	import SortListItem from '$lib/modulesStatic/repeater/loops/sortItems/SortListItem.svelte'
 
     export let items
 	export let type
 
-	// For each Sort Item a variable needs to be created
-	let sortUid = false
-	let sortSubtitle = false
+	let sortItems = [
+		{
+			"sort": "uid",
+			"label": "Title",
+			"status": "false",
+			"css": "w-1/2"
+		},
+		{
+			"sort": "data.sub_title.0.text",
+			"label": "Sub Title",
+			"status": "false",
+			"css": "w-1/2"
+		}
+	]
 
-	function sort(sortBy) {
-		let direction = ""
-
-		// For each created variable above, this IF condition needs to be created
-		if (sortUid == true) {
-			sortUid = false
-			direction = "-"
+	function sort(index, sort, label, status, css) {
+		if(status == 'false') {
+			sortItems[index] = {sort: sort, label: label, status: 'true', css: css }
 		} else {
-			sortUid = true
-			direction = ""
+			sortItems[index] = {sort: sort, label: label, status: 'false', css: css }
 		}
 
-		if (sortSubtitle == true) {
-			sortSubtitle = false
-			direction = "-"
-		} else {
-			sortSubtitle = true
-			direction = ""
-		}
-
-		items = items.sort(dynamicSort(direction + sortBy))
+		items = sortMe(sort, items, status)
 	}
 
-	function dynamicSort(property) {
-		var sortOrder = 1
+	var sortMe = function (prop, arr, direction) {
+		prop = prop.split('.')
+		var len = prop.length
 
-		if(property[0] === "-") {
-			sortOrder = -1
-			property = property.substr(1);
-		}
+		arr.sort(function (a, b) {
+			var i = 0
 
-		return function (a,b) {
-			if(sortOrder == -1) {
-				return b[property].localeCompare(a[property])
-			} else{
-				return a[property].localeCompare(b[property])
+			while( i < len ) {
+				a = a[prop[i]]
+				b = b[prop[i]]
+				i++
 			}
-		}
+
+			if (direction == 'true') {
+				if (a < b) {
+					return -1
+				} else if (a > b) {
+					return 1
+				} else {
+					return 0
+				}
+			} else {
+				if (a > b) {
+					return -1
+				} else if (a < b) {
+					return 1
+				} else {
+					return 0
+				}
+			}
+
+		})
+
+		return arr
 	}
 </script>
 
 <div>
 	<div class="flex border-lines border-b w-full text-xl py-3 px-4 uppercase">
-		<!-- For each sort item this block needs to be created -->
-		<div on:click={e => sort("uid")} class="w-1/2">
-			<SortListItem label={"Title"} />
-		</div>
+		{#each sortItems as sortItem, index}
+			<div class="cursor-pointer flex {sortItem.css}" on:click={e => sort(index, sortItem.sort, sortItem.label, sortItem.status, sortItem.css)}>
+				<div>
+					{sortItem.label}
+				</div>
 
-		<div on:click={e => sort("data.sub_title[0].text")} class="w-1/2">
-			<SortListItem label={"Sub Title"} />
-		</div>
+				<div class="pl-3">
+					{#if sortItem.status == 'false'}
+						Down
+					{:else}
+						Up
+					{/if}
+				</div>
+			</div>
+		{/each}
 	</div>
 
     {#each items as item}
