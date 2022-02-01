@@ -1,9 +1,13 @@
 <script>
+	import { slide } from "svelte/transition";
+
     export let item
-	export let type
+
+	let isOpen = false
+	let toggle = () => isOpen = !isOpen
 </script>
 
-<a sveltekit:prefetch href="/{type}s/{item.uid}" class="flex text-xl py-3 px-4 w-full border-b border-lines">
+<div on:click={toggle} class="cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
 	<div class="w-1/3">
 		{item.data.title[0].text}
 	</div>
@@ -17,4 +21,10 @@
 	<div class="w-1/3">
 		{item.last_publication_date}
 	</div>
-</a>
+</div>
+
+{#if isOpen}
+	<div class="bg-neutral-100 flex w-full border-b border-lines  py-3 px-4" transition:slide={{ duration: 300 }}>
+		{item.data.title[0].text}
+	</div>
+{/if}

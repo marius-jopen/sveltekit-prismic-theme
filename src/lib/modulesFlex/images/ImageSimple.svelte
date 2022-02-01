@@ -7,8 +7,8 @@
 	if (slice == undefined){
 		image = inputImage
 	} else {
-		image = slice.primary.image
+		image = slice.primary.image.Big.url
 	}
 </script>
 
-<img class="border-b border-lines" src="{image.Big.url}" alt="{image.alt}">
+<img class="w-full border-b border-lines" src="{image.Big.url}" alt="{image.alt}">
