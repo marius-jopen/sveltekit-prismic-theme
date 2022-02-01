@@ -36,8 +36,8 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modulesStatic/items/filterItems/FilterItemsFull.svelte'
-    import LoopItemsSimple from '$lib/modulesStatic/items/loopItems/LoopItemsSimple.svelte'
+	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
+    import LoopItemsSimple from '$lib/modulesStatic/repeater/loops/simple/LoopItemsSimple.svelte'
 
     export let filteredItems
     export let currentTag

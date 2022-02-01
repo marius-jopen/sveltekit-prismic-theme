@@ -1,5 +1,5 @@
 <script>
-    import ItemHover from '$lib/modulesStatic/items/singleItems/ItemHover.svelte'
+    import ItemHover from '$lib/modulesStatic/repeater/singleItems/ItemHover.svelte'
 
     export let items
 	export let type

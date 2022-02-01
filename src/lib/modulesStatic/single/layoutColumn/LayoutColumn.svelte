@@ -1,7 +1,7 @@
 <script>
-	import LayoutColumnLeft from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnLeft.svelte'
-	import LayoutColumnRight from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnRight.svelte'
-	import LayoutColumnMobile from '$lib/modulesStatic/items/layout/layoutColumn/LayoutColumnMobile.svelte'
+	import LayoutColumnLeft from '$lib/modulesStatic/single/layoutColumn/LayoutColumnLeft.svelte'
+	import LayoutColumnRight from '$lib/modulesStatic/single/layoutColumn/LayoutColumnRight.svelte'
+	import LayoutColumnMobile from '$lib/modulesStatic/single/layoutColumn/LayoutColumnMobile.svelte'
 
 	export let input
 </script>
