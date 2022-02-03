@@ -9,19 +9,19 @@
 			"sort": "uid",
 			"label": "Title",
 			"status": "false",
-			"css": "w-1/3"
+			"css": "w-1/3 textHoverGrey"
 		},
 		{
 			"sort": "data.sub_title.0.text",
 			"label": "Sub Title",
 			"status": "false",
-			"css": "w-1/3"
+			"css": "w-1/3 textHoverGrey"
 		},
 		{
 			"sort": "last_publication_date",
 			"label": "Date",
 			"status": "false",
-			"css": "w-1/3"
+			"css": "w-1/3 textHoverGrey"
 		}
 	]
 
