@@ -7,7 +7,7 @@
 	if (slice == undefined){
 		image = inputImage
 	} else {
-		image = slice.primary.image.Big.url
+		image = slice.primary.image
 	}
 </script>
 

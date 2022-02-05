@@ -4,6 +4,19 @@
     export let items
 	export let type
 
+	$: 	items.map(item => {
+			if(item.status == true) {
+				item.hiddenStatus = true
+				item.status = false
+			}
+
+
+
+        })
+
+		$: console.log(items)
+
+	// Array of the Sort fields
 	let sortItems = [
 		{
 			"sort": "uid",
@@ -25,17 +38,30 @@
 		}
 	]
 
+	// The main function which gets called on click on sort button
 	function sort(index, sort, label, status, css) {
+		addSortStatus(index, sort, label, status, css)
+		items = sortMe(sort, items, status)
+	}
+
+	// Function to add SortStatus to the Sort Array
+	function addSortStatus(index, sort, label, status, css) {
 		if(status == 'false') {
 			sortItems[index] = {sort: sort, label: label, status: 'true', css: css }
 		} else {
 			sortItems[index] = {sort: sort, label: label, status: 'false', css: css }
 		}
-
-		items = sortMe(sort, items, status)
 	}
 
-	var sortMe = function (prop, arr, direction) {
+	// Function to add AccordeonStatus to the items array
+	function addAccordeonStatus() {
+		items.map(item => {
+			item.status = false
+        })
+	}
+
+	// Sort function
+	function sortMe(prop, arr, direction) {
 		prop = prop.split('.')
 		var len = prop.length
 
@@ -92,7 +118,7 @@
 	</div>
 
     {#each items as item}
-        <ItemAccordeonList item={item} type={type} />
+        <ItemAccordeonList item={item} type={type} status={item.status} bind:interalStatus={item.status}/>
     {/each}
 
 	<div class="border-lines border-b w-full -mt-1px">

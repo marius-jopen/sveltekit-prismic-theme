@@ -2,14 +2,16 @@
 	import { slide } from "svelte/transition";
 
     export let item
+	export let status
+	export let interalStatus
 
-	let open = false
+	$: interalStatus
 
 	function toggle() {
-		if(open == true) {
-			open = false
+		if (interalStatus == true) {
+			interalStatus = false
 		} else {
-			open = true
+			interalStatus = true
 		}
 	}
 </script>
@@ -30,7 +32,7 @@
 	</div>
 </div>
 
-{#if open == true}
+{#if status == true}
 	<div class="bg-neutral-100 flex w-full border-b border-lines py-4 px-4" transition:slide={{ duration: 300 }}>
 		<div class="w-1/2">
 			{item.data.title[0].text}
