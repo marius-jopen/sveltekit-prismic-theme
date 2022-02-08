@@ -1,8 +1,9 @@
 <script>
     export let items
-    export let itemSorted
+    export let itemsSorted
 
-	// Array of the Sort fields on which the user can click on
+	// Array of the Sort fields on which the user can click on+
+	// More can be added if needed
 	let sortItems = [
 		{
 			"sort": "uid",
@@ -28,7 +29,7 @@
 	function sort(index, sort, label, status, css) {
 		closeAllAccordeons() 
 		addSortStatus(index, sort, label, status, css)
-		itemSorted = sortMe(sort, items, status)
+		itemsSorted = sortMe(sort, items, status)
 	}
 
     // Function to add AccordeonStatus to the items array

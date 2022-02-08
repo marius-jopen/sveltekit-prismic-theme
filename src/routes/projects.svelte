@@ -37,7 +37,7 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
-    import LoopItemsListSort from '$lib/modulesStatic/repeater/loops/sortItemsAccordeon/LoopItemsSortAccordeon.svelte'
+    import AccordeonComplex from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplex.svelte'
     import TypoGridLoop from '$lib/modulesStatic/repeater/loops/typoGrid/TypoGridLoop.svelte'
 
     export let document
@@ -55,5 +55,5 @@
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
-<LoopItemsListSort items={sortedItems} type={type} />
+<AccordeonComplex items={sortedItems} type={type} />
 <TypoGridLoop items={sortedItems} type={type} />

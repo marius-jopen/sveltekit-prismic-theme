@@ -2,19 +2,30 @@
 	import { slide } from "svelte/transition";
 
     export let item
-	export let status
+
+	// Variables for binding
 	export let interalStatus
 	export let uid
 
+	// Make those variables reactive
 	$: interalStatus
 	$: uid
 
+	// Toggle function which gets called on click on headline
 	function toggle() {
 		if (interalStatus == true) {
+			// Close the accordeon
 			interalStatus = false
+
+			// Set uid to null because this will tell the parent comp to not do anything
 			uid = ""
 		} else {
+			// Open the accordeon
 			interalStatus = true
+
+			// Set the uid to the current open accordeon, becaus it will tell the parent comp
+			// that this accordeon is open now. This is used in the parent comp to close all the
+			// other accordeons
 			uid = item.uid
 		}
 	}
@@ -36,7 +47,7 @@
 	</div>
 </div>
 
-{#if status == true}
+{#if interalStatus == true}
 	<div class="bg-neutral-100 flex w-full border-b border-lines py-4 px-4" transition:slide={{ duration: 300 }}>
 		<div class="w-1/2">
 			{item.data.title[0].text}
