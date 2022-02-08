@@ -37,7 +37,7 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
-    import LoopItemsListSort from '$lib/modulesStatic/repeater/loops/sortItems/LoopItemsListSort.svelte'
+    import LoopItemsListSort from '$lib/modulesStatic/repeater/loops/sortItemsAccordeon/LoopItemsSortAccordeon.svelte'
     import TypoGridLoop from '$lib/modulesStatic/repeater/loops/typoGrid/TypoGridLoop.svelte'
 
     export let document

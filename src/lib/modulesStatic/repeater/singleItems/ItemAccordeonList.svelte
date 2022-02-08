@@ -4,14 +4,18 @@
     export let item
 	export let status
 	export let interalStatus
+	export let uid
 
 	$: interalStatus
+	$: uid
 
 	function toggle() {
 		if (interalStatus == true) {
 			interalStatus = false
+			uid = ""
 		} else {
 			interalStatus = true
+			uid = item.uid
 		}
 	}
 </script>

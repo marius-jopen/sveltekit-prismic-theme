@@ -1,22 +1,8 @@
 <script>
-    import ItemAccordeonList from '$lib/modulesStatic/repeater/singleItems/ItemAccordeonList.svelte'
-
     export let items
-	export let type
+    export let itemSorted
 
-	$: 	items.map(item => {
-			if(item.status == true) {
-				item.hiddenStatus = true
-				item.status = false
-			}
-
-
-
-        })
-
-		$: console.log(items)
-
-	// Array of the Sort fields
+	// Array of the Sort fields on which the user can click on
 	let sortItems = [
 		{
 			"sort": "uid",
@@ -40,11 +26,19 @@
 
 	// The main function which gets called on click on sort button
 	function sort(index, sort, label, status, css) {
+		closeAllAccordeons() 
 		addSortStatus(index, sort, label, status, css)
-		items = sortMe(sort, items, status)
+		itemSorted = sortMe(sort, items, status)
 	}
 
-	// Function to add SortStatus to the Sort Array
+    // Function to add AccordeonStatus to the items array
+	function closeAllAccordeons() {
+		items.map(item => {
+			item.status = false
+        })
+	}
+
+    // Function to add SortStatus to the Sort Array
 	function addSortStatus(index, sort, label, status, css) {
 		if(status == 'false') {
 			sortItems[index] = {sort: sort, label: label, status: 'true', css: css }
@@ -53,14 +47,7 @@
 		}
 	}
 
-	// Function to add AccordeonStatus to the items array
-	function addAccordeonStatus() {
-		items.map(item => {
-			item.status = false
-        })
-	}
-
-	// Sort function
+    // Sort function
 	function sortMe(prop, arr, direction) {
 		prop = prop.split('.')
 		var len = prop.length
@@ -98,29 +85,20 @@
 	}
 </script>
 
-<div>
-	<div class="flex border-lines border-b w-full text-xl py-3 px-4 uppercase">
-		{#each sortItems as sortItem, index}
-			<div class="cursor-pointer flex {sortItem.css}" on:click={e => sort(index, sortItem.sort, sortItem.label, sortItem.status, sortItem.css)}>
-				<div>
-					{sortItem.label}
-				</div>
+<div class="flex border-lines border-b w-full text-xl py-3 px-4 uppercase">
+    {#each sortItems as sortItem, index}
+        <div class="cursor-pointer flex {sortItem.css}" on:click={e => sort(index, sortItem.sort, sortItem.label, sortItem.status, sortItem.css)}>
+            <div>
+                {sortItem.label}
+            </div>
 
-				<div class="pl-3">
-					{#if sortItem.status == 'false'}
-						Down
-					{:else}
-						Up
-					{/if}
-				</div>
-			</div>
-		{/each}
-	</div>
-
-    {#each items as item}
-        <ItemAccordeonList item={item} type={type} status={item.status} bind:interalStatus={item.status}/>
+            <div class="pl-3">
+                {#if sortItem.status == 'false'}
+                    Down
+                {:else}
+                    Up
+                {/if}
+            </div>
+        </div>
     {/each}
-
-	<div class="border-lines border-b w-full -mt-1px">
-	</div>
 </div>
