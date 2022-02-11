@@ -31,9 +31,8 @@
             }
         })
 
-        // And also scroll to that div with an offset
         if(browser) {
-            animateScroll.scrollTo({ element: "#bitterfly", offset: -50 })
+            animateScroll.scrollTo({ element: "." + urlHash , offset: -50 })
         }
     }
 </script>

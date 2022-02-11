@@ -33,7 +33,7 @@
 
 {#if item}
 	<div transition:slide={{ duration: 300 }}>
-		<div on:click={toggle} id="{item.uid}" class="textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
+		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
 			<div class="w-1/3">
 				{item.data.title[0].text}
 			</div>

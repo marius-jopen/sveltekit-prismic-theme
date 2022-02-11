@@ -1,5 +1,6 @@
 <script>
     import ItemAccordeonList from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexItem.svelte'
+    import { browser } from '$app/env'
 
     export let items
 	export let type
@@ -16,6 +17,10 @@
         if (activeItem) {
             items.map(item => {
                 if(item.uid == activeItem) {
+                    // Changes URL to active item
+                    if(browser) {
+                        location.hash = activeItem
+                    }
                 } else {
                     item.status = false
                 }
