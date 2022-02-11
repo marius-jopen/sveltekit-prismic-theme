@@ -9,9 +9,9 @@
 	export let type
 
 	// Get values from the components with binding
-	export let itemsSorted
-	export let itemsSearched
-	export let itemsUrl
+	let itemsSorted
+	let itemsSearched
+	let itemsUrl
 
 	// Declate 2 variables which we need
 	let itemsModified
@@ -37,13 +37,14 @@
 		} 
 	}
 
-	// Function which sorts the loop
+	// Function updates the loop with the sorted items
 	function setSorted() {
 		if (itemsSorted) {
 			itemsModified = itemsSorted
 		}
 	}
 
+	// Function which updates the loop with the active Url item
 	function setUrl() {
 		if (itemsUrl) {
 			itemsModified = itemsUrl
