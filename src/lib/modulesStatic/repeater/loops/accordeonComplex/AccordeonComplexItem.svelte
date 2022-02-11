@@ -34,17 +34,17 @@
 {#if item}
 	<div transition:slide={{ duration: 300 }}>
 		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
-			<div class="w-1/3">
+			<div class="w-1/2 lg:w-1/3">
 				{item.data.title[0].text}
 			</div>
 
 			{#if item.data.sub_title[0]}
-				<div class="w-1/3">
+				<div class="w-1/2 lg:w-1/3">
 					{item.data.sub_title[0].text}
 				</div>
 			{/if}
 
-			<div class="w-1/3">
+			<div class="hidden lg:block w-1/3">
 				{item.last_publication_date}
 			</div>
 		</div>
