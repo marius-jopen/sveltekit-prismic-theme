@@ -1,6 +1,8 @@
 <script>
-    import TypoGridItem from '$lib/modulesStatic/repeater/loops/typoGrid/TypoGridItem.svelte'
+    // Import child components which are used in this module
+    import TypoGridItem from '$lib/modulesStatic/repeater/loops/TypoGrid/TypoGridItem.svelte'
 
+    // Get data from parent component
     export let items
 	export let type
 </script>

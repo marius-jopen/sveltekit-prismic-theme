@@ -48,8 +48,8 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
-    import AccordeonComplex from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplex.svelte'
-    import TypoGridLoop from '$lib/modulesStatic/repeater/loops/typoGrid/TypoGridLoop.svelte'
+    import AccordeonComplex from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplex.svelte'
+    import TypoGridLoop from '$lib/modulesStatic/repeater/loops/TypoGrid/TypoGrid.svelte'
 
     // Get the data from above
     export let document

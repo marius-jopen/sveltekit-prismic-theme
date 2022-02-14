@@ -1,7 +1,11 @@
 <script>
-    import ItemAccordeonList from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexItem.svelte'
+    // Import the function from Svelte which lets you run browser based functions
     import { browser } from '$app/env'
 
+    // Import child components which are used in this module
+    import ItemAccordeonList from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplexItem.svelte'
+
+    // Get data from parent component
     export let items
 	export let type
     

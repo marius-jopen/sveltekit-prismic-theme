@@ -1,4 +1,5 @@
 <script>
+	// Import all possible components which get used in the Slice module
 	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple/VideoSimple.svelte"
 	import VideoControls from "$lib/modulesFlex/videos/VideoControls/VideoControls.svelte"
@@ -10,8 +11,10 @@
 	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
 	import SliderPanorama from "$lib/modulesFlex/sliders/SliderPanorama/SliderPanorama.svelte"
 
+	// Get the data from the parent component
 	export let slices
 
+	// Connect each slice from Prismic to a component from above
 	const sliceTypes = {
 		slider_basic: SliderBasic,
 		slider_panorama_text: SliderPanorama,

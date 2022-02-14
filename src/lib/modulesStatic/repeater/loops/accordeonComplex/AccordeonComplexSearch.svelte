@@ -1,4 +1,5 @@
 <script>
+    // Get data from parent component
     export let items
     export let itemsSearched
 
@@ -61,8 +62,10 @@
 </script>
 
 <div class="flex border-lines border-b w-full text-xl px-4 uppercase">
+    <!-- Search field -->
     <input autocomplete="off" class="py-3" placeholder="Search" bind:value={searchTerm} />
 
+    <!-- Reset button -->
     <div on:click={reset} class="py-3 cursor-pointer">
         Reset
     </div>

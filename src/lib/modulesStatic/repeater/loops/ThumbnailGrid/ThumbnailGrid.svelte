@@ -1,6 +1,8 @@
 <script>
-    import ItemHover from '$lib/modulesStatic/repeater/singleItems/ItemHover.svelte'
+    // Import child components which are used in this module
+    import ItemHover from '$lib/modulesStatic/repeater/loops/ThumbnailGrid/ThumbnailGridItem.svelte'
 
+    // Get data from parent component
     export let items
 	export let type
 </script>

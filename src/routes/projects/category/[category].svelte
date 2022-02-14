@@ -44,7 +44,7 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
-    import LoopItemsSimple from '$lib/modulesStatic/repeater/loops/simple/LoopItemsSimple.svelte'
+    import ThumbnailGrid from '$lib/modulesStatic/repeater/loops/ThumbnailGrid/ThumbnailGrid.svelte'
 
     // Get the data from above
     export let filteredItems
@@ -60,4 +60,4 @@
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={currentTag} />
-<LoopItemsSimple items={filteredItems} type={type} />
+<ThumbnailGrid items={filteredItems} type={type} />

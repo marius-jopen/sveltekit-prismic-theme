@@ -1,6 +1,8 @@
 <script>
+	// Import transition functin from Svelte
 	import { slide } from "svelte/transition";
 
+	// Get data from parent component
     export let item
 
 	// Variables for binding
@@ -33,6 +35,7 @@
 
 {#if item}
 	<div transition:slide={{ duration: 300 }}>
+		<!-- Header -->
 		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
 			<div class="w-1/2 lg:w-1/3">
 				{item.data.title[0].text}
@@ -49,6 +52,7 @@
 			</div>
 		</div>
 
+		<!-- Content -->
 		{#if interalStatus == true}
 			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 px-4" transition:slide={{ duration: 300 }}>
 				<div class="w-1/2">

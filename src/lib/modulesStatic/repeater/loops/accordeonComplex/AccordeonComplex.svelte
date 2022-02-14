@@ -1,10 +1,11 @@
 <script>
-	import AccordeonComplexUrl from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexUrl.svelte'
-	import AccordeonComplexSearch from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexSearch.svelte'
-	import AccordeonComplexSort from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexSort.svelte'
-	import AccordeonComplexLoop from '$lib/modulesStatic/repeater/loops/accordeonComplex/AccordeonComplexLoop.svelte'
+	// Import child components which are used in this module
+	import AccordeonComplexUrl from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplexUrl.svelte'
+	import AccordeonComplexSearch from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplexSearch.svelte'
+	import AccordeonComplexSort from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplexSort.svelte'
+	import AccordeonComplexLoop from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplexLoop.svelte'
 
-	// Get values from outside
+	// Get data from parent component
     export let items
 	export let type
 
@@ -53,6 +54,7 @@
 </script>
 
 <div>
+	<!-- Insert all used components -->
 	<AccordeonComplexUrl items={items} bind:itemsUrl={itemsUrl} />
 	<AccordeonComplexSearch items={items} bind:itemsSearched={itemsSearched}/>
 	<AccordeonComplexSort items={itemsSortedModified} bind:itemsSorted={itemsSorted}/>

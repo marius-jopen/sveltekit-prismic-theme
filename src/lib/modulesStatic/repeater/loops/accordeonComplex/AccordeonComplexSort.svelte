@@ -1,4 +1,5 @@
 <script>
+	// Get data from parent component
     export let items
     export let itemsSorted
 
@@ -89,10 +90,12 @@
 <div class="flex border-lines border-b w-full text-xl py-3 px-4 uppercase">
     {#each sortItems as sortItem, index}
         <div class="cursor-pointer flex {sortItem.css}" on:click={e => sort(index, sortItem.sort, sortItem.label, sortItem.status, sortItem.css)}>
-            <div>
+            <!-- Name of Sorted field -->
+			<div>
                 {sortItem.label}
             </div>
 
+			<!-- Indicator if the items are sorted up or down -->
             <div class="pl-3">
                 {#if sortItem.status == 'false'}
                     Down

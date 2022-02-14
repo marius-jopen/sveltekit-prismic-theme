@@ -1,4 +1,5 @@
 <script>
+	// Get data from parent component
     export let item
 	export let type
 </script>
