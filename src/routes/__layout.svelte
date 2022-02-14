@@ -20,7 +20,7 @@
 	import '../app.postcss'
 
     // Import all components which will be used on this page
-    import FooterSimple from '$lib/modules-static/navigations/footer-simple/FooterSimple.svelte'
+    import FooterSimple from '$lib/modules-static/navigations/footer-simple/footer-simple.svelte'
 
     // Get the data from above
 	export let setup

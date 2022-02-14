@@ -1,7 +1,7 @@
 <script>
 	// Import Modules which are used to display the content
-	import HeadlineSimple from '$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte'
-	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/paragraphRichtextBig/ParagraphRichtextBig.svelte"
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 
 	// Get data from parent component
 	export let input

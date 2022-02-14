@@ -1,9 +1,9 @@
 <script>
 	// Import child components which are used in this module
-	import AccordeonComplexUrl from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplexUrl.svelte'
-	import AccordeonComplexSearch from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplexSearch.svelte'
-	import AccordeonComplexSort from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplexSort.svelte'
-	import AccordeonComplexLoop from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplexLoop.svelte'
+	import AccordeonComplexUrl from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-url.svelte'
+	import AccordeonComplexSearch from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-search.svelte'
+	import AccordeonComplexSort from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-sort.svelte'
+	import AccordeonComplexLoop from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-loop.svelte'
 
 	// Get data from parent component
     export let items

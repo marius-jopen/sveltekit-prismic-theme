@@ -40,11 +40,11 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/NavigationMobileSimple.svelte'
-	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/FilterItemsFull.svelte'
-    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/ThumbnailGrid.svelte'
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte'
+    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
 
     // Get the data from above
     export let filteredItems

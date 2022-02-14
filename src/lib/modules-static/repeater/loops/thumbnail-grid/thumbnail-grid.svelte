@@ -1,15 +1,15 @@
 <script>
     // Import child components which are used in this module
-    import TypoGridItem from '$lib/modules-static/repeater/loops/typo-grid/TypoGridItem.svelte'
+    import ItemHover from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid-item.svelte'
 
     // Get data from parent component
     export let items
 	export let type
 </script>
 
-<div class="flex flex-wrap divide-x divide-lines">
+<div class="flex flex-wrap">
     {#each items as item}
-        <TypoGridItem item={item} type={type} />
+        <ItemHover item={item} type={type} />
     {/each}
 
 	<div class="border-lines border-b w-full -mt-1px">

@@ -2,9 +2,9 @@
 	// Import the Splide slider library
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
-
+	
 	// Import child components which are used in this slider
-    import SliderPanoramaTextItem from '$lib/modules-flex/sliders/slider-panorama/SliderPanoramaItem.svelte'
+    import SliderBasicItem from '$lib/modules-flex/sliders/slider-basic/slider-basic-item.svelte'
 
 	// Get data from parent component or from Slice function
     export let slice
@@ -21,12 +21,11 @@
 	}
 </script>
 
-<div class="sliderPanoramaText border-b border-lines">
+<div class="border-b border-lines">
 	<Splide
 	options={{
 		type: 'loop',
 		focus: 'center',
-		pagination: false,
 		classes: {
 			arrows: 'splide__arrows your-class-arrows',
 			arrow : 'splide__arrow your-class-arrow',
@@ -36,22 +35,22 @@
 	}}>
 		{#each loop as item}
 			<SplideSlide>
-				<SliderPanoramaTextItem item={item} />
+				<SliderBasicItem item={item} />
 			</SplideSlide>
 		{/each}
 	</Splide>
 </div>
 
 <style>
-	:global(.sliderPanoramaText .splide__arrow) {
+	:global(.splide__arrow) {
 		background: rgb(225, 225, 225);
 	}
 
-	:global(.sliderPanoramaText .splide__pagination__page) {
+	:global(.splide__pagination__page) {
 		background: rgb(225, 225, 225);
 	}
 
-	:global(.sliderPanoramaText .splide__pagination__page.is-active) {
+	:global(.splide__pagination__page.is-active) {
 		background: rgb(225, 225, 225);
 	}
 </style>

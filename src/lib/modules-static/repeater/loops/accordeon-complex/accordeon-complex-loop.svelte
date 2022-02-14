@@ -3,7 +3,7 @@
     import { browser } from '$app/env'
 
     // Import child components which are used in this module
-    import ItemAccordeonList from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplexItem.svelte'
+    import ItemAccordeonList from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-item.svelte'
 
     // Get data from parent component
     export let items
