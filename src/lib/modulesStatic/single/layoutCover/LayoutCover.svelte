@@ -2,8 +2,8 @@
 	import * as animateScroll from "svelte-scrollto";
 
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
-	import ImageFull from "$lib/modulesFlex/images/ImageFull.svelte"
-	import ImageSimple from "$lib/modulesFlex/images/ImageSimple.svelte"
+	import ImageFullScreen from "$lib/modulesFlex/images/ImageFullScreen/ImageFullScreen.svelte"
+	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 
 	export let input
 
@@ -32,7 +32,7 @@
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
 <div class="fixed -z-10">
-	<ImageFull inputImage={input.data.thumbnail} />
+	<ImageFullScreen inputImage={input.data.thumbnail} />
 </div>
 
 <div class="h-screen cursor-pointer" on:click="{scrollUp}">
@@ -40,7 +40,7 @@
 
 <div class="border-lines border-t" style="margin-top: -{offset}px">
 	<HeadlineSimple inputHeadline={input.data.title[0].text} />
-	<ImageSimple inputImage={input.data.thumbnail} />
-	<ImageSimple inputImage={input.data.thumbnail} />
-	<ImageSimple inputImage={input.data.thumbnail} />
+	<ImageFullWidth inputImage={input.data.thumbnail} />
+	<ImageFullWidth inputImage={input.data.thumbnail} />
+	<ImageFullWidth inputImage={input.data.thumbnail} />
 </div>

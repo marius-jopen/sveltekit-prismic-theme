@@ -19,7 +19,7 @@
 	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
-	import ImageSimple from '$lib/modulesFlex/images/ImageSimple.svelte'
+	import ImageFullWidth from '$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte'
 	import ParagraphRichtext from '$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte'
 
     export let document
@@ -33,5 +33,5 @@
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
-<ImageSimple inputImage={document.data.image} />
+<ImageFullWidth inputImage={document.data.image} />
 <ParagraphRichtext inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />
