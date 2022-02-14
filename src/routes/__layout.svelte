@@ -15,11 +15,13 @@
 <script>
 	import '../app.postcss'
 
-	export let setup
+    import FooterSimple from '$lib/modulesStatic/navigations/FooterSimple/FooterSimple.svelte'
 
-	console.log(setup)
+	export let setup
 </script>
 
 <main>
 	<slot />
+
+    <FooterSimple data={setup.data} />
 </main>

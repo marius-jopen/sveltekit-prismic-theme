@@ -1,4 +1,5 @@
 <script>
+	// Get data from parent component. Probably from the setup page
 	export let data
 </script>
 
