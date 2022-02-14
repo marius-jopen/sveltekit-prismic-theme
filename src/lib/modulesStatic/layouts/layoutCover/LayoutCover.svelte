@@ -8,8 +8,6 @@
 	// Get data from parent component
 	export let input
 
-	console.log(input)
-
 	// Define variables and some basic settings
 	let offsetDesktop = 50 // Height of navigation in px
 	let offsetMobile = 50 // Height of mobile navigation in px
