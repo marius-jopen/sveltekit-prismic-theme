@@ -4,7 +4,7 @@
 	import '@splidejs/splide/dist/css/splide.min.css';
 
 	// Import child components which are used in this slider
-    import SliderPanoramaTextItem from '$lib/modulesFlex/sliders/SliderPanorama/SliderPanoramaItem.svelte'
+    import SliderPanoramaTextItem from '$lib/modulesFlex/sliders/sliderPanorama/SliderPanoramaItem.svelte'
 
 	// Get data from parent component or from Slice function
     export let slice

@@ -1,6 +1,6 @@
 <script>
     // Import child components which are used in this slider
-    import SliderMouseMoveItem from '$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMoveItem.svelte'
+    import SliderMouseMoveItem from '$lib/modulesFlex/sliders/sliderMouseMove/SliderMouseMoveItem.svelte'
 
     // Get data from parent component or from Slice function
     export let slice

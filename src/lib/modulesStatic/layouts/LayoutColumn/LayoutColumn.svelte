@@ -1,8 +1,8 @@
 <script>
 	// Import child components which are used in this module
-	import LayoutColumnLeft from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnLeft.svelte'
-	import LayoutColumnRight from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnRight.svelte'
-	import LayoutColumnMobile from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnMobile.svelte'
+	import LayoutColumnLeft from '$lib/modulesStatic/layouts/layoutColumn/LayoutColumnLeft.svelte'
+	import LayoutColumnRight from '$lib/modulesStatic/layouts/layoutColumn/LayoutColumnRight.svelte'
+	import LayoutColumnMobile from '$lib/modulesStatic/layouts/layoutColumn/LayoutColumnMobile.svelte'
 
 	// Get data from parent component
 	export let input

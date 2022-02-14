@@ -21,11 +21,11 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/NavigationDesktopSimple/NavigationDesktopSimple.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
-	import ImageFullWidth from '$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte'
-	import ParagraphRichtextBig from '$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte'
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/navigationDesktopSimple/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modulesStatic/navigations/navigationMobileSimple/NavigationMobileSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte'
+	import ImageFullWidth from '$lib/modulesFlex/images/imageFullWidth/ImageFullWidth.svelte'
+	import ParagraphRichtextBig from '$lib/modulesFlex/paragraphs/paragraphRichtextBig/ParagraphRichtextBig.svelte'
 
     // Get the data from above
     export let document

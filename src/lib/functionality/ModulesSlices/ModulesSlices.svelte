@@ -1,15 +1,15 @@
 <script>
 	// Import all possible components which get used in the Slice module
-	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
-	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple/VideoSimple.svelte"
-	import VideoControls from "$lib/modulesFlex/videos/VideoControls/VideoControls.svelte"
-	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte"
-	import HeadlineSimple from "$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte"
-	import NavigationFullBackground from "$lib/modulesFlex/navigations/NavigationFullBackground/NavigationFullBackground.svelte"
-	import SliderMouseMove from "$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMove.svelte"
-	import SliderMarquee from "$lib/modulesFlex/sliders/SliderMarquee/SliderMarquee.svelte"
-	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
-	import SliderPanorama from "$lib/modulesFlex/sliders/SliderPanorama/SliderPanorama.svelte"
+	import ImageFullWidth from "$lib/modulesFlex/images/imageFullWidth/ImageFullWidth.svelte"
+	import VideoSimple from "$lib/modulesFlex/videos/videoSimple/VideoSimple.svelte"
+	import VideoControls from "$lib/modulesFlex/videos/videoControls/VideoControls.svelte"
+	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/paragraphRichtextBig/ParagraphRichtextBig.svelte"
+	import HeadlineSimple from "$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte"
+	import NavigationFullBackground from "$lib/modulesFlex/navigations/navigationFullBackground/NavigationFullBackground.svelte"
+	import SliderMouseMove from "$lib/modulesFlex/sliders/sliderMouseMove/SliderMouseMove.svelte"
+	import SliderMarquee from "$lib/modulesFlex/sliders/sliderMarquee/SliderMarquee.svelte"
+	import SliderBasic from "$lib/modulesFlex/sliders/sliderBasic/SliderBasic.svelte"
+	import SliderPanorama from "$lib/modulesFlex/sliders/sliderPanorama/SliderPanorama.svelte"
 
 	// Get the data from the parent component
 	export let slices
