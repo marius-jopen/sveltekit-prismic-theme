@@ -43,7 +43,7 @@
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/NavigationDesktopSlot/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
+	import FilterItemsFull from '$lib/modulesStatic/repeater/filters/FilterItemsFull/FilterItemsFull.svelte'
     import ThumbnailGrid from '$lib/modulesStatic/repeater/loops/ThumbnailGrid/ThumbnailGrid.svelte'
 
     // Get the data from above
