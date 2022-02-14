@@ -3,7 +3,7 @@
 	import * as animateScroll from "svelte-scrollto";
 
 	// Import the fullscreen image module
-	import ImageFullScreen from "$lib/modulesFlex/images/imageFullScreen/ImageFullScreen.svelte"
+	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
 
 	// Get data from parent component
 	export let input
