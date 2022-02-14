@@ -1,8 +1,11 @@
 <script>
+	// Get data from parent Component
     export let item
 
+	// Define video Url variable
 	let videoUrl = item.video.url
 
+	// Check if a video is used
 	if(item.video_source[0]) {
 		videoUrl = item.video_source[0].text
 	}
