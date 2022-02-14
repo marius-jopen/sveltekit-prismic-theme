@@ -28,12 +28,12 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/navigationDesktopSlot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/navigationMobileSimple/NavigationMobileSimple.svelte'
-	import BackHistory from "$lib/functionality/backHistory/BackHistory.svelte"
-	import LayoutCover from '$lib/modulesStatic/layouts/layoutCover/LayoutCover.svelte'
-	import HeadlineSimple from '$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte'
-	import ImageFullWidth from "$lib/modulesFlex/images/imageFullWidth/ImageFullWidth.svelte"
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/NavigationMobileSimple.svelte'
+	import BackHistory from "$lib/functionality/back-history/BackHistory.svelte"
+	import LayoutCover from '$lib/modules-static/layouts/layout-cover/LayoutCover.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/HeadlineSimple.svelte'
+	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/ImageFullWidth.svelte"
 
     // Get the data from above
     export let document

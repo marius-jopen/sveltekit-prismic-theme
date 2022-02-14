@@ -45,12 +45,12 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/navigationDesktopSlot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/navigationMobileSimple/NavigationMobileSimple.svelte'
-	import HeadlineSimple from '$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modulesStatic/repeater/filters/filterItemsFull/FilterItemsFull.svelte'
-    import AccordeonComplex from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplex.svelte'
-    import TypoGridLoop from '$lib/modulesStatic/repeater/loops/TypoGrid/TypoGrid.svelte'
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/NavigationDesktopSlot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/NavigationMobileSimple.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/HeadlineSimple.svelte'
+	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/FilterItemsFull.svelte'
+    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/AccordeonComplex.svelte'
+    import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/TypoGrid.svelte'
 
     // Get the data from above
     export let document

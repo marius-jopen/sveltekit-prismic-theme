@@ -24,9 +24,9 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/navigationDesktopSimple/NavigationDesktopSimple.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/navigationMobileSimple/NavigationMobileSimple.svelte'
-	import ModulesSlices from '$lib/functionality/modulesSlices/modulesSlices.svelte'
+	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/NavigationDesktopSimple.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/NavigationMobileSimple.svelte'
+	import ModulesSlices from '$lib/functionality/modules-slices/modulesSlices.svelte'
 
     // Get the data from above
     export let document
