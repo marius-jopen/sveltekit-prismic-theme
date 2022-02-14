@@ -2,7 +2,7 @@
     // Import functions which are needed to get data from the CMS
     import Client from '../../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -10,7 +10,7 @@
 		const type = 'project'
 
         // Get current page name
-        const pageName = page.params.project
+        const pageName = url.pathname.replace('/projects/' , '')
 
         // Get data from the current page
         const document = await Client.getByUID(type, pageName)

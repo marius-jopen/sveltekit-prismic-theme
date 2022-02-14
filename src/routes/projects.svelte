@@ -3,7 +3,8 @@
     import Prismic from "@prismicio/client"
     import Client from '../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
+
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -11,7 +12,7 @@
 		const type = 'project'
 
         // Get current page name'
-        const pageName = page.path.replace('/', '')
+        const pageName = url.pathname.replace('/', '')
 
         // Get the content from the current page
 		const document = await Client.getSingle(pageName)

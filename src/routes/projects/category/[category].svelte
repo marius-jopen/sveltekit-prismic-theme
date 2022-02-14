@@ -3,7 +3,7 @@
 	import Prismic from "@prismicio/client"
     import Client from '../../../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -11,14 +11,14 @@
 		const type = 'project'
 
         // Get the current tag by checking the current URL and format it, so it can get used later on
-        const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+        const currentTag = url.pathname.replace('/projects/category/', '').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
         // Make an array with the names of the posts which have this tag
         const tags = await Client.query(
             Prismic.Predicates.at("document.tags", [currentTag])
         )
 
-        // Filter through all items / posts which have the name of the tag
+        // Filter this array above to only have items from the current post-type
 		const filteredItems = tags.results.filter(item => item.type == type);
 
         // A list of all items
