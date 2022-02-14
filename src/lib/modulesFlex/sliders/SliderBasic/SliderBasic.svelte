@@ -4,7 +4,7 @@
 	import '@splidejs/splide/dist/css/splide.min.css';
 	
 	// Import child components which are used in this slider
-    import SliderBasicItem from '$lib/modulesFlex/galleries/SliderBasic/SliderBasicItem.svelte'
+    import SliderBasicItem from '$lib/modulesFlex/sliders/SliderBasic/SliderBasicItem.svelte'
 
 	// Get data from parent component or from Slice function
     export let slice

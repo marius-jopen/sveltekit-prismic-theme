@@ -1,7 +1,7 @@
 <script>
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
-    import SliderPanoramaTextItem from '$lib/modulesFlex/galleries/sliders/sliderPanoramaText/SliderPanoramaTextItem.svelte'
+    import SliderPanoramaTextItem from '$lib/modulesFlex/sliders/sliders/sliderPanoramaText/SliderPanoramaTextItem.svelte'
 
     export let slice
     export let inputLoop

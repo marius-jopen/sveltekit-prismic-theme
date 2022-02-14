@@ -1,4 +1,5 @@
 <script>
+    // Get data from parent Component
     export let item
     export let itemWidthVirtual
 </script>

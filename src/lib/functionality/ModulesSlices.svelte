@@ -4,10 +4,10 @@
 	import VideoControls from "$lib/modulesFlex/videos/VideoControls.svelte"
 	import ParagraphRichtext from "$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte"
 	import FullPageBackground from "$lib/modulesFlex/navigations/FullPageBackground.svelte"
-	import MouseMoveLoop from "$lib/modulesFlex/galleries/mouseMove/MouseMoveLoop.svelte"
-	import SliderMarquee from "$lib/modulesFlex/galleries/sliders/sliderMarquee/SliderMarquee.svelte"
-	import SliderBasic from "$lib/modulesFlex/galleries/SliderBasic/SliderBasic.svelte"
-	import SliderPanoramaText from "$lib/modulesFlex/galleries/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
+	import SliderMouseMove from "$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMove.svelte"
+	import SliderMarquee from "$lib/modulesFlex/sliders/sliders/sliderMarquee/SliderMarquee.svelte"
+	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
+	import SliderPanoramaText from "$lib/modulesFlex/sliders/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
 
 	export let slices
 
@@ -20,7 +20,7 @@
 		video_controls: VideoControls,
 		paragraph_richtext: ParagraphRichtext,
 		navigation_fullpage_background: FullPageBackground,
-		gallery_mouse_move: MouseMoveLoop
+		gallery_mouse_move: SliderMouseMove
 	}
 </script>
 
