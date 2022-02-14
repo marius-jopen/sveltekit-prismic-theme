@@ -35,7 +35,7 @@
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import FilterItemsFull from '$lib/modulesStatic/repeater/filterItems/FilterItemsFull.svelte'
     import LoopItemsSimple from '$lib/modulesStatic/repeater/loops/simple/LoopItemsSimple.svelte'
 

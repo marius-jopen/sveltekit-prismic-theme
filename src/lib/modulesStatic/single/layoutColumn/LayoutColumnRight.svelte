@@ -1,5 +1,5 @@
 <script>
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import ParagraphRichtextNarrow from "$lib/modulesFlex/paragraphs/ParagraphRichtextNarrow.svelte"
 
 	export let input

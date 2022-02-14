@@ -1,9 +1,12 @@
 <script>
+	// Get data from parent component or from Slice function
 	export let slice
     export let inputHeadline
 
+	// Define variables which get used in this component
 	let headline
 
+	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		headline = inputHeadline
 	} else {

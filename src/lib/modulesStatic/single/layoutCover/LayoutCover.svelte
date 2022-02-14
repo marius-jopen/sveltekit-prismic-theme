@@ -1,7 +1,7 @@
 <script>
 	import * as animateScroll from "svelte-scrollto";
 
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple.svelte'
+	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import ImageFullScreen from "$lib/modulesFlex/images/ImageFullScreen/ImageFullScreen.svelte"
 	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 
