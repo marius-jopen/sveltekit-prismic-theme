@@ -1,46 +1,54 @@
 <script>
+	// Import the ScrollTo function from svelte
 	import * as animateScroll from "svelte-scrollto";
 
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
+	// Import the fullscreen image module
 	import ImageFullScreen from "$lib/modulesFlex/images/ImageFullScreen/ImageFullScreen.svelte"
-	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 
+	// Get data from parent component
 	export let input
 
-	let offsetDesktop = 50
-	let offsetMobile = 50
-	let breakpointMobile = 640
-	let borderWidth = 1
+	console.log(input)
 
+	// Define variables and some basic settings
+	let offsetDesktop = 50 // Height of navigation in px
+	let offsetMobile = 50 // Height of mobile navigation in px
+	let breakpointMobile = 640  // Breakpoint
+	let borderWidth = 1 // If a border is used, the width of the border
+
+	// Define other variables which are needed
 	let innerHeight
 	let innerWidth
 	let offset
 
+	// Make it reactive
 	$: offset
 
+	// Reactively check the browser screen width for desktop or mobile mode
 	$: if(innerWidth >= breakpointMobile) {
 		offset = offsetDesktop
 	} else {
 		offset = offsetMobile
 	}
 
+	// Function to scroll
 	function scrollUp() {
 		animateScroll.scrollToTop({element: '.content', offset: innerHeight + borderWidth - offset})
 	}
 </script>
 
+<!-- Get browser width -->
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
+<!-- Top and fullscreen area -->
 <div class="fixed -z-10">
 	<ImageFullScreen inputImage={input.data.thumbnail} />
 </div>
 
+<!-- Invisible and clickable area which is the full screen -->
 <div class="h-screen cursor-pointer" on:click="{scrollUp}">
 </div>
 
+<!-- Border at the bottom, optional -->
 <div class="border-lines border-t" style="margin-top: -{offset}px">
-	<HeadlineSimple inputHeadline={input.data.title[0].text} />
-	<ImageFullWidth inputImage={input.data.thumbnail} />
-	<ImageFullWidth inputImage={input.data.thumbnail} />
-	<ImageFullWidth inputImage={input.data.thumbnail} />
 </div>
