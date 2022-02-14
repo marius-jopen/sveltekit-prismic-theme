@@ -1,7 +1,7 @@
 <script>
 	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
-	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple.svelte"
-	import VideoControls from "$lib/modulesFlex/videos/VideoControls.svelte"
+	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple/VideoSimple.svelte"
+	import VideoControls from "$lib/modulesFlex/videos/VideoControls/VideoControls.svelte"
 	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte"
 	import HeadlineSimple from "$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte"
 	import NavigationFullBackground from "$lib/modulesFlex/navigations/NavigationFullBackground/NavigationFullBackground.svelte"

@@ -1,12 +1,15 @@
 <script>
+	// Get data from parent component or from Slice function
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
-
+console.log(slice)
+	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster
 	let videoVimeo
 
+	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		videoUrl = inputVideoUrl
 		videoPoster = inputVideoPoster
@@ -20,7 +23,8 @@
 		}
 	}
 
-	let iconColor = "black"
+	// Define variables which will be used for the video controller
+	let iconColor = "black" // Set the icon color
 	let time = 0;
 	let duration;
 	let paused = true;
@@ -29,6 +33,7 @@
 	let hideControl = false
 	var timeout
 
+	// Function to hide the controls after 2 seconds
 	function HideControls() {
 		clearTimeout(timeout);
 		timeout = setTimeout(function(){
@@ -38,10 +43,12 @@
 		}, 2000);
 	}
 
+	// Function to show the controls again
 	function unHideControls() {
 		hideControl = false
 	}
 
+	// Function to control the progress bar
 	function handleMove(e) {
 		if (!duration) return
 		if (e.type !== 'touchmove' && !(e.buttons & 1)) return
@@ -50,6 +57,7 @@
 		time = duration * (clientX - left) / (right - left)
 	}
 
+	// Function to play and pause the video by clicking on the button
 	function playButton() {
 		if(paused == false) {
 			paused = true
@@ -59,6 +67,7 @@
 		}
 	}
 
+	// Function to play and pause the video by clicking on the video
 	function handleMouseup(e) {
 		if (new Date() - lastMouseDown < 300) {
 			if (paused) e.target.play()
@@ -66,6 +75,7 @@
 		}
 	}
 
+	// Function to display the time of the video
 	function format(seconds) {
 		if (isNaN(seconds)) return '0:00'
 		const minutes = Math.floor(seconds / 60)
@@ -74,6 +84,7 @@
 		return `${minutes}:${seconds}`
 	}
 
+	// Function to open the video for fullscreen
 	function openFullscreen() {
 		video.webkitEnterFullscreen()
 		if (video.requestFullscreen) {
@@ -110,8 +121,10 @@
 		{/if}
 	</div>
 
+	<!-- Controls -->
 	<div class:hideControlsSoft="{hideControl === true}" class="border-lines border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
+			<!-- Play and Pause button -->
 			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >
 				{#if paused}
 					<svg width="18" height="18" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,11 +138,13 @@
 				{/if}
 			</div>
 
+			<!-- Current time -->
 			<div class="pr-4 -mt-0.5 hidden sm:block">
 				{format(time)}
 			</div>
 		</div>
 
+		<!-- Progress bar -->
 		<div class="progress-box w-full hidden sm:block">
 			<progress
 			class="cursor-pointer pr-4"
@@ -141,10 +156,12 @@
 		</div>
 
 		<div class="flex">
+			<!-- Total time -->
 			<div class="pr-4 hidden -mt-0.5 sm:block">
 				{format(duration)}
 			</div>
 
+			<!-- Fullscreen button -->
 			<div class="pt-0.5 full cursor-pointer" on:mousedown={openFullscreen}>
 				<svg width="18" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 9.46648V15.3331H6.86667" stroke="{iconColor}"/>

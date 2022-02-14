@@ -7,7 +7,8 @@
 	<div class="text-5xl">
 		{item.data.sub_title[0].text}
 	</div>
-	<div>
+
+	<div class="pt-2">
 		{item.data.title[0].text}
 	</div>
 </a>
