@@ -23,7 +23,8 @@
 <script>
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/NavigationDesktopSlot/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import LayoutCover from '$lib/modulesStatic/single/layoutCover/LayoutCover.svelte'
+	import LayoutCover from '$lib/modulesStatic/layouts/layoutCover/LayoutCover.svelte'
+    import LayoutColumn from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumn.svelte'
 	import BackHistory from "$lib/functionality/BackHistory.svelte"
 
     export let document
@@ -35,4 +36,5 @@
 </NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
-<LayoutCover input={document} />
+<!-- <LayoutCover input={document} /> -->
+<LayoutColumn input={document} />

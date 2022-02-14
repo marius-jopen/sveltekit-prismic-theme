@@ -1,23 +1,28 @@
 <script>
-	import LayoutColumnLeft from '$lib/modulesStatic/single/layoutColumn/LayoutColumnLeft.svelte'
-	import LayoutColumnRight from '$lib/modulesStatic/single/layoutColumn/LayoutColumnRight.svelte'
-	import LayoutColumnMobile from '$lib/modulesStatic/single/layoutColumn/LayoutColumnMobile.svelte'
+	// Import child components which are used in this module
+	import LayoutColumnLeft from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnLeft.svelte'
+	import LayoutColumnRight from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnRight.svelte'
+	import LayoutColumnMobile from '$lib/modulesStatic/layouts/LayoutColumn/LayoutColumnMobile.svelte'
 
+	// Get data from parent component
 	export let input
 </script>
 
 <div class="parent relative z-10">
 	<div class="block w-full content">
+		<!-- Mobile -->
 		<div class="block md:hidden">
-			<LayoutColumnMobile input={input} />
+			<LayoutColumnMobile input={input.data} />
 		</div>
 
+		<!-- Left -->
 		<div class="hidden md:block w-1/2 float-left relative h-full border-lines border-r">
-			<LayoutColumnLeft input={input} />
+			<LayoutColumnLeft input={input.data} />
 		</div>
 
+		<!-- Right -->
 		<div class="right-box md:w-1/2 float-left sm:sticky">
-			<LayoutColumnRight input={input} />
+			<LayoutColumnRight input={input.data} />
 		</div>
 	</div>
 

@@ -1,6 +1,8 @@
 <script>
+	// Import Modules which are used to display the content
 	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 
+	// Get data from parent component
 	export let input
 </script>
 
