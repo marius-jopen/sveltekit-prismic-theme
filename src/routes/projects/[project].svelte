@@ -2,7 +2,7 @@
     // Import functions which are needed to get data from the CMS
     import Client from '../../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -10,7 +10,7 @@
 		const type = 'project'
 
         // Get current page name
-        const pageName = page.params.project
+        const pageName = url.pathname.replace('/projects/' , '')
 
         // Get data from the current page
         const document = await Client.getByUID(type, pageName)
@@ -28,12 +28,12 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/NavigationDesktopSlot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import LayoutCover from '$lib/modulesStatic/layouts/LayoutCover/LayoutCover.svelte'
-	import BackHistory from "$lib/functionality/BackHistory.svelte"
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
-	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
+	import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
 
     // Get the data from above
     export let document

@@ -3,7 +3,7 @@
 	import Prismic from "@prismicio/client"
     import Client from '../../../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -11,14 +11,14 @@
 		const type = 'project'
 
         // Get the current tag by checking the current URL and format it, so it can get used later on
-        const currentTag = page.params.category.replace("-", ' ').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+        const currentTag = url.pathname.replace('/projects/category/', '').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
         // Make an array with the names of the posts which have this tag
         const tags = await Client.query(
             Prismic.Predicates.at("document.tags", [currentTag])
         )
 
-        // Filter through all items / posts which have the name of the tag
+        // Filter this array above to only have items from the current post-type
 		const filteredItems = tags.results.filter(item => item.type == type);
 
         // A list of all items
@@ -40,11 +40,11 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/NavigationDesktopSlot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modulesStatic/repeater/filters/FilterItemsFull/FilterItemsFull.svelte'
-    import ThumbnailGrid from '$lib/modulesStatic/repeater/loops/ThumbnailGrid/ThumbnailGrid.svelte'
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte'
+    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
 
     // Get the data from above
     export let filteredItems

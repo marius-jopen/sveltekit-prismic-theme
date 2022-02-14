@@ -2,12 +2,12 @@
     // Import functions which are needed to get data from the CMS
     import Client from '../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
         // Get current page name
-        const pageName = page.params.page
+        const pageName = url.pathname.replace('/', '')
 
         // Get data from the current page
         const document = await Client.getByUID('page', pageName)
@@ -24,9 +24,9 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/NavigationDesktopSimple/NavigationDesktopSimple.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import ModulesSlices from '$lib/functionality/ModulesSlices.svelte'
+	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
 
     // Get the data from above
     export let document

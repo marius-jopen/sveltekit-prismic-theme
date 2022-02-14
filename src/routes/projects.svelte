@@ -3,7 +3,8 @@
     import Prismic from "@prismicio/client"
     import Client from '../utils/client'
 
-    export async function load({ page }) {
+    export async function load({ url }) {
+
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -11,7 +12,7 @@
 		const type = 'project'
 
         // Get current page name'
-        const pageName = page.path.replace('/', '')
+        const pageName = url.pathname.replace('/', '')
 
         // Get the content from the current page
 		const document = await Client.getSingle(pageName)
@@ -44,12 +45,12 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/NavigationDesktopSlot/NavigationDesktopSlot.svelte'
-	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
-	import FilterItemsFull from '$lib/modulesStatic/repeater/filters/FilterItemsFull/FilterItemsFull.svelte'
-    import AccordeonComplex from '$lib/modulesStatic/repeater/loops/AccordeonComplex/AccordeonComplex.svelte'
-    import TypoGridLoop from '$lib/modulesStatic/repeater/loops/TypoGrid/TypoGrid.svelte'
+	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte'
+    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
+    import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
 
     // Get the data from above
     export let document
