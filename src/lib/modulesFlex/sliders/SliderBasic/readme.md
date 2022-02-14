@@ -1,6 +1,6 @@
 # SliderBasic
 
-Displays a simple Slider
+Displays a simple Slider which uses the Splide slider libary
 
 <br>
 

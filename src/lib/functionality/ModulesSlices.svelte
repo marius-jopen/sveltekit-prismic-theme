@@ -5,7 +5,7 @@
 	import ParagraphRichtext from "$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte"
 	import FullPageBackground from "$lib/modulesFlex/navigations/FullPageBackground.svelte"
 	import SliderMouseMove from "$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMove.svelte"
-	import SliderMarquee from "$lib/modulesFlex/sliders/sliders/sliderMarquee/SliderMarquee.svelte"
+	import SliderMarquee from "$lib/modulesFlex/sliders/SliderMarquee/SliderMarquee.svelte"
 	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
 	import SliderPanoramaText from "$lib/modulesFlex/sliders/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
 

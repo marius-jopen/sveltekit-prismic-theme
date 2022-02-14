@@ -1,15 +1,19 @@
 <script>
+	// Import the Splide slider library
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
 	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
+	// Get data from parent component or from Slice function
 	export let slice
     export let inputText
-	export let inputDirection
-
+	export let inputDirection // "ltr" or "rtl", left to right or right to left
+	console.log(slice)
+	// Define variables which get used in this component
 	let text
 	let direction
 
+	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		text = inputText
 		direction = inputDirection
