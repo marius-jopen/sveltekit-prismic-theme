@@ -1,4 +1,5 @@
 <script>
+	// Function which goes back to the previous visited page
 	function back() {
 		history.back()
 	}

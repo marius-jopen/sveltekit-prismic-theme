@@ -1,26 +1,31 @@
 <script>
-	import ImageSimple from "$lib/modulesFlex/images/ImageSimple.svelte"
-	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple.svelte"
-	import VideoControls from "$lib/modulesFlex/videos/VideoControls.svelte"
-	import ParagraphRichtext from "$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte"
-	import FullPageBackground from "$lib/modulesFlex/navigations/FullPageBackground.svelte"
-	import MouseMoveLoop from "$lib/modulesFlex/galleries/mouseMove/MouseMoveLoop.svelte"
-	import SliderMarquee from "$lib/modulesFlex/galleries/sliders/SliderMarquee.svelte"
-	import SliderBasicLoop from "$lib/modulesFlex/galleries/sliders/sliderBasic/SliderBasicLoop.svelte"
-	import SliderPanoramaText from "$lib/modulesFlex/galleries/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
+	// Import all possible components which get used in the Slice module
+	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
+	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple/VideoSimple.svelte"
+	import VideoControls from "$lib/modulesFlex/videos/VideoControls/VideoControls.svelte"
+	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte"
+	import HeadlineSimple from "$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte"
+	import NavigationFullBackground from "$lib/modulesFlex/navigations/NavigationFullBackground/NavigationFullBackground.svelte"
+	import SliderMouseMove from "$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMove.svelte"
+	import SliderMarquee from "$lib/modulesFlex/sliders/SliderMarquee/SliderMarquee.svelte"
+	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
+	import SliderPanorama from "$lib/modulesFlex/sliders/SliderPanorama/SliderPanorama.svelte"
 
+	// Get the data from the parent component
 	export let slices
 
+	// Connect each slice from Prismic to a component from above
 	const sliceTypes = {
-		slider_basic: SliderBasicLoop,
-		slider_panorama_text: SliderPanoramaText,
+		slider_basic: SliderBasic,
+		slider_panorama_text: SliderPanorama,
 		marquee: SliderMarquee,
-		image_simple: ImageSimple,
+		image_simple: ImageFullWidth,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		paragraph_richtext: ParagraphRichtext,
-		navigation_fullpage_background: FullPageBackground,
-		gallery_mouse_move: MouseMoveLoop
+		paragraph_richtext: ParagraphRichtextBig,
+		navigation_fullpage_background: NavigationFullBackground,
+		gallery_mouse_move: SliderMouseMove,
+		headline_simple: HeadlineSimple
 	}
 </script>
 
