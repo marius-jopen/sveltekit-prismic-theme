@@ -12,7 +12,11 @@
 
     // Get url hash from browser
     $: if(browser) {
-        urlHash = location.hash.replace('#', '')
+        if(location.hash.includes('#')) {
+            urlHash = location.hash.replace('#', '')
+        } else {
+            urlHash = null
+        }
     }
 
     // If URL changes, then call the search function
@@ -23,16 +27,20 @@
 
     // Function which sets the status of the selected item to true and the others to false
     function openItem(urlHash) {
-        items.map(item => {
-            if(item.uid == urlHash) {
-                item.status = true
-            } else {
-                item.status = false
-            }
-        })
 
-        if(browser) {
-            animateScroll.scrollTo({ element: "." + urlHash , offset: -50 })
+        // Check if hash is empty and if not, execute the function
+        if(urlHash) {
+            items.map(item => {
+                if(item.uid == urlHash) {
+                    item.status = true
+                } else {
+                    item.status = false
+                }
+            })
+
+            if(browser) {
+                animateScroll.scrollTo({ element: "." + urlHash , offset: -50 })
+            }
         }
     }
 </script>
