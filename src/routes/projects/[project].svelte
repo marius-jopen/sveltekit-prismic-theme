@@ -30,7 +30,7 @@
     // Import all components which will be used on this page
 	import NavigationDesktopSlot from '$lib/modulesStatic/navigations/navigationDesktopSlot/NavigationDesktopSlot.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/navigationMobileSimple/NavigationMobileSimple.svelte'
-	import BackHistory from "$lib/functionality/backHistory/backHistory.svelte"
+	import BackHistory from "$lib/functionality/backHistory/BackHistory.svelte"
 	import LayoutCover from '$lib/modulesStatic/layouts/layoutCover/LayoutCover.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/headlineSimple/HeadlineSimple.svelte'
 	import ImageFullWidth from "$lib/modulesFlex/images/imageFullWidth/ImageFullWidth.svelte"
