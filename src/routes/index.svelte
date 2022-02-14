@@ -20,7 +20,7 @@
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import ImageFullWidth from '$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte'
-	import ParagraphRichtext from '$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte'
+	import ParagraphRichtextBig from '$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte'
 
     export let document
 	export let setup
@@ -34,4 +34,4 @@
 
 <HeadlineSimple inputHeadline={document.data.title[0].text} />
 <ImageFullWidth inputImage={document.data.image} />
-<ParagraphRichtext inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />
+<ParagraphRichtextBig inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />

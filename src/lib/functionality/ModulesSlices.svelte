@@ -2,8 +2,9 @@
 	import ImageFullWidth from "$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte"
 	import VideoSimple from "$lib/modulesFlex/videos/VideoSimple.svelte"
 	import VideoControls from "$lib/modulesFlex/videos/VideoControls.svelte"
-	import ParagraphRichtext from "$lib/modulesFlex/paragraphs/ParagraphRichtext.svelte"
-	import FullPageBackground from "$lib/modulesFlex/navigations/FullPageBackground.svelte"
+	import ParagraphRichtextBig from "$lib/modulesFlex/paragraphs/ParagraphRichtextBig/ParagraphRichtextBig.svelte"
+	import HeadlineSimple from "$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte"
+	import NavigationFullBackground from "$lib/modulesFlex/navigations/NavigationFullBackground/NavigationFullBackground.svelte"
 	import SliderMouseMove from "$lib/modulesFlex/sliders/SliderMouseMove/SliderMouseMove.svelte"
 	import SliderMarquee from "$lib/modulesFlex/sliders/SliderMarquee/SliderMarquee.svelte"
 	import SliderBasic from "$lib/modulesFlex/sliders/SliderBasic/SliderBasic.svelte"
@@ -18,9 +19,10 @@
 		image_simple: ImageFullWidth,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		paragraph_richtext: ParagraphRichtext,
-		navigation_fullpage_background: FullPageBackground,
-		gallery_mouse_move: SliderMouseMove
+		paragraph_richtext: ParagraphRichtextBig,
+		navigation_fullpage_background: NavigationFullBackground,
+		gallery_mouse_move: SliderMouseMove,
+		headline_simple: HeadlineSimple
 	}
 </script>
 

@@ -1,23 +1,28 @@
 <script>
+	// Get data from parent component or from Slice function
 	export let slice
     export let inputNavigation
-	export let mobileImageInput
+	export let inputMobileImage
 
+	// Define variables which get used in this component
 	let navigation
 	let image
-
+	console.log(slice)
+	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		navigation = inputNavigation
-		image = mobileImageInput
+		image = inputMobileImage
 	} else {
 		navigation = slice.items
 		image = slice.primary.mobile_image
 	}
-
+	
+	// Define index variable and set it to 0 to start witht he first image in the list
 	let linkIndex = 0
 </script>
 
 <div class="h-screen relative border-b border-lines">
+	<!-- Navigation -->
 	<div class="text-center flex flex-col h-full justify-center">
 		{#each navigation as item, navIndex}
 			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -27,6 +32,7 @@
 		{/each}
 	</div>
 
+	<!-- Image Desktop -->
 	<div class="hidden sm:block">
 		{#each navigation as item, navIndex}
 			<div class="hidden w-full h-full absolute top-0 left-0 -z-10" class:active="{navIndex === linkIndex}" >
@@ -35,6 +41,7 @@
 		{/each}
 	</div>
 
+	<!-- Image Video -->
 	<img src="{image.Big.url}" alt="{image.alt}" class="sm:hidden w-full h-full absolute top-0 left-0 -z-10 object-cover">
 </div>
 
