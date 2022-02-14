@@ -6,13 +6,13 @@
 	import FullPageBackground from "$lib/modulesFlex/navigations/FullPageBackground.svelte"
 	import MouseMoveLoop from "$lib/modulesFlex/galleries/mouseMove/MouseMoveLoop.svelte"
 	import SliderMarquee from "$lib/modulesFlex/galleries/sliders/sliderMarquee/SliderMarquee.svelte"
-	import SliderBasicLoop from "$lib/modulesFlex/galleries/sliders/sliderBasic/SliderBasicLoop.svelte"
+	import SliderBasic from "$lib/modulesFlex/galleries/SliderBasic/SliderBasic.svelte"
 	import SliderPanoramaText from "$lib/modulesFlex/galleries/sliders/sliderPanoramaText/SliderPanoramaTextLoop.svelte"
 
 	export let slices
 
 	const sliceTypes = {
-		slider_basic: SliderBasicLoop,
+		slider_basic: SliderBasic,
 		slider_panorama_text: SliderPanoramaText,
 		marquee: SliderMarquee,
 		image_simple: ImageFullWidth,

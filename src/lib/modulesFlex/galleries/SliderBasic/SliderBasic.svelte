@@ -1,13 +1,19 @@
 <script>
+	// Import the Splide slider library
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/splide.min.css';
-    import SliderBasicItem from '$lib/modulesFlex/galleries/sliders/sliderBasic/SliderBasicItem.svelte'
+	
+	// Import child components which are used in this slider
+    import SliderBasicItem from '$lib/modulesFlex/galleries/SliderBasic/SliderBasicItem.svelte'
 
+	// Get data from parent component or from Slice function
     export let slice
     export let inputLoop
 
+	// Define variables which get used in this component
 	let loop
 
+	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		loop = inputLoop
 	} else {
