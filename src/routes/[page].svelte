@@ -26,7 +26,7 @@
     // Import all components which will be used on this page
 	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/NavigationDesktopSimple/NavigationDesktopSimple.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/NavigationMobileSimple/NavigationMobileSimple.svelte'
-	import ModulesSlices from '$lib/functionality/ModulesSlices.svelte'
+	import ModulesSlices from '$lib/functionality/ModulesSlices/ModulesSlices.svelte'
 
     // Get the data from above
     export let document
