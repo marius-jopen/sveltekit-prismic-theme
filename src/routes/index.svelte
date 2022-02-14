@@ -16,7 +16,7 @@
 </script>
 
 <script>
-	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/NavigationDesktopSimple/NavigationDesktopSimple.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import HeadlineSimple from '$lib/modulesFlex/headlines/HeadlineSimple/HeadlineSimple.svelte'
 	import ImageFullWidth from '$lib/modulesFlex/images/ImageFullWidth/ImageFullWidth.svelte'

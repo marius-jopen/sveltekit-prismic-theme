@@ -1,9 +1,14 @@
 <script>
+    // Get data from parent component. Probably from the setup page
 	export let data
+
+    // Classes which are connected to the height of the navigation
+	let height = 'text-lg py-3 '
 </script>
 
-<div class="text-lg hidden sm:flex fixed w-full z-20 justify-between py-3 px-4 border-b border-lines bg-background">
+<div class="{height} hidden sm:flex fixed w-full z-20 justify-between px-4 border-b border-lines bg-background">
     <div class="absolute left-4 z-30" >
+        <!-- The left side of the navigation bar can be willed with content via a slot -->
         <slot></slot>
     </div>
 
@@ -22,6 +27,7 @@
     </div>
 </div>
 
-<div class="text-lg py-3 hidden sm:block">
+<!-- Invisible bar which hads the same height as the navigation to push the content down -->
+<div class="{height} hidden sm:block">
 	&nbsp;
 </div>

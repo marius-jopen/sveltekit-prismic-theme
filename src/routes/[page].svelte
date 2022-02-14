@@ -24,7 +24,7 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/desktop/NavigationDesktopSimple.svelte'
+	import NavigationDesktopSimple from '$lib/modulesStatic/navigations/NavigationDesktopSimple/NavigationDesktopSimple.svelte'
 	import NavigationMobileSimple from '$lib/modulesStatic/navigations/mobile/NavigationMobileSimple.svelte'
 	import ModulesSlices from '$lib/functionality/ModulesSlices.svelte'
 
