@@ -2,6 +2,9 @@
 	// Import transition functin from Svelte
 	import { slide } from "svelte/transition";
 
+	// Import child components which are used in this slider
+    import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+
 	// Get data from parent component
     export let item
 
@@ -55,11 +58,18 @@
 		<!-- Content -->
 		{#if interalStatus == true}
 			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 px-4" transition:slide={{ duration: 300 }}>
+				<!-- Left Side -->
 				<div class="w-1/2">
 					{item.data.title[0].text}
 				</div>
 
-				<img src="{item.data.thumbnail.Big.url}" class="w-1/2 h-30vw object-cover" alt="">
+				<!-- Right Side -->
+				<div class="w-1/2">
+					{#if item.data.slider[0]}
+						<SliderComplex inputLoop={item.data.slider} />
+					{/if}
+					<!-- <img src="{item.data.thumbnail.Big.url}" class="w-1/2 h-30vw object-cover" alt=""> -->
+				</div>
 			</div>
 		{/if}
 	</div>
