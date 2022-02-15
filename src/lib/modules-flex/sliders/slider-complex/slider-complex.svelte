@@ -65,16 +65,22 @@
 	</Splide>
 
 	<!-- Fullscreen Button -->
-	<div class="absolute bottom-1 left-2 p-1 cursor-pointer" on:click="{openFullscreen}">
-		Button
+	<div class="absolute bottom-1 left-1 p-1 cursor-pointer" on:click="{openFullscreen}">
+		<!-- SVG Arrow -->
+		<svg id="Ebene_1" class="h-8" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+			<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.85" y1="23.15" x2="23.03" y2="1.97"/><polyline class="cls-1" points="23.15 15.03 23.15 1.85 9.97 1.85"/>
+		</svg>
 	</div>
 </div>
 
 <!-- Fullscreen area -->
 {#if fullscreen == true}
 	<div class="fixed w-full h-screen bg-white/50 z-50 top-0 left-0 backdrop-blur-lg" >
-		<div class="fixed top-1 right-2 p-1 cursor-pointer" on:click="{closeFullscreen}">
-			Close
+		<div class="fixed top-1 right-2 pt-2 pr-4 cursor-pointer" on:click="{closeFullscreen}">
+			<!-- SVG X -->
+			<svg id="Ebene_1" class="h-8" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+				<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.91" y1="1.91" x2="23.09" y2="23.09"/><line class="cls-1" x1="1.91" y1="23.09" x2="23.09" y2="1.91"/>
+			</svg>
 		</div>
 		
 		<div class="">
