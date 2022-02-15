@@ -57,7 +57,7 @@
 
 		<!-- Content -->
 		{#if interalStatus == true}
-			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 px-4" transition:slide={{ duration: 300 }}>
+			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
 				<!-- Left Side -->
 				<div class="w-1/2">
 					{item.data.title[0].text}
