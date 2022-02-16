@@ -28,6 +28,7 @@
 	// define variables which are needed for the functionality of this component
 	let fullscreen = false
 	let locked = ""
+	let splideSlider
 
 	// Function which opens the fullscreen and locks the body
 	function openFullscreen() {
@@ -49,10 +50,15 @@
 			locked = ""
 		}
 	}
-	
-	// function nextSlide() {
-	// 	splide.go( '>' );
-	// }
+		
+	// Two functions to trigger the previous and next slide on click
+	function prevSlide() {
+		splideSlider.splide.go( '<' );
+	}
+
+	function nextSlide() {
+		splideSlider.splide.go( '>' );
+	}
 </script>
 
 <!-- Access the body and change the class -->
@@ -64,7 +70,7 @@
 <div class="relative">
 	<!-- Slider -->
 	<Splide
-	on:mounted={ e => console.log( e ) }
+	bind:this={splideSlider}
 	options={{
 		type: 'loop',
 		focus: 'center',
@@ -94,14 +100,14 @@
 	</div>
 
 	<!-- Arrow Previous -->
-	<div class="absolute top-0 left-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
+	<div on:click={prevSlide} class="absolute top-0 left-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
 		<div class="pl-2 flex justify-start">
 			<svg class="h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
 		</div>
 	</div>
 
 	<!-- Arrow Next -->
-	<div class="absolute top-0 right-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
+	<div on:click={nextSlide} class="absolute top-0 right-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
 		<div class="pr-2 flex justify-end">
 			<svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
 		</div>
