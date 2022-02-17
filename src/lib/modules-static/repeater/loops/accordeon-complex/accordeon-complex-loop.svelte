@@ -14,12 +14,15 @@
     let activeItem
     let visibleItems = 2
     let loadMoreVisible = true
+    let itemsTotal = items.length
 
     // Everytime an accordeons opens, close all the others
     $: activeItem, closeInactiveAccordeons(activeItem)
 
+    // Function which sets the visible items to the total numebr of items
+    // Also hides the laod more button
     function loadMore() {
-        visibleItems = 10000
+        visibleItems = itemsTotal
         loadMoreVisible = false
     }
 
@@ -40,12 +43,16 @@
     }
 </script>
 
+<!-- Loop of items -->
 {#each items as item, i}
+    <!-- Limits the number of visible items -->
     {#if i <= visibleItems}
+        <!-- The item -->
         <ItemAccordeonList item={item} type={type} bind:interalStatus={item.status} bind:uid={activeItem}/>
     {/if}
 {/each}
 
+<!-- Load more button -->
 {#if loadMoreVisible}
     <div class="text-center text-xl py-3 uppercase cursor-pointer" on:click={loadMore}>
         Load More

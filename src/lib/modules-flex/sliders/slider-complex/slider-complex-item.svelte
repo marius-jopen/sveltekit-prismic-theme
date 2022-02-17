@@ -7,5 +7,5 @@
 </script>
 
 <div class="{height}">
-    <img src="{item.slider_image.Medium.url}" alt="{item.slider_image.alt}" class="{height} w-full object-cover">
+    <img src="{item.slider_image.Big.url}" alt="{item.slider_image.alt}" class="{height} w-full object-cover">
 </div>
