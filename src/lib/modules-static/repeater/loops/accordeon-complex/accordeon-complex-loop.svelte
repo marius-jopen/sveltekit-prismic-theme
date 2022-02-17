@@ -14,10 +14,13 @@
     let activeItem
     let visibleItems = 2
     let loadMoreVisible = true
-    let itemsTotal = items.length
+    let itemsTotal
 
     // Everytime an accordeons opens, close all the others
     $: activeItem, closeInactiveAccordeons(activeItem)
+
+    // Load more button is reactive
+    $: itemsTotal = items.length
 
     // Function which sets the visible items to the total numebr of items
     // Also hides the laod more button
@@ -53,9 +56,9 @@
 {/each}
 
 <!-- Load more button -->
-{#if loadMoreVisible}
+{#if loadMoreVisible && itemsTotal > visibleItems + 1}
     <div class="text-center text-xl py-3 uppercase cursor-pointer" on:click={loadMore}>
-        Load More
+        Load {itemsTotal - visibleItems - 1} More
     </div>
 {/if}
 

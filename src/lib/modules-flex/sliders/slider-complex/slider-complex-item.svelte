@@ -3,7 +3,7 @@
     export let item
 
     // Shared height
-    let height = "h-30vw"
+    let height = "h-50vw sm:h-30vw"
 </script>
 
 <div class="{height}">

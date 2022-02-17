@@ -39,39 +39,43 @@
 {#if item}
 	<div transition:slide={{ duration: 300 }}>
 		<!-- Header -->
-		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
-			{#if interalStatus == false}
-				<div class="w-1/2 lg:w-1/3">
-					{item.data.title[0].text}
-				</div>
-
-				{#if item.data.sub_title[0]}
+		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer text-xl py-3 px-4 border-b border-lines">
+			{#if interalStatus == false || interalStatus == undefined}
+				<div class="w-full flex">
 					<div class="w-1/2 lg:w-1/3">
-						{item.data.sub_title[0].text}
+						{item.data.title[0].text}
 					</div>
-				{/if}
 
-				<div class="hidden lg:block w-1/3">
-					{item.last_publication_date}
+					{#if item.data.sub_title[0]}
+						<div class="w-1/2 lg:w-1/3">
+							{item.data.sub_title[0].text}
+						</div>
+					{/if}
+
+					<div class="hidden lg:block w-1/3">
+						{item.last_publication_date}
+					</div>
 				</div>
 			{:else}
-				<div class="w-full">
-					{item.data.title[0].text}
-				</div>
+				<div class="w-full flex">
+					<div class="w-full">
+						{item.data.title[0].text}
+					</div>
 
-				<div class="pr-2 flex justify-center flex-col">
-					<svg id="Ebene_1" class="h-5" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-						<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.91" y1="1.91" x2="23.09" y2="23.09"/><line class="cls-1" x1="1.91" y1="23.09" x2="23.09" y2="1.91"/>
-					</svg>
+					<div class="pr-2 flex justify-center flex-col">
+						<svg id="Ebene_1" class="h-5" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+							<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.91" y1="1.91" x2="23.09" y2="23.09"/><line class="cls-1" x1="1.91" y1="23.09" x2="23.09" y2="1.91"/>
+						</svg>
+					</div>
 				</div>
 			{/if}
 		</div>
 
 		<!-- Content -->
 		{#if interalStatus == true}
-			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
+			<div class="bg-neutral-100 flex flex-col-reverse sm:flex-row w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
 				<!-- Left Side -->
-				<div class="w-1/2">
+				<div class="sm:w-1/2 pt-4 sm:pt-0">
 					<div class="text-xl">
 						{item.data.title[0].text}
 					</div>
@@ -86,7 +90,7 @@
 				</div>
 
 				<!-- Right Side -->
-				<div class="w-1/2">
+				<div class="sm:w-1/2">
 					{#if item.data.slider[0]}
 						<SliderComplex inputLoop={item.data.slider} />
 					{/if}
