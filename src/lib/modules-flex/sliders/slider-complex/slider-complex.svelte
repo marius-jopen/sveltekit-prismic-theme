@@ -14,9 +14,8 @@
     export let slice
     export let inputLoop
 
-	// Define variables which get used in this component
+	// Define variables to check if this slides is embedded via slices or manually
 	let loop
-	let keyCode
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
@@ -25,10 +24,13 @@
 		loop = slice.items
 	}
 
-	// define variables which are needed for the functionality of this component
+	// Define variables which get used in this component
+	let keyCode
 	let fullscreen = false
 	let locked = ""
 	let splideSlider
+	let slideIndex = 1
+	let totalSlides = loop.length
 
 	// Function which opens the fullscreen and locks the body
 	function openFullscreen() {
@@ -59,6 +61,11 @@
 	function nextSlide() {
 		splideSlider.splide.go( '>' );
 	}
+
+	// Function to get the current slide
+	function getSlideIndex(e) {
+		slideIndex = e.detail.index + 1
+	}
 </script>
 
 <!-- Access the body and change the class -->
@@ -71,6 +78,7 @@
 	<!-- Slider -->
 	<Splide
 	bind:this={splideSlider}
+	on:move={ e => {getSlideIndex(e)} }
 	options={{
 		type: 'loop',
 		focus: 'center',
@@ -88,6 +96,8 @@
 			<SplideSlide>
 				<SliderComplexItem item={item} />
 			</SplideSlide>
+
+			<!-- {item.caption[0].text} -->
 		{/each}
 	</Splide>
 
@@ -111,6 +121,17 @@
 		<div class="pr-2 flex justify-end">
 			<svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
 		</div>
+	</div>
+</div>
+
+<!-- Extra row with caption and slide counter -->
+<div class="flex w-full justify-between pt-1">
+	<div>
+		Caption
+	</div>
+
+	<div>
+		{slideIndex} / {totalSlides}
 	</div>
 </div>
 
