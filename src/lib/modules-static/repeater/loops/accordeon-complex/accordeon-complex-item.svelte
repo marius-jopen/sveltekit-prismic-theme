@@ -40,19 +40,31 @@
 	<div transition:slide={{ duration: 300 }}>
 		<!-- Header -->
 		<div on:click={toggle} id="" class="{item.uid} textHoverGrey cursor-pointer flex text-xl py-3 px-4 w-full border-b border-lines">
-			<div class="w-1/2 lg:w-1/3">
-				{item.data.title[0].text}
-			</div>
-
-			{#if item.data.sub_title[0]}
+			{#if interalStatus == false}
 				<div class="w-1/2 lg:w-1/3">
-					{item.data.sub_title[0].text}
+					{item.data.title[0].text}
+				</div>
+
+				{#if item.data.sub_title[0]}
+					<div class="w-1/2 lg:w-1/3">
+						{item.data.sub_title[0].text}
+					</div>
+				{/if}
+
+				<div class="hidden lg:block w-1/3">
+					{item.last_publication_date}
+				</div>
+			{:else}
+				<div class="w-full">
+					{item.data.title[0].text}
+				</div>
+
+				<div class="pr-2 flex justify-center flex-col">
+					<svg id="Ebene_1" class="h-5" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.91" y1="1.91" x2="23.09" y2="23.09"/><line class="cls-1" x1="1.91" y1="23.09" x2="23.09" y2="1.91"/>
+					</svg>
 				</div>
 			{/if}
-
-			<div class="hidden lg:block w-1/3">
-				{item.last_publication_date}
-			</div>
 		</div>
 
 		<!-- Content -->
@@ -60,7 +72,17 @@
 			<div class="bg-neutral-100 flex w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
 				<!-- Left Side -->
 				<div class="w-1/2">
-					{item.data.title[0].text}
+					<div class="text-xl">
+						{item.data.title[0].text}
+					</div>
+
+					<div class="pt-1">
+						{item.data.sub_title[0].text}
+					</div>
+
+					<div>
+						{item.last_publication_date}
+					</div>
 				</div>
 
 				<!-- Right Side -->
