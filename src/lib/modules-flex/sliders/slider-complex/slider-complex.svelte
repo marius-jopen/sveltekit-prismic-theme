@@ -31,6 +31,11 @@
 	let splideSlider
 	let slideIndex = 1
 	let totalSlides = loop.length
+	let currentCaption 
+
+	// The getCaption function gets called the first time to check if the
+	// first slide has a caption
+	getCaption(0)
 
 	// Function which opens the fullscreen and locks the body
 	function openFullscreen() {
@@ -62,9 +67,23 @@
 		splideSlider.splide.go( '>' );
 	}
 
-	// Function to get the current slide
-	function getSlideIndex(e) {
+	// Function which gets called when the slider moves
+	function slideMove(e) {
+		// Get the current index number of the slider
 		slideIndex = e.detail.index + 1
+
+		// Calls the function which gets the caption
+		getCaption(e.detail.index)
+	}
+
+	//  Function which get the current caption
+	function getCaption(item) {
+		// Get the current caption of the slider
+		if(loop[item].caption[0]) {
+			currentCaption = loop[item].caption[0].text
+		} else {
+			currentCaption = ''
+		}
 	}
 </script>
 
@@ -78,7 +97,7 @@
 	<!-- Slider -->
 	<Splide
 	bind:this={splideSlider}
-	on:move={ e => {getSlideIndex(e)} }
+	on:move={ e => {slideMove(e)} }
 	options={{
 		type: 'loop',
 		focus: 'center',
@@ -96,8 +115,6 @@
 			<SplideSlide>
 				<SliderComplexItem item={item} />
 			</SplideSlide>
-
-			<!-- {item.caption[0].text} -->
 		{/each}
 	</Splide>
 
@@ -127,7 +144,7 @@
 <!-- Extra row with caption and slide counter -->
 <div class="flex w-full justify-between pt-1">
 	<div>
-		Caption
+		{currentCaption}
 	</div>
 
 	<div>
