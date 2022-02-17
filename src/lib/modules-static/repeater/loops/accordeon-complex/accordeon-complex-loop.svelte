@@ -42,6 +42,11 @@
                     item.status = false
                 }
             })
+        } else {
+            // Remove the hash content if an accordeon gets closed
+            if(browser) {
+                location.hash = ''
+            }
         }
     }
 </script>
