@@ -19,7 +19,7 @@
 		slider_basic: SliderBasic,
 		slider_panorama_text: SliderPanorama,
 		marquee: SliderMarquee,
-		image_simple: ImageFullWidth,
+		image_full_width: ImageFullWidth,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
 		paragraph_richtext: ParagraphRichtextBig,

@@ -36,5 +36,5 @@
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={document.data.title} />
-<ImageFullWidth inputImage={document.data.image} />
+<ImageFullWidth inputImage={document.data.image} inputCaption={'Caption'} inputHasRichtext={false} inputImageSize={'Big'}/>
 <ParagraphRichtextBig inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />

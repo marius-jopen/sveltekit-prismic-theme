@@ -1,4 +1,7 @@
 <script>
+	// Import vimeJs player
+	import { Player, Video, DefaultUi } from '@vime/svelte';
+
 	// Get data from parent component or from Slice function
     export let slice
     export let inputVideoUrl
