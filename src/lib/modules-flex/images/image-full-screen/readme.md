@@ -1,7 +1,7 @@
-# Image Full Width Component | Sveltekit + Prismic
+# Image Full Screen Component | Sveltekit + Prismic
 Author: www.mariusjopen.com
 
-Displays an image + caption
+Displays an image in full screen + caption
 - Can receive data via parent component or via the Prismic slices module
 - You can set the size of the image to Big, Medium, Small and Original
 - You can chose if the caption which is inserted is a string or a Prismic richtext
@@ -17,11 +17,12 @@ This is how the component gets used when called via a parent component:
 
 And this is the array of the slice which gets used in Prismic. You can also use it to get the seperate array for the image and the caption if needed
 ````
-"image_full_width" : {
+"image_full_screen" : {
     "type" : "Slice",
-    "fieldset" : "Image Full Width",
-    "description" : "Full width image",
-    "icon" : "add_a_photo",
+    "fieldset" : "Image Full Screen",
+    "description" : "Fullscreen image",
+    "icon" : "photo_size_select_large",
+    "display" : "list",
     "non-repeat" : {
         "image" : {
             "type" : "Image",

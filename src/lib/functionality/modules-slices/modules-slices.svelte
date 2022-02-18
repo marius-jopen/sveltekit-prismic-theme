@@ -1,6 +1,8 @@
 <script>
 	// Import all possible components which get used in the Slice module
 	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
+	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
+
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
@@ -16,10 +18,12 @@
 
 	// Connect each slice from Prismic to a component from above
 	const sliceTypes = {
+		image_full_width: ImageFullWidth,
+		image_full_screen: ImageFullScreen,
+
 		slider_basic: SliderBasic,
 		slider_panorama_text: SliderPanorama,
 		marquee: SliderMarquee,
-		image_full_width: ImageFullWidth,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
 		paragraph_richtext: ParagraphRichtextBig,
