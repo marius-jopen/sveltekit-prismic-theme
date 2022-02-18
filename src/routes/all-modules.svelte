@@ -26,6 +26,7 @@
 	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
     import ImageFullScreen from '$lib/modules-flex/images/image-full-screen/image-full-screen.svelte'
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
+	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
 
     // Get the data from above
     export let document
@@ -51,4 +52,8 @@ inputHasRichtext={false}
 
 <ParagraphRichtextBig 
 inputLongText={document.data.paragraph_richtext_big_long_text}
+/>
+
+<HeadlineSimple 
+inputText={document.data.headline_simple_text[0].text}
 />

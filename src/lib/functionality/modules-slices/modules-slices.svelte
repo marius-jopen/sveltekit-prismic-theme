@@ -3,15 +3,13 @@
 	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
 	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
-
+	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
+	
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
-	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
-	import NavigationFullBackground from "$lib/modules-flex/navigations/navigation-full-background/navigation-full-background.svelte"
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
-	import SliderBasic from "$lib/modules-flex/sliders/slider-basic/slider-basic.svelte"
-	import SliderPanorama from "$lib/modules-flex/sliders/slider-panorama/slider-panorama.svelte"
+	// Slider Complex
 
 	// Get the data from the parent component
 	export let slices
@@ -20,16 +18,13 @@
 	const sliceTypes = {
 		image_full_width: ImageFullWidth,
 		image_full_screen: ImageFullScreen,
+		headline_simple: HeadlineSimple,
 
-		slider_basic: SliderBasic,
-		slider_panorama_text: SliderPanorama,
 		marquee: SliderMarquee,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
 		paragraph_richtext_big: ParagraphRichtextBig,
-		navigation_fullpage_background: NavigationFullBackground,
-		gallery_mouse_move: SliderMouseMove,
-		headline_simple: HeadlineSimple
+		gallery_mouse_move: SliderMouseMove
 	}
 </script>
 
