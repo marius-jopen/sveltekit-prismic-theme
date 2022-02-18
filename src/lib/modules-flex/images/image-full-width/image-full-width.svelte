@@ -28,9 +28,9 @@
 	} else {
 		// Use data from the slices module
 		image = slice.primary.image
+		imageSize = 'Big' // Define the size of the image (Default: Big)
 		caption = slice.primary.caption
 		hasRichtext = true // Define id the slices module caption is a richtext (Default: true)
-		size = 'Big' // Define the size of the image (Default: Big)
 	}
 </script>
 
