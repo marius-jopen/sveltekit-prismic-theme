@@ -15,7 +15,7 @@ This is how the component gets used when called via a parent component:
 <ImageFullWidth inputImage={document.data.image} inputCaption={'Caption'} inputHasRichtext={false} inputImageSize={'Big'}/>
 ````
 
-And this is the array of the slice which gets used in Prismic
+And this is the array of the slice which gets used in Prismic. You can also use it to get the seperate array for the image and the caption if needed
 ````
 "image_full_width" : {
     "type" : "Slice",
@@ -24,31 +24,31 @@ And this is the array of the slice which gets used in Prismic
     "icon" : "add_a_photo",
     "non-repeat" : {
         "image" : {
-        "type" : "Image",
-        "config" : {
-            "constraint" : { },
-            "thumbnails" : [ {
-            "name" : "Big",
-            "width" : 2500,
-            "height" : null
-            }, {
-            "name" : "Medium",
-            "width" : 1500,
-            "height" : null
-            }, {
-            "name" : "Small",
-            "width" : 750,
-            "height" : null
-            } ],
-            "label" : "Image"
-        }
+            "type" : "Image",
+            "config" : {
+                "constraint" : { },
+                "thumbnails" : [ {
+                    "name" : "Big",
+                    "width" : 2500,
+                    "height" : null
+                }, {
+                    "name" : "Medium",
+                    "width" : 1500,
+                    "height" : null
+                }, {
+                    "name" : "Small",
+                    "width" : 750,
+                    "height" : null
+                } ],
+                "label" : "Image"
+            }
         },
         "caption" : {
-        "type" : "StructuredText",
-        "config" : {
-            "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-            "label" : "Caption"
-        }
+            "type" : "StructuredText",
+            "config" : {
+                "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label" : "Caption"
+            }
         }
     },
     "repeat" : { }
