@@ -12,7 +12,12 @@ Otherwise to user has to set the size everytime which is annoying.
 
 This is how the component gets used when called via a parent component:
 ````
-<ImageFullWidth inputImage={document.data.image} inputCaption={'Caption'} inputHasRichtext={false} inputImageSize={'Big'}/>
+<ImageFullWidth 
+inputImage={document.data.image_full_width_image} 
+inputImageSize={'Big'}
+inputCaption={document.data.image_full_width_caption} 
+inputHasRichtext={true} 
+/>
 ````
 
 And this is the array of the slice which gets used in Prismic. You can also use it to get the seperate array for the image and the caption if needed

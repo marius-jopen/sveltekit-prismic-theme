@@ -25,6 +25,7 @@
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
     import ImageFullScreen from '$lib/modules-flex/images/image-full-screen/image-full-screen.svelte'
+	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 
     // Get the data from above
     export let document
@@ -46,4 +47,8 @@ inputImage={document.data.image_full_width_image}
 inputImageSize={'Big'}
 inputCaption={document.data.image_full_screen_caption[0].text} 
 inputHasRichtext={false}
+/>
+
+<ParagraphRichtextBig 
+inputLongText={document.data.paragraph_richtext_big_long_text}
 />

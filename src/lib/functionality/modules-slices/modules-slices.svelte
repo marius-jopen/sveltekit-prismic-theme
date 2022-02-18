@@ -2,10 +2,10 @@
 	// Import all possible components which get used in the Slice module
 	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
 	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
+	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
-	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
 	import NavigationFullBackground from "$lib/modules-flex/navigations/navigation-full-background/navigation-full-background.svelte"
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
@@ -26,7 +26,7 @@
 		marquee: SliderMarquee,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		paragraph_richtext: ParagraphRichtextBig,
+		paragraph_richtext_big: ParagraphRichtextBig,
 		navigation_fullpage_background: NavigationFullBackground,
 		gallery_mouse_move: SliderMouseMove,
 		headline_simple: HeadlineSimple
