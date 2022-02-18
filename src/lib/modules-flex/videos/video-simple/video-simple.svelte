@@ -24,7 +24,7 @@
 	}
 </script>
 
-<video muted class="border-b border-lines" playsinline poster="{videoPoster}" autoplay loop>
+<video muted class="border-b border-lines w-full" playsinline poster="{videoPoster}" autoplay loop>
 	<source src={videoUrl} type="video/mp4" />
 	Your browser does not support the video tag.
 </video>

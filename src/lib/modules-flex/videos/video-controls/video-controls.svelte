@@ -3,7 +3,7 @@
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
-console.log(slice)
+
 	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster

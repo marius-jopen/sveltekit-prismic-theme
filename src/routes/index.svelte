@@ -35,6 +35,6 @@
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
+<HeadlineSimple inputHeadline={document.data.title} />
 <ImageFullWidth inputImage={document.data.image} />
 <ParagraphRichtextBig inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />
