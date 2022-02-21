@@ -23,7 +23,6 @@
 	} else {
 		loop = slice.items
 	}
-
 	// Define variables which get used in this component
 	let keyCode
 	let fullscreen = false
@@ -32,7 +31,7 @@
 	let slideIndex = 1
 	let totalSlides = loop.length
 	let currentCaption 
-
+	
 	// The getCaption function gets called the first time to check if the
 	// first slide has a caption
 	getCaption(0)
@@ -79,8 +78,8 @@
 	//  Function which get the current caption
 	function getCaption(item) {
 		// Get the current caption of the slider
-		if(loop[item].caption[0]) {
-			currentCaption = loop[item].caption[0].text
+		if(loop[item].slider_caption[0]) {
+			currentCaption = loop[item].slider_caption[0].text
 		} else {
 			currentCaption = ''
 		}
@@ -110,7 +109,6 @@
 			next  : 'splide__arrow--next your-class-next',
 		},
 	}}>
-	
 		{#each loop as item}
 			<SplideSlide>
 				<SliderComplexItem item={item} />

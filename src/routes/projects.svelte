@@ -61,6 +61,5 @@
 <NavigationContentScroll data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
-<AccordeonComplex items={sortedItems} type={type} />
 <TypoGridLoop items={sortedItems} type={type} />
+<AccordeonComplex items={sortedItems} type={type} />
