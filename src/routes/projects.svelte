@@ -25,7 +25,7 @@
         // Check if those items are in the list of selected projects on the current page
         // And then put them into an array
         // This allows the user to sort the items and not just show ALL the projects
-        const sortedItems = document.data.order.map(i => {
+        const sortedItems = document.data.project_order.map(i => {
 			const uid = i.selected.uid
             return allItems.results.find(p => p.uid === uid)
         })
@@ -47,9 +47,9 @@
     // Import all components which will be used on this page
 	import NavigationContentScroll from '$lib/modules-static/navigations/navigation-desktop-content-scroll/navigation-desktop-content-scroll.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
     import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
     import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
+    import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
 
     // Get the data from above
     export let document
@@ -61,5 +61,6 @@
 <NavigationContentScroll data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<TypoGridLoop items={sortedItems} type={type} />
-<AccordeonComplex items={sortedItems} type={type} />
+<!-- <TypoGridLoop items={sortedItems} type={type} /> -->
+<!-- <AccordeonComplex items={sortedItems} type={type} /> -->
+<SliderVideoFullscreen items={sortedItems} type={type} />

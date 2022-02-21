@@ -25,7 +25,7 @@
     let imageSmallHeight = image.Small.dimensions.width
 
     // Alt text
-    let imageAlt = image.alt
+    let imageAlt = "image.alt"
 </script>
 
 {#if imageSize == 'Original'}
