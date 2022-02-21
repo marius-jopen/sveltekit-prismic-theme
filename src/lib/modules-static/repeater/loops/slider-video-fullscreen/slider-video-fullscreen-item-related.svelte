@@ -5,6 +5,7 @@
     // Get data from parent component
     export let item
     export let allItems
+    export let heightVh
 
     // Compare related field with all items and make list of those items
     const relatedItems = item.data.related_projects.map(i => {
@@ -15,7 +16,7 @@
 
 <div class="video-box flex flex-wrap">
     {#each relatedItems as relatedItem}
-        <SliderVideoFullscreenItemRelatedItem item={relatedItem} />
+        <SliderVideoFullscreenItemRelatedItem item={relatedItem} heightVh={heightVh}/>
     {/each}
 </div>
 

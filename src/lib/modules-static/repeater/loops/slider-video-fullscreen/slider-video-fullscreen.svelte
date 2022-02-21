@@ -18,6 +18,7 @@
     let splideSlider
     let peekDownStatus = false
     let peekUpStatus = false
+    let heightVh = 80
 
     // Function which gets called when the scrollwheel is used
     // It prevents the function to be called too fast again by a delay time which can be chosen
@@ -80,7 +81,7 @@
         options={{
             perMove: 1,
             drag: false,
-            height: '80vh', // Height of the slider and its slides
+            height: heightVh + 'vh', // Height of the slider and its slides
             keyboard: true,
             speed: 700, // Slide speed when triggered
             wheel: false,
@@ -100,7 +101,7 @@
                     <!-- Part of the swiperJS -->
                     <SplideSlide>
                         {#if item.data.view == 'Related'}
-                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} /> 
+                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} heightVh={heightVh} /> 
                         {:else}
                             <SliderVideoFullscreenItem item={item} /> 
                         {/if}
@@ -132,11 +133,3 @@
         margin-top: -60px !important;
 	}
 </style>
-
-
-<!-- 
-TODO:
-Hover Click
-Grid
-preview: farbe
--->
