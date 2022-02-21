@@ -56,6 +56,7 @@
 	export let setup
     export let sortedItems
 	export let type
+    export let allItems
 </script>
 
 <NavigationContentScroll data={setup.data} />
@@ -63,4 +64,4 @@
 
 <!-- <TypoGridLoop items={sortedItems} type={type} /> -->
 <!-- <AccordeonComplex items={sortedItems} type={type} /> -->
-<SliderVideoFullscreen items={sortedItems} type={type} />
+<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} />

@@ -1,6 +1,7 @@
 <script>
     // Import child components which are used in this module
-    import SliderVideoFullscreenItem from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreenItem.svelte'
+    import SliderVideoFullscreenItem from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen-item.svelte'
+    import SliderVideoFullscreenItemRelated from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen-item-related.svelte'
 
     // Import the Splide slider library
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
@@ -8,9 +9,8 @@
 
     // Get data from parent component
     export let items
+    export let allItems
 	export let type
-
-    console.log(items)
 
     // Define variables which are used in the slider
     let functionDelayTime = 1000
@@ -94,12 +94,16 @@
                 <!-- 
                 Check if the item contains a preview video. Either HTML or as an embed via Vimeo etc… 
                 Not mandatory, just avoiding empty slides 
+                Also check if it is a group slide which only display related projects
                 -->
-                {#if item.data.preview_video.url || item.data.preview_video_link.length}
+                {#if item.data.preview_video.url || item.data.preview_video_link.length || item.data.view == 'Related'}
                     <!-- Part of the swiperJS -->
                     <SplideSlide>
-                        <!-- Calling the child / item component -->
-                        <SliderVideoFullscreenItem item={item} />                
+                        {#if item.data.view == 'Related'}
+                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} /> 
+                        {:else}
+                            <SliderVideoFullscreenItem item={item} /> 
+                        {/if}
                     </SplideSlide>
                 {/if}
             {/each}

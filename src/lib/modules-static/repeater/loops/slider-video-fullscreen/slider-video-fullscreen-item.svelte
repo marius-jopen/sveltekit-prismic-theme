@@ -4,7 +4,7 @@
 
 <a class="video-box relative block h-full" href="/"> 
     <!-- Video -->
-    <video muted class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster_url}" autoplay loop>
+    <video class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster_url}" autoplay loop muted>
         <source src={((item.data.preview_video_link[0]) ? item.data.preview_video_link[0].text : item.data.preview_video.url)} type="video/mp4" />
         Your browser does not support the video tag.
     </video>
