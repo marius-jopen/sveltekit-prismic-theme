@@ -30,6 +30,17 @@
             return allItems.results.find(p => p.uid === uid)
         })
 
+        // From the orted items list, find the projects which have the 'Normal' view and put them into an array
+        // A project can also have a different view set up. For example 'Related'
+        // And then it would not work in some loops, because some important fields would be empty
+        const sortedItemsNormal = []
+        
+        sortedItems.map(i => {
+            if(i.data.view == 'Normal' || i.data.view == null) {
+                sortedItemsNormal.push(i)
+            }
+        })
+
         // Return the data which we got above
         return {
             props: {
@@ -37,7 +48,8 @@
                 document,
                 allItems,
 				type,
-				setup
+				setup,
+                sortedItemsNormal
             }
         }
     }
@@ -57,11 +69,12 @@
     export let sortedItems
 	export let type
     export let allItems
+    export let sortedItemsNormal
 </script>
 
 <NavigationContentScroll data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<!-- <TypoGridLoop items={sortedItems} type={type} /> -->
-<!-- <AccordeonComplex items={sortedItems} type={type} /> -->
+<TypoGridLoop items={sortedItemsNormal} type={type} />
+<AccordeonComplex items={sortedItemsNormal} type={type} />
 <SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} />
