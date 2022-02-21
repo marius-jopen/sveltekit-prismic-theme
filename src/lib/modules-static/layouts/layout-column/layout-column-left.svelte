@@ -7,9 +7,31 @@
 </script>
 
 <div>
-	<ImageFullWidth inputImage={input.thumbnail} />
-	<ImageFullWidth inputImage={input.thumbnail} />
-	<ImageFullWidth inputImage={input.thumbnail} />
-	<ImageFullWidth inputImage={input.thumbnail} />
-	<ImageFullWidth inputImage={input.thumbnail} />
+	<ImageFullWidth 
+	inputImage={input.data.preview_image} 
+	inputImageSize={'Big'}
+	inputCaption={''} 
+	inputHasRichtext={false}
+	/>
+
+	<ImageFullWidth 
+	inputImage={input.data.preview_image} 
+	inputImageSize={'Big'}
+	inputCaption={''} 
+	inputHasRichtext={false}
+	/>
+
+	<ImageFullWidth 
+	inputImage={input.data.preview_image} 
+	inputImageSize={'Big'}
+	inputCaption={''} 
+	inputHasRichtext={false}
+	/>
+
+	<ImageFullWidth 
+	inputImage={input.data.preview_image} 
+	inputImageSize={'Big'}
+	inputCaption={''} 
+	inputHasRichtext={false}
+	/>
 </div>

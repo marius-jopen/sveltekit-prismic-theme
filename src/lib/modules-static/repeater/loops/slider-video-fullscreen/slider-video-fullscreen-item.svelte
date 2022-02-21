@@ -1,5 +1,6 @@
 <script>
     export let item
+    export let type
 
     // Define variables which are used in the slider
     let textColor 
@@ -12,7 +13,7 @@
     }
 </script>
 
-<a class="{textColor} video-box relative block h-full" href="/"> 
+<a class="{textColor} video-box relative block h-full" href="/{type}s/{item.uid}"> 
     <!-- Video -->
     <video class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster.Big.url}" autoplay loop muted>
         <source src={((item.data.preview_video_link[0]) ? item.data.preview_video_link[0].text : item.data.preview_video.url)} type="video/mp4" />

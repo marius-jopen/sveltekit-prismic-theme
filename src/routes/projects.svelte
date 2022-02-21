@@ -30,7 +30,7 @@
             return allItems.results.find(p => p.uid === uid)
         })
 
-        // From the orted items list, find the projects which have the 'Normal' view and put them into an array
+        // From the sorted items list, find the projects which have the 'Normal' view and put them into an array
         // A project can also have a different view set up. For example 'Related'
         // And then it would not work in some loops, because some important fields would be empty
         const sortedItemsNormal = []
@@ -64,7 +64,6 @@
     import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
 
     // Get the data from above
-    export let document
 	export let setup
     export let sortedItems
 	export let type

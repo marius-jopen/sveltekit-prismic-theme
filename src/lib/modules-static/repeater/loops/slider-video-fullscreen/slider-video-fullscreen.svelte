@@ -10,7 +10,7 @@
     // Get data from parent component
     export let items
     export let allItems
-	export let type
+    export let type
 
     // Define variables which are used in the slider
     let functionDelayTime = 1000
@@ -101,9 +101,9 @@
                     <!-- Part of the swiperJS -->
                     <SplideSlide>
                         {#if item.data.view == 'Related'}
-                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} heightVh={heightVh} /> 
+                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} heightVh={heightVh} type={type} /> 
                         {:else}
-                            <SliderVideoFullscreenItem item={item} /> 
+                            <SliderVideoFullscreenItem item={item} type={type} /> 
                         {/if}
                     </SplideSlide>
                 {/if}

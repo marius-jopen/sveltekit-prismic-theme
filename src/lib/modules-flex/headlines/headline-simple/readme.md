@@ -7,9 +7,7 @@ Displays a headline text
 
 This is how the component gets used when called via a parent component:
 ````
-<HeadlineSimple 
-inputText={document.data.headline_simple_text[0].text}
-/>
+<HeadlineSimple inputText={document.data.title[0].text} />
 ````
 
 And this is the array of the slice which gets used in Prismic. You can also use it to get the seperate array for the image and the caption if needed

@@ -34,7 +34,7 @@
 	}
 </script>
 
-<div class="border-b border-lines relative">
+<div class="border-b border-lines relative ">
 	<!-- Display image basic comp -->
 	<Image image={image} imageSize={imageSize} classes={'w-full h-screen object-cover'} />
 

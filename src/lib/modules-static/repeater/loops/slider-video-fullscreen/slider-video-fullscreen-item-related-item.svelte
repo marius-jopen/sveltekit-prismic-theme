@@ -2,6 +2,7 @@
     // Get data from parent component
     export let item
     export let heightVh
+    export let type
 
     // Define variables which are used in the slider
     let active
@@ -32,7 +33,7 @@
     }
 </script>
 
-<a href="/" style="{relatedStyling}" class="{textColor} block relative w-1/2 related-item" on:mouseenter="{start}" on:mouseleave="{stop}">
+<a href="/{type}s/{item.uid}" style="{relatedStyling}" class="{textColor} block relative w-1/2 related-item" on:mouseenter="{start}" on:mouseleave="{stop}">
     <!-- Video -->
     <video bind:currentTime class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster.Medium.url}" autoplay loop muted>
         <source src={((item.data.preview_video_link[0]) ? item.data.preview_video_link[0].text : item.data.preview_video.url)} type="video/mp4" />

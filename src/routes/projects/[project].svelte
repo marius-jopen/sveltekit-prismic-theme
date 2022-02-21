@@ -33,7 +33,7 @@
 	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
 	import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
-	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
+	import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
 
     // Get the data from above
     export let document
@@ -46,5 +46,5 @@
 <NavigationMobileSimple data={setup.data} />
 
 <LayoutCover input={document} />
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
-<ImageFullWidth inputImage={document.data.thumbnail} />
+<HeadlineSimple inputText={document.data.title[0].text} />
+<LayoutColumn input={document} />

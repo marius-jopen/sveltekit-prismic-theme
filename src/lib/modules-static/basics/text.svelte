@@ -9,14 +9,16 @@
     export let classesRichtext
 </script>
 
-{#if hasRichtext == true}
-    <div class="{classesRichtext}">
-    {@html PrismicDom.RichText.asHtml(text)}
-    </div>
-{/if}
+{#if text}
+    {#if hasRichtext == true}
+        <div class="{classesRichtext}">
+            {@html PrismicDom.RichText.asHtml(text)}
+        </div>
+    {/if}
 
-{#if hasRichtext == false || hasRichtext == undefined}
-    <div class="{classes}">
-        {text}
-    </div>
+    {#if hasRichtext == false || hasRichtext == undefined}
+        <div class="{classes}">
+            {text}
+        </div>
+    {/if}
 {/if}
