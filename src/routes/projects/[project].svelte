@@ -34,6 +34,7 @@
 	import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 	import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
+    import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
 
     // Get the data from above
     export let document
@@ -48,3 +49,5 @@
 <LayoutCover input={document} />
 <HeadlineSimple inputText={document.data.title[0].text} />
 <LayoutColumn input={document} />
+
+<SliderComplex inputLoop={document.data.slider} height="h-50vw sm:h-60vw" classes="bg-white border-lines border-b" />

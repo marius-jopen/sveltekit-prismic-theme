@@ -36,7 +36,7 @@
 
 <div class="border-b border-lines">
 	<!-- Display image basic comp -->
-	<Image image={image} imageSize={imageSize} classes={'border-b border-lines w-full'} />
+	<Image image={image} imageSize={imageSize} classes={'w-full'} />
 
 	<!-- Display text basic comp -->
 	<Text text={caption} hasRichtext={hasRichtext} classes={'px-4 py-2'} classesRichtext={'px-4 pt-1 pb-3'}/>

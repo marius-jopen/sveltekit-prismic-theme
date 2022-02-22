@@ -1,9 +1,15 @@
 <script>
     // Get data from parent Component
     export let item
+    export let height // Shared height
 
-    // Shared height
-    let height = "h-50vw sm:h-30vw"
+    // Check if it is a vimeo link or a file from prismic
+    let videoUrl = item.slider_video.url
+    let videoVimeo = item.slider_video_link[0]
+
+    if(videoVimeo) {
+        videoUrl = item.slider_video_link[0].text
+    }
 </script>
 
 <div class="{height}">
@@ -11,9 +17,9 @@
         <img src="{item.slider_image.Big.url}" alt="{item.slider_image.alt}" class="{height} w-full object-cover">
     {/if}
 
-    {#if item.slider_video.url}
-        <video class="{height} w-full object-cover" playsinline poster="" autoplay loop muted>
-            <source src={item.slider_video.url} type="video/mp4" />
+    {#if videoUrl || videoVimeo}
+        <video class="{height} w-full object-cover" playsinline poster="{item.slider_video_poster.Big.url}" autoplay loop muted>
+            <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     {/if}

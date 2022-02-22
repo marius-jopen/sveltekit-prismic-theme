@@ -13,6 +13,8 @@
 	// Get data from parent component or from Slice function
     export let slice
     export let inputLoop
+	export let height
+	export let classes
 
 	// Define variables to check if this slides is embedded via slices or manually
 	let loop
@@ -92,68 +94,70 @@
 <!-- Access the window to get the keystrokes to close the fullscreen -->
 <svelte:window on:keydown={handleKeydown}/>
 
-<div class="relative">
-	<!-- Slider -->
-	<Splide
-	bind:this={splideSlider}
-	on:move={ e => {slideMove(e)} }
-	options={{
-		type: 'loop',
-		focus: 'center',
-		pagination: false,
-		arrows: false,
-		classes: {
-			arrows: 'splide__arrows your-class-arrows',
-			arrow : 'splide__arrow your-class-arrow',
-			prev  : 'splide__arrow--prev your-class-prev',
-			next  : 'splide__arrow--next your-class-next',
-		},
-	}}>
-		{#each loop as item}
-			<SplideSlide>
-				<SliderComplexItem item={item} />
-			</SplideSlide>
-		{/each}
-	</Splide>
+<div class="{classes}">
+	<div class="relative">
+		<!-- Slider -->
+		<Splide
+		bind:this={splideSlider}
+		on:move={ e => {slideMove(e)} }
+		options={{
+			type: 'loop',
+			focus: 'center',
+			pagination: false,
+			arrows: false,
+			classes: {
+				arrows: 'splide__arrows your-class-arrows',
+				arrow : 'splide__arrow your-class-arrow',
+				prev  : 'splide__arrow--prev your-class-prev',
+				next  : 'splide__arrow--next your-class-next',
+			},
+		}}>
+			{#each loop as item}
+				<SplideSlide>
+					<SliderComplexItem item={item} height={height} />
+				</SplideSlide>
+			{/each}
+		</Splide>
 
-	<!-- Fullscreen Button -->
-	<div class="absolute bottom-1 left-1 p-1 cursor-pointer z-30" on:click="{openFullscreen}">
-		<!-- SVG Arrow -->
-		<svg id="Ebene_1" class="h-7" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-			<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.85" y1="23.15" x2="23.03" y2="1.97"/><polyline class="cls-1" points="23.15 15.03 23.15 1.85 9.97 1.85"/>
-		</svg>
-	</div>
-
-	<!-- Only show when more than 1 slider -->
-	{#if totalSlides > 1}
-		<!-- Arrow Previous -->
-		<div on:click={prevSlide} class="absolute top-0 left-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
-			<div class="pl-2 flex justify-start">
-				<svg class="h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
-			</div>
+		<!-- Fullscreen Button -->
+		<div class="absolute bottom-1 left-1 p-1 cursor-pointer z-30" on:click="{openFullscreen}">
+			<!-- SVG Arrow -->
+			<svg id="Ebene_1" class="h-7" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+				<defs><style>.cls-1{fill:none;stroke:black;stroke-miterlimit:10;stroke-width:2px;}</style></defs><line class="cls-1" x1="1.85" y1="23.15" x2="23.03" y2="1.97"/><polyline class="cls-1" points="23.15 15.03 23.15 1.85 9.97 1.85"/>
+			</svg>
 		</div>
 
-		<!-- Arrow Next -->
-		<div on:click={nextSlide} class="absolute top-0 right-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
-			<div class="pr-2 flex justify-end">
-				<svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
+		<!-- Only show when more than 1 slider -->
+		{#if totalSlides > 1}
+			<!-- Arrow Previous -->
+			<div on:click={prevSlide} class="absolute top-0 left-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
+				<div class="pl-2 flex justify-start">
+					<svg class="h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
+				</div>
 			</div>
-		</div>
-	{/if}
-</div>
 
-<!-- Extra row with caption and slide counter -->
-<div class="flex w-full justify-between pt-1">
-	<div>
-		{currentCaption}
+			<!-- Arrow Next -->
+			<div on:click={nextSlide} class="absolute top-0 right-0 w-1/2 p-1 cursor-pointer z-10 h-full flex justify-center flex-col opacity-0 hover:opacity-100 transition-opacity duration-300">
+				<div class="pr-2 flex justify-end">
+					<svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
+				</div>
+			</div>
+		{/if}
 	</div>
 
-	<!-- Only show when more than 1 slider -->
-	{#if totalSlides > 1}
+	<!-- Extra row with caption and slide counter -->
+	<div class="flex w-full justify-between pt-1">
 		<div>
-			{slideIndex} / {totalSlides}
+			{currentCaption}
 		</div>
-	{/if}
+
+		<!-- Only show when more than 1 slider -->
+		{#if totalSlides > 1}
+			<div>
+				{slideIndex} / {totalSlides}
+			</div>
+		{/if}
+	</div>
 </div>
 
 <!-- Fullscreen area -->
