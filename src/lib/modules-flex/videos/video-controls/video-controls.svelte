@@ -38,9 +38,8 @@
 	// When status changes, then the video gets resetted and played
 	$: status, resetVideo()
 
-	// Function which resets and pauses the video
+	// Function which pauses the video
 	function resetVideo() {
-		time = 0 // Resets the time of the video
 		paused = true // paused the video
 	}
 

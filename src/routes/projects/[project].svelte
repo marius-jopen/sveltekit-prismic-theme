@@ -47,8 +47,6 @@
 </NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
-<!-- <LayoutCover input={document} /> -->
-<!-- <HeadlineSimple inputText={document.data.title[0].text} /> -->
-<!-- <LayoutColumn input={document} /> -->
-<!-- <SliderComplex inputLoop={document.data.slider} height="h-50vw sm:h-60vw" classes="bg-white border-lines border-b" /> -->
-<SliderVideoFull inputLoop={document.data.slider} />
+<LayoutCover input={document} />
+<HeadlineSimple inputText={document.data.title[0].text} />
+<LayoutColumn input={document} />

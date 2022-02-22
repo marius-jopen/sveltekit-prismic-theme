@@ -12,6 +12,7 @@
 
 	// Define variables to check if this slides is embedded via slices or manually
 	let loop
+	let slideIndex
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
@@ -23,16 +24,12 @@
 	// Define variables which get used in this component
 	let splideSlider
 	let totalSlides = loop.length
-	let status  // Triggers to pause the video
 	
-	// Function which gets called when the slider moves
-	// It changes the status variable which will pause the video
-	function slideMove() {	
-		if(status == true) {
-			status = false
-		} else {
-			status = true
-		}
+	// Change slide number index
+	// Gets used for the arrows and also to pass the index into each slide
+	// When the index changes, then the video gets paused
+	function slideMove(e) {	
+		slideIndex = e.detail.index
 	}
 
 	// Two functions to trigger the previous and next slide on click
@@ -53,29 +50,33 @@
 		on:move={ e => {slideMove(e)} }
 		options={{
             height: '100vh',
-			type: 'loop',
+			type: 'fade',
 			focus: 'center',
 			pagination: false,
 			arrows: false,
 		}}>
 			{#each loop as item}
 				<SplideSlide>
-					<SliderVideoFullItem item={item} height={'h-screen'} status={status}/>
+					<SliderVideoFullItem item={item} height={'h-screen'} status={slideIndex}/>
 				</SplideSlide>
 			{/each}
 		</Splide>
 
 		<!-- Only show when more than 1 slider -->
 		{#if totalSlides > 1}
-			<!-- Arrow Previous -->
-			<div class="arrow-left" on:click={prevSlide}>
-				<svg class="h-6 rotate-180 opacity-0 transition-opacity duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:white;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
-			</div>
+			{#if !(slideIndex == 0 || slideIndex == null)}
+				<!-- Arrow Previous -->
+				<div class="arrow-left" on:click={prevSlide}>
+					<svg class="h-6 rotate-180 opacity-0 transition-opacity duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:white;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
+				</div>
+			{/if}
 
-			<!-- Arrow Next -->
-			<div class="arrow-right" on:click={nextSlide}>
-				<svg class="h-6 opacity-0 transition-opacity duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:white;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
-			</div>
+			{#if !(slideIndex == (totalSlides - 1))}
+				<!-- Arrow Next -->
+				<div class="arrow-right" on:click={nextSlide}>
+					<svg class="h-6 opacity-0 transition-opacity duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.53 20.05"><defs><style>.cls-1{fill:none;stroke:white;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><line class="cls-1" y1="10.02" x2="29.95" y2="10.02"/><polyline class="cls-1" points="20.8 19.34 30.12 10.02 20.8 0.71"/></g></g></svg>
+				</div>
+			{/if}
 		{/if}
 	</div>
 </div>
