@@ -1,5 +1,5 @@
 {
-	"Main" : {
+	"General" : {
 	  "title" : {
 		"type" : "StructuredText",
 		"config" : {
@@ -13,7 +13,131 @@
 		  "label" : "UID"
 		}
 	  },
-	  "thumbnail" : {
+	  "brightness" : {
+		"type" : "Boolean",
+		"config" : {
+		  "placeholder_false" : "dark",
+		  "placeholder_true" : "light",
+		  "default_value" : true,
+		  "label" : "Brightness"
+		}
+	  },
+	  "view" : {
+		"type" : "Select",
+		"config" : {
+		  "options" : [ "Normal", "Related" ],
+		  "default_value" : "Normal",
+		  "label" : "View"
+		}
+	  },
+	  "sub_title" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Sub Title"
+		}
+	  },
+	  "description" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+		  "label" : "Description"
+		}
+	  }
+	},
+	"SEO" : { },
+	"Slices" : { },
+	"Content" : {
+	  "slider" : {
+		"type" : "Group",
+		"config" : {
+		  "fields" : {
+			"slider_image" : {
+			  "type" : "Image",
+			  "config" : {
+				"constraint" : { },
+				"thumbnails" : [ {
+				  "name" : "Big",
+				  "width" : 2500,
+				  "height" : null
+				}, {
+				  "name" : "Medium",
+				  "width" : 1500,
+				  "height" : null
+				}, {
+				  "name" : "Small",
+				  "width" : 750,
+				  "height" : null
+				} ],
+				"label" : "Slider Image"
+			  }
+			},
+			"slider_video_poster" : {
+			  "type" : "Image",
+			  "config" : {
+				"constraint" : { },
+				"thumbnails" : [ {
+				  "name" : "Big",
+				  "width" : 2500,
+				  "height" : null
+				}, {
+				  "name" : "Medium",
+				  "width" : 1500,
+				  "height" : null
+				}, {
+				  "name" : "Small",
+				  "width" : 750,
+				  "height" : null
+				} ],
+				"label" : "Slider Video Poster"
+			  }
+			},
+			"slider_video" : {
+			  "type" : "Link",
+			  "config" : {
+				"select" : "media",
+				"label" : "Slider Video"
+			  }
+			},
+			"slider_video_link" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+				"label" : "Slider Video Link"
+			  }
+			},
+			"slider_caption" : {
+			  "type" : "StructuredText",
+			  "config" : {
+				"multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+				"label" : "Slider Caption"
+			  }
+			}
+		  },
+		  "label" : "Slider"
+		}
+	  }
+	},
+	"Related" : {
+	  "related_projects" : {
+		"type" : "Group",
+		"config" : {
+		  "fields" : {
+			"related_project" : {
+			  "type" : "Link",
+			  "config" : {
+				"select" : "document",
+				"customtypes" : [ "project" ],
+				"label" : "Related Project"
+			  }
+			}
+		  },
+		  "label" : "Related Projects"
+		}
+	  }
+	},
+	"Preview Media" : {
+	  "preview_image" : {
 		"type" : "Image",
 		"config" : {
 		  "constraint" : { },
@@ -30,7 +154,41 @@
 			"width" : 750,
 			"height" : null
 		  } ],
-		  "label" : "Thumbnail"
+		  "label" : "Preview Image"
+		}
+	  },
+	  "preview_video" : {
+		"type" : "Link",
+		"config" : {
+		  "select" : "media",
+		  "label" : "Preview Video"
+		}
+	  },
+	  "preview_video_link" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Preview Video Link"
+		}
+	  },
+	  "preview_video_poster" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : { },
+		  "thumbnails" : [ {
+			"name" : "Big",
+			"width" : 2500,
+			"height" : null
+		  }, {
+			"name" : "Medium",
+			"width" : 1500,
+			"height" : null
+		  }, {
+			"name" : "Small",
+			"width" : 750,
+			"height" : null
+		  } ],
+		  "label" : "Preview Video Poster"
 		}
 	  }
 	}

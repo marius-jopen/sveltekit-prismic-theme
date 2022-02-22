@@ -1,45 +1,14 @@
 {
-	"Main" : {
+	"General" : {
 	  "website_title" : {
 		"type" : "StructuredText",
 		"config" : {
 		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
 		  "label" : "Website Title"
 		}
-	  },
-	  "uid" : {
-		"type" : "UID",
-		"config" : {
-		  "label" : "Setup"
-		}
-	  },
-	  "seo_text" : {
-		"type" : "StructuredText",
-		"config" : {
-		  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-		  "label" : "SEO Text"
-		}
-	  },
-	  "seo_image" : {
-		"type" : "Image",
-		"config" : {
-		  "constraint" : { },
-		  "thumbnails" : [ {
-			"name" : "Big",
-			"width" : 2500,
-			"height" : null
-		  }, {
-			"name" : "Medium",
-			"width" : 1500,
-			"height" : null
-		  }, {
-			"name" : "Small",
-			"width" : 750,
-			"height" : null
-		  } ],
-		  "label" : "SEO Image"
-		}
-	  },
+	  }
+	},
+	"Navigation" : {
 	  "navigation_top" : {
 		"type" : "Group",
 		"config" : {
@@ -102,5 +71,6 @@
 		  "label" : "Navigation Bottom"
 		}
 	  }
-	}
+	},
+	"SEO" : { }
   }

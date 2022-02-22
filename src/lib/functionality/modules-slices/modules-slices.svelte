@@ -9,7 +9,9 @@
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
-	// Slider Complex
+	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
+
 
 	// Get the data from the parent component
 	export let slices
@@ -19,7 +21,8 @@
 		image_full_width: ImageFullWidth,
 		image_full_screen: ImageFullScreen,
 		headline_simple: HeadlineSimple,
-
+		slider_complex: SliderComplex,
+		slider_video_full: SliderVideoFull,
 		marquee: SliderMarquee,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,

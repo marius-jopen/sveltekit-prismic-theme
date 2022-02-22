@@ -3,6 +3,8 @@
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
+	export let height
+	export let status
 
 	// Define variables which get used in this component
 	let videoUrl
@@ -32,6 +34,15 @@
 	let video
 	let hideControl = false
 	var timeout
+
+	// When status changes, then the video gets resetted and played
+	$: status, resetVideo()
+
+	// Function which resets and pauses the video
+	function resetVideo() {
+		time = 0 // Resets the time of the video
+		paused = true // paused the video
+	}
 
 	// Function to hide the controls after 2 seconds
 	function HideControls() {
@@ -99,14 +110,14 @@
 	}
 </script>
 
-<div on:mousemove={HideControls} on:mousemove={unHideControls} class="relative w-full" >
-	<div class="video-box cursor-pointer relative top-0 left-0 w-full">
+<div on:mousemove={HideControls} on:mousemove={unHideControls} class="relative w-full {height}" >
+	<div class="bg-black video-box cursor-pointer relative top-0 left-0 w-full {height}">
 		{#if videoUrl}
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video
 				id="video"
 				poster="{videoPoster}"
-				class="w-full h-full  object-contain"
+				class="{height} w-full object-contain"
 				src={videoUrl}
 				bind:this={video}
 				on:mouseup={handleMouseup}
@@ -122,7 +133,7 @@
 	</div>
 
 	<!-- Controls -->
-	<div class:hideControlsSoft="{hideControl === true}" class="border-lines border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
+	<div class:hideControlsSoft="{hideControl === true}" class="{height} border-lines border-t border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<!-- Play and Pause button -->
 			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >

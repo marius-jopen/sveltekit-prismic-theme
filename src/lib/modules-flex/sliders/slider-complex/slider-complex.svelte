@@ -24,6 +24,7 @@
 		loop = inputLoop
 	} else {
 		loop = slice.items
+		height = "h-50vw sm:h-60vw"
 	}
 	// Define variables which get used in this component
 	let keyCode
@@ -146,7 +147,7 @@
 	</div>
 
 	<!-- Extra row with caption and slide counter -->
-	<div class="flex w-full justify-between pt-1">
+	<div class="flex w-full justify-between pt-1 border-t border-b border-lines">
 		<div>
 			{currentCaption}
 		</div>
