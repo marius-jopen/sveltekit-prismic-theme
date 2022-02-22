@@ -12,6 +12,9 @@
 	export let interalStatus
 	export let uid
 
+	// Calls the functions which shortens the title if needed
+	let titleShort = truncateString(item.data.title[0].text, 35);
+
 	// Make those variables reactive
 	$: interalStatus
 	$: uid
@@ -34,15 +37,26 @@
 			uid = item.uid
 		}
 	}
+
+	// Function which shortens the title
+	function truncateString(str, num) {
+		// If the length of str is less than or equal to num
+		// just return str--don't truncate it.
+		if (str.length <= num) {
+			return str
+		}
+		// Return str truncated with '...' concatenated to the end of str.
+		return str.slice(0, num) + '...'
+	}
 </script>
 
 {#if item}
 	<div transition:slide={{ duration: 300 }}>
 		<!-- Header -->
-		<div on:click={toggle} id="" class="{item.uid} w-full flex cursor-pointer textHoverGrey text-xl py-3 px-4 border-b border-lines">
+		<div on:click={toggle} class="{item.uid} w-full flex cursor-pointer textHoverGrey text-xl py-3 px-4 border-b border-lines">
 			{#if interalStatus == false || interalStatus == undefined}
 				<div class="w-1/2 lg:w-1/3">
-					{item.data.title[0].text}
+					{titleShort}
 				</div>
 
 				{#if item.data.sub_title[0]}

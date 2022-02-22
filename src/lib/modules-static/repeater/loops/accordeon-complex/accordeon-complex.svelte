@@ -13,6 +13,7 @@
 	let itemsSorted
 	let itemsSearched
 	let itemsUrl
+	let urlUsed
 
 	// Declate 2 variables which we need
 	let itemsModified
@@ -28,6 +29,7 @@
 	$: itemsSearched, setSearched() 
 	$: itemsSorted, setSorted() 
 	$: itemsUrl, setUrl()
+	$: urlUsed
 
 	// Function which gets called on each keystroke of the search
 	// It filters the list with the items and also the list which the sort function is using
@@ -55,8 +57,8 @@
 
 <div>
 	<!-- Insert all used components -->
-	<AccordeonComplexUrl items={items} bind:itemsUrl={itemsUrl} />
+	<AccordeonComplexUrl items={items} bind:itemsUrl={itemsUrl} bind:urlUsed={urlUsed} />
 	<AccordeonComplexSearch items={items} bind:itemsSearched={itemsSearched}/>
 	<AccordeonComplexSort items={itemsSortedModified} bind:itemsSorted={itemsSorted}/>
-	<AccordeonComplexLoop type={type} items={itemsModified} />
+	<AccordeonComplexLoop urlUsed={urlUsed} type={type} items={itemsModified} />
 </div>

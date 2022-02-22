@@ -8,6 +8,7 @@
     // Get data from parent component
     export let items
 	export let type
+    export let urlUsed
     
     // Declare a varibale which gets changes when the active accordeon opens
     // It tells us the name of the accordeonm so we can close the others
@@ -21,6 +22,10 @@
 
     // Load more button is reactive
     $: itemsTotal = items.length
+
+    $: if(urlUsed == true) {
+        loadMore()
+    }
 
     // Function which sets the visible items to the total numebr of items
     // Also hides the laod more button
@@ -44,9 +49,9 @@
             })
         } else {
             // Remove the hash content if an accordeon gets closed
-            if(browser) {
-                location.hash = ''
-            }
+            // if(browser) {
+            //     location.hash = ''
+            // }
         }
     }
 </script>

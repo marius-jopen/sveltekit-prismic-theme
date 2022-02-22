@@ -10,6 +10,7 @@
     
     // Variable for binding
     export let itemsUrl
+    export let urlUsed
 
     // Init the url variable
     let urlHash = ""
@@ -17,8 +18,10 @@
     // Get url hash from browser
     $: if(browser) {
         if(location.hash.includes('#')) {
+            urlUsed = true
             urlHash = location.hash.replace('#', '')
         } else {
+            urlUsed = false
             urlHash = null
         }
     }

@@ -8,9 +8,9 @@
         <div class="pt-10 px-12">
             <img src="{item.slider_image.Big.url}" alt="{item.slider_image.alt}">
 
-            {#if item.caption[0]}
+            {#if item.slider_caption[0]}
                 <div class="pt-1">
-                    {item.caption[0].text}
+                    {item.slider_caption[0].text}
                 </div>
             {/if}
         </div>
