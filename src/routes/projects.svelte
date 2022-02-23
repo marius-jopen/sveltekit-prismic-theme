@@ -63,6 +63,7 @@
     import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
     import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
     import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
+    import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
 
     // Get the data from above
 	export let setup
@@ -75,6 +76,7 @@
 <NavigationContentScroll data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
+<Overlay items={sortedItemsNormal} />
 <TypoGridLoop items={sortedItemsNormal} type={type} />
 <AccordeonComplex items={sortedItemsNormal} type={type} />
 <ThumbnailGrid items={sortedItemsNormal} type={type} />

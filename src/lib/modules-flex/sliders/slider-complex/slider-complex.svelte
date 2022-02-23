@@ -26,6 +26,7 @@
 		loop = slice.items
 		height = "h-50vw sm:h-60vw"
 	}
+	
 	// Define variables which get used in this component
 	let keyCode
 	let fullscreen = false
