@@ -38,7 +38,7 @@
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<!-- <ImageFullWidth 
+<ImageFullWidth 
 inputImage={document.data.image_full_width_image} 
 inputImageSize={'Big'}
 inputCaption={document.data.image_full_width_caption} 
@@ -64,7 +64,7 @@ inputText={document.data.headline_simple_text[0].text}
 inputLoop={document.data.slider} 
 height="h-50vw sm:h-60vw" 
 classes="" 
-/> -->
+/>
 
 <SliderVideoFull 
 inputLoop={document.data.slider} 

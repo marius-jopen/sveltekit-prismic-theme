@@ -8,6 +8,7 @@
     let active
     let currentTime
     let textColor 
+    let muted = true
     
     // Gets the height from root-parent and divides it by two
     // also adds 2px to avoid the grey / white line
@@ -35,7 +36,8 @@
 
 <a href="/{type}s/{item.uid}" style="{relatedStyling}" class="{textColor} block relative w-1/2 related-item" on:mouseenter="{start}" on:mouseleave="{stop}">
     <!-- Video -->
-    <video bind:currentTime class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster.Medium.url}" autoplay loop muted>
+    <!-- svelte-ignore a11y-media-has-caption -->
+    <video bind:currentTime class="h-full w-full object-cover" poster="{item.data.preview_video_poster.Medium.url}" playsinline autoplay loop bind:muted >
         <source src={((item.data.preview_video_link[0]) ? item.data.preview_video_link[0].text : item.data.preview_video.url)} type="video/mp4" />
         Your browser does not support the video tag.
     </video>

@@ -6,6 +6,7 @@
     export let item
     export let height // Shared height
     export let status
+    export let index
 
     // Check if it is a vimeo link or a file from prismic
     let videoUrl = item.slider_video.url
@@ -21,5 +22,5 @@
         <img src="{item.slider_image.Big.url}" alt="{item.slider_image.alt}" class="{height} border-lines border-b w-full object-cover">
     {/if}
 
-    <VideoControls status="{status}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_poster.Big.url}" height="h-screen"/>
+    <VideoControls index="{index}" status="{status}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_poster.Big.url}" height="h-screen"/>
 </div>

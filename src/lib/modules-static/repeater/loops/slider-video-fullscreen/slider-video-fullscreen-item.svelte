@@ -15,7 +15,8 @@
 
 <a class="{textColor} video-box relative block h-full" href="/{type}s/{item.uid}"> 
     <!-- Video -->
-    <video class="h-full w-full object-cover" playsinline poster="{item.data.preview_video_poster.Big.url}" autoplay loop muted>
+    <!-- svelte-ignore a11y-media-has-caption -->
+    <video class="h-full w-full object-cover" poster="{item.data.preview_video_poster.Big.url}" playsinline autoplay loop muted >
         <source src={((item.data.preview_video_link[0]) ? item.data.preview_video_link[0].text : item.data.preview_video.url)} type="video/mp4" />
         Your browser does not support the video tag.
     </video>

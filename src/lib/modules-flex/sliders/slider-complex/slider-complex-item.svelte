@@ -18,6 +18,7 @@
     {/if}
 
     {#if videoUrl || videoVimeo}
+        <!-- svelte-ignore a11y-media-has-caption -->
         <video class="{height} w-full object-cover" playsinline poster="{item.slider_video_poster.Big.url}" autoplay loop muted>
             <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.

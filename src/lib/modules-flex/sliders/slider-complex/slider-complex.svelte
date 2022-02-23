@@ -34,7 +34,7 @@
 	let slideIndex = 1
 	let totalSlides = loop.length
 	let currentCaption
-	
+
 	// The getCaption function gets called the first time to check if the
 	// first slide has a caption
 	getCaption(0)
@@ -76,6 +76,10 @@
 
 		// Calls the function which gets the caption
 		getCaption(e.detail.index)
+	}
+
+	function refreshMuted() {
+		randomNumber = Math.floor(Math.random() * 10)
 	}
 
 	//  Function which get the current caption

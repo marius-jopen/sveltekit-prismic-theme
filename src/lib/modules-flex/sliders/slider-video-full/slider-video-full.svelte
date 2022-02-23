@@ -55,9 +55,9 @@
 			pagination: false,
 			arrows: false,
 		}}>
-			{#each loop as item}
+			{#each loop as item, index}
 				<SplideSlide>
-					<SliderVideoFullItem item={item} height={'h-screen'} status={slideIndex}/>
+					<SliderVideoFullItem item={item} height={'h-screen'} status={slideIndex} index={index}/>
 				</SplideSlide>
 			{/each}
 		</Splide>

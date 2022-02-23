@@ -5,6 +5,7 @@
 	export let inputVideoPoster
 	export let height
 	export let status
+	export let index
 
 	// Define variables which get used in this component
 	let videoUrl
@@ -35,17 +36,19 @@
 	let hideControl = false
 	var timeout
 
-	// When status changes, then the video gets resetted and played
-	$: status, resetVideo()
-
-	// Function which pauses the video
-	function resetVideo() {
-		paused = true // paused the video
+	// When status changes, then the inactive video gets paused
+	// And the active video plays
+	$: if(index == status) {
+		paused = false
+	} else {
+		paused = true
+		hideControl = false
 	}
 
 	// Function to hide the controls after 2 seconds
 	function HideControls() {
 		clearTimeout(timeout);
+
 		timeout = setTimeout(function(){
 			if(paused == false ) {
 				hideControl = true
@@ -124,6 +127,7 @@
 				bind:currentTime={time}
 				bind:duration
 				bind:paused
+				autoplay
 				loop
 				playsinline
 				>
