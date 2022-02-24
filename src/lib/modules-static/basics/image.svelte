@@ -3,6 +3,7 @@
     export let image
     export let imageSize
     export let classes
+    export let style
 
     // Original
     let imagePath = image.url
@@ -29,17 +30,17 @@
 </script>
 
 {#if imageSize == 'Original'}
-    <img class="{classes}" width="{imageWidth}" height="{imageHeight}" src="{imagePath}" alt="{imageAlt}">
+    <img style="{style}" class="{classes}" width="{imageWidth}" height="{imageHeight}" src="{imagePath}" alt="{imageAlt}">
 {/if}
 
 {#if imageSize == 'Big'}
-    <img class="{classes}" width="{imageBigWidth}" height="{imageBigHeight}" src="{imageBigPath}" alt="{imageAlt}">
+    <img style="{style}" class="{classes}" width="{imageBigWidth}" height="{imageBigHeight}" src="{imageBigPath}" alt="{imageAlt}">
 {/if}
 
 {#if imageSize == 'Medium'}
-    <img class="{classes}" width="{imageMediumWidth}" height="{imageMediumHeight}" src="{imageMediumPath}" alt="{imageAlt}">
+    <img style="{style}" class="{classes}" width="{imageMediumWidth}" height="{imageMediumHeight}" src="{imageMediumPath}" alt="{imageAlt}">
 {/if}
 
 {#if imageSize == 'Small'}
-    <img class="{classes}" width="{imageSmallWidth}" height="{imageSmallHeight}" src="{imageSmallPath}" alt="{imageAlt}">
+    <img style="{style}" class="{classes}" width="{imageSmallWidth}" height="{imageSmallHeight}" src="{imageSmallPath}" alt="{imageAlt}">
 {/if}

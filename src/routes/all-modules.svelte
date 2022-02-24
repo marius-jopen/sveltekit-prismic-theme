@@ -26,6 +26,7 @@
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
     import ImageFullScreen from '$lib/modules-flex/images/image-full-screen/image-full-screen.svelte'
+    import TextImage from '$lib/modules-flex/paragraphs/text-image/text-image.svelte'
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
     import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
@@ -71,4 +72,14 @@ classes=""
 
 <SliderVideoFull 
 inputLoop={document.data.slider} 
+/>
+
+<TextImage 
+inputImage={document.data.text_image_image} 
+inputImageSize={'Big'}
+inputCaption={document.data.text_image_caption} 
+inputHasRichtext={true}
+inputLayout={document.data.text_image_layout}
+inputHeight={true}
+inputLongText={document.data.text_image_long_text}
 />

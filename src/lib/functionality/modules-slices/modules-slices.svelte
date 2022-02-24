@@ -4,13 +4,15 @@
 	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
-	
+	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
+	import TextImage from "$lib/modules-flex/paragraphs/text-image/text-image.svelte"
+
+
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
-	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
-    import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
 
 
 	// Get the data from the parent component
@@ -20,13 +22,15 @@
 	const sliceTypes = {
 		image_full_width: ImageFullWidth,
 		image_full_screen: ImageFullScreen,
+		paragraph_richtext_big: ParagraphRichtextBig,
 		headline_simple: HeadlineSimple,
 		slider_complex: SliderComplex,
 		slider_video_full: SliderVideoFull,
+		text_image: TextImage,
+
 		marquee: SliderMarquee,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		paragraph_richtext_big: ParagraphRichtextBig,
 		gallery_mouse_move: SliderMouseMove
 	}
 </script>
