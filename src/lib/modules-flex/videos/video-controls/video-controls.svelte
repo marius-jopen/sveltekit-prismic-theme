@@ -196,7 +196,7 @@
 	progress {
 		display: block;
 		width: 100%;
-		padding-top: 11px;
+		padding-top: 9px;
 		padding-bottom: 4px;
 		-webkit-appearance: none;
 		appearance: none;

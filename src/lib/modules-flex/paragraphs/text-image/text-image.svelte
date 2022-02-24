@@ -1,7 +1,7 @@
 <script>
 	// Import components which are used
-	import Image from '$lib/modules-static/basics/image.svelte'
-	import Text from '$lib/modules-static/basics/text.svelte'
+	import Image from '$lib/modules-basic/image.svelte'
+	import Text from '$lib/modules-basic/text.svelte'
 	
 	// Get data from Slice function
 	export let slice
