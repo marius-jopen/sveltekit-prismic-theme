@@ -57,7 +57,8 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationContentScroll from '$lib/modules-static/navigations/navigation-desktop-content-scroll/navigation-desktop-content-scroll.svelte'
+    import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationContentScroll from '$lib/modules-static/navigations/navigation-desktop-content-scroll/navigation-desktop-content-scroll.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
     import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
     import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
@@ -71,7 +72,10 @@
 	export let type
     export let allItems
     export let sortedItemsNormal
+    export let document
 </script>
+
+<Seo setup={setup.data} document={document.data} />
 
 <NavigationContentScroll data={setup.data} />
 <NavigationMobileSimple data={setup.data} />

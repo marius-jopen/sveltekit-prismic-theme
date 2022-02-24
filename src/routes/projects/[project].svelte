@@ -28,7 +28,8 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+    import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
 	import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
@@ -41,6 +42,8 @@
     export let document
 	export let setup
 </script>
+
+<Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSlot data={setup.data}>
 	<BackHistory />
