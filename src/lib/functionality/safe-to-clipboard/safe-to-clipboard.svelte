@@ -6,16 +6,16 @@
     export let copyText // Text which gets copied. For example an email
     export let buttonText // Text of the button
 
-    const handleFailedCopy = (e) => {
+    function handleFailedCopy() {
         buttonText = 'Not safed to Clipboard!'
     }
 
-    function handleSuccessfullyCopied(e) {
+    function handleSuccessfullyCopied() {
         buttonText = 'Safed to Clipboard!'
     }
 </script>
 
-<CopyToClipboard text={copyText} on:copy={e => handleSuccessfullyCopied(e)} on:fail={e => handleFailedCopy(e)} let:copy>
+<CopyToClipboard text={copyText} on:copy={e => handleSuccessfullyCopied()} on:fail={e => handleFailedCopy()} let:copy>
     <button on:click={copy}>
         {buttonText}
     </button>
