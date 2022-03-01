@@ -8,10 +8,20 @@
 
     function handleFailedCopy() {
         buttonText = 'Not safed to Clipboard!'
+
+        // Jump back after 3 seconds to show old text again
+        setTimeout(() => {
+            buttonText = copyText
+        }, 3000);
     }
 
     function handleSuccessfullyCopied() {
         buttonText = 'Safed to Clipboard!'
+
+        // Jump back after 3 seconds to show old text again
+        setTimeout(() => {
+            buttonText = copyText
+        }, 3000);
     }
 </script>
 
