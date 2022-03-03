@@ -59,11 +59,12 @@
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
     import NavigationSuperSimple from '$lib/modules-static/navigations/navigation-super-simple/navigation-super-simple.svelte'
-    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
-    import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
-    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
-    import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
-    import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
+    // import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
+    // import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
+    // import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
+    // import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
+    // import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
+    import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
 
     // Get the data from above
 	export let setup
@@ -77,9 +78,12 @@
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationSuperSimple data={setup.data} />
+<ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
 
+<!-- 
 <Overlay items={sortedItemsNormal} />
 <TypoGridLoop items={sortedItemsNormal} type={type} />
 <AccordeonComplex items={sortedItemsNormal} type={type} />
 <ThumbnailGrid items={sortedItemsNormal} type={type} />
-<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} />
+<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} /> 
+-->

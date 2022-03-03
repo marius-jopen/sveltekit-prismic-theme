@@ -119,7 +119,7 @@
 			<video
 				id="video"
 				poster="{videoPoster}"
-				class="{height} w-full object-contain"
+				class="{height} w-full object-cover"
 				src={videoUrl}
 				bind:this={video}
 				on:mouseup={handleMouseup}

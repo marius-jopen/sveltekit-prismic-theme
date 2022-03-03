@@ -5,7 +5,7 @@
 	let totalItems = data.navigation_top.length
 </script>
 
-<div class="w-full justify-start px-3 uppercase bg-background py-1">
+<div class="w-full justify-start px-3 uppercase bg-background py-1.5">
     <a sveltekit:prefetch class="text-lg textHoverGrey" href="/">
         {data.website_title[0].text} / 
     </a>

@@ -32,6 +32,7 @@ module.exports = {
 				'30vw': '30vw',
 				'20vw': '20vw',
 				'10vw': '10vw',
+				'screen+1': 'calc(100vh + 1px)' // This can be used if you want to get the scrolling direction but the page is fullscreen
 			},
 		}
 	},
