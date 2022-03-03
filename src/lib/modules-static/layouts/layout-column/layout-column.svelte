@@ -8,21 +8,21 @@
 	export let input
 </script>
 
-<div class="parent relative z-10">
+<div class="parent relative z-10 bg-white">
 	<div class="block w-full content">
 		<!-- Mobile -->
 		<div class="block md:hidden">
-			<LayoutColumnMobile input={input.data} />
+			<LayoutColumnMobile input={input} />
 		</div>
 
 		<!-- Left -->
 		<div class="hidden md:block w-1/2 float-left relative h-full border-lines border-r">
-			<LayoutColumnLeft input={input.data} />
+			<LayoutColumnLeft input={input} />
 		</div>
 
 		<!-- Right -->
 		<div class="right-box md:w-1/2 float-left sm:sticky">
-			<LayoutColumnRight input={input.data} />
+			<LayoutColumnRight input={input} />
 		</div>
 	</div>
 

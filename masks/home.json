@@ -1,0 +1,29 @@
+{
+	"General" : { },
+	"Seo" : {
+	  "seo_title" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Seo Title"
+		}
+	  },
+	  "seo_description" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Seo Description"
+		}
+	  },
+	  "seo_image" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : {
+			"width" : 1000
+		  },
+		  "thumbnails" : [ ],
+		  "label" : "Seo Image"
+		}
+	  }
+	}
+  }

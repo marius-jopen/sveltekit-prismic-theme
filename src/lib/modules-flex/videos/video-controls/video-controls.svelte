@@ -3,7 +3,10 @@
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
-console.log(slice)
+	export let height
+	export let status
+	export let index
+
 	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster
@@ -33,9 +36,19 @@ console.log(slice)
 	let hideControl = false
 	var timeout
 
+	// When status changes, then the inactive video gets paused
+	// And the active video plays
+	$: if(index == status) {
+		paused = false
+	} else {
+		paused = true
+		hideControl = false
+	}
+
 	// Function to hide the controls after 2 seconds
 	function HideControls() {
 		clearTimeout(timeout);
+
 		timeout = setTimeout(function(){
 			if(paused == false ) {
 				hideControl = true
@@ -99,14 +112,14 @@ console.log(slice)
 	}
 </script>
 
-<div on:mousemove={HideControls} on:mousemove={unHideControls} class="relative w-full" >
-	<div class="video-box cursor-pointer relative top-0 left-0 w-full">
+<div on:mousemove={HideControls} on:mousemove={unHideControls} class="relative w-full {height}" >
+	<div class="bg-black video-box cursor-pointer relative top-0 left-0 w-full {height}">
 		{#if videoUrl}
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video
 				id="video"
 				poster="{videoPoster}"
-				class="w-full h-full  object-contain"
+				class="{height} w-full object-cover"
 				src={videoUrl}
 				bind:this={video}
 				on:mouseup={handleMouseup}
@@ -114,6 +127,7 @@ console.log(slice)
 				bind:currentTime={time}
 				bind:duration
 				bind:paused
+				autoplay
 				loop
 				playsinline
 				>
@@ -122,7 +136,7 @@ console.log(slice)
 	</div>
 
 	<!-- Controls -->
-	<div class:hideControlsSoft="{hideControl === true}" class="border-lines border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
+	<div class:hideControlsSoft="{hideControl === true}" class="{height} border-lines border-t border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<!-- Play and Pause button -->
 			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >
@@ -182,7 +196,7 @@ console.log(slice)
 	progress {
 		display: block;
 		width: 100%;
-		padding-top: 11px;
+		padding-top: 9px;
 		padding-bottom: 4px;
 		-webkit-appearance: none;
 		appearance: none;

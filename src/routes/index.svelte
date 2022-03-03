@@ -21,20 +21,19 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
+	import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
-	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
-	import ParagraphRichtextBig from '$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte'
-
+    import SafeToClipboard from '$lib/functionality/safe-to-clipboard/safe-to-clipboard.svelte';
+    
     // Get the data from above
     export let document
 	export let setup
 </script>
 
+<Seo setup={setup.data} document={document.data} />
+
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
-<ImageFullWidth inputImage={document.data.image} />
-<ParagraphRichtextBig inputParagraph={document.data.long_text} inputTextAlignment={"ltr"} />
+<SafeToClipboard copyText={"Copy me!"} buttonText={"Click me!"}/>

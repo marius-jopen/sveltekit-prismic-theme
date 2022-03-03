@@ -1,31 +1,37 @@
 <script>
 	// Import all possible components which get used in the Slice module
 	import ImageFullWidth from "$lib/modules-flex/images/image-full-width/image-full-width.svelte"
-	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
-	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
+	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
-	import NavigationFullBackground from "$lib/modules-flex/navigations/navigation-full-background/navigation-full-background.svelte"
+	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
+	import TextImage from "$lib/modules-flex/paragraphs/text-image/text-image.svelte"
+
+
+	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
+	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
-	import SliderBasic from "$lib/modules-flex/sliders/slider-basic/slider-basic.svelte"
-	import SliderPanorama from "$lib/modules-flex/sliders/slider-panorama/slider-panorama.svelte"
+
 
 	// Get the data from the parent component
 	export let slices
 
 	// Connect each slice from Prismic to a component from above
 	const sliceTypes = {
-		slider_basic: SliderBasic,
-		slider_panorama_text: SliderPanorama,
+		image_full_width: ImageFullWidth,
+		image_full_screen: ImageFullScreen,
+		paragraph_richtext_big: ParagraphRichtextBig,
+		headline_simple: HeadlineSimple,
+		slider_complex: SliderComplex,
+		slider_video_full: SliderVideoFull,
+		text_image: TextImage,
+
 		marquee: SliderMarquee,
-		image_simple: ImageFullWidth,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		paragraph_richtext: ParagraphRichtextBig,
-		navigation_fullpage_background: NavigationFullBackground,
-		gallery_mouse_move: SliderMouseMove,
-		headline_simple: HeadlineSimple
+		gallery_mouse_move: SliderMouseMove
 	}
 </script>
 

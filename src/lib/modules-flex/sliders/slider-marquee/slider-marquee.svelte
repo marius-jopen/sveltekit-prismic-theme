@@ -8,7 +8,7 @@
 	export let slice
     export let inputText
 	export let inputDirection // "ltr" or "rtl", left to right or right to left
-	console.log(slice)
+
 	// Define variables which get used in this component
 	let text
 	let direction

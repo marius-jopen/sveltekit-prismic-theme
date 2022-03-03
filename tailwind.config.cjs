@@ -14,6 +14,7 @@ module.exports = {
 			colors: {
 			  'lines': 'rgb(30 30 30)',
 			  'fonts': 'rgb(30 30 30)',
+			  'fonts-invert': 'rgb(255 255 255)',
 			  'background': 'rgb(255 255 255)',
 			},
 			margin: {
@@ -31,6 +32,7 @@ module.exports = {
 				'30vw': '30vw',
 				'20vw': '20vw',
 				'10vw': '10vw',
+				'screen+1': 'calc(100vh + 1px)' // This can be used if you want to get the scrolling direction but the page is fullscreen
 			},
 		}
 	},

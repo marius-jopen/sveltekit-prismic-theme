@@ -8,6 +8,7 @@
 	let videoUrl
 	let videoPoster
 	let videoVimeo
+	let muted = true
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
@@ -24,7 +25,8 @@
 	}
 </script>
 
-<video muted class="border-b border-lines" playsinline poster="{videoPoster}" autoplay loop>
+<!-- svelte-ignore a11y-media-has-caption -->
+<video class="border-b border-lines w-full" poster="{videoPoster}" playsinline autoplay loop bind:muted>
 	<source src={videoUrl} type="video/mp4" />
 	Your browser does not support the video tag.
 </video>

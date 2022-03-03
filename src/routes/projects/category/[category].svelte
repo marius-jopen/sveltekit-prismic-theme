@@ -40,7 +40,8 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+    import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte'
@@ -52,7 +53,10 @@
     export let allItems
 	export let type
 	export let setup
+    export let document
 </script>
+
+<Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSlot data={setup.data}>
 	<FilterItemsFull items={allItems.results} type={type} />

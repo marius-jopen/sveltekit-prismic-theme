@@ -39,8 +39,13 @@
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
 <!-- Top and fullscreen area -->
-<div class="fixed -z-10">
-	<ImageFullScreen inputImage={input.data.thumbnail} />
+<div class="fixed -z-10 w-full">
+	<ImageFullScreen 
+	inputImage={input.data.preview_image} 
+	inputImageSize={'Big'}
+	inputCaption={''} 
+	inputHasRichtext={false}
+	/>
 </div>
 
 <!-- Invisible and clickable area which is the full screen -->

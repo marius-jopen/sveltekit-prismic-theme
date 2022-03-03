@@ -7,5 +7,5 @@
 </script>
 
 <div>
-	<ImageFullWidth inputImage={input.thumbnail} />
+	IMAGE
 </div>

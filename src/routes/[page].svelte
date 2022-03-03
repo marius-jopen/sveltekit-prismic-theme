@@ -24,7 +24,8 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
+    import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
 
@@ -33,7 +34,9 @@
     export let setup
 </script>
 
+<Seo setup={setup.data} document={document.data} />
+
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<ModulesSlices slices={document.data.body} />
+<ModulesSlices slices={document.data.body1} />

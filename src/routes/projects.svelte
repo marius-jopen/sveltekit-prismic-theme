@@ -25,9 +25,20 @@
         // Check if those items are in the list of selected projects on the current page
         // And then put them into an array
         // This allows the user to sort the items and not just show ALL the projects
-        const sortedItems = document.data.order.map(i => {
+        const sortedItems = document.data.project_order.map(i => {
 			const uid = i.selected.uid
             return allItems.results.find(p => p.uid === uid)
+        })
+
+        // From the sorted items list, find the projects which have the 'Normal' view and put them into an array
+        // A project can also have a different view set up. For example 'Related'
+        // And then it would not work in some loops, because some important fields would be empty
+        const sortedItemsNormal = []
+        
+        sortedItems.map(i => {
+            if(i.data.view == 'Normal' || i.data.view == null) {
+                sortedItemsNormal.push(i)
+            }
         })
 
         // Return the data which we got above
@@ -37,7 +48,8 @@
                 document,
                 allItems,
 				type,
-				setup
+				setup,
+                sortedItemsNormal
             }
         }
     }
@@ -45,26 +57,33 @@
 
 <script>
     // Import all components which will be used on this page
-	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
-	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
-	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte'
-    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
-    import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
+    import Seo from '$lib/functionality/seo/seo.svelte'
+    import NavigationSuperSimple from '$lib/modules-static/navigations/navigation-super-simple/navigation-super-simple.svelte'
+    // import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
+    // import TypoGridLoop from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
+    // import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
+    // import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
+    // import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
+    import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
 
     // Get the data from above
-    export let document
 	export let setup
-    export let allItems
     export let sortedItems
 	export let type
+    export let allItems
+    export let sortedItemsNormal
+    export let document
 </script>
 
-<NavigationDesktopSlot data={setup.data}>
-	<FilterItemsFull items={allItems.results} type={type} />
-</NavigationDesktopSlot>
-<NavigationMobileSimple data={setup.data} />
+<Seo setup={setup.data} document={document.data} />
 
-<HeadlineSimple inputHeadline={document.data.title[0].text} />
-<AccordeonComplex items={sortedItems} type={type} />
-<TypoGridLoop items={sortedItems} type={type} />
+<NavigationSuperSimple data={setup.data} />
+<ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
+
+<!-- 
+<Overlay items={sortedItemsNormal} />
+<TypoGridLoop items={sortedItemsNormal} type={type} />
+<AccordeonComplex items={sortedItemsNormal} type={type} />
+<ThumbnailGrid items={sortedItemsNormal} type={type} />
+<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} /> 
+-->
