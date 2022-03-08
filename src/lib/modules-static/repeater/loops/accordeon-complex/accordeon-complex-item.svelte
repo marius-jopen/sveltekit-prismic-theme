@@ -13,11 +13,12 @@
 	export let uid
 
 	// Calls the functions which shortens the title if needed
-	let titleShort = truncateString(item.data.title[0].text, 35);
+	let titleShort
 
 	// Make those variables reactive
 	$: interalStatus
 	$: uid
+	$: titleShort = truncateString(item.data.title[0].text, 35);
 
 	// Toggle function which gets called on click on headline
 	function toggle() {
