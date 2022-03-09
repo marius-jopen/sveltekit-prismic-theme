@@ -1,11 +1,17 @@
 <script>
+	// Import the store for passing props to other comps
+	import { filmControlStatus } from '$lib/functionality/store/store'
+
 	// Get data from parent component or from Slice function
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
 	export let height
-	export let status
 	export let index
+
+	// Variables which get passed up to parent via binding
+	export let status
+	export let infoPassUp
 
 	// Define variables which get used in this component
 	let videoUrl
@@ -25,7 +31,7 @@
 			videoUrl = videoVimeo
 		}
 	}
-
+        
 	// Define variables which will be used for the video controller
 	let iconColor = "black" // Set the icon color
 	let time = 0;
@@ -34,7 +40,7 @@
 	let lastMouseDown;
 	let video
 	let hideControl = false
-	var timeout
+	let timeout
 
 	// When status changes, then the inactive video gets paused
 	// And the active video plays
@@ -44,6 +50,9 @@
 		paused = true
 		hideControl = false
 	}
+
+	// When the status changes, write this into the store
+	$: hideControl, filmControlStatus.set(hideControl)
 
 	// Function to hide the controls after 2 seconds
 	function HideControls() {
@@ -109,6 +118,16 @@
 		} else if(video.mozRequestFullScreen){
 			video.mozRequestFullScreen()
 		}
+	}
+
+	// Function which toggles the parent info area
+
+	function toggleInfo() {
+		if(infoPassUp == false || infoPassUp == undefined) {
+			infoPassUp = true
+		} else {
+			infoPassUp = false
+    	}
 	}
 </script>
 
@@ -184,6 +203,10 @@
 					<path d="M6.86719 0.666992L1.00052 0.666992L1.00052 6.53366" stroke="{iconColor}"/>
 				</svg>
 			</div>
+		</div>
+
+		<div class="-mt-0.5 pl-3 uppercase cursor-pointer" on:mousedown={toggleInfo}>
+			Info
 		</div>
 	</div>
 </div>

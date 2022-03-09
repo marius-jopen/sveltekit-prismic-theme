@@ -38,7 +38,11 @@
 
 <div class="h-screen pointer-event-none"></div>
 
-<div bind:clientHeight={infoHeight} style="margin-top: -{marginTop}px;" class="infoBox relative z-20 bg-white bottom-0 left-0 w-full">
+<div>
+	<InfoBoxes item={item} />
+</div>
+
+<!-- <div bind:clientHeight={infoHeight} style="margin-top: -{marginTop}px;" class="infoBox relative z-20 bg-white bottom-0 left-0 w-full">
 	<InfoBoxes item={item} />
 </div>
 
@@ -46,4 +50,4 @@
 	.infoBox {
 		transition: margin-top 0.3s;
 	}
-</style>
+</style> -->
