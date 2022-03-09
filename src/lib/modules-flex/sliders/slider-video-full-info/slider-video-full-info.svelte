@@ -12,11 +12,9 @@
 	// Get data from parent component or from Slice function
     export let slice
     export let inputLoop
-
-	// Define variables to check if this slides is embedded via slices or manually
+	
 	let loop
-	let slideIndex
-
+	
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		loop = inputLoop
@@ -25,14 +23,17 @@
 	}
 
 	// Define variables which get used in this component
+	let slideIndex = 0 // Current slide (Gets updated later on)
 	let splideSlider
 	let totalSlides = loop.length
+	let sliderClicked = false
 	
 	// Change slide number index
 	// Gets used for the arrows and also to pass the index into each slide
 	// When the index changes, then the video gets paused
 	function slideMove(e) {	
 		slideIndex = e.detail.index
+		sliderClicked = true
 	}
 
 	// Two functions to trigger the previous and next slide on click
@@ -60,7 +61,7 @@
 		}}>
 			{#each loop as item, index}
 				<SplideSlide>
-					<SliderVideoFullInfoItem item={item} height={'h-screen'} status={slideIndex} index={index}/>
+					<SliderVideoFullInfoItem sliderClicked={sliderClicked} item={item} height={'h-screen'} slideIndex={slideIndex} index={index}/>
 				</SplideSlide>
 			{/each}
 		</Splide>

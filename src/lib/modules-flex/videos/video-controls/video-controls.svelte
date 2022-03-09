@@ -8,9 +8,10 @@
 	export let inputVideoPoster
 	export let height
 	export let index
+	export let slideIndex
+	export let sliderClicked
 
 	// Variables which get passed up to parent via binding
-	export let status
 	export let infoPassUp
 
 	// Define variables which get used in this component
@@ -45,11 +46,16 @@
 
 	// When status changes, then the inactive video gets paused
 	// And the active video plays
-	$: if(index == status) {
+	$: if(index == slideIndex) {
 		paused = false
 	} else {
 		paused = true
 		hideControl = false
+	}
+
+	// Checks if the slider above already has been clicked. And if not. pause the video
+	$: if(sliderClicked == false) {
+		paused = true
 	}
 
 	// When the status changes, write this into the store
@@ -82,7 +88,7 @@
 
 	// Function to play and pause the video by clicking on the button
 	function playButton() {
-		if(paused == false) {
+		if(paused == false || paused == undefined) {
 			paused = true
 			hideControl = false
 		} else {
@@ -157,8 +163,7 @@
 				bind:currentTime={time}
 				bind:duration
 				bind:paused
-				autoplay
-				loop
+				loop	
 				playsinline
 				>
 			</video>
@@ -169,7 +174,7 @@
 	<div class:hideControlsSoft="{hideControl === true}" class="{height} border-lines border-t border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<!-- Play and Pause button -->
-			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >
+			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={e => playButton()} >
 				{#if paused}
 					<svg width="18" height="18" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M20 10L5 18.6603L5 1.33974L20 10Z" fill="{iconColor}"/>
@@ -250,6 +255,6 @@
 	}
 
 	.sound {
-		width: 120px;
+		width: 130px;
 	}
 </style>

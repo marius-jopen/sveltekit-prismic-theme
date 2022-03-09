@@ -9,8 +9,9 @@
     // Get data from parent Component
     export let item
     export let height // Shared height
-    export let status
+    export let slideIndex
     export let index
+    export let sliderClicked
 
     // Check if it is a vimeo link or a file from prismic
     let videoUrl = item.slider_video.url
@@ -33,10 +34,9 @@
 
     // Calls scroll function when the button here or in the child gets called
     $: infoPassUp, setInfoScroll()
-
+    
     // Sets the scroll position. Probably I could have made it more clean by not using this function
     // but it works now.
-    
     function setInfoScroll() {
         if(infoPassUp !== undefined) {
             if(infoPassUp == true) {
@@ -72,7 +72,7 @@
         {/if}
     
         <!-- Video -->
-        <VideoControls bind:infoPassUp={infoPassUp} index="{index}" status="{status}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_poster.Big.url}" height="h-screen"/>
+        <VideoControls bind:infoPassUp={infoPassUp} sliderClicked={sliderClicked} index="{index}" slideIndex="{slideIndex}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_poster.Big.url}" height="h-screen"/>
     </div>
 
     <!-- Info area which scrolls up -->
