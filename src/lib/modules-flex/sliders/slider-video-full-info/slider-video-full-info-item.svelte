@@ -77,7 +77,7 @@
 
     <!-- Info area which scrolls up -->
     <div class="info relative z-20 w-screen h-screen">
-        <div class="w-full bg-white w-screen border-lines border-t">
+        <div class="info-child w-full bg-white w-screen border-lines border-t">
             <InfoBoxes item={item} />
         </div>
     </div>
@@ -92,5 +92,9 @@
 	.info {
 		padding-top: 100vh;
         pointer-events: none;
+    }
+
+    .info-child {
+        pointer-events: all;
     }
 </style>

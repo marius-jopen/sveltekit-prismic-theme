@@ -41,6 +41,7 @@
 	let video
 	let hideControl = false
 	let timeout
+	let sound = true
 
 	// When status changes, then the inactive video gets paused
 	// And the active video plays
@@ -121,13 +122,23 @@
 	}
 
 	// Function which toggles the parent info area
-
 	function toggleInfo() {
 		if(infoPassUp == false || infoPassUp == undefined) {
 			infoPassUp = true
 		} else {
 			infoPassUp = false
     	}
+	}
+
+	// Toggle Sound
+	function soundStatus() {
+		if(sound == true) {
+			sound = false
+			video.volume = 0
+		} else {
+			sound = true
+			video.volume = 1
+		}
 	}
 </script>
 
@@ -205,7 +216,12 @@
 			</div>
 		</div>
 
-		<div class="-mt-0.5 pl-3 uppercase cursor-pointer" on:mousedown={toggleInfo}>
+		<div class="sound cursor-pointer text-left -mt-0.5 hidden sm:block pl-3" on:mousedown={soundStatus}>
+			<!-- Uses non-breaking space to keep the words together -->
+			Sound&nbsp;{sound ? 'on' : 'off'}
+		</div>
+
+		<div class="-mt-0.5 uppercase cursor-pointer" on:mousedown={toggleInfo}>
 			Info
 		</div>
 	</div>
@@ -231,5 +247,9 @@
 
 	progress::-webkit-progress-value {
 		background-color: black;
+	}
+
+	.sound {
+		width: 120px;
 	}
 </style>
