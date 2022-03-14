@@ -6,7 +6,7 @@
     export let item
 </script>
 
-<div class="sm:flex px-8 py-8">
+<div class="sm:flex px-8 py-8 bg-white border-t border-lines">
     <div class="sm:w-1/4 text-4xl uppercase">
         <Text text={item.slider_caption} hasRichtext={true} classes={''} classesRichtext={''}/>
     </div>

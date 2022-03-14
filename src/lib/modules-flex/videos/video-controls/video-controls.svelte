@@ -11,9 +11,6 @@
 	export let slideIndex
 	export let sliderClicked
 
-	// Variables which get passed up to parent via binding
-	export let infoPassUp
-
 	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster
@@ -53,7 +50,8 @@
 		hideControl = false
 	}
 
-	// Checks if the slider above already has been clicked. And if not. pause the video
+	// Checks if the slider above already has been clicked. 
+	// And if not: pause the video. Prevents the video to play by accident on other sliders
 	$: if(sliderClicked == false) {
 		paused = true
 	}
@@ -125,15 +123,6 @@
 		} else if(video.mozRequestFullScreen){
 			video.mozRequestFullScreen()
 		}
-	}
-
-	// Function which toggles the parent info area
-	function toggleInfo() {
-		if(infoPassUp == false || infoPassUp == undefined) {
-			infoPassUp = true
-		} else {
-			infoPassUp = false
-    	}
 	}
 
 	// Toggle Sound
@@ -221,13 +210,9 @@
 			</div>
 		</div>
 
-		<div class="sound cursor-pointer text-left -mt-0.5 hidden sm:block pl-3" on:mousedown={soundStatus}>
+		<div class="sound cursor-pointer text-right -mt-0.5 hidden sm:block pl-3" on:mousedown={soundStatus}>
 			<!-- Uses non-breaking space to keep the words together -->
 			Sound&nbsp;{sound ? 'on' : 'off'}
-		</div>
-
-		<div class="-mt-0.5 uppercase cursor-pointer" on:mousedown={toggleInfo}>
-			Info
 		</div>
 	</div>
 </div>
@@ -255,6 +240,6 @@
 	}
 
 	.sound {
-		width: 130px;
+		width: 110px;
 	}
 </style>
