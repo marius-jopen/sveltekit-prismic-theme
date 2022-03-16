@@ -17,7 +17,7 @@
 
 <div class="video-box flex flex-wrap">
     {#each relatedItems as relatedItem}
-        <SliderVideoFullscreenItemRelatedItem item={relatedItem} heightVh={heightVh} type={type}/>
+        <!-- <SliderVideoFullscreenItemRelatedItem item={relatedItem} heightVh={heightVh} type={type}/> -->
     {/each}
 </div>
 
