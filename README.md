@@ -4,4 +4,8 @@
 - Easy deployment on Netlify
 - Tailwind CSS
 - Custom Components
-- GraphQL included and working. But deativated.
+
+
+# Todo
+- Video modules more atomic
+- Slider complex fullscreen -> Video
