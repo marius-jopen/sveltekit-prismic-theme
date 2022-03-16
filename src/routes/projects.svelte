@@ -78,6 +78,7 @@
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationSuperSimple data={setup.data} />
+
 <ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
 <Overlay items={sortedItemsNormal} />
 <TypoGridLoop items={sortedItemsNormal} type={type} />
