@@ -22,7 +22,7 @@
 <script>
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
-	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
+	import NavigationDesktopLayered from '$lib/modules-static/navigations/navigation-desktop-layered/navigation-desktop-layered.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
     import ImageFullScreen from '$lib/modules-flex/images/image-full-screen/image-full-screen.svelte'
@@ -39,7 +39,7 @@
 
 <Seo setup={setup.data} document={document.data} />
 
-<NavigationDesktopSimple data={setup.data} />
+<NavigationDesktopLayered data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
 <ImageFullWidth 
