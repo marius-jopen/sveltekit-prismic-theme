@@ -1,7 +1,14 @@
 <script>
+    // Import mount function to control the mute and autoplay
+	import { onMount } from 'svelte'
+
     // Get data from parent Component
     export let item
     export let height // Shared height
+
+    // Define variables which get used in this component
+    let video
+    let paused
 
     // Check if it is a vimeo link or a file from prismic
     let videoUrl = item.slider_video.url
@@ -9,6 +16,19 @@
 
     if(videoVimeo) {
         videoUrl = item.slider_video_link[0].text
+    }
+
+    // Sets video volume to 0 on load and activates autoplay
+    onMount(() => {
+        if(videoUrl || videoVimeo) {
+            video.volume = 0;
+            paused = false
+        }
+    }) 
+
+    // Sets video volume to 0 on load
+    function videoMute() {
+        video.volume = 0
     }
 </script>
 
@@ -19,7 +39,7 @@
 
     {#if videoUrl || videoVimeo}
         <!-- svelte-ignore a11y-media-has-caption -->
-        <video class="{height} w-full object-cover" playsinline poster="{item.slider_video_poster.Big.url}" autoplay loop muted>
+        <video on:load="{videoMute}" bind:paused bind:this={video} class="{height} w-full object-cover" poster="{item.slider_video_poster.Big.url}" playsinline loop muted  >
             <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
         </video>

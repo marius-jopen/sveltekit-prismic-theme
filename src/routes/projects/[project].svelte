@@ -29,15 +29,15 @@
 <script>
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
-    import NavigationSuperSimpleFixed from '$lib/modules-static/navigations/navigation-super-simple-fixed/navigation-super-simple-fixed.svelte'
-    import SliderVideoFullInfo from '$lib/modules-flex/sliders/slider-video-full-info/slider-video-full-info.svelte'
-    // import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
-	// import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	// import BackHistory from "$lib/functionality/back-history/back-history.svelte"
-	// import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
-	// import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
-	// import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
-    // import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
+	import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+	import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
+    import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    // import NavigationSuperSimpleFixed from '$lib/modules-static/navigations/navigation-super-simple-fixed/navigation-super-simple-fixed.svelte'
+    // import SliderVideoFullInfo from '$lib/modules-flex/sliders/slider-video-full-info/slider-video-full-info.svelte'
 
     // Get the data from above
     export let document
@@ -46,16 +46,17 @@
 
 <Seo setup={setup.data} document={document.data} />
 
-<NavigationSuperSimpleFixed data={setup.data} classes={"text-white"} />
-<SliderVideoFullInfo inputLoop={document.data.slider} />
-
 <!-- 
+<NavigationSuperSimpleFixed data={setup.data} classes={"text-white"} />
+<SliderVideoFullInfo inputLoop={document.data.slider} /> 
+-->
+
 <NavigationDesktopSlot data={setup.data}>
-<BackHistory />
+    <BackHistory />
 </NavigationDesktopSlot>
 <NavigationMobileSimple data={setup.data} />
 
 <LayoutCover input={document} />
 <HeadlineSimple inputText={document.data.title[0].text} />
 <LayoutColumn input={document} /> 
--->
+<SliderComplex inputLoop={document.data.slider} height="h-50vw sm:h-60vw" classes="" />
