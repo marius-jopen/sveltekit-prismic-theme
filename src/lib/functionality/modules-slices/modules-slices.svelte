@@ -7,7 +7,7 @@
 	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
     import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
 	import TextImage from "$lib/modules-flex/paragraphs/text-image/text-image.svelte"
-
+	import GalleryListHover from "$lib/modules-flex/galleries/gallery-list-hover/gallery-list-hover.svelte"
 
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
@@ -27,6 +27,7 @@
 		slider_complex: SliderComplex,
 		slider_video_full: SliderVideoFull,
 		text_image: TextImage,
+		gallery_list_hover: GalleryListHover,
 
 		marquee: SliderMarquee,
 		video_simple: VideoSimple,

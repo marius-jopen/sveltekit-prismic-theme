@@ -23,7 +23,7 @@
 	</div>
 
 	{#if layers == 2}
-		<div class="{height} bg-background px-4">
+		<div class="{height} bg-background px-4 border-b border-lines">
 			<slot></slot>
 		</div>
 	{/if}

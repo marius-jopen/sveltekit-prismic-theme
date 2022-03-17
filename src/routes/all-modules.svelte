@@ -24,7 +24,8 @@
     import Seo from '$lib/functionality/seo/seo.svelte'
 	import NavigationDesktopLayeredSlot from '$lib/modules-static/navigations/navigation-desktop-layered-slot/navigation-desktop-layered-slot.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
+	import GalleryListHover from '$lib/modules-flex/galleries/gallery-list-hover/gallery-list-hover.svelte'
+    import ImageFullWidth from '$lib/modules-flex/images/image-full-width/image-full-width.svelte'
     import ImageFullScreen from '$lib/modules-flex/images/image-full-screen/image-full-screen.svelte'
     import TextImage from '$lib/modules-flex/paragraphs/text-image/text-image.svelte'
 	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
@@ -44,6 +45,8 @@
 </NavigationDesktopLayeredSlot>
 
 <NavigationMobileSimple data={setup.data} />
+
+<GalleryListHover inputLoop={document.data.gallery_list_hover} inputBackgroundColor={document.data.gallery_list_hover_backgroundcolor} />
 
 <ImageFullWidth 
 inputImage={document.data.image_full_width_image} 
