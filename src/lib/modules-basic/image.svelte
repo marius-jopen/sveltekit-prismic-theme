@@ -5,42 +5,60 @@
     export let classes
     export let style
 
-    // Original
-    let imagePath = image.url
-    let imageWidth = image.dimensions.width
-    let imageHeight = image.dimensions.width
+    let imagePath
+    let imageWidth
+    let imageHeight
+    let imageBigPath
+    let imageBigWidth
+    let imageBigHeight
+    let imageMediumPath
+    let imageMediumWidth
+    let imageMediumHeight
+    let imageSmallPath
+    let imageSmallWidth
+    let imageSmallHeight
+    let imageAlt
 
-    // Big
-    let imageBigPath = image.Big.url
-    let imageBigWidth = image.Big.dimensions.width
-    let imageBigHeight = image.Big.dimensions.width
+    if(image.url) {
+        // Original
+        imagePath = image.url
+        imageWidth = image.dimensions.width
+        imageHeight = image.dimensions.width
 
-    // Medium
-    let imageMediumPath = image.Medium.url
-    let imageMediumWidth = image.Medium.dimensions.width
-    let imageMediumHeight = image.Medium.dimensions.width
+        // Big
+        imageBigPath = image.Big.url
+        imageBigWidth = image.Big.dimensions.width
+        imageBigHeight = image.Big.dimensions.width
 
-    // Small
-    let imageSmallPath = image.Small.url
-    let imageSmallWidth = image.Small.dimensions.width
-    let imageSmallHeight = image.Small.dimensions.width
+        // Medium
+        imageMediumPath = image.Medium.url
+        imageMediumWidth = image.Medium.dimensions.width
+        imageMediumHeight = image.Medium.dimensions.width
 
-    // Alt text
-    let imageAlt = "image.alt"
+        // Small
+        imageSmallPath = image.Small.url
+        imageSmallWidth = image.Small.dimensions.width
+        imageSmallHeight = image.Small.dimensions.width
+
+        // Alt text
+        imageAlt = "image.alt"
+    }
 </script>
 
-{#if imageSize == 'Original'}
-    <img style="{style}" class="{classes}" width="{imageWidth}" height="{imageHeight}" src="{imagePath}" alt="{imageAlt}">
-{/if}
+{#if imagePath}
+    {#if imageSize == 'Original'}
+        <img style="{style}" class="{classes}" width="{imageWidth}" height="{imageHeight}" src="{imagePath}" alt="{imageAlt}">
+    {/if}
 
-{#if imageSize == 'Big'}
-    <img style="{style}" class="{classes}" width="{imageBigWidth}" height="{imageBigHeight}" src="{imageBigPath}" alt="{imageAlt}">
-{/if}
+    {#if imageSize == 'Big'}
+        <img style="{style}" class="{classes}" width="{imageBigWidth}" height="{imageBigHeight}" src="{imageBigPath}" alt="{imageAlt}">
+    {/if}
 
-{#if imageSize == 'Medium'}
-    <img style="{style}" class="{classes}" width="{imageMediumWidth}" height="{imageMediumHeight}" src="{imageMediumPath}" alt="{imageAlt}">
-{/if}
+    {#if imageSize == 'Medium'}
+        <img style="{style}" class="{classes}" width="{imageMediumWidth}" height="{imageMediumHeight}" src="{imageMediumPath}" alt="{imageAlt}">
+    {/if}
 
-{#if imageSize == 'Small'}
-    <img style="{style}" class="{classes}" width="{imageSmallWidth}" height="{imageSmallHeight}" src="{imageSmallPath}" alt="{imageAlt}">
+    {#if imageSize == 'Small'}
+        <img style="{style}" class="{classes}" width="{imageSmallWidth}" height="{imageSmallHeight}" src="{imageSmallPath}" alt="{imageAlt}">
+    {/if}
 {/if}

@@ -65,6 +65,7 @@
     import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
     import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
     import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
+    import ThumbnailShopGridHover from '$lib/modules-static/repeater/loops/thumbnail-shop-grid-hover/thumbnail-shop-grid-hover.svelte'
 
     // Get the data from above
 	export let setup
@@ -79,6 +80,7 @@
 
 <NavigationSuperSimple data={setup.data} />
 
+<ThumbnailShopGridHover items={sortedItemsNormal} type={type} />
 <ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
 <Overlay items={sortedItemsNormal} />
 <TypoGridLoop items={sortedItemsNormal} type={type} />
