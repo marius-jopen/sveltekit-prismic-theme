@@ -26,6 +26,10 @@
         effect = "invert"
     }
 
+    if (item.gallery_image_effect == "invert blur") {
+        effect = "invert blur-3xl"
+    }
+
     // Checks if an hover image exists and if yes, define the variable to it
     if (item.gallery_image_hover.Big.url) {
         itemHoverUrl = item.gallery_image_hover.Big.url
@@ -56,9 +60,25 @@
     }
 </script>
 
-<!-- If the item has a link, show this -->
-{#if item.gallery_image_link[0]}
-    <a sveltekit:prefetch href="{item.gallery_image_link[0].text}" class="hidden sm:block pb-20" style="margin-left: {marginLeft}%; width: {itemWidth}%; padding-bottom: {marginBottom}vw">
+<!-- Desktop -->
+<div class="hidden sm:block pb-20" style="margin-left: {marginLeft}%; width: {itemWidth}%; padding-bottom: {marginBottom}vw">
+    {#if item.gallery_image_link[0]}
+        <!-- Content of the item which gets displayed when there is a link -->
+        <a sveltekit:prefetch href="{item.gallery_image_link[0].text}">
+            {#if item.gallery_image.Big.url}
+                <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="image object-bottom object-contain pb-1" style="height: {itemWidth}vw" on:mouseenter={mouseEnter} on:mouseleave={mouseLeave}>
+            {/if}
+
+            <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={'uppercase text-xs tracking-widest leading-4 text-white'}/>
+            
+            {#if item.gallery_image_caption[0]}
+                <div class="text-white uppercase text-xs tracking-widest leading-4">
+                    {item.gallery_image_caption[0].text}
+                </div>
+            {/if}
+        </a>
+    {:else}
+    <!-- Content of the item which gets displayed when there is no link -->
         {#if item.gallery_image.Big.url}
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="image object-bottom object-contain pb-1" style="height: {itemWidth}vw" on:mouseenter={mouseEnter} on:mouseleave={mouseLeave}>
         {/if}
@@ -70,26 +90,12 @@
                 {item.gallery_image_caption[0].text}
             </div>
         {/if}
-    </a>
-    <!-- And if the items does not have a link, show that -->
-{:else}
-    <div class="hidden sm:block pb-20" style="margin-left: {marginLeft}%; width: {itemWidth}%; padding-bottom: {marginBottom}vw">
-        {#if item.gallery_image.Big.url}
-            <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="image object-bottom object-contain pb-1" style="height: {itemWidth}vw" on:mouseenter={mouseEnter} on:mouseleave={mouseLeave}>
-        {/if}
-
-        <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={'uppercase text-xs tracking-widest leading-4 text-white'}/>
-        
-        {#if item.gallery_image_caption[0]}
-            <div class="text-white uppercase text-xs tracking-widest leading-4">
-                {item.gallery_image_caption[0].text}
-            </div>
-        {/if}
-    </div>
-{/if}
+    {/if}
+</div>
 
 <!-- And this is fore mobile -->
 {#if item.gallery_image_link[0]}
+    <!-- With link -->
     <a sveltekit:prefetch href="{item.gallery_image_link[0].text}" class="relative block sm:hidden text-white uppercase text-xs tracking-widest leading-4">
         {#if item.gallery_image.Big.url}
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="w-full">
@@ -104,6 +110,7 @@
         {/if}
     </a>
 {:else}
+    <!-- Without link -->
     <div class="relative block sm:hidden text-white uppercase text-xs tracking-widest leading-4">
         {#if item.gallery_image.Big.url}
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="w-full">

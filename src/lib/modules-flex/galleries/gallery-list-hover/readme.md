@@ -75,7 +75,7 @@ And this is the array of the slice which gets used in Prismic. You can also use 
         "gallery_image_effect" : {
         "type" : "Select",
         "config" : {
-            "options" : [ "blur", "invert" ],
+            "options" : [ "blur", "invert", "invert blur" ],
             "label" : "Gallery Image Effect"
         }
         },

@@ -14,7 +14,6 @@
 	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
 
-
 	// Get the data from the parent component
 	export let slices
 
