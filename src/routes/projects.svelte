@@ -66,6 +66,7 @@
     import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
     import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
     import ThumbnailShopGridHover from '$lib/modules-static/repeater/loops/thumbnail-shop-grid-hover/thumbnail-shop-grid-hover.svelte'
+    import FilterItemsHorizontal from '$lib/modules-static/repeater/filters/filter-items-horizontal/filter-items-horizontal.svelte'
 
     // Get the data from above
 	export let setup
@@ -79,6 +80,7 @@
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationSuperSimple data={setup.data} />
+<FilterItemsHorizontal items={allItems.results} type={type} />
 
 <ThumbnailShopGridHover items={sortedItemsNormal} type={type} />
 <ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />

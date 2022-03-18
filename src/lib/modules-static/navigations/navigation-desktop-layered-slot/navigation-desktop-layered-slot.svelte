@@ -34,9 +34,17 @@
 	<div class="{height} hidden sm:block">
 		&nbsp;
 	</div>
+
+	<div class="{height} hidden sm:block">
+		&nbsp;
+	</div>
 {/if}
 
 {#if layers == 2}
+	<div class="{height} hidden sm:block">
+		&nbsp;
+	</div>
+
 	<div class="{height} hidden sm:block">
 		&nbsp;
 	</div>

@@ -9,9 +9,10 @@
 
         // Define the type of the post-type. For example project or product
 		const type = 'project'
+        const types = 'projects'
 
         // Get the current tag by checking the current URL and format it, so it can get used later on
-        const currentTag = url.pathname.replace('/projects/category/', '').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+        const currentTag = url.pathname.replace('/' + {types} + '/category/', '').replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
         // Make an array with the names of the posts which have this tag
         const tags = await Client.query(

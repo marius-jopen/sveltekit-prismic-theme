@@ -69,31 +69,27 @@
                 <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="image object-bottom object-contain pb-1" style="height: {itemWidth}vw" on:mouseenter={mouseEnter} on:mouseleave={mouseLeave}>
             {/if}
 
+            <!-- Display the long text -->
             <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={'uppercase text-xs tracking-widest leading-4 text-white'}/>
             
-            {#if item.gallery_image_caption[0]}
-                <div class="text-white uppercase text-xs tracking-widest leading-4">
-                    {item.gallery_image_caption[0].text}
-                </div>
-            {/if}
+            <!-- Display the caption -->
+            <Text text={item.gallery_image_caption[0].text} hasRichtext={false} classes={'text-white uppercase text-xs tracking-widest leading-4'} classesRichtext={''}/>
         </a>
     {:else}
-    <!-- Content of the item which gets displayed when there is no link -->
+        <!-- Content of the item which gets displayed when there is no link -->
         {#if item.gallery_image.Big.url}
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="image object-bottom object-contain pb-1" style="height: {itemWidth}vw" on:mouseenter={mouseEnter} on:mouseleave={mouseLeave}>
         {/if}
 
+        <!-- Display the long text -->
         <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={'uppercase text-xs tracking-widest leading-4 text-white'}/>
         
-        {#if item.gallery_image_caption[0]}
-            <div class="text-white uppercase text-xs tracking-widest leading-4">
-                {item.gallery_image_caption[0].text}
-            </div>
-        {/if}
+        <!-- Display the caption -->
+        <Text text={item.gallery_image_caption[0].text} hasRichtext={false} classes={'text-white uppercase text-xs tracking-widest leading-4'} classesRichtext={''}/>
     {/if}
 </div>
 
-<!-- And this is fore mobile -->
+<!-- And this is for mobile -->
 {#if item.gallery_image_link[0]}
     <!-- With link -->
     <a sveltekit:prefetch href="{item.gallery_image_link[0].text}" class="relative block sm:hidden text-white uppercase text-xs tracking-widest leading-4">
@@ -101,10 +97,10 @@
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="w-full">
 
             <div class="absolute left-0 bottom-0 mix-blend-difference px-3 pb-3">
-                {#if item.gallery_image_caption[0]}
-                    {item.gallery_image_caption[0].text}
-                {/if}
+                <!-- Display the caption -->
+                <Text text={item.gallery_image_caption[0].text} hasRichtext={false} classes={''} classesRichtext={''}/>
 
+                <!-- Display the long text -->
                 <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={''}/>
             </div>
         {/if}
@@ -116,10 +112,10 @@
             <img src="{item.gallery_image.Big.url}" alt="{item.gallery_image.alt}" class="w-full">
 
             <div class="absolute left-0 bottom-0 mix-blend-difference px-3 pb-3">
-                {#if item.gallery_image_caption[0]}
-                    {item.gallery_image_caption[0].text}
-                {/if}
+                <!-- Display the caption -->
+                <Text text={item.gallery_image_caption[0].text} hasRichtext={false} classes={''} classesRichtext={''}/>
 
+                <!-- Display the long text -->
                 <Text text={item.gallery_image_long_text} hasRichtext={true} classes={''} classesRichtext={''}/>
             </div>
         {/if}

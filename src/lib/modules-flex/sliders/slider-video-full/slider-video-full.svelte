@@ -12,7 +12,6 @@
 
 	// Define variables to check if this slides is embedded via slices or manually
 	let loop
-	let slideIndex
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
@@ -24,6 +23,7 @@
 	// Define variables which get used in this component
 	let splideSlider
 	let totalSlides = loop.length
+	let slideIndex
 	
 	// Change slide number index
 	// Gets used for the arrows and also to pass the index into each slide

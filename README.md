@@ -7,5 +7,14 @@
 
 
 # Todo
+- Fix Filters
 - Video modules more atomic
-- Slider complex fullscreen -> Video
+- Images atomic
+- Slider complex fullscreen -> Video overlay
+- Shopify button
+- Accordeon
+- RO footer
+- RO Collection overview
+- RO Home Slider
+- RO Contact
+- RO Privacy Policy
