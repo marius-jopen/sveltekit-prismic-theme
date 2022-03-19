@@ -1,18 +1,14 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
-        // Get data from home page
-        const document = await Client.getSingle('all_modules')
-
         // Return the data which we got above
         return {
             props: {
-                document,
 				setup
             }
         }
@@ -26,13 +22,140 @@
 	import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
 
     // Get the data from above
-    export let document
 	export let setup
 </script>
 
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<div class="bg-neutral-100 min-h-screen w-full">
-    <LayoutColumn input={document} /> 
-</div>
+<LayoutColumn>
+    <span slot="mobile">
+        Content mobile
+    </span>
+
+    <span slot="left">
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+    </span>
+
+    <span slot="right">
+        Content right
+    </span>
+</LayoutColumn> 

@@ -28,7 +28,9 @@
 
 <main>
     <!-- Slot where all the pages will get inserted -->
-	<slot />
+    <div class="bg-neutral-100 min-h-screen w-full">
+        <slot />
+    </div>
 
     <!-- Modules which will be inserted on all pages -->
     <!-- <FooterSimple data={setup.data} /> -->
