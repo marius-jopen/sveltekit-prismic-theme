@@ -7,5 +7,4 @@
 	export let input
 </script>
 
-<HeadlineSimple inputText={input.data.title[0].text} />
-<SliderComplex inputLoop={input.data.slider} height="h-50vw sm:h-30vw" classes="bg-white" />
+Content

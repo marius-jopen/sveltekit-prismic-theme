@@ -21,7 +21,7 @@
 	}
 </script>
 
-<div class="border-b border-lines bg-background">
+<div class="border-b border-lines">
 	<!-- Display text basic comp -->
 	<Text text={text} hasRichtext={false} classes={'px-4 py-3 text-xl uppercase text-center'} classesRichtext={''}/>
 </div>

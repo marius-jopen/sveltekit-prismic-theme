@@ -6,7 +6,7 @@
 	import ImageFullScreen from "$lib/modules-flex/images/image-full-screen/image-full-screen.svelte"
 
 	// Get data from parent component
-	export let input
+	export let inputImage
 
 	// Define variables and some basic settings
 	let offsetDesktop = 50 // Height of navigation in px
@@ -39,9 +39,9 @@
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
 <!-- Top and fullscreen area -->
-<div class="fixed -z-10 w-full">
+<div class="fixed z-0 w-full cursor-pointer" on:click="{scrollUp}">
 	<ImageFullScreen 
-	inputImage={input.data.preview_image} 
+	inputImage={inputImage} 
 	inputImageSize={'Big'}
 	inputCaption={''} 
 	inputHasRichtext={false}
@@ -49,9 +49,121 @@
 </div>
 
 <!-- Invisible and clickable area which is the full screen -->
-<div class="h-screen cursor-pointer" on:click="{scrollUp}">
+<div class="h-screen cursor-pointer" >
 </div>
 
 <!-- Border at the bottom, optional -->
 <div class="border-lines border-t" style="margin-top: -{offset}px">
+</div>
+
+<div class="relative z-10 bg-background">
+	Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
+	<br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+    Content
+    <br>
+	Content
 </div>

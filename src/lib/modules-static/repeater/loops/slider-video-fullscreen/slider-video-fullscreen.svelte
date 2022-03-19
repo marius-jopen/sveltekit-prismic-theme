@@ -74,7 +74,7 @@
     }
 </script>
 
-<div class="relative">
+<div class="relative hidden sm:block">
     <div class="peekDown-tue peekDown-{peekDownStatus} peekUp-{peekUpStatus} slider-video-fullscreen border-lines border-b" on:mousewheel={e => onMouseWheel(e)}>
         <Splide
         bind:this={splideSlider}

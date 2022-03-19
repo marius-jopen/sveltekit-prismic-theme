@@ -105,7 +105,6 @@
 					{#if item.data.slider[0]}
 						<SliderComplex inputLoop={item.data.slider} height="h-50vw sm:h-30vw" classes="" />
 					{/if}
-					<!-- <img src="{item.data.thumbnail.Big.url}" class="w-1/2 h-30vw object-cover" alt=""> -->
 				</div>
 			</div>
 		{/if}

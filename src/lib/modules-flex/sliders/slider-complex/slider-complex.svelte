@@ -152,7 +152,7 @@
 	</div>
 
 	<!-- Extra row with caption and slide counter -->
-	<div class="flex w-full justify-between pt-1 border-t border-b border-lines bg-background">
+	<div class="flex w-full justify-between pt-1 bg-background">
 		<div>
 			{currentCaption}
 		</div>

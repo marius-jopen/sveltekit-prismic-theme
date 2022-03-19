@@ -1,7 +1,7 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
     import Prismic from "@prismicio/client"
-    import Client from '../utils/client'
+    import Client from '../../../../utils/client'
 
     export async function load({ url }) {
 
@@ -12,7 +12,8 @@
 		const type = 'project'
 
         // Get current page name'
-        const pageName = url.pathname.replace('/', '')
+        // const pageName = url.pathname.replace('/', '')
+        const pageName = 'projects'
 
         // Get the content from the current page
 		const document = await Client.getSingle(pageName)
@@ -44,10 +45,6 @@
         // Return the data which we got above
         return {
             props: {
-				sortedItems,
-                document,
-                allItems,
-				type,
 				setup,
                 sortedItemsNormal
             }
@@ -57,35 +54,18 @@
 
 <script>
     // Import all components which will be used on this page
-    import Seo from '$lib/functionality/seo/seo.svelte'
-    import NavigationSuperSimple from '$lib/modules-static/navigations/navigation-super-simple/navigation-super-simple.svelte'
-    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
-    import TypoGrid from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
-    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
-    import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
+    import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
     import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
-    import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
-    import ThumbnailShopGridHover from '$lib/modules-static/repeater/loops/thumbnail-shop-grid-hover/thumbnail-shop-grid-hover.svelte'
-    import FilterItemsHorizontal from '$lib/modules-static/repeater/filters/filter-items-horizontal/filter-items-horizontal.svelte'
 
     // Get the data from above
 	export let setup
-    export let sortedItems
-	export let type
-    export let allItems
     export let sortedItemsNormal
-    export let document
 </script>
 
-<Seo setup={setup.data} document={document.data} />
+<NavigationDesktopSimple data={setup.data} />
+<NavigationMobileSimple data={setup.data} />
 
-<NavigationSuperSimple data={setup.data} />
-<FilterItemsHorizontal items={allItems.results} type={type} />
-
-<ThumbnailShopGridHover items={sortedItemsNormal} type={type} />
-<ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
-<Overlay items={sortedItemsNormal} />
-<TypoGrid items={sortedItemsNormal} type={type} />
-<AccordeonComplex items={sortedItemsNormal} type={type} />
-<ThumbnailGrid items={sortedItemsNormal} type={type} />
-<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} /> 
+<div class="bg-neutral-100 min-h-screen w-full">
+    <Overlay items={sortedItemsNormal} />
+</div>

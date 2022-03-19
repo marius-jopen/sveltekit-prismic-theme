@@ -6,6 +6,4 @@
 	export let input
 </script>
 
-<div>
-	IMAGE
-</div>
+MOBILE CONTENT
