@@ -87,8 +87,8 @@
     Typogrid
 </a>
 
-<a href="/examples/modules-static/repeater/thumbnail-shop-grid-hover" class="block">
-    ThumbnailShopGridHover
+<a href="/examples/modules-static/repeater/thumbnail-grid-hover" class="block">
+    ThumbnailGridHover
 </a>
 
 <a href="/examples/modules-static/repeater/slider-video-fullscreen" class="block">

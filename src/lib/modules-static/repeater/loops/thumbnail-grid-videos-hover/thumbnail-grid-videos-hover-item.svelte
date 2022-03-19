@@ -20,7 +20,6 @@
 	    Your browser does not support the video tag.
     </video>
 
-	<!-- On Hover Text -->
 	<div class="text-left text-lg px-3 py-1.5">
         {item.data.title[0].text}
     </div>

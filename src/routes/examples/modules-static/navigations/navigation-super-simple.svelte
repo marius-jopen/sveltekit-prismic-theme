@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
@@ -25,6 +25,109 @@
 
 <NavigationSuperSimple data={setup.data} />
 
-<div class="bg-neutral-100 min-h-screen w-full">
-    Content
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Navigation Super Simple
+    </h3>
+
+    <li>
+        Adds a / between each navigation point
+    </li>
+
+    <li>
+        Can be also used for mobile if not many items are in the navigation
+    </li>
 </div>
+
+
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll

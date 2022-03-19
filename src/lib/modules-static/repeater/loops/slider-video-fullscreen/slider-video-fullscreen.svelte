@@ -1,7 +1,6 @@
 <script>
     // Import child components which are used in this module
     import SliderVideoFullscreenItem from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen-item.svelte'
-    import SliderVideoFullscreenItemRelated from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen-item-related.svelte'
 
     // Import the Splide slider library
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
@@ -9,7 +8,6 @@
 
     // Get data from parent component
     export let items
-    export let allItems
     export let type
 
     // Define variables which are used in the slider
@@ -100,11 +98,8 @@
                 {#if item.data.preview_video.url || item.data.preview_video_link.length || item.data.view == 'Related'}
                     <!-- Part of the swiperJS -->
                     <SplideSlide>
-                        {#if item.data.view == 'Related'}
-                            <SliderVideoFullscreenItemRelated item={item} allItems={allItems} heightVh={heightVh} type={type} /> 
-                        {:else}
-                            <SliderVideoFullscreenItem item={item} type={type} /> 
-                        {/if}
+                        <!-- There is another item-comp which displays a grid of 4 items instead a full one. But it is not connected to Prismic yet. -->
+                        <SliderVideoFullscreenItem item={item} type={type} /> 
                     </SplideSlide>
                 {/if}
             {/each}

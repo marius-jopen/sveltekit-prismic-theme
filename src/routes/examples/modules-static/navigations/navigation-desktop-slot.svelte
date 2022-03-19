@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
@@ -23,10 +23,112 @@
 	export let setup
 </script>
 
-<NavigationDesktopSlot data={setup.data} layers="2">
+<NavigationDesktopSlot data={setup.data}>
     Slot Content
 </NavigationDesktopSlot>
 
-<div class="bg-neutral-100 min-h-screen w-full">
-    Content
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Navigation Desktop Slot
+    </h3>
+
+    <li>
+        On the right side is a slot which can be filled with information from outside of this component. For example a back button or a button to open a filter overlay.
+    </li>
+
+    <li>
+        Is fixed to the top, but pushes the content down, so it does not hide information
+    </li>
 </div>
+
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll

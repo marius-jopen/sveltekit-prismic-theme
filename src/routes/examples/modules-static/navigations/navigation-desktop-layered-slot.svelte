@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
@@ -27,6 +27,112 @@
     Slot Content
 </NavigationDesktopLayeredSlot>
 
-<div class="bg-neutral-100 min-h-screen w-full">
-    Content
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Navigation Desktop Layered Slot
+    </h3>
+
+    <li>
+        A navigation bar with a layer (slot) for some extra content like a filter bar etc… 
+    </li>
+
+    <li>
+        This layer is optional and can be switched on or off by changing the prop called layers from 1 to 2.
+    </li>
+
+    <li>
+        Is fixed to the top, but pushes the content down, so it does not hide information
+    </li>
 </div>
+
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll

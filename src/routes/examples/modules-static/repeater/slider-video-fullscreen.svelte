@@ -1,10 +1,9 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
     import Prismic from "@prismicio/client"
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load({ url }) {
-
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
@@ -12,11 +11,11 @@
 		const type = 'project'
 
         // Get current page name'
-        // const pageName = url.pathname.replace('/', '')
-        const pageName = 'projects'
+        // const types = url.pathname.replace('/', '')
+        const types = 'projects'
 
         // Get the content from the current page
-		const document = await Client.getSingle(pageName)
+		const document = await Client.getSingle(types)
 
         // Get all items from the post-type. For example project or product
         const allItems = await Client.query(
@@ -31,24 +30,12 @@
             return allItems.results.find(p => p.uid === uid)
         })
 
-        // From the sorted items list, find the projects which have the 'Normal' view and put them into an array
-        // A project can also have a different view set up. For example 'Related'
-        // And then it would not work in some loops, because some important fields would be empty
-        const sortedItemsNormal = []
-        
-        sortedItems.map(i => {
-            if(i.data.view == 'Normal' || i.data.view == null) {
-                sortedItemsNormal.push(i)
-            }
-        })
-
         // Return the data which we got above
         return {
             props: {
-				type,
 				setup,
-                sortedItems,
-                allItems
+				type,
+                sortedItems
             }
         }
     }
@@ -64,14 +51,10 @@
 	export let setup
 	export let type
     export let sortedItems
-    export let allItems
 </script>
 
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<div class="bg-neutral-100 min-h-screen w-full">
-    <SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} /> 
-
-    No mobile!
-</div>
+<SliderVideoFullscreen items={sortedItems} type={type} /> 
+No mobile!

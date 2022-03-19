@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
@@ -25,9 +25,95 @@
 </script>
 
 <NavigationDesktopSimple data={setup.data} />
-
-<div class="bg-neutral-100 min-h-screen w-full">
-    Scroll down!
-</div>
-
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
+<br>
+scroll
 <FooterSimple data={setup.data} />

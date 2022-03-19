@@ -84,28 +84,8 @@
 
 		<!-- Content -->
 		{#if interalStatus == true}
-			<div class="bg-neutral-100 flex flex-col-reverse sm:flex-row w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
-				<!-- Left Side -->
-				<div class="sm:w-1/2 pt-4 sm:pt-0">
-					<div class="text-xl">
-						{item.data.title[0].text}
-					</div>
-
-					<div class="pt-1">
-						{item.data.sub_title[0].text}
-					</div>
-
-					<div>
-						{item.last_publication_date}
-					</div>
-				</div>
-
-				<!-- Right Side -->
-				<div class="sm:w-1/2">
-					{#if item.data.slider[0]}
-						<SliderComplex inputLoop={item.data.slider} height="h-50vw sm:h-30vw" classes="" />
-					{/if}
-				</div>
+			<div class="bg-neutral-100 w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
+				Content
 			</div>
 		{/if}
 	</div>
