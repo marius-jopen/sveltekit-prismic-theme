@@ -1,7 +1,7 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
 	import Prismic from "@prismicio/client"
-    import Client from '../../../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load({ url }) {
         // Get data from setup page

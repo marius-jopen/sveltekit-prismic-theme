@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../utils/client'
+    import Client from '$lib/functionality/client/client'
 
     export async function load() {
         // Get data from setup page
