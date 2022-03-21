@@ -6,7 +6,7 @@
 	export let slice
 
 	// Get data from parent component
-    export let inputLongText
+    export let inputText
 
 	// Define variables which get used in this component
 	let longText
@@ -14,7 +14,7 @@
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		// Use data from the parent comp
-		longText = inputLongText
+		longText = inputText
 	} else {
 		// Use data from the slices module
 		longText = slice.primary.long_text

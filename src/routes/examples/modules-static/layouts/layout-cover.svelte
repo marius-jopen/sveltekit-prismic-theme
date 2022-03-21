@@ -30,158 +30,38 @@
 
 <LayoutCover>
     <span slot="fullscreen">
-        Content mobile
+        Scroll down or click!
     </span>
 
     <span slot="content">
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
-        <br>
-        Content to Scroll
+        <div class="border-b border-lines px-3 py-3 text-lg">
+            <h3>
+                Layout Cover
+            </h3>
+        
+            <li>
+                Area for a fullscreen image / video or any kind of media at the top
+            </li>
+        
+            <li>
+                Content below scrolls above it.
+            </li>
+        
+            <li>
+                By click on the fullscreen area, content scrolls until the top of the screen is reached.
+            </li>
+        
+            <li>
+                The media must be inserted via the slot called fullscreen
+            </li>
+        
+            <li>
+                All content on this page should be inserted into the slot called content. Like this they will get a background color.
+            </li>
+        
+            <li>
+                No information from Prismic is needed.
+            </li>
+        </div>
     </span>
 </LayoutCover>
-
-<div class="border-b border-lines px-3 py-3 text-lg">
-    <h3>
-        Layout Cover
-    </h3>
-
-    <li>
-        Area for a fullscreen image / video or any kind of media at the top
-    </li>
-
-    <li>
-        Content below scrolls above it.
-    </li>
-
-    <li>
-        By click on the fullscreen area, content scrolls until the top of the screen is reached.
-    </li>
-
-    <li>
-        The media must be inserted via the slot called fullscreen
-    </li>
-
-    <li>
-        All content on this page should be inserted into the slot called content. Like this they will get a background color.
-    </li>
-
-    <li>
-        No information from Prismic is needed.
-    </li>
-</div>

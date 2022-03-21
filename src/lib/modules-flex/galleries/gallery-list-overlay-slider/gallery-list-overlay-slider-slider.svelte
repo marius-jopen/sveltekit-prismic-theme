@@ -4,7 +4,7 @@
 	import '@splidejs/splide/dist/css/splide.min.css';
 
     // Import child components which are used in this slider
-	import SliderFullscreenImageItem from '$lib/modules-flex/sliders/slider-fullscreen-image/slider-fullscreen-image-item.svelte'
+	import GalleryListOverlaySliderSliderItem from '$lib/modules-flex/galleries/gallery-list-overlay-slider/gallery-list-overlay-slider-slider-item.svelte'
 
     // Get data from parent component or from Slice function
     export let slice
@@ -57,7 +57,7 @@
     }}>
         {#each loop as item}
             <SplideSlide>
-                <SliderFullscreenImageItem item={item} />
+                <GalleryListOverlaySliderSliderItem item={item} />
             </SplideSlide>
         {/each}
     </Splide>

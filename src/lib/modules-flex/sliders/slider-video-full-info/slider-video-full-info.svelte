@@ -94,7 +94,7 @@
 	{/if}
 </div>
 
-<!-- Slider whcih contains the info area -->
+<!-- Slider which contains the info area -->
 <div class="info-slider w-full">
 	<Splide
 	bind:this={splideSliderInfo}
@@ -112,6 +112,11 @@
 			</SplideSlide>
 		{/each}
 	</Splide>
+</div>
+
+<div class="relative bg-white z-20">
+    <slot>
+	</slot>
 </div>
 
 <style lang="postcss">

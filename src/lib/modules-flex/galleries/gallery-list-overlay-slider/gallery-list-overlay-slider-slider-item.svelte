@@ -9,8 +9,8 @@
 
 <div class="">
 	<!-- Display image basic comp -->
-	<Image image={item.slider_fullscreen_image_image} imageSize={'Big'} classes={'h-screen w-full object-cover'} />
+	<Image image={item.gallery_list_overlay_slider_image} imageSize={'Big'} classes={'h-screen w-full object-cover'} />
 
 	<!-- Display text basic comp -->
-	<Text text={item.slider_fullscreen_image_caption} hasRichtext={true} classes={''} classesRichtext={'absolute bottom-3 left-0 w-full text-center'}/>
+	<Text text={item.gallery_list_overlay_slider_caption} hasRichtext={true} classes={''} classesRichtext={'absolute bottom-3 left-0 w-full text-center'}/>
 </div>

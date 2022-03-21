@@ -18,3 +18,4 @@
 - RO Home Slider
 - RO Contact
 - RO Privacy Policy
+- Pot store into each project. film controls

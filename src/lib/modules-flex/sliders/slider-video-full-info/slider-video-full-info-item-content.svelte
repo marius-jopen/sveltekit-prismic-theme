@@ -9,21 +9,15 @@
     export let sliderClicked
 
     // Check if it is a vimeo link or a file from prismic
-    let videoUrl = item.slider_video.url
-    let videoVimeo = item.slider_video_link[0]
+    let videoUrl = item.slider_video_full_info_video.url
+    let videoVimeo = item.slider_video_full_info_vimeo[0]
 
     if(videoVimeo) {
-        videoUrl = item.slider_video_link[0].text
+        videoUrl = item.slider_video_full_info_vimeo[0].text
     }
 </script>
 
 <!-- Content of Slider -->
 <div class="h-screen fixed top-0 left-0 z-0 w-full">
-    <!-- Image -->
-    {#if item.slider_image.url}
-        <img src="{item.slider_image.Big.url}" alt="{item.slider_image.alt}" class="h-screen border-lines border-b w-full object-cover">
-    {/if}
-
-    <!-- Video -->
-    <VideoControls sliderClicked={sliderClicked} index="{index}" slideIndex="{slideIndex}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_poster.Big.url}" height="h-screen"/>
+    <VideoControls sliderClicked={sliderClicked} index="{index}" slideIndex="{slideIndex}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_full_info_video_poster.Big.url}" height="h-screen"/>
 </div>

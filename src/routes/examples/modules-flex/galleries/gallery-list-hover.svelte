@@ -1,16 +1,13 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../utils/client'
+    import Client from '$lib/functionality/client/client'
 
-    export async function load({ url }) {
+    export async function load() {
         // Get data from setup page
 		const setup = await Client.getSingle('setup')
 
-        // Get current page name
-        const pageName = url.pathname.replace('/', '')
-
-        // Get data from the current page
-        const document = await Client.getByUID('page', pageName)
+        // Get data from all-modules page
+        const document = await Client.getSingle('all_modules')
 
         // Return the data which we got above
         return {
@@ -24,19 +21,29 @@
 
 <script>
     // Import all components which will be used on this page
-    import Seo from '$lib/functionality/seo/seo.svelte'
     import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
+	import GalleryListHover from '$lib/modules-flex/galleries/gallery-list-hover/gallery-list-hover.svelte'
 
     // Get the data from above
     export let document
-    export let setup
+	export let setup
 </script>
-
-<Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<!-- <ModulesSlices slices={document.data.body1} /> -->
+<GalleryListHover 
+inputLoop={document.data.gallery_list_hover} 
+inputBackgroundColor={document.data.gallery_list_hover_backgroundcolor} 
+/>
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Gallery List Hover
+    </h3>
+
+    <li>
+        Only receives strings
+    </li>
+</div>

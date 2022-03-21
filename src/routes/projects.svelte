@@ -59,21 +59,12 @@
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
     import NavigationSuperSimple from '$lib/modules-static/navigations/navigation-super-simple/navigation-super-simple.svelte'
-    import AccordeonComplex from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex.svelte'
-    import TypoGrid from '$lib/modules-static/repeater/loops/typo-grid/typo-grid.svelte'
-    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
-    import SliderVideoFullscreen from '$lib/modules-static/repeater/loops/slider-video-fullscreen/slider-video-fullscreen.svelte'
-    import Overlay from '$lib/modules-static/repeater/loops/overlay/overlay.svelte'
-    import ThumbnailGridVideosHover from '$lib/modules-static/repeater/loops/thumbnail-grid-videos-hover/thumbnail-grid-videos-hover.svelte'
-    import ThumbnailShopGridHover from '$lib/modules-static/repeater/loops/thumbnail-shop-grid-hover/thumbnail-shop-grid-hover.svelte'
     import FilterItemsHorizontal from '$lib/modules-static/repeater/filters/filter-items-horizontal/filter-items-horizontal.svelte'
 
     // Get the data from above
 	export let setup
-    export let sortedItems
 	export let type
     export let allItems
-    export let sortedItemsNormal
     export let document
 </script>
 
@@ -81,11 +72,3 @@
 
 <NavigationSuperSimple data={setup.data} />
 <FilterItemsHorizontal items={allItems.results} type={type} />
-
-<ThumbnailShopGridHover items={sortedItemsNormal} type={type} />
-<ThumbnailGridVideosHover items={sortedItemsNormal} type={type} />
-<Overlay items={sortedItemsNormal} />
-<TypoGrid items={sortedItemsNormal} type={type} />
-<AccordeonComplex items={sortedItemsNormal} type={type} />
-<ThumbnailGrid items={sortedItemsNormal} type={type} />
-<SliderVideoFullscreen items={sortedItems} allItems={allItems} type={type} /> 

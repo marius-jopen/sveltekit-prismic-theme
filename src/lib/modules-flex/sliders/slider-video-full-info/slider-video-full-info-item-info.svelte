@@ -1,9 +1,11 @@
 <script>
     // Import components which are used
-    import InfoBoxes from '$lib/modules-flex/paragraphs/info-boxes/info-boxes.svelte'
+	import ParagraphRichtextBig from "$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte"
 
     // Get data from parent Component
     export let item
 </script>
 
-<InfoBoxes item={item} />
+<div class="bg-white border-t border-lines">
+    <ParagraphRichtextBig inputLongText={item.slider_video_full_info_caption} />
+</div>

@@ -1,7 +1,7 @@
 <script>
     // Import child components which are used in this slider
     import GalleryListOverlaySliderItem from '$lib/modules-flex/galleries/gallery-list-overlay-slider/gallery-list-overlay-slider-item.svelte'
-	import SliderFullscreenImage from '$lib/modules-flex/sliders/slider-fullscreen-image/slider-fullscreen-image.svelte'
+	import GalleryListOverlaySliderSlider from '$lib/modules-flex/galleries/gallery-list-overlay-slider/gallery-list-overlay-slider-slider.svelte'
 
 	// Import the Body function which allows us to change the body tag
 	import { Body } from 'svelte-body';
@@ -72,7 +72,7 @@
 		</div>
 		
 		<div>
-			<SliderFullscreenImage inputLoop={loop} />
+			<GalleryListOverlaySliderSlider inputLoop={loop} />
 		</div>
 	</div>
 {/if}
