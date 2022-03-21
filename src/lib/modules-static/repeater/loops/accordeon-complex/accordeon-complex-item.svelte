@@ -3,7 +3,7 @@
 	import { slide } from "svelte/transition";
 
 	// Import child components which are used in this slider
-    import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import AccordeonComplexItemContent from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-item-content.svelte'
 
 	// Get data from parent component
     export let item
@@ -85,7 +85,7 @@
 		<!-- Content -->
 		{#if interalStatus == true}
 			<div class="bg-neutral-100 w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
-				Content
+				<AccordeonComplexItemContent item={item} />
 			</div>
 		{/if}
 	</div>

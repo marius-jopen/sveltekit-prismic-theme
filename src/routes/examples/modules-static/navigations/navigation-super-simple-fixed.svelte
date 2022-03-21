@@ -41,8 +41,11 @@
     <li>
         Can be also used for mobile if not many items are in the navigation
     </li>
-</div>
 
+    <li>
+        Only the information from the Prismic setup page is needed.
+    </li>
+</div>
 
 scroll
 <br>

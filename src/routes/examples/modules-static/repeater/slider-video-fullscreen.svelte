@@ -57,4 +57,33 @@
 <NavigationMobileSimple data={setup.data} />
 
 <SliderVideoFullscreen items={sortedItems} type={type} /> 
-No mobile!
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Slider Video Fullscreen
+    </h3>
+
+    <li>
+        The height can be defined, but it is recommended to set it to fullscreen via the variable called heightVh.
+    </li>
+
+    <li>
+        Displays projects and their preview videos.
+    </li>
+
+    <li>
+        Changes slides on scroll.
+    </li>
+
+    <li>
+        Changes slides by clicking to the top or bottom area.
+    </li>
+
+    <li>
+        Videos autoplay and are muted.
+    </li>
+
+    <li>
+        Not recommended for mobile.
+    </li>
+</div>

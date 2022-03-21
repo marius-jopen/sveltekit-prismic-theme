@@ -57,3 +57,17 @@
 <NavigationMobileSimple data={setup.data} />
 
 <ThumbnailGridVideosHover items={sortedItems} type={type} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Thumbnail Grid Videos Hover
+    </h3>
+
+    <li>
+        Displays a three columm grid of projects with videos.
+    </li>
+
+    <li>
+        On hover, the video starts to play and stops, when the mouse leaves the item.
+    </li>
+</div>

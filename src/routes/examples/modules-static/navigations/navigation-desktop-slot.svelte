@@ -39,6 +39,10 @@
     <li>
         Is fixed to the top, but pushes the content down, so it does not hide information
     </li>
+
+    <li>
+        Only the information from the Prismic setup page is needed.
+    </li>
 </div>
 
 scroll

@@ -57,3 +57,17 @@
 <NavigationMobileSimple data={setup.data} />
 
 <ThumbnailGrid items={sortedItems} type={type} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Thumbnail Grid
+    </h3>
+
+    <li>
+        Displays a three columm grid of projects with images.
+    </li>
+
+    <li>
+        On hover, the title of the project appears.
+    </li>
+</div>

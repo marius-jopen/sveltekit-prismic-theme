@@ -7,7 +7,7 @@
 	export let type
 </script>
 
-<div class="flex flex-wrap">
+<div class="flex flex-wrap border-lines border-b">
     {#each items as item}
         <ThumbnailGridHoverItem item={item} type={type} />
     {/each}

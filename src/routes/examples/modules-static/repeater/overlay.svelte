@@ -56,3 +56,25 @@
 <NavigationMobileSimple data={setup.data} />
 
 <Overlay items={sortedItems} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Overlay
+    </h3>
+
+    <li>
+        A basic list of projects below ieach other.
+    </li>
+
+    <li>
+        On click, a fullscreen area appears with content of the project.
+    </li>
+
+    <li>
+        When clicking the X or the kexy ESC, the fullscreen area disappears.
+    </li>
+
+    <li>
+        Not optimised for mobile yet.
+    </li>
+</div>

@@ -34,7 +34,7 @@
     </span>
 
     <span slot="left">
-        Content to Scroll
+        Content left
         <br>
         Content to Scroll
         <br>
@@ -157,5 +157,109 @@
 
     <span slot="right">
         Content right
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
+        <br>
+        Content to Scroll
     </span>
 </LayoutColumn> 
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Layout Column
+    </h3>
+
+    <li>
+        Content on left scrolls and the right side is sticky until the end of the left box is reached.
+    </li>
+
+    <li>
+        Left column should be longer than right column.
+    </li>
+
+    <li>
+        Good for product pages in shops.
+    </li>
+
+    <li>
+        No information from Prismic is needed.
+    </li>
+</div>

@@ -57,3 +57,13 @@
 <NavigationMobileSimple data={setup.data} />
 
 <TypoGrid items={sortedItems} type={type} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Typo Grid
+    </h3>
+
+    <li>
+        Displays a three columm grid of projects without images.
+    </li>
+</div>

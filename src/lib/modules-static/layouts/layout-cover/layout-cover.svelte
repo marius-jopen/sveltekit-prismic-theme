@@ -46,7 +46,7 @@
 <div class="border-lines border-t" style="margin-top: -{offset}px">
 </div>
 
-<div class="relative z-10 bg-background">
+<div class="relative z-10 bg-background border-lines border-b">
 	<slot name="content">
     </slot>
 </div>

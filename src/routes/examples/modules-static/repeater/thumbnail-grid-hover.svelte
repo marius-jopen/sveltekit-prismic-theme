@@ -57,3 +57,17 @@
 <NavigationMobileSimple data={setup.data} />
 
 <ThumbnailGridHover items={sortedItems} type={type} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Thumbnail Grid Hover
+    </h3>
+
+    <li>
+        Displays a three columm grid of projects with image.
+    </li>
+
+    <li>
+        On hover, the the second image appears and disappears when removing the mouse.
+    </li>
+</div>

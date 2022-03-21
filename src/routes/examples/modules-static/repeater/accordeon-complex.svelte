@@ -57,3 +57,37 @@
 <NavigationMobileSimple data={setup.data} />
 
 <AccordeonComplex items={sortedItems} type={type} />
+
+<div class="border-b border-lines px-3 py-3 text-lg">
+    <h3>
+        Accordeon Complex
+    </h3>
+
+    <li>
+        Displays a list of projects as accordeons.
+    </li>
+
+    <li>
+        By opening one accordeon, the other accordeons close.
+    </li>
+
+    <li>
+        Sort function to sort the items by title or other fields. This can be done by chaning the array in the child composition AccordeonComplexSort. Inside each of the array items, a different field can be targeted. Also it is possible to change the styling for each sort item. When changing the sort items, it is also recommended to change the items in the hader-area of each accordeon item in the child component ItemAccordeonList.
+    </li>
+
+    <li>
+        Search function to search through fields within the project. To add more fields into the search, change the function called search inside this child component AccordeonComplexSearch. Until now the fields MUST contain information otherwise the search does not work.
+    </li>
+
+    <li>
+        Load more button to show more projects. The number of projects which are displayed can be changed in this child compnent AccordeonComplexLoop. Change the variable visibleItems.
+    </li>
+
+    <li>
+        When an accordeon opens, the url of the page changes to the project ID. When opening this URl from a new window, the page scrolls down to that project and opens it. Still has some bugs.
+    </li>
+
+    <li>
+        To change content in the accordeon items, change it here: AccordeonComplexItemContent
+    </li>
+</div>

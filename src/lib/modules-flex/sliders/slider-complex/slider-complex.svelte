@@ -86,8 +86,8 @@
 	//  Function which get the current caption
 	function getCaption(item) {
 		// Get the current caption of the slider
-		if(loop[item].slider_caption[0]) {
-			currentCaption = loop[item].slider_caption[0].text
+		if(loop[item].slider_complex_caption[0]) {
+			currentCaption = loop[item].slider_complex_caption[0].text
 		} else {
 			currentCaption = ''
 		}

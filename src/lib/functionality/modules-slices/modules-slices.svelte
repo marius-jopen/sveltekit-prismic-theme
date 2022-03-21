@@ -6,14 +6,13 @@
 	import HeadlineSimple from "$lib/modules-flex/headlines/headline-simple/headline-simple.svelte"
 	import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
     import SliderVideoFull from '$lib/modules-flex/sliders/slider-video-full/slider-video-full.svelte'
+	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
+	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
 	import TextImage from "$lib/modules-flex/paragraphs/text-image/text-image.svelte"
 	import GalleryListHover from "$lib/modules-flex/galleries/gallery-list-hover/gallery-list-hover.svelte"
-
 	import VideoSimple from "$lib/modules-flex/videos/video-simple/video-simple.svelte"
 	import VideoControls from "$lib/modules-flex/videos/video-controls/video-controls.svelte"
-	import SliderMouseMove from "$lib/modules-flex/sliders/slider-mouse-move/slider-mouse-move.svelte"
-	import SliderMarquee from "$lib/modules-flex/sliders/slider-marquee/slider-marquee.svelte"
-
+	
 	// Get the data from the parent component
 	export let slices
 
@@ -25,13 +24,12 @@
 		headline_simple: HeadlineSimple,
 		slider_complex: SliderComplex,
 		slider_video_full: SliderVideoFull,
+		slider_marquee: SliderMarquee,
+		slider_mouse_move: SliderMouseMove,
 		text_image: TextImage,
 		gallery_list_hover: GalleryListHover,
-
-		marquee: SliderMarquee,
 		video_simple: VideoSimple,
 		video_controls: VideoControls,
-		gallery_mouse_move: SliderMouseMove
 	}
 </script>
 
