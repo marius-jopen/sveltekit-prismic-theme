@@ -123,6 +123,10 @@
     Layout Cover
 </a>
 
+<a href="/examples/modules-static/layouts/layout-accordeon" class="block px-4">
+    Layout Accordeon
+</a>
+
 <div class="bg-neutral-200 text-center py-2 border-b border-t border-lines">
     MODULES FLEX
 </div>
