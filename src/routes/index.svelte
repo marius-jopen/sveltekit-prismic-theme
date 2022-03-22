@@ -35,11 +35,11 @@
 <NavigationDesktopSimple data={setup.data} />
 <NavigationMobileSimple data={setup.data} />
 
-<div class="bg-neutral-200 text-center py-2 border-b border-t border-lines">
+<div class="bg-neutral-200 my-3 text-center py-2 border-b border-t border-lines">
     MODULES STATIC
 </div>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Navigations
 </div>
 
@@ -71,7 +71,7 @@
     Navigation Mobile Simple
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Footers
 </div>
 
@@ -79,7 +79,7 @@
     Footer Simple
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Repeater
 </div>
 
@@ -111,7 +111,7 @@
     Thumbnail Grid VideosHover
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Layouts
 </div>
 
@@ -127,11 +127,11 @@
     Layout Accordeon
 </a>
 
-<div class="bg-neutral-200 text-center py-2 border-b border-t border-lines">
+<div class="bg-neutral-200 my-3 text-center py-2 border-b border-t border-lines">
     MODULES FLEX
 </div>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Videos
 </div>
 
@@ -143,7 +143,7 @@
     Video Controls
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Sliders
 </div>
 
@@ -167,7 +167,7 @@
     Slider Video Full Info
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Paragraphs
 </div>
 
@@ -187,7 +187,7 @@
     Text Image
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Navigations
 </div>
 
@@ -195,7 +195,7 @@
     Navigation Full Background
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Images
 </div>
 
@@ -207,7 +207,7 @@
     Image Full Width
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Headlines
 </div>
 
@@ -215,7 +215,7 @@
     Headline Simple
 </a>
 
-<div class="bg-neutral-100 py-2 border-b border-t border-lines text-center -mt-0.5">
+<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
     Galleries
 </div>
 

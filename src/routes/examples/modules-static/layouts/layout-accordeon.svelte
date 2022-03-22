@@ -38,37 +38,6 @@
     Content
 </LayoutAccordeon> 
 
-<LayoutAccordeon inputHeadline={"This is a headline"}>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-</LayoutAccordeon> 
-
-<LayoutAccordeon inputHeadline={"This is a headline"}>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-</LayoutAccordeon> 
-
-<LayoutAccordeon inputHeadline={"This is a headline"}>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-    <br>
-    Content
-</LayoutAccordeon> 
-
-
 <div class="border-b border-lines px-3 py-3 text-lg">
     <h3>
         Layout Accordeon
