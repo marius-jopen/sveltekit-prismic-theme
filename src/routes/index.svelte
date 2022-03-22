@@ -115,6 +115,10 @@
     Layouts
 </div>
 
+<a href="/examples/modules-static/layouts/layout-tabs" class="block px-4">
+    Layout Tabs
+</a>
+
 <a href="/examples/modules-static/layouts/layout-column" class="block px-4">
     Layout Column
 </a>
@@ -171,6 +175,10 @@
     Paragraphs
 </div>
 
+<a href="/examples/modules-flex/paragraphs/repeating-content" class="block px-4">
+    Repeating Content
+</a>
+
 <a href="/examples/modules-flex/paragraphs/info-boxes" class="block px-4">
     Info Boxes
 </a>
@@ -185,6 +193,10 @@
 
 <a href="/examples/modules-flex/paragraphs/text-image" class="block px-4">
     Text Image
+</a>
+
+<a href="/examples/modules-flex/tables/table-basic" class="block px-4">
+    Table Basic
 </a>
 
 <div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">
