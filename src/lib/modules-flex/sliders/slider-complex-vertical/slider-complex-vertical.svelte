@@ -80,7 +80,7 @@
             drag: false,
             height: heightVh + 'vh', // Height of the slider and its slides
             keyboard: true,
-            speed: 700, // Slide speed when triggered
+            speed: 1500, // Slide speed when triggered
             wheel: false,
             direction: 'ttb',
             type: 'loop',
