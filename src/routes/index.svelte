@@ -155,6 +155,10 @@
     Slider Complex
 </a>
 
+<a href="/examples/modules-flex/sliders/slider-complex-vertical" class="block px-4">
+    Slider Complex Vertical
+</a>
+
 <a href="/examples/modules-flex/sliders/slider-marquee" class="block px-4">
     Slider Marquee
 </a>
