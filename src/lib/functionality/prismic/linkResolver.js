@@ -1,15 +1,14 @@
 export default function (doc) {
   switch (doc.type) {
-    case ('setup'):
-      break
     case ('page'):
-      break
+      return (doc.uid)
     case ('project'):
-      break
+      return ('/projects/' + doc.uid)
     case ('projects'):
       return '/projects'
     case ('home'):
     case ('all_modules'):
+    case ('setup'):
     default:
       return '/'
   }

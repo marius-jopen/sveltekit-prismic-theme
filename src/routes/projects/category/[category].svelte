@@ -17,12 +17,11 @@
 		const type = 'project';
 
     // NOTE that tags in Prismic are ALWAYS case sensitive
+    // e.g. liquid -> Liquid
 		const filteredItems = await api.query([
       Prismic.Predicates.at('document.tags', [capitalize(category)]),
       Prismic.Predicates.at('document.type', type)
     ]);
-
-    console.log(filteredItems)
 
 		// A list of all items
 		const allItems = await api.query(Prismic.Predicates.at('document.type', type));
