@@ -1,13 +1,16 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '$lib/functionality/client/client'
+    import makeClient from '$lib/functionality/prismic/client'
 
-    export async function load() {
+    export async function load({ session }) {
+
+    const api = await makeClient(session.cookie)
+
         // Get data from setup page
-		const setup = await Client.getSingle('setup')
+		const setup = await api.getSingle('setup')
 
         // Get data from all-modules page
-        const document = await Client.getSingle('all_modules')
+        const document = await api.getSingle('all_modules')
 
         // Return the data which we got above
         return {
