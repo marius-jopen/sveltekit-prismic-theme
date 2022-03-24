@@ -122,7 +122,7 @@
 
 <a href="/examples/modules-flex/sliders/slider-complex" class="block px-4"> Slider Complex </a>
 
-<a href="/examples/modules-flex/sliders/slider-marquee" class="block px-4"> Slider Marquee </a>
+
 
 <a href="/examples/modules-flex/sliders/slider-mouse-move" class="block px-4">
 	Slider Mouse Move
