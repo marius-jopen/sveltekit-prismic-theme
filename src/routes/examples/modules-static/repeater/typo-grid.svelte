@@ -1,11 +1,14 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
     import Prismic from "@prismicio/client"
-    import Client from '$lib/functionality/client/client'
+    import makeClient from '$lib/functionality/prismic/client'
 
-    export async function load({ url }) {
+    export async function load({ url, session }) {
+
+    const api = await makeClient(session.cookie)
+
         // Get data from setup page
-		const setup = await Client.getSingle('setup')
+		const setup = await api.getSingle('setup')
 
         // Define the type of the post-type. For example project or product
 		const type = 'project'
@@ -15,10 +18,10 @@
         const types = 'projects'
 
         // Get the content from the current page
-		const document = await Client.getSingle(types)
+		const document = await api.getSingle(types)
 
         // Get all items from the post-type. For example project or product
-        const allItems = await Client.query(
+        const allItems = await api.query(
             Prismic.Predicates.at("document.type", type),
         )
 
