@@ -101,7 +101,7 @@
 <svelte:window on:keydown={handleKeydown}/>
 
 <div class="{classes}">
-	<div class="relative">
+	<div class="relative border-lines border-b">
 		<!-- Slider -->
 		<Splide
 		bind:this={splideSlider}
@@ -152,7 +152,7 @@
 	</div>
 
 	<!-- Extra row with caption and slide counter -->
-	<div class="flex w-full justify-between pt-1 bg-background">
+	<div class="flex w-full justify-between bg-background border-lines border-b py-2">
 		<div>
 			{currentCaption}
 		</div>

@@ -26,6 +26,7 @@
 
 	let textHeight = 0 // Variable to get the height of the text box
 
+	// Make this variable reactive
 	$: textHeight
 
 	// Check if Slices function is used, otherwise use the data from parent component

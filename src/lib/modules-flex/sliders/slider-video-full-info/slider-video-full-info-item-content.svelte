@@ -19,5 +19,5 @@
 
 <!-- Content of Slider -->
 <div class="h-screen fixed top-0 left-0 z-0 w-full">
-    <VideoControls sliderClicked={sliderClicked} index="{index}" slideIndex="{slideIndex}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_full_info_video_poster.Big.url}" height="h-screen"/>
+    <VideoControls inputSliderClicked={sliderClicked} inputIndex="{index}" inputSlideIndex="{slideIndex}" inputVideoUrl="{videoUrl}" inputVideoPoster="{item.slider_video_full_info_video_poster.Big.url}" inputHeight="h-screen"/>
 </div>

@@ -38,9 +38,9 @@
 <NavigationMobileSimple data={setup.data} />
 
 <ImageFullWidth 
-inputImage={document.data.image_full_screen_image} 
+inputImage={document.data.image_full_width_image} 
 inputImageSize={'Big'}
-inputCaption={document.data.image_full_screen_caption} 
+inputCaption={document.data.image_full_width_caption} 
 inputHasRichtext={true}
 />
 

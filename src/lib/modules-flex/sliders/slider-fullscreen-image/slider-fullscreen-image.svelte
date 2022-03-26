@@ -10,8 +10,6 @@
     export let slice
     export let inputLoop
 
-    console.log(inputLoop)
-
     // Define variables which get used in this component to detect if it is a slice or a manual module
 	let loop
 

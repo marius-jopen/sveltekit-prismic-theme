@@ -53,7 +53,7 @@
 	}
 </script>
 
-<div class="fixed top-0 left-0 w-screen hscreen">
+<div class="relative w-screen h-screen">
 	<!-- Slider -->
 	<Splide
 	bind:this={splideSlider}
@@ -95,12 +95,12 @@
 </div>
 
 <!-- Slider which contains the info area -->
-<div class="info-slider w-full">
+<div class="w-full">
 	<Splide
 	bind:this={splideSliderInfo}
 	on:move={ e => {slideMove(e)} }
 	options={{
-		height: '',
+		height: 'h-screen',
 		type: 'fade',
 		focus: 'center',
 		pagination: false,
@@ -112,11 +112,6 @@
 			</SplideSlide>
 		{/each}
 	</Splide>
-</div>
-
-<div class="relative bg-white z-20">
-    <slot>
-	</slot>
 </div>
 
 <style lang="postcss">
@@ -140,10 +135,5 @@
 	/* Hide arrows when the controls of the video are hidden */
 	.controls-true {
 		opacity: 0 !important;
-	}
-
-	/* Info Area */
-	.info-slider {
-		margin-top: 100vh;
 	}
 </style>

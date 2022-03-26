@@ -27,6 +27,8 @@
 	import Seo from '$lib/functionality/seo/seo.svelte';
 	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte';
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte';
+	import LayoutAccordeon from '$lib/modules-static/layouts/layout-accordeon/layout-accordeon.svelte'
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
 	// Get the data from above
 	export let document;
@@ -39,148 +41,188 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<div class="bg-neutral-200 my-3 text-center py-2 border-b border-t border-lines">
-	MODULES STATIC
-</div>
+<HeadlineSimple inputClasses={"border-t"} inputText={"Modules Static"} />
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Navigations</div>
+<LayoutAccordeon inputHeadline={"Navigations"}>
+	<a href="/examples/modules-static/navigations/navigation-desktop-simple" class="block py-0.5 textHoverGrey">
+		Navigation Desktop Simple
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-super-simple" class="block py-0.5 textHoverGrey">
+		Navigation Super Simple
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-super-simple-fixed" class="block py-0.5 textHoverGrey">
+		Navigation Super Simple Fixed
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-desktop-content-scroll" class="block py-0.5 textHoverGrey">
+		Navigation Desktop Content Scroll
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-desktop-layered-slot" class="block py-0.5 textHoverGrey">
+		Navigation Desktop Layered Slot
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-desktop-slot" class="block py-0.5 textHoverGrey">
+		Navigation Desktop Slot
+	</a>
+	
+	<a href="/examples/modules-static/navigations/navigation-mobile-simple" class="block py-0.5 textHoverGrey">
+		Navigation Mobile Simple
+	</a>
+</LayoutAccordeon> 
 
-<a href="/examples/modules-static/navigations/navigation-desktop-simple" class="block px-4">
-	Navigation Desktop Simple
-</a>
+<LayoutAccordeon inputHeadline={"Footers"}>
+	<a href="/examples/modules-static/navigations/footer-simple" class="block py-0.5 textHoverGrey">
+		Footer Simple
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-static/navigations/navigation-super-simple" class="block px-4">
-	Navigation Super Simple
-</a>
+<LayoutAccordeon inputHeadline={"Repeater"}>
+	<a href="/examples/modules-static/repeater/thumbnail-grid" class="block py-0.5 textHoverGrey">
+		Thumbnail Grid
+	</a>
 
-<a href="/examples/modules-static/navigations/navigation-super-simple-fixed" class="block px-4">
-	Navigation Super Simple Fixed
-</a>
+	<a href="/examples/modules-static/repeater/typo-grid" class="block py-0.5 textHoverGrey"> 
+		Typo Grid 
+	</a>
 
-<a href="/examples/modules-static/navigations/navigation-desktop-content-scroll" class="block px-4">
-	Navigation Desktop Content Scroll
-</a>
+	<a href="/examples/modules-static/repeater/thumbnail-grid-hover" class="block py-0.5 textHoverGrey">
+		Thumbnail Grid Hover
+	</a>
 
-<a href="/examples/modules-static/navigations/navigation-desktop-layered-slot" class="block px-4">
-	Navigation Desktop Layered Slot
-</a>
+	<a href="/examples/modules-static/repeater/slider-video-fullscreen" class="block py-0.5 textHoverGrey">
+		Slider Video Fullscreen
+	</a>
 
-<a href="/examples/modules-static/navigations/navigation-desktop-slot" class="block px-4">
-	Navigation Desktop Slot
-</a>
+	<a href="/examples/modules-static/repeater/overlay" class="block py-0.5 textHoverGrey"> 
+		Overlay 
+	</a>
 
-<a href="/examples/modules-static/navigations/navigation-mobile-simple" class="block px-4">
-	Navigation Mobile Simple
-</a>
+	<a href="/examples/modules-static/repeater/accordeon-complex" class="block py-0.5 textHoverGrey">
+		Accordeon Complex
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Footers</div>
+	<a href="/examples/modules-static/repeater/thumbnail-grid-videos-hover" class="block py-0.5 textHoverGrey">
+		Thumbnail Grid VideosHover
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-static/navigations/footer-simple" class="block px-4"> Footer Simple </a>
+<LayoutAccordeon inputHeadline={"Filter"}>
+	<a href="/examples/modules-static/filter/filter-items-full" class="block py-0.5 textHoverGrey">
+		Filter Items Full
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Repeater</div>
+	<a href="/examples/modules-static/filter/filter-items-horizontal" class="block py-0.5 textHoverGrey">
+		Filter Items Horizontal
+	</a>
 
-<a href="/examples/modules-static/repeater/thumbnail-grid" class="block px-4"> Thumbnail Grid </a>
+	<a href="/examples/modules-static/filter/filter-items-top" class="block py-0.5 textHoverGrey">
+		Filter Items Top
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-static/repeater/typo-grid" class="block px-4"> Typo Grid </a>
+<LayoutAccordeon inputHeadline={"Layouts"}>
+	<a href="/examples/modules-static/layouts/layout-tabs" class="block py-0.5 textHoverGrey"> 
+		Layout Tabs 
+	</a>
 
-<a href="/examples/modules-static/repeater/thumbnail-grid-hover" class="block px-4">
-	Thumbnail Grid Hover
-</a>
+	<a href="/examples/modules-static/layouts/layout-column" class="block py-0.5 textHoverGrey"> 
+		Layout Column 
+	</a>
 
-<a href="/examples/modules-static/repeater/slider-video-fullscreen" class="block px-4">
-	Slider Video Fullscreen
-</a>
+	<a href="/examples/modules-static/layouts/layout-cover" class="block py-0.5 textHoverGrey"> 
+		Layout Cover 
+	</a>
 
-<a href="/examples/modules-static/repeater/overlay" class="block px-4"> Overlay </a>
+	<a href="/examples/modules-static/layouts/layout-accordeon" class="block py-0.5 textHoverGrey">
+		Layout Accordeon
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-static/repeater/accordeon-complex" class="block px-4">
-	Accordeon Complex
-</a>
+<HeadlineSimple inputClasses={""} inputText={"Modules Flex"} />
 
-<a href="/examples/modules-static/repeater/thumbnail-grid-videos-hover" class="block px-4">
-	Thumbnail Grid VideosHover
-</a>
+<LayoutAccordeon inputHeadline={"Videos"}>
+	<a href="/examples/modules-flex/videos/video-simple" class="block py-0.5 textHoverGrey"> 
+		Video Simple 
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Layouts</div>
+	<a href="/examples/modules-flex/videos/video-controls" class="block py-0.5 textHoverGrey"> 
+		Video Controls 
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-static/layouts/layout-tabs" class="block px-4"> Layout Tabs </a>
+<LayoutAccordeon inputHeadline={"Sliders"}>
+	<a href="/examples/modules-flex/sliders/slider-complex" class="block py-0.5 textHoverGrey"> 
+		Slider Complex
+	</a>
 
-<a href="/examples/modules-static/layouts/layout-column" class="block px-4"> Layout Column </a>
+	<a href="/examples/modules-flex/sliders/slider-mouse-move" class="block py-0.5 textHoverGrey">
+		Slider Mouse Move
+	</a>
 
-<a href="/examples/modules-static/layouts/layout-cover" class="block px-4"> Layout Cover </a>
+	<a href="/examples/modules-flex/sliders/slider-fullscreen-image" class="block py-0.5 textHoverGrey">
+		Slider Fullscreen Image
+	</a>
 
-<a href="/examples/modules-static/layouts/layout-accordeon" class="block px-4">
-	Layout Accordeon
-</a>
+	<a href="/examples/modules-flex/sliders/slider-video-full-info" class="block py-0.5 textHoverGrey">
+		Slider Video Full Info
+	</a>
+</LayoutAccordeon>
 
-<div class="bg-neutral-200 my-3 text-center py-2 border-b border-t border-lines">MODULES FLEX</div>
+<LayoutAccordeon inputHeadline={"Paragraphs"}>
+	<a href="/examples/modules-flex/paragraphs/repeating-content" class="block py-0.5 textHoverGrey">
+		Repeating Content
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Videos</div>
+	<a href="/examples/modules-flex/paragraphs/info-boxes" class="block py-0.5 textHoverGrey"> Info Boxes </a>
 
-<a href="/examples/modules-flex/videos/video-simple" class="block px-4"> Video Simple </a>
+	<a href="/examples/modules-flex/paragraphs/paragraph-richtext-big" class="block py-0.5 textHoverGrey">
+		Paragraph Richtext Big
+	</a>
 
-<a href="/examples/modules-flex/videos/video-controls" class="block px-4"> Video Controls </a>
+	<a href="/examples/modules-flex/paragraphs/paragraph-richtext-small" class="block py-0.5 textHoverGrey">
+		Paragraph Richtext Small
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Sliders</div>
+	<a href="/examples/modules-flex/paragraphs/text-image" class="block py-0.5 textHoverGrey"> 
+		Text Image 
+	</a>
 
-<a href="/examples/modules-flex/sliders/slider-complex" class="block px-4"> Slider Complex </a>
+	<a href="/examples/modules-flex/tables/table-basic" class="block py-0.5 textHoverGrey"> 
+		Table Basic 
+	</a>
+</LayoutAccordeon>
 
+<LayoutAccordeon inputHeadline={"Navigations"}>
+	<a href="/examples/modules-flex/navigations/navigation-full-background" class="block py-0.5 textHoverGrey">
+		Navigation Full Background
+	</a>
+</LayoutAccordeon>
 
+<LayoutAccordeon inputHeadline={"Images"}>
+	<a href="/examples/modules-flex/images/image-full-screen" class="block py-0.5 textHoverGrey"> 
+		Image Full Screen 
+	</a>
 
-<a href="/examples/modules-flex/sliders/slider-mouse-move" class="block px-4">
-	Slider Mouse Move
-</a>
+	<a href="/examples/modules-flex/images/image-full-width" class="block py-0.5 textHoverGrey"> 
+		Image Full Width 
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-flex/sliders/slider-fullscreen-image" class="block px-4">
-	Slider Fullscreen Image
-</a>
+<LayoutAccordeon inputHeadline={"Headlines"}>
+	<a href="/examples/modules-flex/headlines/headline-simple" class="block py-0.5 textHoverGrey"> 
+		Headline Simple 
+	</a>
+</LayoutAccordeon>
 
-<a href="/examples/modules-flex/sliders/slider-video-full-info" class="block px-4">
-	Slider Video Full Info
-</a>
+<LayoutAccordeon inputHeadline={"Galleries"}>
+	<a href="/examples/modules-flex/galleries/gallery-list-hover" class="block py-0.5 textHoverGrey">
+		Gallery List Hover
+	</a>
 
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Paragraphs</div>
-
-<a href="/examples/modules-flex/paragraphs/repeating-content" class="block px-4">
-	Repeating Content
-</a>
-
-<a href="/examples/modules-flex/paragraphs/info-boxes" class="block px-4"> Info Boxes </a>
-
-<a href="/examples/modules-flex/paragraphs/paragraph-richtext-big" class="block px-4">
-	Paragraph Richtext Big
-</a>
-
-<a href="/examples/modules-flex/paragraphs/paragraph-richtext-small" class="block px-4">
-	Paragraph Richtext Small
-</a>
-
-<a href="/examples/modules-flex/paragraphs/text-image" class="block px-4"> Text Image </a>
-
-<a href="/examples/modules-flex/tables/table-basic" class="block px-4"> Table Basic </a>
-
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Navigations</div>
-
-<a href="/examples/modules-flex/navigations/navigation-full-background" class="block px-4">
-	Navigation Full Background
-</a>
-
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Images</div>
-
-<a href="/examples/modules-flex/images/image-full-screen" class="block px-4"> Image Full Screen </a>
-
-<a href="/examples/modules-flex/images/image-full-width" class="block px-4"> Image Full Width </a>
-
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Headlines</div>
-
-<a href="/examples/modules-flex/headlines/headline-simple" class="block px-4"> Headline Simple </a>
-
-<div class="bg-neutral-100 my-3 py-2 border-b border-t border-lines text-center">Galleries</div>
-
-<a href="/examples/modules-flex/galleries/gallery-list-hover" class="block px-4">
-	Gallery List Hover
-</a>
-
-<a href="/examples/modules-flex/galleries/gallery-list-overlay-slider" class="block px-4">
-	Gallery List Overlay Slider
-</a>
+	<a href="/examples/modules-flex/galleries/gallery-list-overlay-slider" class="block py-0.5 textHoverGrey">
+		Gallery List Overlay Slider
+	</a>
+</LayoutAccordeon>

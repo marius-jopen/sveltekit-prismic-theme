@@ -30,6 +30,7 @@
     import Seo from '$lib/functionality/seo/seo.svelte'
     import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
 
     // Get the data from above
     export let document
@@ -41,3 +42,5 @@
 <NavigationDesktopSimple data={setup.data} />
 
 <NavigationMobileSimple data={setup.data} />
+
+<ModulesSlices slices={document.data.body} />

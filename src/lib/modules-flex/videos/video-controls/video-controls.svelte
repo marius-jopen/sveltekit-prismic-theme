@@ -6,28 +6,40 @@
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
-	export let height
-	export let index
-	export let slideIndex
-	export let sliderClicked
+	export let inputHeight
+	export let inputIndex
+	export let inputSlideIndex
+	export let inputSliderClicked
 
 	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster
 	let videoVimeo
+	let height
+	let sliderClicked
+	let index
+	let slideIndex
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		videoUrl = inputVideoUrl
 		videoPoster = inputVideoPoster
+		height = inputHeight
+		sliderClicked = inputSliderClicked
+		index = inputIndex
+		slideIndex = inputSlideIndex
 	} else {
 		videoUrl = slice.primary.video.url
 		videoVimeo = slice.primary.vimeo[0].text
-		videoPoster = slice.primary.preview_image.Big.url
+		videoPoster = slice.primary.video_poster.Big.url
+		height = "h-40vw"
+		sliderClicked = false
+		index = 0
+		slideIndex = 0
 
 		if(videoVimeo) {
 			videoUrl = videoVimeo
-		}
+		} 
 	}
         
 	// Define variables which will be used for the video controller
@@ -160,7 +172,7 @@
 	</div>
 
 	<!-- Controls -->
-	<div class:hideControlsSoft="{hideControl === true}" class=" border-lines border-t border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
+	<div class:hideControlsSoft="{hideControl === true}" class=" border-lines border-t opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<!-- Play and Pause button -->
 			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={e => playButton()} >

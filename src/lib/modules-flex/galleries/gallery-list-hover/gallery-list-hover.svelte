@@ -27,7 +27,7 @@
 	let passedUp
 </script>
 
-<div style="background-color: #{backgroundColor};">
+<div class="border-lines border-b" style="background-color: #{backgroundColor};">
     <div class="relative sm:pt-8 z-10" >
 		{#each loop as item}
 			<GalleryListHoverItem item={item} bind:value={passedUp} />

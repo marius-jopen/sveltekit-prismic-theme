@@ -37,22 +37,4 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<SliderVideoFullInfo inputLoop={document.data.slider_video_full_info}>  
-    <div class="border-b border-lines px-3 py-3 text-lg">
-        <h3>
-            Slider Video Full Info
-        </h3>
-    
-        <li>
-            Slider which displays videos with controls.
-        </li>
-    
-        <li>
-            Caption can scroll up
-        </li>
-
-        <li>
-            The rest of the page needs to be put into the slot of this comp
-        </li>
-    </div>
-</SliderVideoFullInfo> 
+<SliderVideoFullInfo inputLoop={document.data.slider_video_full_info} />

@@ -2,6 +2,9 @@
     // Value which gets passed down to this comp
     export let inputHeadline
 
+	// Import transition functin from Svelte
+	import { slide } from "svelte/transition";
+
     // Variables which get used in this comp
     let accordeonState = false
 
@@ -14,26 +17,17 @@
     }
 </script>
 
-<div class="-mt-px {accordeonState == true ? 'active' : ''}">
-    <div on:click={toggleAccordeon} class="cursor-pointer border-t border-b border-lines px-4 py-2">
+<div class="-mt-px">
+    <div on:click={toggleAccordeon} class="cursor-pointer border-t border-b border-lines px-4 py-2 textHoverGrey">
         {inputHeadline}
     </div>
 
-    <div class="content max-h-0">
-        <div class="border-b border-lines px-4 py-2">
-            <slot>
-            </slot>
+    {#if accordeonState == true}
+        <div class="content" transition:slide={{ duration: 300 }}>
+            <div class="border-b border-lines px-4 py-2">
+                <slot>
+                </slot>
+            </div>
         </div>
-    </div>
+    {/if}
 </div>
-
-<style lang="postcss">
-    .content {
-        overflow-y: hidden;
-        transition: max-height 1s;
-    }
-
-    .active .content {
-        max-height: 1000px;
-    }
-</style>

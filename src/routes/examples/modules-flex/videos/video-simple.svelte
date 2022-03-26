@@ -37,7 +37,7 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<VideoSimple inputVideoUrl={document.data.video_simple_vimeo[0].text} inputVideoPoster={document.data.video_simple_poster} />
+<VideoSimple inputVideoUrl={document.data.video_simple_vimeo[0].text} inputVideoPoster={document.data.video_simple_poster.Big.url} />
 
 <div class="border-b border-lines px-3 py-3 text-lg">
     <h3>

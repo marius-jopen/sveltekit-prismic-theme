@@ -39,5 +39,5 @@
 	<Image image={image} imageSize={imageSize} classes={'w-full'} />
 
 	<!-- Display text basic comp -->
-	<Text text={caption} hasRichtext={hasRichtext} classes={'px-4 py-2'} classesRichtext={'px-4 pt-1 pb-3'}/>
+	<Text text={caption} hasRichtext={hasRichtext} classes={'px-4 py-2'} classesRichtext={'px-4 pt-1 pb-3 border-t border-lines'}/>
 </div>

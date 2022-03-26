@@ -23,10 +23,14 @@
 </script>
 
 <script>
+    // Modules which are getting imported for the README AREA
+    import SvelteMarkdown from 'svelte-markdown'
+	import Text from '$lib/modules-basic/text.svelte'
+    import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+
     // Import all components which will be used on this page
     import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-    import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
     // Get the data from above
     export let document
@@ -37,14 +41,62 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputText={document.data.headline_simple_text[0].text} />
+<HeadlineSimple inputText={document.data.headline_simple_text[0].text} inputClasses={""} />
 
-<div class="border-b border-lines px-3 py-3 text-lg">
-    <h3>
-        Headline Simple
-    </h3>
+<!-- README AREA -->
 
+<HeadlineSimple inputText={"Headline Simple"} inputClasses={""} />
+
+<div class="py-2 px-4">
     <li>
-        Only receives strings
+        Displays a headline
     </li>
+</div>
+
+<HeadlineSimple inputText={"Embed"} inputClasses={"border-t border-lines"} />
+
+<div class="py-4 border-lines border-b">
+    <SvelteMarkdown source={`
+        import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+
+        <HeadlineSimple inputText={document.data.headline_simple_text[0].text} inputClasses={""} />
+    `}/>
+</div>
+
+<HeadlineSimple inputText={"Json Module"} inputClasses={""} />
+
+<div class="py-4 border-lines border-b">
+    <SvelteMarkdown source={`
+        "headline_simple_text" : {
+            "type" : "StructuredText",
+            "config" : {
+            "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+            "label" : "Headline Simple Text"
+            }
+        }
+    `}/>
+</div>
+
+<HeadlineSimple inputText={"Json Slice"} inputClasses={""} />
+
+<div class="py-4 border-lines border-b">
+    <SvelteMarkdown source={`
+        "headline_simple": {
+            "type": "Slice",
+            "fieldset": "Headline Simple",
+            "description": "Simple Headline",
+            "icon": "format_color_text",
+            "display": "list",
+            "non-repeat": {
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label": "Text"
+                }
+              }
+            },
+            "repeat": {}
+          }
+    `}/>
 </div>
