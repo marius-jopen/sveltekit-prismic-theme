@@ -41,7 +41,7 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputClasses={"border-t"} inputText={"Modules Static"} />
+<HeadlineSimple inputClasses={""} inputText={"Modules Static"} />
 
 <LayoutAccordeon inputHeadline={"Navigations"}>
 	<a href="/examples/modules-static/navigations/navigation-desktop-simple" class="block py-0.5 textHoverGrey">
