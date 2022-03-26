@@ -46,9 +46,11 @@
 	{#if scrollingDown}
 		<div transition:fly="{{ y: -height, duration: 500 }}">
 			{#each data.navigation_top as navItem}
-				<a sveltekit:prefetch class="ml-4 text-lg textHoverGrey" href="/{navItem.uid[0].text}">
-					{navItem.title[0].text}
-				</a>
+				{#if navItem.uid[0]}
+					<a sveltekit:prefetch class="ml-4 text-lg textHoverGrey" href="/{navItem.uid[0].text}">
+						{navItem.title[0].text}
+					</a>
+				{/if}
 			{/each}
 		</div>
 	{/if}

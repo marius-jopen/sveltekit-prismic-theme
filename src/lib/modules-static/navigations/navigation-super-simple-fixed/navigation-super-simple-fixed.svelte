@@ -18,9 +18,11 @@
     </a>
 
 	{#each data.navigation_top as navItem, index}
-		<a sveltekit:prefetch class="text-lg textHoverGrey" href="/{navItem.uid[0].text}">
-			{navItem.title[0].text} {(index == totalItems - 1) ? '' : '/'}
-		</a>
+		{#if navItem.uid[0]}
+			<a sveltekit:prefetch class="text-lg textHoverGrey" href="/{navItem.uid[0].text}">
+				{navItem.title[0].text} {(index == totalItems - 1) ? '' : '/'}
+			</a>
+		{/if}
 	{/each}
 </div>
 

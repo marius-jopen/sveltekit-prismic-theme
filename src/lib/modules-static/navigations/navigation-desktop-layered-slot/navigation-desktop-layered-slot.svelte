@@ -16,9 +16,11 @@
 	
 	<div class="{height} border-b border-lines bg-background">
 		{#each data.navigation_top as navItem}
-			<a sveltekit:prefetch class="ml-4 textHoverGrey" href="/{navItem.uid[0].text}">
-				{navItem.title[0].text}
-			</a>
+			{#if navItem.uid[0]}
+				<a sveltekit:prefetch class="ml-4 textHoverGrey" href="/{navItem.uid[0].text}">
+					{navItem.title[0].text}
+				</a>
+			{/if}
 		{/each}
 	</div>
 

@@ -48,9 +48,11 @@
     <div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-background flex-col justify-center" transition:fade>
         <div class="flex flex-col text-center text-lg -mt-20">
 			{#each data.navigation_top as navItem}
-				<a sveltekit:prefetch on:click="{close}" class="py-1" href="/{navItem.uid[0].text}">
-					{navItem.title[0].text}
-				</a>
+                {#if navItem.uid[0]}
+                    <a sveltekit:prefetch on:click="{close}" class="py-1" href="/{navItem.uid[0].text}">
+                        {navItem.title[0].text}
+                    </a>    
+                {/if}
 			{/each}
 		</div>
     </div>

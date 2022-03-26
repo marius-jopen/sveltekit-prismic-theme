@@ -25,7 +25,6 @@
 <script>
     // Modules which are getting imported for the README AREA
     import SvelteMarkdown from 'svelte-markdown'
-	import Text from '$lib/modules-basic/text.svelte'
     import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
     // Import all components which will be used on this page
