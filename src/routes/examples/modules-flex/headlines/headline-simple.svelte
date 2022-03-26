@@ -51,11 +51,19 @@
     <li>
         Displays a headline
     </li>
+
+    <li>
+        Classes prop, so each headline can be styled from outside if wanted
+    </li>
+
+    <li>
+        Included in Module Slicer
+    </li>
 </div>
 
 <HeadlineSimple inputText={"Embed"} inputClasses={"border-t border-lines"} />
 
-<div class="py-4 border-lines border-b">
+<div class="py-4 border-lines border-b overflox-x-scroll">
     <SvelteMarkdown source={`
         import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
@@ -65,7 +73,7 @@
 
 <HeadlineSimple inputText={"Json Module"} inputClasses={""} />
 
-<div class="py-4 border-lines border-b">
+<div class="py-4 border-lines border-b overflox-x-scroll">
     <SvelteMarkdown source={`
         "headline_simple_text" : {
             "type" : "StructuredText",
@@ -79,7 +87,7 @@
 
 <HeadlineSimple inputText={"Json Slice"} inputClasses={""} />
 
-<div class="py-4 border-lines border-b">
+<div class="py-4 border-lines border-b overflox-x-scroll">
     <SvelteMarkdown source={`
         "headline_simple": {
             "type": "Slice",
