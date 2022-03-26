@@ -2,12 +2,15 @@
 	// Import functions which are needed to get data from the CMS
 	import Prismic from '@prismicio/client';
 	import makeClient from '$lib/functionality/prismic/client';
-  import { capitalize } from 'lodash'
 
-	export async function load({ url, session, params }) {
+	// Import function which uppercases first letter of every word
+	import { capitalize } from 'lodash'
 
-    const api = await makeClient(session.cookie)
+	export async function load({ session, params }) {
+        // Get api from client and include the session cookie which is important for the preview mode
+    	const api = await makeClient(session.cookie)
 
+		// Get current category uid
 		const { category } = params;
 
 		// Get data from setup page
@@ -16,17 +19,20 @@
 		// Define the type of the post-type. For example project or product
 		const type = 'project';
 
-    // NOTE that tags in Prismic are ALWAYS case sensitive
-    // e.g. liquid -> Liquid
+		// NOTE that tags in Prismic are ALWAYS case sensitive
+		// e.g. liquid -> Liquid
 		const filteredItems = await api.query([
-      Prismic.Predicates.at('document.tags', [capitalize(category)]),
-      Prismic.Predicates.at('document.type', type)
-    ]);
+			Prismic.Predicates.at('document.tags', [capitalize(category)]),
+			Prismic.Predicates.at('document.type', type)
+		]);
 
 		// A list of all items
-		const allItems = await api.query(Prismic.Predicates.at('document.type', type));
+		const allItems = await api.query(
+			Prismic.Predicates.at('document.type', type)
+		);
 
-    const document = setup
+		// Set document to setup to avoid empty document array for SEO
+    	const document = setup
 
 		return {
 			props: {
@@ -35,7 +41,7 @@
 				category,
 				type,
 				setup,
-        document
+        		document
 			}
 		};
 	}
@@ -51,20 +57,22 @@
 	import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte';
 
 	// Get the data from above
-	export let filteredItems;
-	export let category;
-	export let allItems;
-	export let type;
-	export let setup;
-  export let document
+	export let filteredItems
+	export let category
+	export let allItems
+	export let type
+	export let setup
+	export let document
 </script>
 
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSlot data={setup.data}>
-	<FilterItemsFull items={allItems.results} {type} />
+	<FilterItemsFull items={allItems.results} type={type} />
 </NavigationDesktopSlot>
+
 <NavigationMobileSimple data={setup.data} />
 
 <HeadlineSimple inputHeadline={category} />
-<ThumbnailGrid items={filteredItems} {type} />
+
+<ThumbnailGrid items={filteredItems.results} type={type} /> 

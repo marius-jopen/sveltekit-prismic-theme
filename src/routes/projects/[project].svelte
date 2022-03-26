@@ -2,9 +2,12 @@
     // Import functions which are needed to get data from the CMS
     import makeClient from '$lib/functionality/prismic/client'
 
-    export async function load({ url, session }) {
-
-    const api = await makeClient(session.cookie)
+    export async function load({ url, session, params }) {
+        // Get current project uid
+        const { project } = params // const project = params.project
+        
+        // Get api from client and include the session cookie which is important for the preview mode
+        const api = await makeClient(session.cookie)
 
         // Get data from setup page
 		const setup = await api.getSingle('setup')
@@ -12,18 +15,15 @@
         // Define the type of the post-type. For example project or product
 		const type = 'project'
 
-        // Get current page name
-        const pageName = url.pathname.replace('/projects/' , '')
-
         // Get data from the current page
-        const document = await api.getByUID(type, pageName)
+        const document = await api.getByUID(type, project)
 
         // Return the data which we got above
         return {
             props: {
                 document,
-				type,
-				setup
+                type,
+                setup
             }
         }
     }

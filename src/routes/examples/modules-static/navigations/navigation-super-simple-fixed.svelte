@@ -3,8 +3,8 @@
     import makeClient from '$lib/functionality/prismic/client'
 
     export async function load({ session }) {
-
-    const api = await makeClient(session.cookie)
+        // Get api from client and include the session cookie which is important for the preview mode
+        const api = await makeClient(session.cookie)
 
         // Get data from setup page
 		const setup = await api.getSingle('setup')
@@ -21,12 +21,15 @@
 <script>
     // Import all components which will be used on this page
     import NavigationSuperSimpleFixed from '$lib/modules-static/navigations/navigation-super-simple-fixed/navigation-super-simple-fixed.svelte'
-    
+    import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+
     // Get the data from above
 	export let setup
 </script>
 
 <NavigationSuperSimpleFixed data={setup.data} />
+
+<NavigationMobileSimple data={setup.data} />
 
 <div class="border-b border-lines px-3 pt-16 pb-3 text-lg">
     <h3>

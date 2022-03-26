@@ -1,4 +1,4 @@
-// import makeClient from '../../../../utils/client'
+// Check if the current page is a preview page
 import Prismic from '@prismicio/client'
 import { apiEndpoint } from '$lib/functionality/prismic/setup'
 import linkResolver from '$lib/functionality/prismic/linkResolver'

@@ -3,7 +3,9 @@
 	import makeClient from '$lib/functionality/prismic/client';
 
 	export async function load({ session }) {
+		// Get api from client and include the session cookie which is important for the preview mode
 		const api = await makeClient(session.cookie);
+		
 		// Get data from setup page
 		const setup = await api.getSingle('setup');
 
@@ -34,6 +36,7 @@
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSimple data={setup.data} />
+
 <NavigationMobileSimple data={setup.data} />
 
 <div class="bg-neutral-200 my-3 text-center py-2 border-b border-t border-lines">

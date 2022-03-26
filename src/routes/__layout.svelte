@@ -3,15 +3,16 @@
 	import makeClient from '$lib/functionality/prismic/client';
 
 	export async function load({ session }) {
+		// Get api from client and include the session cookie which is important for the preview mode
+    	const api = await makeClient(session.cookie)
 
-    const api = await makeClient(session.cookie)
 		// Get data from setup page
 		const setup = await api.getSingle('setup');
 
 		// Return the data which we got above
 		return {
 			props: {
-				setup
+				setup // Is not is use right now, but can be used for footer etc…
 			}
 		};
 	}
@@ -20,28 +21,20 @@
 <script>
 	// Import CSS
 	import '../app.postcss';
+
+	// Import the prismic repo name
 	import { namespace } from '$lib/functionality/prismic/setup';
-
-	// Import all components which will be used on this page
-	// import FooterSimple from '$lib/modules-static/navigations/footer-simple/footer-simple.svelte'
-
-	// Get the data from above
-	export let setup;
 </script>
 
 <svelte:head>
-	<script
-		async
-		defer
-		src="https://static.cdn.prismic.io/prismic.js?new=true&repo={namespace}"></script>
+	<!-- Import the script which checks if this page is in preview mode -->
+	<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={namespace}"></script>
 </svelte:head>
 
 <main>
-	<!-- Slot where all the pages will get inserted -->
+	<!-- Just making the background grey and giving it a min height for the example theme. Remove if is not needed. -->
 	<div class="bg-neutral-100 min-h-screen w-full">
+		<!-- Slot where all the pages will get inserted -->
 		<slot />
 	</div>
-
-	<!-- Modules which will be inserted on all pages -->
-	<!-- <FooterSimple data={setup.data} /> -->
 </main>

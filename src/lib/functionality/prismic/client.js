@@ -1,8 +1,6 @@
 import Prismic from '@prismicio/client';
 import { apiEndpoint } from '$lib/functionality/prismic/setup'
 
-// const Client = Prismic.client(apiEndpoint);
-
 const makeClient = async (cookie) => {
   const options = {
     req: {
@@ -16,6 +14,5 @@ const makeClient = async (cookie) => {
 
   return client
 }
-
 
 export default makeClient;

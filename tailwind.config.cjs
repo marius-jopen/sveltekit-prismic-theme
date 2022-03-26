@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 const fontFamily = {
 	...defaultTheme.fontFamily,
 	sans: ['system-ui', 'Open Sans', 'sans-serif'],
@@ -39,6 +40,6 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [
+		plugins: [
 	]
 }

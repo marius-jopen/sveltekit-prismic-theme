@@ -3,9 +3,11 @@
     import makeClient from '$lib/functionality/prismic/client'
 
     export async function load({ url, session }) {
+        // Get api from client and include the session cookie which is important for the preview mode
         const api = await makeClient(session.cookie)
+
         // Get data from setup page
-		    const setup = await api.getSingle('setup')
+        const setup = await api.getSingle('setup')
 
         // Get current page name
         const pageName = url.pathname.replace('/', '')
@@ -28,7 +30,6 @@
     import Seo from '$lib/functionality/seo/seo.svelte'
     import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
 
     // Get the data from above
     export let document
@@ -38,6 +39,5 @@
 <Seo setup={setup.data} document={document.data} />
 
 <NavigationDesktopSimple data={setup.data} />
-<NavigationMobileSimple data={setup.data} />
 
-<!-- <ModulesSlices slices={document.data.body1} /> -->
+<NavigationMobileSimple data={setup.data} />

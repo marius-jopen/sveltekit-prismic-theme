@@ -3,8 +3,8 @@
     import makeClient from '$lib/functionality/prismic/client'
 
     export async function load({ session }) {
-
-    const api = await makeClient(session.cookie)
+        // Get api from client and include the session cookie which is important for the preview mode
+        const api = await makeClient(session.cookie)
 
         // Get data from setup page
 		const setup = await api.getSingle('setup')
@@ -34,6 +34,7 @@
 </script>
 
 <NavigationDesktopSimple data={setup.data} />
+
 <NavigationMobileSimple data={setup.data} />
 
 <GalleryListOverlaySlider inputLoop={document.data.gallery_list_overlay_slider} />

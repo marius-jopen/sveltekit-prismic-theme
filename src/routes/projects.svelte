@@ -4,9 +4,8 @@
     import makeClient from '$lib/functionality/prismic/client'
 
     export async function load({ url, session }) {
-
-    const api = await makeClient(session.cookie)
-
+        // Get api from client and include the session cookie which is important for the preview mode
+        const api = await makeClient(session.cookie)
 
         // Get data from setup page
 		const setup = await api.getSingle('setup')
@@ -33,17 +32,6 @@
             return allItems.results.find(p => p.uid === uid)
         })
 
-        // From the sorted items list, find the projects which have the 'Normal' view and put them into an array
-        // A project can also have a different view set up. For example 'Related'
-        // And then it would not work in some loops, because some important fields would be empty
-        const sortedItemsNormal = []
-        
-        sortedItems.map(i => {
-            if(i.data.view == 'Normal' || i.data.view == null) {
-                sortedItemsNormal.push(i)
-            }
-        })
-
         // Return the data which we got above
         return {
             props: {
@@ -51,8 +39,7 @@
                 document,
                 allItems,
 				type,
-				setup,
-                sortedItemsNormal
+				setup
             }
         }
     }
@@ -61,17 +48,25 @@
 <script>
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
-    import NavigationSuperSimple from '$lib/modules-static/navigations/navigation-super-simple/navigation-super-simple.svelte'
+	import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte';
+    import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
     import FilterItemsHorizontal from '$lib/modules-static/repeater/filters/filter-items-horizontal/filter-items-horizontal.svelte'
+    import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte'
 
     // Get the data from above
 	export let setup
 	export let type
     export let allItems
     export let document
+    export let sortedItems
 </script>
 
 <Seo setup={setup.data} document={document.data} />
 
-<NavigationSuperSimple data={setup.data} />
+<NavigationDesktopSimple data={setup.data} />
+
+<NavigationMobileSimple data={setup.data} />
+
 <FilterItemsHorizontal items={allItems.results} type={type} />
+
+<ThumbnailGrid items={sortedItems} type={type} />
