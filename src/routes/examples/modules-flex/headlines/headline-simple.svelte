@@ -62,7 +62,7 @@
 
 <HeadlineSimple inputText={"Embed"} inputClasses={"border-t border-lines"} />
 
-<div class="py-4 border-lines border-b overflox-x-scroll">
+<div class="py-4 border-lines border-b overflow-x-scroll w-screen">
     <SvelteMarkdown source={`
         import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
@@ -72,7 +72,7 @@
 
 <HeadlineSimple inputText={"Json Module"} inputClasses={""} />
 
-<div class="py-4 border-lines border-b overflox-x-scroll">
+<div class="py-4 border-lines border-b overflow-x-scroll w-screen">
     <SvelteMarkdown source={`
         "headline_simple_text" : {
             "type" : "StructuredText",
@@ -86,7 +86,7 @@
 
 <HeadlineSimple inputText={"Json Slice"} inputClasses={""} />
 
-<div class="py-4 border-lines border-b overflox-x-scroll">
+<div class="py-4 border-lines border-b overflow-x-scroll w-screen">
     <SvelteMarkdown source={`
         "headline_simple": {
             "type": "Slice",
