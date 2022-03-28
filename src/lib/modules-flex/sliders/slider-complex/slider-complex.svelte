@@ -86,8 +86,8 @@
 	//  Function which get the current caption
 	function getCaption(item) {
 		// Get the current caption of the slider
-		if(loop[item].slider_caption[0]) {
-			currentCaption = loop[item].slider_caption[0].text
+		if(loop[item].slider_complex_caption[0]) {
+			currentCaption = loop[item].slider_complex_caption[0].text
 		} else {
 			currentCaption = ''
 		}
@@ -101,7 +101,7 @@
 <svelte:window on:keydown={handleKeydown}/>
 
 <div class="{classes}">
-	<div class="relative">
+	<div class="relative border-lines border-b">
 		<!-- Slider -->
 		<Splide
 		bind:this={splideSlider}
@@ -152,7 +152,7 @@
 	</div>
 
 	<!-- Extra row with caption and slide counter -->
-	<div class="flex w-full justify-between pt-1 border-t border-b border-lines">
+	<div class="flex w-full justify-between bg-background border-lines border-b py-2">
 		<div>
 			{currentCaption}
 		</div>

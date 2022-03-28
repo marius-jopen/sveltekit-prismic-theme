@@ -1,31 +1,47 @@
 <script>
+	// Import the store for passing props to other comps
+	import { filmControlStatus } from '$lib/functionality/store/store'
+
 	// Get data from parent component or from Slice function
     export let slice
     export let inputVideoUrl
 	export let inputVideoPoster
-	export let height
-	export let status
-	export let index
+	export let inputHeight
+	export let inputIndex
+	export let inputSlideIndex
+	export let inputSliderClicked
 
 	// Define variables which get used in this component
 	let videoUrl
 	let videoPoster
 	let videoVimeo
+	let height
+	let sliderClicked
+	let index
+	let slideIndex
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
 		videoUrl = inputVideoUrl
 		videoPoster = inputVideoPoster
+		height = inputHeight
+		sliderClicked = inputSliderClicked
+		index = inputIndex
+		slideIndex = inputSlideIndex
 	} else {
 		videoUrl = slice.primary.video.url
 		videoVimeo = slice.primary.vimeo[0].text
-		videoPoster = slice.primary.preview_image.Big.url
+		videoPoster = slice.primary.video_poster.Big.url
+		height = "h-40vw"
+		sliderClicked = false
+		index = 0
+		slideIndex = 0
 
 		if(videoVimeo) {
 			videoUrl = videoVimeo
-		}
+		} 
 	}
-
+        
 	// Define variables which will be used for the video controller
 	let iconColor = "black" // Set the icon color
 	let time = 0;
@@ -34,16 +50,26 @@
 	let lastMouseDown;
 	let video
 	let hideControl = false
-	var timeout
+	let timeout
+	let sound = true
 
 	// When status changes, then the inactive video gets paused
 	// And the active video plays
-	$: if(index == status) {
+	$: if(index == slideIndex) {
 		paused = false
 	} else {
 		paused = true
 		hideControl = false
 	}
+
+	// Checks if the slider above already has been clicked. 
+	// And if not: pause the video. Prevents the video to play by accident on other sliders
+	$: if(sliderClicked == false) {
+		paused = true
+	}
+
+	// When the status changes, write this into the store
+	$: hideControl, filmControlStatus.set(hideControl)
 
 	// Function to hide the controls after 2 seconds
 	function HideControls() {
@@ -72,7 +98,7 @@
 
 	// Function to play and pause the video by clicking on the button
 	function playButton() {
-		if(paused == false) {
+		if(paused == false || paused == undefined) {
 			paused = true
 			hideControl = false
 		} else {
@@ -110,6 +136,17 @@
 			video.mozRequestFullScreen()
 		}
 	}
+
+	// Toggle Sound
+	function soundStatus() {
+		if(sound == true) {
+			sound = false
+			video.volume = 0
+		} else {
+			sound = true
+			video.volume = 1
+		}
+	}
 </script>
 
 <div on:mousemove={HideControls} on:mousemove={unHideControls} class="relative w-full {height}" >
@@ -127,8 +164,7 @@
 				bind:currentTime={time}
 				bind:duration
 				bind:paused
-				autoplay
-				loop
+				loop	
 				playsinline
 				>
 			</video>
@@ -136,10 +172,10 @@
 	</div>
 
 	<!-- Controls -->
-	<div class:hideControlsSoft="{hideControl === true}" class="{height} border-lines border-t border-b opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
+	<div class:hideControlsSoft="{hideControl === true}" class=" border-lines border-t opacity-100 transition-opacity h-8 absolute bottom-0 bg-background w-full z-10 px-4 text-lg pt-1 flex justify-between">
 		<div class="flex">
 			<!-- Play and Pause button -->
-			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={playButton} >
+			<div class="pr-4 playpause cursor-pointer pt-0.5" on:mousedown={e => playButton()} >
 				{#if paused}
 					<svg width="18" height="18" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M20 10L5 18.6603L5 1.33974L20 10Z" fill="{iconColor}"/>
@@ -185,6 +221,11 @@
 				</svg>
 			</div>
 		</div>
+
+		<div class="sound cursor-pointer text-right -mt-0.5 hidden sm:block pl-3" on:mousedown={soundStatus}>
+			<!-- Uses non-breaking space to keep the words together -->
+			Sound&nbsp;{sound ? 'on' : 'off'}
+		</div>
 	</div>
 </div>
 
@@ -208,5 +249,9 @@
 
 	progress::-webkit-progress-value {
 		background-color: black;
+	}
+
+	.sound {
+		width: 110px;
 	}
 </style>

@@ -10,9 +10,11 @@
 
     <div>
 		{#each data.navigation_bottom as navItem}
-			<a sveltekit:prefetch class="ml-4 text-lg textHoverGrey" href="/{navItem.uid1[0].text}">
-				{navItem.title[0].text}
-			</a>
+			{#if navItem.uid1[0]}
+				<a sveltekit:prefetch class="ml-4 text-lg textHoverGrey" href="/{navItem.uid1[0].text}">
+					{navItem.title[0].text}
+				</a>
+			{/if}
 		{/each}
 	</div>
 </div>

@@ -3,7 +3,7 @@
 	import { slide } from "svelte/transition";
 
 	// Import child components which are used in this slider
-    import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import AccordeonComplexItemContent from '$lib/modules-static/repeater/loops/accordeon-complex/accordeon-complex-item-content.svelte'
 
 	// Get data from parent component
     export let item
@@ -13,11 +13,12 @@
 	export let uid
 
 	// Calls the functions which shortens the title if needed
-	let titleShort = truncateString(item.data.title[0].text, 35);
+	let titleShort
 
 	// Make those variables reactive
 	$: interalStatus
 	$: uid
+	$: titleShort = truncateString(item.data.title[0].text, 35);
 
 	// Toggle function which gets called on click on headline
 	function toggle() {
@@ -83,29 +84,8 @@
 
 		<!-- Content -->
 		{#if interalStatus == true}
-			<div class="bg-neutral-100 flex flex-col-reverse sm:flex-row w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
-				<!-- Left Side -->
-				<div class="sm:w-1/2 pt-4 sm:pt-0">
-					<div class="text-xl">
-						{item.data.title[0].text}
-					</div>
-
-					<div class="pt-1">
-						{item.data.sub_title[0].text}
-					</div>
-
-					<div>
-						{item.last_publication_date}
-					</div>
-				</div>
-
-				<!-- Right Side -->
-				<div class="sm:w-1/2">
-					{#if item.data.slider[0]}
-						<SliderComplex inputLoop={item.data.slider} height="h-50vw sm:h-30vw" classes="" />
-					{/if}
-					<!-- <img src="{item.data.thumbnail.Big.url}" class="w-1/2 h-30vw object-cover" alt=""> -->
-				</div>
+			<div class="bg-neutral-100 w-full border-b border-lines py-4 pl-4 pr-6" transition:slide={{ duration: 300 }}>
+				<AccordeonComplexItemContent item={item} />
 			</div>
 		{/if}
 	</div>

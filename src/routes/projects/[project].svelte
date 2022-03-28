@@ -1,26 +1,29 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import Client from '../../utils/client'
+    import makeClient from '$lib/functionality/prismic/client'
 
-    export async function load({ url }) {
+    export async function load({ url, session, params }) {
+        // Get current project uid
+        const { project } = params // const project = params.project
+        
+        // Get api from client and include the session cookie which is important for the preview mode
+        const api = await makeClient(session.cookie)
+
         // Get data from setup page
-		const setup = await Client.getSingle('setup')
+		const setup = await api.getSingle('setup')
 
         // Define the type of the post-type. For example project or product
 		const type = 'project'
 
-        // Get current page name
-        const pageName = url.pathname.replace('/projects/' , '')
-
         // Get data from the current page
-        const document = await Client.getByUID(type, pageName)
+        const document = await api.getByUID(type, project)
 
         // Return the data which we got above
         return {
             props: {
                 document,
-				type,
-				setup
+                type,
+                setup
             }
         }
     }
@@ -29,15 +32,10 @@
 <script>
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
-    import NavigationSuperSimpleFixed from '$lib/modules-static/navigations/navigation-super-simple-fixed/navigation-super-simple-fixed.svelte'
-    import SliderVideoFullInfo from '$lib/modules-flex/sliders/slider-video-full-info/slider-video-full-info.svelte'
-    // import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
-	// import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	// import BackHistory from "$lib/functionality/back-history/back-history.svelte"
-	// import LayoutCover from '$lib/modules-static/layouts/layout-cover/layout-cover.svelte'
-	// import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
-	// import LayoutColumn from '$lib/modules-static/layouts/layout-column/layout-column.svelte'
-    // import SliderComplex from '$lib/modules-flex/sliders/slider-complex/slider-complex.svelte'
+    import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
+	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
     // Get the data from above
     export let document
@@ -46,16 +44,10 @@
 
 <Seo setup={setup.data} document={document.data} />
 
-<NavigationSuperSimpleFixed data={setup.data} classes={"text-white"} />
-<SliderVideoFullInfo inputLoop={document.data.slider} />
-
-<!-- 
 <NavigationDesktopSlot data={setup.data}>
-<BackHistory />
+    <BackHistory />
 </NavigationDesktopSlot>
+
 <NavigationMobileSimple data={setup.data} />
 
-<LayoutCover input={document} />
 <HeadlineSimple inputText={document.data.title[0].text} />
-<LayoutColumn input={document} /> 
--->

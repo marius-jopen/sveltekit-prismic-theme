@@ -18,8 +18,8 @@
 		text = inputText
 		direction = inputDirection
 	} else {
-		text = slice.primary.text[0].text
-		direction = slice.primary.direction
+		text = slice.primary.slider_marquee_text[0].text
+		direction = slice.primary.slider_marquee_direction
 	}
 </script>
 

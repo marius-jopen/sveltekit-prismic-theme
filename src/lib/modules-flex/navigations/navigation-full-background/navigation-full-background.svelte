@@ -5,47 +5,54 @@
 	export let inputMobileImage
 
 	// Define variables which get used in this component
-	let navigation
-	let image
+	let navigationLoop
+	let imageMobile
 
 	// Check if Slices function is used, otherwise use the data from parent component
 	if (slice == undefined){
-		navigation = inputNavigation
-		image = inputMobileImage
+		navigationLoop = inputNavigation
+		imageMobile = inputMobileImage
 	} else {
-		navigation = slice.items
-		image = slice.primary.mobile_image
+		navigationLoop = slice.items
+		imageMobile = slice.primary.mobile_image
 	}
 	
 	// Define index variable and set it to 0 to start witht he first image in the list
 	let linkIndex = 0
+	let navIndex
+
+	$: navIndex
+
+	function changeImage(navIndex) {
+		linkIndex = navIndex
+	}
 </script>
 
 <div class="h-screen relative border-b border-lines">
 	<!-- Navigation -->
 	<div class="text-center flex flex-col h-full justify-center">
-		{#each navigation as item, navIndex}
+		{#each navigationLoop as item, navIndex}
 			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
-			<a on:mouseover={e => linkIndex = navIndex} class="text-white text-2xl textHoverGrey" sveltekit:prefetch href="/{item.slug[0].text}">
-				{item.name[0].text}
+			<a on:mouseover={e => changeImage(navIndex)} class="relative z-10 text-white text-2xl textHoverGrey" href="/{item.navigation_full_background_loop_link[0].text}">
+				{item.navigation_full_background_loop_title[0].text}
 			</a>
 		{/each}
 	</div>
 
 	<!-- Image Desktop -->
 	<div class="hidden sm:block">
-		{#each navigation as item, navIndex}
-			<div class="hidden w-full h-full absolute top-0 left-0 -z-10" class:active="{navIndex === linkIndex}" >
-				{#if item.image.Big}
-					<img src="{item.image.Big.url}" alt="{item.image.alt}" class="w-full h-full object-cover">
+		{#each navigationLoop as item, navIndex}
+			<div class="hidden w-full h-full absolute top-0 left-0 z-0" class:active="{navIndex == linkIndex}" >
+				{#if item.navigation_full_background_loop_image.Big.url}
+					<img src="{item.navigation_full_background_loop_image.Big.url}" alt="{item.navigation_full_background_loop_image.alt}" class="w-full h-full object-cover">
 				{/if}
 			</div>
 		{/each}
 	</div>
 
-	<!-- Image Video -->
-	{#if image.Big}
-		<img src="{image.Big.url}" alt="{image.alt}" class="sm:hidden w-full h-full absolute top-0 left-0 -z-10 object-cover">
+	<!-- Image Mobile -->
+	{#if imageMobile.Big}
+		<img src="{imageMobile.Big.url}" alt="{imageMobile.alt}" class="sm:hidden w-full h-full absolute top-0 left-0 z-0 object-cover">
 	{/if}
 </div>
 
