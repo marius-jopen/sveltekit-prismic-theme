@@ -36,6 +36,7 @@
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
 	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
+    import ParagraphRichtextBig from '$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte'
 
     // Get the data from above
     export let document
@@ -50,4 +51,8 @@
 
 <NavigationMobileSimple data={setup.data} />
 
-<HeadlineSimple inputText={document.data.title[0].text} />
+<HeadlineSimple inputText={document.data.title[0].text} inputClasses={""} />
+
+<HeadlineSimple inputText={document.data.sub_title[0].text} inputClasses={""} />
+
+<ParagraphRichtextBig inputText={document.data.description} />
