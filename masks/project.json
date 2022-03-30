@@ -22,14 +22,6 @@
 		  "label" : "Brightness"
 		}
 	  },
-	  "view" : {
-		"type" : "Select",
-		"config" : {
-		  "options" : [ "Normal", "Related" ],
-		  "default_value" : "Normal",
-		  "label" : "View"
-		}
-	  },
 	  "sub_title" : {
 		"type" : "StructuredText",
 		"config" : {
@@ -143,24 +135,6 @@
 		}
 	  }
 	},
-	"Related" : {
-	  "related_projects" : {
-		"type" : "Group",
-		"config" : {
-		  "fields" : {
-			"related_project" : {
-			  "type" : "Link",
-			  "config" : {
-				"select" : "document",
-				"customtypes" : [ "project" ],
-				"label" : "Related Project"
-			  }
-			}
-		  },
-		  "label" : "Related Projects"
-		}
-	  }
-	},
 	"Preview Media" : {
 	  "preview_image" : {
 		"type" : "Image",
@@ -180,6 +154,26 @@
 			"height" : null
 		  } ],
 		  "label" : "Preview Image"
+		}
+	  },
+	  "preview_image_hover" : {
+		"type" : "Image",
+		"config" : {
+		  "constraint" : { },
+		  "thumbnails" : [ {
+			"name" : "Big",
+			"width" : 2500,
+			"height" : null
+		  }, {
+			"name" : "Medium",
+			"width" : 1500,
+			"height" : null
+		  }, {
+			"name" : "Small",
+			"width" : 750,
+			"height" : null
+		  } ],
+		  "label" : "Preview Image Hover"
 		}
 	  },
 	  "preview_video" : {
@@ -214,6 +208,36 @@
 			"height" : null
 		  } ],
 		  "label" : "Preview Video Poster"
+		}
+	  }
+	},
+	"Shop" : {
+	  "price" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Price"
+		}
+	  },
+	  "discount" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Discount"
+		}
+	  },
+	  "sold_out" : {
+		"type" : "Boolean",
+		"config" : {
+		  "default_value" : false,
+		  "label" : "Sold Out"
+		}
+	  },
+	  "shopify_button_id" : {
+		"type" : "StructuredText",
+		"config" : {
+		  "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+		  "label" : "Shopify Button ID"
 		}
 	  }
 	}
