@@ -77,11 +77,19 @@
 	<a href="/examples/modules-static/navigations/footer-simple" class="block py-0.5 textHoverGrey">
 		Footer Simple
 	</a>
+
+	<a href="/examples/modules-static/navigations/footer-stretched" class="block py-0.5 textHoverGrey">
+		Footer Stretched
+	</a>
 </LayoutAccordeon>
 
 <LayoutAccordeon inputHeadline={"Repeater"}>
 	<a href="/examples/modules-static/repeater/thumbnail-grid" class="block py-0.5 textHoverGrey">
 		Thumbnail Grid
+	</a>
+
+	<a href="/examples/modules-static/repeater/big-image-list" class="block py-0.5 textHoverGrey">
+		Big Image List
 	</a>
 
 	<a href="/examples/modules-static/repeater/typo-grid" class="block py-0.5 textHoverGrey"> 
@@ -168,6 +176,14 @@
 
 	<a href="/examples/modules-flex/sliders/slider-video-full-info" class="block py-0.5 textHoverGrey">
 		Slider Video Full Info
+	</a>
+
+	<a href="/examples/modules-flex/sliders/slider-marquee" class="block py-0.5 textHoverGrey"> 
+		Slider Marquee
+	</a>
+
+	<a href="/examples/modules-flex/sliders/slider-complex-vertical" class="block py-0.5 textHoverGrey"> 
+		Slider Complex Vertical
 	</a>
 </LayoutAccordeon>
 

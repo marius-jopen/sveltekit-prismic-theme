@@ -24,45 +24,35 @@
     import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
 
     // Import all components which will be used on this page
-    import NavigationDesktopLayeredSlot from '$lib/modules-static/navigations/navigation-desktop-layered-slot/navigation-desktop-layered-slot.svelte'
+    import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
     import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
+    import FooterStretched from '$lib/modules-static/navigations/footer-stretched/footer-stretched.svelte'
 
     // Get the data from above
 	export let setup
 </script>
 
-<NavigationDesktopLayeredSlot 
-data={setup.data} 
-classes={"uppercase tracking-widest text-xs py-1.5 px-4 border-lines border-b"} 
-layers="2">
-    Slot Content
-</NavigationDesktopLayeredSlot>
+<NavigationDesktopSimple data={setup.data} />
 
 <NavigationMobileSimple data={setup.data} />
 
-<div class="border-lines px-3 py-3 text-lg">
+<FooterStretched data={setup.data} classes={"tracking-widest text-xs text-x py-1.5 px-4"} />
+
+<div class="px-3 py-3 text-lg">
     <h3>
-        Navigation Desktop Layered Slot
+        Footer Stretched
     </h3>
 
     <li>
-        A navigation bar with a layer (slot) for some extra content like a filter bar etc… 
+        Desktop only
     </li>
 
     <li>
-        This layer is optional and can be switched on or off by changing the prop called layers from 1 to 2.
+        Displays the name and the footer navigation.
     </li>
 
     <li>
-        Is fixed to the top, but pushes the content down, so it does not hide information
-    </li>
-
-    <li>
-        Stylable from the outside via prop
-    </li>
-    
-    <li>
-        Only the information from the Prismic setup page is needed.
+        Style from outside via props
     </li>
 </div>
 
@@ -70,14 +60,9 @@ layers="2">
 
 <div class="py-4 border-lines border-b overflow-x-scroll w-screen">
     <SvelteMarkdown source={`
-        import NavigationDesktopLayeredSlot from '$lib/modules-static/navigations/navigation-desktop-layered-slot/navigation-desktop-layered-slot.svelte'
+        import FooterStretched from '$lib/modules-static/navigations/footer-stretched/footer-stretched.svelte'
 
-        <NavigationDesktopLayeredSlot 
-        data={setup.data} 
-        classes={"text-xs py-1.5 bg-white px-4 border-lines border-b uppercase tracking-widest"} 
-        layers="2">
-            Slot Content
-        </NavigationDesktopLayeredSlot>
+        <FooterStretched data={setup.data} classes={"tracking-widest text-xs text-x py-1.5 px-4"} />
     `}/>
 </div>
 
@@ -92,7 +77,7 @@ layers="2">
                 "label" : "Website Title"
             }
         },
-        "navigation_top" : {
+        "navigation_bottom" : {
             "type" : "Group",
             "config" : {
                 "fields" : {
@@ -103,7 +88,7 @@ layers="2">
                     "label" : "Title"
                     }
                 },
-                "uid" : {
+                "uid1" : {
                     "type" : "StructuredText",
                     "config" : {
                     "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
@@ -115,12 +100,12 @@ layers="2">
                     "config" : {
                     "placeholder_false" : "internal",
                     "placeholder_true" : "external",
-                    "default_value" : false,
+                    "default_value" : true,
                     "label" : "Target"
                     }
                 }
                 },
-                "label" : "Navigation Top"
+                "label" : "Navigation Bottom"
             }
         }
     `}/>

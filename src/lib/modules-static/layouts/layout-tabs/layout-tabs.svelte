@@ -1,6 +1,7 @@
 <script>
     // Get data from parent component
     export let inputTabNumber
+    export let classes
     export let headline1
     export let headline2
     export let headline3
@@ -11,7 +12,7 @@
     let buttonStyle = 'cursor-pointer pr-2'
 </script>
 
-<div class="flex px-4 py-2 border-lines border-b">
+<div class="flex {classes}">
     <!-- If 2 slots are used -->
     {#if inputTabNumber == 2}
         <div on:click="{e => currentTab = 1}" class="{buttonStyle}">
@@ -58,7 +59,7 @@
     {/if}
 </div>
 
-<div class="border-lines border-b px-4 py-2">
+<div class="{classes}">
     <!-- If 2 slots are used -->
     {#if inputTabNumber == 2}
         {#if currentTab == 1}
