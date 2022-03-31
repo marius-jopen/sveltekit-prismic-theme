@@ -37,7 +37,8 @@
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
     import ParagraphRichtextBig from '$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte'
     import ShopifyBuyButton from '$lib/modules-flex/shop/shopify-buy-button/shopify-buy-button.svelte'
-    
+    import PriceDiscount from '$lib/modules-flex/shop/price-discount/price-discount.svelte'
+
     // Get the data from above
     export let document
 	export let setup
@@ -60,3 +61,5 @@ layers="1">
 <ParagraphRichtextBig inputText={document.data.description} />
 
 <ShopifyBuyButton input={document.data} />
+
+<PriceDiscount input={document.data} classes={""} />
