@@ -32,12 +32,12 @@
 <script>
     // Import all components which will be used on this page
     import Seo from '$lib/functionality/seo/seo.svelte'
-    import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte'
+    import NavigationDesktopLayeredSlot from '$lib/modules-static/navigations/navigation-desktop-layered-slot/navigation-desktop-layered-slot.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import BackHistory from "$lib/functionality/back-history/back-history.svelte"
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte'
     import ParagraphRichtextBig from '$lib/modules-flex/paragraphs/paragraph-richtext-big/paragraph-richtext-big.svelte'
-
+    import ShopifyBuyButton from '$lib/modules-flex/shop/shopify-buy-button/shopify-buy-button.svelte'
+    
     // Get the data from above
     export let document
 	export let setup
@@ -45,9 +45,11 @@
 
 <Seo setup={setup.data} document={document.data} />
 
-<NavigationDesktopSlot data={setup.data}>
-    <BackHistory />
-</NavigationDesktopSlot>
+<NavigationDesktopLayeredSlot 
+data={setup.data} 
+classes={"uppercase tracking-widest text-xs py-1.5 px-4 border-lines border-b"} 
+layers="1">
+</NavigationDesktopLayeredSlot>
 
 <NavigationMobileSimple data={setup.data} />
 
@@ -56,3 +58,5 @@
 <HeadlineSimple inputText={document.data.sub_title[0].text} inputClasses={""} />
 
 <ParagraphRichtextBig inputText={document.data.description} />
+
+<ShopifyBuyButton input={document.data} />

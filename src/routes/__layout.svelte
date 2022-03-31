@@ -28,7 +28,7 @@
 
 <svelte:head>
 	<!-- Import the script which checks if this page is in preview mode -->
-	<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={namespace}"></script>
+	<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={namespace}"></script>	
 </svelte:head>
 
 <main>
