@@ -37,7 +37,7 @@
     on:click={handleClick}
     data-sveltekit-prefetch={prefetch}
     data-sveltekit-reload={reload}
-    >
+  >
     <slot></slot>
   </a>
 {:else}
