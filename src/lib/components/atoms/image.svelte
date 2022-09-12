@@ -1,64 +1,49 @@
+<!-- An image that scales resolution with the viewport -->
+
 <script>
-    // Get data from parent 
-    export let image
-    export let imageSize
-    export let classes
-    export let style
+  import { fade } from "svelte/transition"
 
-    let imagePath
-    let imageWidth
-    let imageHeight
-    let imageBigPath
-    let imageBigWidth
-    let imageBigHeight
-    let imageMediumPath
-    let imageMediumWidth
-    let imageMediumHeight
-    let imageSmallPath
-    let imageSmallWidth
-    let imageSmallHeight
-    let imageAlt
+  export let field
+  export let classes = ""
+  export let fixedSize = false
+  export let staticImage = false
 
-    if(image.url) {
-        // Original
-        imagePath = image.url
-        imageWidth = image.dimensions.width
-        imageHeight = image.dimensions.width
+  let url, clientWidth
+  let size = 'Medium'
 
-        // Big
-        imageBigPath = image.Big.url
-        imageBigWidth = image.Big.dimensions.width
-        imageBigHeight = image.Big.dimensions.width
+  const uncompressed = (url) => url.replace(/\?.*$/, '')
 
-        // Medium
-        imageMediumPath = image.Medium.url
-        imageMediumWidth = image.Medium.dimensions.width
-        imageMediumHeight = image.Medium.dimensions.width
+  if (fixedSize) size = fixedSize
 
-        // Small
-        imageSmallPath = image.Small.url
-        imageSmallWidth = image.Small.dimensions.width
-        imageSmallHeight = image.Small.dimensions.width
-
-        // Alt text
-        imageAlt = "image.alt"
+  $: {
+    if (!fixedSize && clientWidth)  {
+      if (clientWidth < 768) {
+        size = 'Small'
+      } else if (clientWidth < 1200) {
+        size = 'Medium'
+      } else if (clientWidth < 1600) {
+        size = 'Big'
+      } else {
+        size = 'Original'
+      }
     }
+  }
+
+  $: url = size === 'Original' ? uncompressed(field.url) : field[size].url
 </script>
 
-{#if imagePath}
-    {#if imageSize == 'Original'}
-        <img style="{style}" class="{classes}" width="{imageWidth}" height="{imageHeight}" src="{imagePath}" alt="{imageAlt}">
-    {/if}
-
-    {#if imageSize == 'Big'}
-        <img style="{style}" class="{classes}" width="{imageBigWidth}" height="{imageBigHeight}" src="{imageBigPath}" alt="{imageAlt}">
-    {/if}
-
-    {#if imageSize == 'Medium'}
-        <img style="{style}" class="{classes}" width="{imageMediumWidth}" height="{imageMediumHeight}" src="{imageMediumPath}" alt="{imageAlt}">
-    {/if}
-
-    {#if imageSize == 'Small'}
-        <img style="{style}" class="{classes}" width="{imageSmallWidth}" height="{imageSmallHeight}" src="{imageSmallPath}" alt="{imageAlt}">
-    {/if}
+{#if !staticImage}
+  <div class={classes} bind:clientWidth transition:fade>
+    <img
+      src={url}
+      alt={field.alt}
+    >
+  </div>
+{:else}
+  <div class={classes} bind:clientWidth transition:fade>
+    <img
+      src={url}
+      alt={field.alt}
+    >
+  </div>
 {/if}

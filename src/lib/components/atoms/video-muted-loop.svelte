@@ -1,3 +1,5 @@
+<!-- A muted video -->
+
 <script>
     // Import mount function
     import { onMount } from 'svelte'
