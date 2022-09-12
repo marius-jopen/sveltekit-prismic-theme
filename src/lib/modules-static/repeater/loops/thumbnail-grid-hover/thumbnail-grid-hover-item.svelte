@@ -1,6 +1,6 @@
 <script>
 	// Import child components which are used in this module
-	import Image from '$lib/modules-basic/image.svelte'
+	import Image from '$lib/components/atoms/image.svelte'
 
 	// Import child components which are used in this module
     export let item

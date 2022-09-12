@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import makeClient from '$lib/functionality/prismic/client'
+    import makeClient from '$lib/components/functionality/prismic/client'
 
     export async function load({ url, session }) {
         // Get api from client and include the session cookie which is important for the preview mode
@@ -27,10 +27,10 @@
 
 <script>
     // Import all components which will be used on this page
-    import Seo from '$lib/functionality/seo/seo.svelte'
+    import Seo from '$lib/components/functionality/seo/seo.svelte'
     import NavigationDesktopSimple from '$lib/modules-static/navigations/navigation-desktop-simple/navigation-desktop-simple.svelte'
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte'
-	import ModulesSlices from '$lib/functionality/modules-slices/modules-slices.svelte'
+	import ModulesSlices from '$lib/components/functionality/modules-slices/modules-slices.svelte'
 
     // Get the data from above
     export let document

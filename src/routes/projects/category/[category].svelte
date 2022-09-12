@@ -1,7 +1,7 @@
 <script context="module">
 	// Import functions which are needed to get data from the CMS
 	import Prismic from '@prismicio/client';
-	import makeClient from '$lib/functionality/prismic/client';
+	import makeClient from '$lib/components/functionality/prismic/client';
 
 	// Import function which uppercases first letter of every word
 	import { capitalize } from 'lodash'
@@ -49,7 +49,7 @@
 
 <script>
 	// Import all components which will be used on this page
-	import Seo from '$lib/functionality/seo/seo.svelte';
+	import Seo from '$lib/components/functionality/seo/seo.svelte';
 	import NavigationDesktopSlot from '$lib/modules-static/navigations/navigation-desktop-slot/navigation-desktop-slot.svelte';
 	import NavigationMobileSimple from '$lib/modules-static/navigations/navigation-mobile-simple/navigation-mobile-simple.svelte';
 	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte';

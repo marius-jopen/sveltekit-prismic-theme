@@ -1,6 +1,6 @@
 <script context="module">
     // Import functions which are needed to get data from the CMS
-    import makeClient from '$lib/functionality/prismic/client'
+    import makeClient from '$lib/components/functionality/prismic/client'
 
     export async function load({ session }) {
         // Get api from client and include the session cookie which is important for the preview mode
