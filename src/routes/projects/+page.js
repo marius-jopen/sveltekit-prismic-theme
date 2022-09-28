@@ -1,10 +1,13 @@
-import createClient from "$lib/services/prismic/client"
+import createClient from "$lib/utilities/prismic/client"
 
 export async function load({ parent }) {
 	const api = await createClient()
-	const p = await parent()
+
+	// Get shared data
+  const p = await parent()
 	const { document, setup } = p
 
+  // Page specific data
 	const projects = await api.getSingle('projects', {
 		graphQuery: `{
 			projects {

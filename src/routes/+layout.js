@@ -1,4 +1,4 @@
-import createClient from "$lib/services/prismic/client"
+import createClient from "$lib/utilities/prismic/client"
 
 export async function load() {
 	const api = await createClient()

@@ -2,11 +2,11 @@
   "name": "mj-theme",
   "version": "0.0.1",
   "scripts": {
-		"dev": "nvm use && vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@sveltejs/adapter-netlify": "next",
@@ -26,6 +26,7 @@
     "svelte-hamburgers": "^3.0.1",
     "svelte-preprocess": "^4.9.8",
     "svelte-scrollto": "^0.2.0",
+    "sveltekit-autoimport": "^1.6.9",
     "tailwindcss": "^3.0"
   },
   "type": "module",

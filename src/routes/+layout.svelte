@@ -1,9 +1,6 @@
 <script>
 	import "../app.postcss";
-	import Seo from '$lib/components/functionality/seo/index.svelte';
-	import NavigationDesktopSimple from '$lib/components/modules/navigations/navigation-desktop-simple/index.svelte';
-	import NavigationMobileSimple from '$lib/components/modules/navigations/navigation-mobile-simple/index.svelte';
-	import { namespace } from '$lib/services/prismic'; // Import the prismic repo name
+	import { namespace } from '$lib/utilities/prismic'; // Import the prismic repo name
 	import {
 		vw,
 		vh,
@@ -11,7 +8,7 @@
 		mouseX,
 		mouseY,
 		progress
-	} from "$lib/services/layout"
+	} from "$lib/utilities/layout"
 
 	const onMouseMove = (e) => {
 		mouseX.set(e.clientX)
@@ -36,17 +33,18 @@
 
 <svelte:body on:mousemove="{onMouseMove}"></svelte:body>
 
-<Seo {document} {setup} />
+<ToolSeo {document} {setup} />
 
-<NavigationDesktopSimple data={setup.data} />
-<NavigationMobileSimple data={setup.data} />
+<RootHeader />
 
 <div class="h-[2000px]">
-	<div class="fixed bottom-0">
-		{$vw}
+  <div class="fixed bottom-0">
+    {$vw}
 		{$y}
 		{$progress}
 	</div>
-
+  
 	<slot />
 </div>
+
+<RootFooter />

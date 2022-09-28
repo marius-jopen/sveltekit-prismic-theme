@@ -1,9 +1,16 @@
 <script>
-	import Seo from '$lib/components/functionality/seo/index.svelte';
-
 	export let data
 
 	const { document, setup } = data
+  const slices = [{ slice_type: 'random_component' }, { slice_type: 'undefined_component' }]
 </script>
 
-<Seo {setup} {document} />
+<ToolSeo {setup} {document} />
+
+<AtomText>
+  Hallo
+</AtomText>
+
+<AtomImage src="https://gitlab.com/uploads/-/system/user/avatar/2624106/avatar.png?width=96"/>
+
+<SliceLoop {slices} />
