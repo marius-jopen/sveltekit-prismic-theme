@@ -1,9 +1,9 @@
 <script>
 	// Import all components which will be used on this page
 	import Seo from '$lib/components/functionality/seo/seo.svelte';
-	import HeadlineSimple from '$lib/modules-flex/headlines/headline-simple/headline-simple.svelte';
-	import FilterItemsFull from '$lib/modules-static/repeater/filters/filter-items-full/filter-items-full.svelte';
-	import ThumbnailGrid from '$lib/modules-static/repeater/loops/thumbnail-grid/thumbnail-grid.svelte';
+  import NavigationDesktopSlot from '$lib/components/modules/navigations/navigation-desktop-slot/index.svelte'
+	import FilterItemsFull from '$lib/components/modules/repeater/filters/filter-items-full/index.svelte';
+	import ThumbnailGrid from '$lib/components/modules/repeater/loops/thumbnail-grid/index.svelte';
 
 	// Get the data from above
 	export let filteredItems
@@ -16,7 +16,7 @@
 
 <Seo setup={setup.data} document={document.data} />
 
-<!-- <NavigationDesktopSlot data={setup.data}>
+<NavigationDesktopSlot data={setup.data}>
 	<FilterItemsFull items={allItems.results} type={type} />
 </NavigationDesktopSlot>
 
@@ -24,4 +24,4 @@
 
 <HeadlineSimple inputHeadline={category} />
 
-<ThumbnailGrid items={filteredItems.results} type={type} />  -->
+<ThumbnailGrid items={filteredItems} type={type} /> 
