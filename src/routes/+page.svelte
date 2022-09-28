@@ -2,15 +2,20 @@
 	export let data
 
 	const { document, setup } = data
-  const slices = [{ slice_type: 'random_component' }, { slice_type: 'undefined_component' }]
 </script>
 
 <ToolSeo {setup} {document} />
 
-<AtomText>
-  Hallo
-</AtomText>
+<RootGrid px={4} gap={4} columns={12}>
+  <div class="col-start-3 col-span-7 bg-red-300">one</div>
+  <div class="col-start-1 col-span-4 bg-green-500">two</div>
+  <div class="col-start-5 col-span-7 bg-blue-300">thre</div>
+  <div class="col-span-full bg-orange-500" style="margin: 0 -{4 / 4}rem;">Full</div>
+  <div class="col-start-3 col-span-7 bg-red-300">one</div>
+  <div class="col-start-1 col-span-4 bg-green-500">two</div>
+  <div class="col-start-5 col-span-7 bg-blue-300">thre</div>
+</RootGrid>
 
-<AtomImage src="https://gitlab.com/uploads/-/system/user/avatar/2624106/avatar.png?width=96"/>
-
-<SliceLoop {slices} />
+<style lang="postcss">
+  
+</style>

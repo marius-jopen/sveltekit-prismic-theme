@@ -12,7 +12,7 @@
 {#if slices}
 	<div class="allSlices">
 		{#each slices as slice}
-      <SliceItem {slice} {...props} />
+      <RootSlice {slice} {...props} />
 		{/each}
 	</div>
 {/if}

@@ -5,4 +5,4 @@
 
 <ToolSeo {document} {setup} />
 
-<SliceLoop slices={document.data.body} />
+<RootSlices slices={document.data.body} />

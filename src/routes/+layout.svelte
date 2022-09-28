@@ -37,13 +37,7 @@
 
 <RootHeader />
 
-<div class="h-[2000px]">
-  <div class="fixed bottom-0">
-    {$vw}
-		{$y}
-		{$progress}
-	</div>
-  
+<div>  
 	<slot />
 </div>
 
