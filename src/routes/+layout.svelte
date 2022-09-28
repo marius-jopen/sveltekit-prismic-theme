@@ -37,7 +37,7 @@
 
 <RootHeader />
 
-<div>  
+<div>
 	<slot />
 </div>
 
