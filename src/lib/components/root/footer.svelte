@@ -1,3 +1,5 @@
-<footer>
-  Footer
-</footer>
+<RootContainer width='full' >
+	<footer>
+		Footer
+	</footer>
+</RootContainer>

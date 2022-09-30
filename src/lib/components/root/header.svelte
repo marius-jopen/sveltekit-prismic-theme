@@ -1,3 +1,5 @@
-<header>
-  <ModuleNavigation />
-</header>
+<RootContainer width='full' >
+	<header>
+		<ModuleNavigation />
+	</header>
+</RootContainer>

@@ -1,0 +1,66 @@
+<script>
+	import Saos from "saos"
+
+	export let bgColor = 'white'
+	export let textColor = 'black'
+	export let paddingTop = 'pt-12'
+	export let paddingBottom = 'pb-12'
+	export let paddingX = 'px-8'
+	export let width = 'width-7xl'
+	export let saos = 'slide-in-bottom 0.5s both'
+	export let border = 'border-b border-neutral-300'
+</script>
+
+<div class="{bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
+	<Saos animation={saos} >
+		<div class=" {width == 'screen' ? '' : width + ' ' + paddingX} mx-auto">
+			<slot />
+		</div>
+	</Saos>
+</div>
+
+<style lang="postcss">
+	.width-xs {
+		@apply max-w-none md:max-w-xs;
+	}
+
+	.width-sm {
+		@apply max-w-none md:max-w-sm;
+	}
+
+	.width-md {
+		@apply max-w-none md:max-w-md;
+	}
+
+	.width-lg {
+		@apply max-w-none md:max-w-lg;
+	}
+
+	.width-xl {
+		@apply max-w-none md:max-w-xl;
+	}
+
+	.width-2xl {
+		@apply max-w-none md:max-w-2xl;
+	}
+
+	.width-3xl {
+		@apply max-w-none md:max-w-3xl;
+	}
+
+	.width-4xl {
+		@apply max-w-none md:max-w-4xl;
+	}
+
+	.width-5xl {
+		@apply max-w-none md:max-w-5xl;
+	}
+
+	.width-6xl {
+		@apply max-w-none md:max-w-6xl;
+	}
+
+	.width-7xl {
+		@apply max-w-none md:max-w-7xl;
+	}
+</style>

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+	@keyframes slide-in-bottom {
+		0% {
+			transform: translateY(100px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+}
