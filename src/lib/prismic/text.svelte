@@ -21,12 +21,12 @@
       <div class:inline class="{classes}">
         {`${prepend} `}{asText(field)}{` ${append}`}
       </div>
-      {:else}
+		{:else}
       <div class="{classes}">
         {`${prepend} `}{@html asHTML(field)}{` ${append}`}
       </div>
-      {/if}
-    {:else}
+		{/if}
+	{:else}
     <div class="{classes}">
         {`${prepend} `}{field}{` ${append}`}
     </div>

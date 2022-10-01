@@ -1,22 +1,24 @@
 <script>
 	import Container from "$lib/tools/container.svelte"
 	import Text from "$lib/prismic/text.svelte"
-	import Image from "$lib/prismic/image.svelte"
+	import Video from "$lib/tools/video/index.svelte"
 
 	export let text = ''
+	export let poster = ''
 	export let bgColor = ''
 	export let width = ''
 	export let src = ''
 	export let slice
 
 	if(slice) {
-		src = slice.primary.image_image
-		text = slice.primary.image_caption_image
-		width = slice.primary.width_image
+		src = slice.primary.video_video.url
+		poster = slice.primary.video_poster_video.url
+		text = slice.primary.video_caption_video
+		width = slice.primary.width_video
 	}
 </script>
 
 <Container {bgColor} {width} >
-	<Image {src} classes="rounded-3xl" />
+	<Video {src} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-xl text-center" />
 </Container>

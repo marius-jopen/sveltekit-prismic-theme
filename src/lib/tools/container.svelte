@@ -3,12 +3,12 @@
 
 	export let bgColor = 'white'
 	export let textColor = 'black'
-	export let paddingTop = 'pt-12'
-	export let paddingBottom = 'pb-12'
+	export let paddingTop = 'pt-8'
+	export let paddingBottom = 'pb-8'
 	export let paddingX = 'px-8'
 	export let width = 'width-7xl'
 	export let saos = 'slide-in-bottom 0.5s both'
-	export let border = 'border-b border-neutral-300'
+	export let border = ''
 </script>
 
 <div class="{bgColor} {textColor} {paddingTop} {paddingBottom} {border}">

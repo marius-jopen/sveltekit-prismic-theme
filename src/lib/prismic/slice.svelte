@@ -1,5 +1,10 @@
 <script>
   import { dev } from "$app/environment"
+	import Comment from "$lib/tools/comment.svelte"
+
+	import ImageBox from "$lib/modules/image-box.svelte"
+	import TextBox from "$lib/modules/text-box.svelte"
+	import VideoBox from "$lib/modules/video-box.svelte"
 
 	// Get the data from the parent component
 	export let slice
@@ -8,13 +13,16 @@
     // Add your slice type mappings here
     // e.g.
     // carousel: ModuleCarousel
+		image: ImageBox,
+		text: TextBox,
+		video: VideoBox
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)
 </script>
 
 <div class="slice">
-  <ToolComment comment={slice.slice_type} />
+  <Comment comment={slice.slice_type} />
 
   <svelte:component this={mappings[slice.slice_type]} {slice} />
 

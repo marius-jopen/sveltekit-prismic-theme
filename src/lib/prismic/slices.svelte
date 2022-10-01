@@ -6,7 +6,7 @@
 	export let slices
 
   const props = {
-    maxWidth: $page.url.pathname.includes('about')
+    // image: $page.url.pathname.includes('home')
   }
 </script>
 
