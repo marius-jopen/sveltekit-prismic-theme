@@ -11,15 +11,7 @@
 
 <Seo {setup} {document} />
 
-<div class="w-1/3">
-	<Image src="{document.data.image.url}" alt="{document.data.image.alt}" />
-</div>
-
-<div class="w-2/3">
-	<Image src="{document.data.image.url}" alt="{document.data.image.alt}" />
-</div>
-
-<div class="w-1/2">
+<div class="">
 	<Image src="{document.data.image.url}" alt="{document.data.image.alt}" />
 </div>
 
