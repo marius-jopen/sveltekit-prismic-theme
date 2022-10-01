@@ -16,6 +16,6 @@
 	}
 </script>
 
-<div role="button" on:mousedown={openFullscreen}>
-	Fullscreen
+<div role="button" on:mousedown={openFullscreen} class="w-6 text-right">
+	<i class="fa-solid fa-expand"></i>
 </div>

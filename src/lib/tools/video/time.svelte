@@ -11,6 +11,6 @@
 	}
 </script>
 
-<div>
+<div class="w-16">
 	{format(time)}
 </div>

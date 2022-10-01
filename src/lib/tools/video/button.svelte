@@ -15,9 +15,13 @@
 		<slot />
 	{:else}
 		{#if paused}
-			play
+		<div class="w-6">
+			<i class="fa-solid fa-play"></i>
+		</div>
 		{:else}
-			pause
+		<div class="w-6">
+			<i class="fa-solid fa-pause"></i>
+		</div>
 		{/if}
 	{/if}
 </div>

@@ -11,6 +11,6 @@
 	}
 </script>
 
-<div>
+<div class="pr-2">
 	{format(duration)}
 </div>
