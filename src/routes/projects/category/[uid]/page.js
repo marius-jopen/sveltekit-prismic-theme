@@ -1,5 +1,5 @@
 // Import functions which are needed to get data from the CMS
-import createClient from "$lib/utilities/prismic/client"
+import createClient from "$lib/prismic/setup/client"
 
 export async function load({ parent }) {
   const api = await createClient()
@@ -8,7 +8,7 @@ export async function load({ parent }) {
 
   // Get your data
 
-  if (setup && document) {      
+  if (setup && document) {
     // Return the data which we got above
     return {
       document,

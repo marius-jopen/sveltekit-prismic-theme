@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import { clamp } from "$lib/utilities/maths"
+import { clamp } from "$lib/tools/maths"
 
 export const vw           = writable(0)
 export const vh           = writable(0)

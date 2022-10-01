@@ -18,7 +18,7 @@
   if (document) {
     href = linkResolver(document)
   }
-  
+
   const handleClick = (e) => {
     dispatch('click', e)
   }
@@ -27,7 +27,6 @@
 
   $: active = href === $page.url.pathname
 </script>
-
 
 {#if href}
   <a
@@ -43,4 +42,3 @@
 {:else}
   <slot></slot>
 {/if}
-

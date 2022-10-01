@@ -1,14 +1,12 @@
 <script>
-	import "../app.postcss";
-	import { namespace } from '$lib/utilities/prismic'; // Import the prismic repo name
-	import {
-		vw,
-		vh,
-		y,
-		mouseX,
-		mouseY,
-		progress
-	} from "$lib/utilities/layout"
+	import "../app.postcss"
+
+	import Seo from "$lib/prismic/seo.svelte"
+	import Header from "$lib/modules/header.svelte"
+	import Footer from "$lib/modules/footer.svelte"
+
+	import { namespace } from '$lib/prismic/setup/index' // Import the prismic repo name
+	import {vw, vh, y, mouseX, mouseY, progress } from "$lib/tools/layout"
 
 	const onMouseMove = (e) => {
 		mouseX.set(e.clientX)
@@ -33,12 +31,12 @@
 
 <svelte:body on:mousemove="{onMouseMove}"></svelte:body>
 
-<ToolSeo {document} {setup} />
+<Seo {document} {setup} />
 
-<RootHeader />
+<Header />
 
 <div>
 	<slot />
 </div>
 
-<RootFooter />
+<Footer />

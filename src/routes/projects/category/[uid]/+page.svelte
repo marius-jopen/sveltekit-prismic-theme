@@ -1,6 +1,8 @@
 <script>
+	import Seo from "$lib/prismic/seo.svelte"
+
 	export let setup
 	export let document
 </script>
 
-<ToolSeo setup={setup.data} document={document.data} />
+<Seo setup={setup.data} document={document.data} />
