@@ -16,9 +16,9 @@
 	<img
 	on:load="{imageLoaded}"
 	srcset="
-	{src}?&w={width}&fm=webp&lossless=true&dpr=1 1x,
-	{src}?&w={width}&fm=webp&lossless=true&dpr=2 2x,
-	{src}?&w={width}&fm=webp&lossless=true&dpr=3 3x
+		{src}?&w={width}&fm=webp&lossless=true&dpr=1 1x,
+		{src}?&w={width}&fm=webp&lossless=true&dpr=2 2x,
+		{src}?&w={width}&fm=webp&lossless=true&dpr=3 3x
 	"
 	src="{src}?&w={width}&fm=webp&lossless=true"
 	alt="{alt}" width={width}

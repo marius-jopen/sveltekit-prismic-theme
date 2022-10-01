@@ -1,5 +1,6 @@
 <script>
 	export let paused
+	export let controls
 
 	function playButton() {
 		if(paused == false || paused == undefined) {
@@ -9,19 +10,22 @@
 		}
 	}
 </script>
-
-<div role="button" on:mousedown={playButton}>
-	{#if $$slots.default}
-		<slot />
-	{:else}
-		{#if paused}
-		<div class="w-6">
-			<i class="fa-solid fa-play"></i>
-		</div>
+{#if controls}
+	<div role="button" on:mousedown={playButton}>
+		{#if $$slots.default}
+			<slot />
 		{:else}
-		<div class="w-6">
-			<i class="fa-solid fa-pause"></i>
-		</div>
+			{#if paused}
+			<div class="w-6">
+				<i class="fa-solid fa-play"></i>
+			</div>
+			{:else}
+			<div class="w-6">
+				<i class="fa-solid fa-pause"></i>
+			</div>
+			{/if}
 		{/if}
-	{/if}
-</div>
+	</div>
+{:else}
+	<slot />
+{/if}

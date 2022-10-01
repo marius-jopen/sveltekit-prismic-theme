@@ -15,7 +15,7 @@
 	<Image src="{document.data.image.url}" alt="{document.data.image.alt}" />
 </div>
 
-<div class="w-1/3">
+<div class="w-1/2">
 	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' controls loop/>
 	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' autoplay loop/>
 </div>

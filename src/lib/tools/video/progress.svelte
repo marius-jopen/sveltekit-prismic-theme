@@ -2,7 +2,6 @@
 	export let time
 	export let duration
 
-	// Function to control the progress bar
 	function handleMove(e) {
 		if (!duration) return
 		if (e.type !== 'touchmove' && !(e.buttons & 1)) return
@@ -11,12 +10,10 @@
 		time = duration * (clientX - left) / (right - left)
 	}
 
-	// Function to play and pause the video by clicking on the video
-	function handleMouseup(e) {
-		if (new Date() - lastMouseDown < 300) {
-			if (paused) e.target.play()
-			else e.target.pause()
-		}
+	function mouseDown(e) {
+		const clientX = e.clientX
+		const { left, right } = this.getBoundingClientRect()
+		time = duration * (clientX - left) / (right - left)
 	}
 </script>
 
@@ -24,9 +21,9 @@
 	<progress
 	class="cursor-pointer"
 	value="{(time / duration) || 0}"
+	on:mousedown={mouseDown}
 	on:mousemove={handleMove}
 	on:touchmove|preventDefault={handleMove}
-	on:mouseup={handleMouseup}
 	/>
 </div>
 

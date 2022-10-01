@@ -11,7 +11,7 @@
 	export let autoplay = false
 	export let muted = false
 	export let loop = false
-	export let controls
+	export let controls = false
 	export let paused = true
 
 	let time
@@ -47,7 +47,7 @@
 	{/if}
 
 	<div on:mousemove={hideUi} on:mousemove={showUi} >
-		<Button bind:paused>
+		<Button bind:paused controls={controls}>
 			<Player bind:video bind:time bind:duration {paused} {src} {poster} {autoplay} {loop} {muted} />
 		</Button>
 	</div>
