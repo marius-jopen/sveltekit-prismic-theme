@@ -1,6 +1,7 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
 	import TextBox from "$lib/modules/text-box.svelte"
+	import ImageBox from "$lib/modules/image-box.svelte"
 	import Image from "$lib/prismic/image.svelte"
 	import Video from "$lib/tools/video/index.svelte"
 
@@ -11,13 +12,16 @@
 
 <Seo {setup} {document} />
 
-<div class="">
-	<Image src="{document.data.image.url}" alt="{document.data.image.alt}" />
+<ImageBox src="{document.data.image}" text={'Caption'} width='width-3xl' />
+
+<div class="flex">
+	<Image src="{document.data.image}" />
+	<Image src="{document.data.image}" />
 </div>
 
 <div class="w-1/2">
-	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' controls loop/>
-	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' autoplay loop/>
+	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' controls loop />
+	<Video src='https://www.w3schools.com/html/mov_bbb.mp4' autoplay loop />
 </div>
 
 <TextBox text={'Width: width-xs'} bgColor='bg-neutral-100' width='width-xs' />

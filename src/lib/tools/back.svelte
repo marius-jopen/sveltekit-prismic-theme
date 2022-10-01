@@ -5,6 +5,6 @@
 	}
 </script>
 
-<div class="cursor-pointer" on:mousedown={back}>
+<div role="button" on:mousedown={back}>
 	Back
 </div>
