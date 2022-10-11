@@ -7,18 +7,29 @@
 	export let poster = ''
 	export let bgColor = ''
 	export let width = ''
-	export let src = ''
+	export let src240p = ''
+	export let src320p = ''
+	export let src540p = ''
+	export let src720p = ''
+	export let src1080p = ''
+	export let srcVideo = ''
+
 	export let slice
 
 	if(slice) {
-		src = slice.primary.video_video.url
-		poster = slice.primary.video_poster_video.url
+		src240p = slice.primary.video_240_video
+		src320p = slice.primary.video_320_video
+		src540p = slice.primary.video_540_video
+		src720p = slice.primary.video_720_video
+		src1080p = slice.primary.video_1080_video
+		srcVideo = slice.primary.video_video
+		poster = slice.primary.video_poster_video.url+"?&w=800&fm=webp&lossless=true"
 		text = slice.primary.video_caption_video
 		width = slice.primary.width_video
 	}
 </script>
 
 <Container {bgColor} {width} >
-	<Video {src} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
+	<Video {src240p} {src320p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-xl text-center" />
 </Container>
