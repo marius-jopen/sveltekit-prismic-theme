@@ -5,15 +5,15 @@ export async function load({ parent }) {
 
 	// Get shared data
   const p = await parent()
-	const { document, setup } = p
+	const { setup } = p
 
   // Page specific data
-	const projects = await api.getSingle('projects', {
+	const document = await api.getSingle('projects', {
 		graphQuery: `{
 			projects {
 				...projectsFields
-				project_order {
-					selected {
+				items {
+					item {
 						...on project {
 						...projectFields
 						}
@@ -26,7 +26,6 @@ export async function load({ parent }) {
 	if (setup && document) {
 		return {
 			document,
-			projects,
 			setup
 		};
 	}

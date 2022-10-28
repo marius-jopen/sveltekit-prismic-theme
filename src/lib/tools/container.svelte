@@ -9,15 +9,18 @@
 	export let width = 'width-7xl'
 	export let saos = 'slide-in-bottom 0.5s both'
 	export let border = ''
+	export let active = true
 </script>
 
-<div class="{bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
-	<Saos animation={saos} >
-		<div class=" {width == 'screen' ? '' : width + ' ' + paddingX} mx-auto">
-			<slot />
-		</div>
-	</Saos>
-</div>
+{#if active}
+	<div class="{bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
+		<Saos animation={saos} >
+			<div class=" {width == 'screen' ? '' : width + ' ' + paddingX} mx-auto">
+				<slot />
+			</div>
+		</Saos>
+	</div>
+{/if}
 
 <style lang="postcss">
 	.width-xs {
