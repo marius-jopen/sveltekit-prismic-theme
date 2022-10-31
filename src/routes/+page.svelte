@@ -1,6 +1,6 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
-  import Container from "$lib/tools/container.svelte";
+  import Container from "$lib/tools/container.svelte"
 
 	export let data
 
