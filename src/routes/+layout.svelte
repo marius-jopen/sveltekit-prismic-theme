@@ -10,6 +10,8 @@
 	export let data
 
 	const { document, setup } = data
+
+	console.log(setup)
 </script>
 
 <svelte:head>

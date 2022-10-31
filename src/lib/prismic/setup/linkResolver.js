@@ -6,9 +6,9 @@ export default function (doc) {
   } else {
     switch (doc.type) {
       case ('project'):
-        return (`/${doc.uid}`)
+        return (`/projects/${doc.uid}`)
 			case ('page'):
-				return (`/${doc.uid}`)
+				return (`${doc.uid}`)
       case ('home'):
       default:
         return '/'
