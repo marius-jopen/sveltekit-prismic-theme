@@ -13,8 +13,4 @@
 	<div>
 		{document.data.title}
 	</div>
-
-	<div>
-		This page works fine and displays the content from the home page
-	</div>
 </Container>

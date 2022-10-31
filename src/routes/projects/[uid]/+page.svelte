@@ -14,10 +14,10 @@
 
 <Container>
 	<div>
-		PROJECT
+		{document.data.title}
 	</div>
 
 	<div>
-		ERROR: This page does not get the data from the current project
+		This page works fine and displays the content from a single page
 	</div>
 </Container>

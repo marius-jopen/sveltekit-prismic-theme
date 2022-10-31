@@ -7,10 +7,8 @@ export default function (doc) {
     switch (doc.type) {
       case ('project'):
         return (`/${doc.uid}`)
-
-      // case ('info'):
-      //   return ('/page/info')
-
+			case ('page'):
+				return (`/${doc.uid}`)
       case ('home'):
       default:
         return '/'

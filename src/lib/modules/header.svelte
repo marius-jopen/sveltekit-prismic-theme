@@ -3,11 +3,9 @@
 	import Navigation from "$lib/modules/navigation.svelte"
 
 	export let setup
-
-	console.log(setup)
 </script>
 
-<!-- <Container width='full' >
+<Container width='full' >
 	<header class="flex justify-between">
 		<div>
 			Logo
@@ -15,4 +13,4 @@
 
 		<Navigation {setup} />
 	</header>
-</Container> -->
+</Container>

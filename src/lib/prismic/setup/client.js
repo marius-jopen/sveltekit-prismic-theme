@@ -1,6 +1,7 @@
 import * as prismic from '@prismicio/client'
 
 import { namespace, routes } from "."
+
 const accessToken = '' // If your repository is private, add an access token
 
 // This defines how you will structure URL paths in your project.

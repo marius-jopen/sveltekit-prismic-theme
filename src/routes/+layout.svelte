@@ -18,10 +18,10 @@
 
 <Seo {document} {setup} />
 
-<!-- <Header {setup} /> -->
+<Header {setup} />
 
 <div class="wrapper">
 	<slot />
 </div>
 
-<!-- <Footer /> -->
+<Footer />

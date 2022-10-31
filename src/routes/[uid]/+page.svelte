@@ -13,10 +13,10 @@
 
 <Container>
 	<div>
-		PAGE
+		{document.data.title}
 	</div>
 
 	<div>
-		ERROR: This page does not get the data from the current page
+		This page works fine and displays the content from a default page
 	</div>
 </Container>
