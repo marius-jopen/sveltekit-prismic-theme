@@ -32,7 +32,7 @@
   <a
     {href}
     class:active
-    class="cursor-pointer inline-block {classes}"
+    class="cursor-pointer {classes}"
     on:click={handleClick}
     data-sveltekit-prefetch={prefetch}
     data-sveltekit-reload={reload}

@@ -4,7 +4,7 @@
 	export let setup
 </script>
 
-<div>
+<div class="flex gap-1">
 	{#each setup.data.navigation_header as { title, link }}
 		<Link document={link}>
 			<Text inline field={title} />
