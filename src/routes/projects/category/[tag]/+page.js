@@ -16,7 +16,7 @@ export async function load ({ params }) {
     predicates: [prismic.predicate.any('document.tags', [...cases])]
   })
 
-  
+
   if (response) {
     console.log('response', response)
     return { documents: response }
