@@ -8,9 +8,6 @@
 	export let slice
 
 	const mappings = {
-    // Add your slice type mappings here
-    // e.g.
-    // carousel: ModuleCarousel
 		image: ImageBox,
 		text: TextBox,
 		video: VideoBox

@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/collapse.css" />
 </svelte:head>
 
-<div class="{height} sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-background justify-between cursor-pointer pt-2">
+<div class="{height} sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-white justify-between cursor-pointer pt-2">
 	<a sveltekit:prefetch on:click="{close}" class="pt-2 pl-2" href="/">
 		<Text plain field={setup.data.title} />
 	</a>
@@ -44,6 +44,6 @@
 	</div>
 {/if}
 
-<div class="{height} block sm:hidden">
+<div class="{height} block sm:hidden bg-white w-full">
 	&nbsp;
 </div>
