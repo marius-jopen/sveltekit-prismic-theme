@@ -5,10 +5,8 @@
 	export let setup
 </script>
 
-<div class="flex gap-2">
-	{#each setup.data.navigation_header as { title, link }}
-		<Link document={link}>
-			<Text inline field={title} />
-		</Link>
-	{/each}
-</div>
+{#each setup.data.navigation_header as { title, link }}
+	<Link document={link}>
+		<Text inline field={title} />
+	</Link>
+{/each}

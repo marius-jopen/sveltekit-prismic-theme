@@ -5,12 +5,12 @@
 	export let setup
 </script>
 
-<header class="flex justify-between px-2 py-2">
-	<div>
-		<a href="/">
-			<Text plain field={setup.data.title} />
-		</a>
-	</div>
+<header class="justify-between px-2 py-2 hidden sm:flex">
+	<a href="/">
+		<Text plain field={setup.data.title} />
+	</a>
 
-	<Navigation {setup} />
+	<div class="flex gap-2">
+		<Navigation {setup} />
+	</div>
 </header>
