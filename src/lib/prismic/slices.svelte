@@ -1,6 +1,5 @@
 <script>
 	import Slice from '$lib/prismic/slice.svelte'
-
 	export let slices
 </script>
 

@@ -12,7 +12,10 @@
 <Seo {document} {setup} />
 
 <Container>
-	<Text plain field={document.data.title} />
+	<Text
+    plain
+    field={document.data.title}
+  />
 </Container>
 
 <Slices slices={document.data.body} />
