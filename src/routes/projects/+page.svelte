@@ -12,7 +12,7 @@
 <Seo {setup} {document} />
 
 <Container>
-	<Text field={document.data.title} />
+	<Text plain field={document.data.title} />
 
 	<div class="pt-2">
 		Categories
@@ -36,7 +36,7 @@
       <div class="block">
         <!-- {console.log(item.item)} -->
         <Link document={item.item}>
-          <Text field={item.item.data.title} />
+          <Text plain field={item.item.data.title} />
         </Link>
       </div>
 		{/each}

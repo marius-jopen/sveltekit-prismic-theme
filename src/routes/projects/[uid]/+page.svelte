@@ -11,5 +11,5 @@
 <Seo {setup} {document} />
 
 <Container>
-	<Text field={document.data.title} />
+	<Text plain field={document.data.title} />
 </Container>

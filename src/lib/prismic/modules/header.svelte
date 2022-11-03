@@ -8,7 +8,7 @@
 <header class="flex justify-between">
 	<div>
 		<a href="/">
-			<Text field={setup.data.title} />
+			<Text plain field={setup.data.title} />
 		</a>
 	</div>
 

@@ -3,6 +3,7 @@
 
 	export let field // A Prismic rich text field or a simple string
 	export let inline = false
+	export let plain = false
 	export let classes = ""
 	export let prepend = ""
 	export let append = ""
@@ -14,7 +15,11 @@
   </div>
 {:else}
   {#if isFilled.richText(field)}
-    {#if inline}
+    {#if plain}
+      <div class:inline class="{classes}">
+        {`${prepend} `}{field[0].text}{` ${append}`}
+      </div>
+		{:else if inline}
       <div class:inline class="{classes}">
         {`${prepend} `}{asText(field)}{` ${append}`}
       </div>
