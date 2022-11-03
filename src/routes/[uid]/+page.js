@@ -1,11 +1,12 @@
 import { error } from '@sveltejs/kit'
-
 import createClient from '$lib/prismic/setup/client'
 
-export async function load({ fetch, params, request }) {
+export async function load({params }) {
+  const api = createClient()
+
   const { uid } = params
-  const client = createClient({ fetch, request })
-  const document = await client.getByUID('page', uid)
+  const document = await api.getByUID('page', uid)
+  console.log(document)
 
   if (document) {
     return { document }
