@@ -1,6 +1,7 @@
 <script>
 	import "../app.postcss"
 	import HeaderDesktop from "$lib/prismic/modules/header-desktop.svelte"
+	import HeaderMobile from "$lib/prismic/modules/header-mobile.svelte"
 	import Footer from "$lib/prismic/modules/footer.svelte"
 	import { namespace } from '$lib/prismic/setup/index' // Import the prismic repo name
 
@@ -14,6 +15,7 @@
 </svelte:head>
 
 <HeaderDesktop {setup} />
+<HeaderMobile {setup} />
 
 <div class="wrapper">
 	<slot />
