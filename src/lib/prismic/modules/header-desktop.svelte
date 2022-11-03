@@ -5,7 +5,7 @@
 	export let setup
 </script>
 
-<header class="flex justify-between">
+<header class="flex justify-between px-2 py-2">
 	<div>
 		<a href="/">
 			<Text plain field={setup.data.title} />

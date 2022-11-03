@@ -8,7 +8,7 @@
 	import Progress from '$lib/tools/video/progress.svelte'
 
 	export let src240p = ''
-	export let src320p = ''
+	export let src360p = ''
 	export let src540p = ''
 	export let src720p = ''
 	export let src1080p = ''
@@ -32,7 +32,7 @@
 
 	let srcset = {
 		0 : src240p,
-		1 : src320p,
+		1 : src360p,
 		2 : src540p,
 		3 : src720p,
 		4 : src1080p,
@@ -46,7 +46,7 @@
 	// >>> Functions to define the responsive video source
 	$: if(width <= 240) {
 		VideoResponsive(0)
-	} else if (width <= 320) {
+	} else if (width <= 360) {
 		VideoResponsive(1)
 	} else if (width <= 540) {
 		VideoResponsive(2)

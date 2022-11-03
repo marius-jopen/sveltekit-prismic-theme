@@ -8,7 +8,7 @@
 	export let bgColor = ''
 	export let width = ''
 	export let src240p = ''
-	export let src320p = ''
+	export let src360p = ''
 	export let src540p = ''
 	export let src720p = ''
 	export let src1080p = ''
@@ -17,7 +17,7 @@
 
 	if(slice) {
 		src240p = slice.primary.video_240_video
-		src320p = slice.primary.video_320_video
+		src360p = slice.primary.video_360_video
 		src540p = slice.primary.video_540_video
 		src720p = slice.primary.video_720_video
 		src1080p = slice.primary.video_1080_video
@@ -29,6 +29,6 @@
 </script>
 
 <Container {bgColor} {width} >
-	<Video {src240p} {src320p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
-	<Text field={text} classes="text-xl text-center" />
+	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
+	<Text field={text} classes="text-center" />
 </Container>

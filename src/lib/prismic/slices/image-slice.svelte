@@ -18,5 +18,5 @@
 
 <Container {bgColor} {width} >
 	<Image {src} classes="rounded-3xl" />
-	<Text field={text} classes="text-xl text-center" />
+	<Text field={text} classes="text-center" />
 </Container>
