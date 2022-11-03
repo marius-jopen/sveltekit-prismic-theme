@@ -10,7 +10,7 @@
 		setTimeout(() => {
 			buttonText = copyText
 		}, 3000);
-}
+	}
 
 	function handleSuccessfullyCopied() {
 		buttonText = 'Safed to Clipboard!'
