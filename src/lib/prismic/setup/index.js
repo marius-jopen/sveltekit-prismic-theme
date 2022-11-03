@@ -21,6 +21,13 @@ export function linkResolver (doc) {
     return doc.url
   } else {
     switch (doc.type) {
+      case ('projects'):
+        return '/projects'
+      case ('project'):
+        return `/projects/${doc.uid}`
+			case ('page'):
+				return `/${doc.uid}`
+      case ('home'):
       default:
         return '/'
     }

@@ -5,12 +5,10 @@
 	export let setup
 </script>
 
-<Container width='full' >
-	<header class="flex justify-between">
-		<div>
-			Logo
-		</div>
+<header class="flex justify-between">
+	<div>
+		Logo
+	</div>
 
-		<Navigation {setup} />
-	</header>
-</Container>
+	<Navigation {setup} />
+</header>
