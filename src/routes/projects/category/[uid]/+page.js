@@ -1,15 +1,12 @@
-import { error } from '@sveltejs/kit'
-import { createClient } from '$lib/prismic/setup'
+export async function load({ parent }) {
+  const p = await parent()
+  const { document, setup } = p  
 
-export async function load ({ params }) {
-  const { uid } = params
-  const api = await createClient()
-
-  const document = await api.query()
-
-  if (document) {
-    return { document }
+  if (setup && document) {
+    // Return the data which we got above
+    return {
+      document,
+      setup
+    };
   }
-
-  error(404, 'Category not found')
 }
