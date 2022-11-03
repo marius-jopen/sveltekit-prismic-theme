@@ -11,11 +11,5 @@
 <Seo {setup} {document} />
 
 <Container>
-	<div>
-    <Text field={document.data.title} />
-	</div>
-
-	<div>
-		This page works fine and displays the content from a single page
-	</div>
+	<Text field={document.data.title} />
 </Container>
