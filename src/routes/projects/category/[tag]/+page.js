@@ -16,9 +16,27 @@ export async function load ({ params, fetch, request }) {
     predicates: [prismic.predicate.any('document.tags', [...cases])]
   })
 
+	// Page specific data
+	const document = await api.getSingle('projects', {
+		graphQuery: `{
+			projects {
+				...projectsFields
+				items {
+					item {
+						...on project {
+						...projectFields
+						}
+					}
+				}
+			}
+		}`
+	})
 
-  if (response) {
-    return { documents: response }
+  if (response && document) {
+    return {
+			documents: response,
+			document
+		}
   }
 
   error(404, 'Category not found')

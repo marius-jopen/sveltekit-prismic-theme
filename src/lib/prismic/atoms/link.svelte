@@ -42,9 +42,3 @@
 {:else}
   <slot></slot>
 {/if}
-
-<style lang="postcss">
-  .active {
-    @apply underline underline-offset-4;
-  }
-</style>

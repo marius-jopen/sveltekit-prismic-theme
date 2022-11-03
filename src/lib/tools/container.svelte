@@ -6,14 +6,15 @@
 	export let paddingTop = 'pt-8'
 	export let paddingBottom = 'pb-8'
 	export let paddingX = 'px-8'
-	export let width = 'width-7xl'
+	export let width = 'width-empty'
 	export let saos = 'slide-in-bottom 0.5s both'
 	export let border = ''
 	export let active = true
+	export let classes =''
 </script>
 
 {#if active}
-	<div class="{bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
+	<div class="{classes} {bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
 		<Saos animation={saos} >
 			<div class=" {width == 'screen' ? '' : width + ' ' + paddingX} mx-auto">
 				<slot />
@@ -23,6 +24,10 @@
 {/if}
 
 <style lang="postcss">
+	.width-empty {
+		@apply max-w-none;
+	}
+
 	.width-xs {
 		@apply max-w-none md:max-w-xs;
 	}

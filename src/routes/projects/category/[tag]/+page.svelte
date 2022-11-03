@@ -1,20 +1,24 @@
 <script>
-	// import Seo from "$lib/prismic/seo.svelte"
+	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte"
   import Text from "$lib/prismic/atoms/text.svelte"
-	import Link from "$lib/prismic/atoms/link.svelte"
+	import Categories from "$lib/prismic/categories.svelte"
+	import ProjectItem from "$lib/prismic/project-item.svelte"
 
 	export let data
 
-	const { setup, documents } = data
+	const { setup, documents, document} = data
 </script>
 
-<!-- <Seo {setup} {document} /> -->
+<Seo {setup} {document} />
 
 <Container>
-	{#each documents as document}
-		<Link document={document}>
-			<Text plain field={document.data.title} />
-		</Link>
-	{/each}
+	<Text classes="h4 text-center pb-2" plain field={document.data.title} />
+	<Categories type='projects' items={document.data.items} />
+
+	<div class="sm:flex flex-wrap">
+		{#each documents as document}
+			<ProjectItem item={document} />
+		{/each}
+	</div>
 </Container>

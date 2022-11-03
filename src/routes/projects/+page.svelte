@@ -1,8 +1,9 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
-  import Container from "$lib/tools/container.svelte";
-  import Link from "$lib/prismic/atoms/link.svelte"
+  import Container from "$lib/tools/container.svelte"
+  import ProjectItem from "$lib/prismic/project-item.svelte"
   import Text from "$lib/prismic/atoms/text.svelte"
+	import Categories from "$lib/prismic/categories.svelte"
 
 	export let data
 
@@ -12,33 +13,12 @@
 <Seo {setup} {document} />
 
 <Container>
-	<Text plain field={document.data.title} />
+	<Text classes="h4 text-center pb-2" plain field={document.data.title} />
+	<Categories type='projects' items={document.data.items} />
 
-	<div class="pt-2">
-		Categories
-		<a href="/projects/category/blue" class="block">
-			Blue
-		</a>
-
-		<a href="/projects/category/brown" class="block">
-			Brown
-		</a>
-
-		<a href="/projects/category/pink" class="block">
-			Pink
-		</a>
-	</div>
-
-	<div class="pt-2">
-		Projects
-
+	<div class="sm:flex flex-wrap">
 		{#each document.data.items as item}
-      <div class="block">
-        <!-- {console.log(item.item)} -->
-        <Link document={item.item}>
-          <Text plain field={item.item.data.title} />
-        </Link>
-      </div>
+			<ProjectItem item={item.item} />
 		{/each}
 	</div>
 </Container>

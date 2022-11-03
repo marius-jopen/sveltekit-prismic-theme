@@ -20,7 +20,7 @@
 </svelte:head>
 
 <div class="{height} sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-white justify-between cursor-pointer pt-2">
-	<a sveltekit:prefetch on:click="{close}" class="pt-2 pl-2" href="/">
+	<a data-sveltekit-prefetch on:click="{close}" class="pt-2 pl-2" href="/">
 		<Text plain field={setup.data.title} />
 	</a>
 
