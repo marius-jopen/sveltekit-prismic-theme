@@ -1,6 +1,7 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte";
+	import Text from "$lib/prismic/text.svelte"
 
 	export let data
 
@@ -10,13 +11,7 @@
 <Seo {setup} {document} />
 
 <Container>
-	<div>
-		{document.data.title}
-	</div>
-
-	<div>
-		This page works fine and display the content from the home page and the projects which are selected. The categories are put in manually.
-	</div>
+	<Text field={document.data.title} />
 
 	<div class="pt-2">
 		Categories

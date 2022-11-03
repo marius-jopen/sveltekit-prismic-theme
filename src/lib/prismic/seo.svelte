@@ -1,7 +1,7 @@
 <script>
 	// Import the function to read the URL
 	import { page } from '$app/stores'
-	import { isFilled } from '@prismicio/helpers'
+	import { asText, isFilled } from '@prismicio/helpers'
 
 	// Get data from setup and current parent page
 	export let setup
@@ -23,13 +23,13 @@
 	let url = $page.url.href
 
 	/** Title */
-	let title = document.data.seo_title
-		? document.data.seo_title + ` ${divider} ${websiteTitle}` : document.data.title
-			? document.data.title + ` ${divider} ${websiteTitle}` : setup.data.seo_title
+	let title = asText(document.data.seo_title)
+		? asText(document.data.seo_title) + ` ${divider} ${asText(websiteTitle)}` : asText(document.data.title)
+			? asText(document.data.title) + ` ${divider} ${asText(websiteTitle)}` : asText(setup.data.seo_title)
 
 	/** Description */
-	let description = document.data.seo_description
-		? document.data.seo_description + ' | ' + setup.data.seo_description : setup.data.seo_description
+	let description = asText(document.data.seo_description)
+		? asText(setup.data.seo_description) : asText(setup.data.seo_description)
 
 	/** Image */
 	let imageUrl = isFilled.image(document.data.seo_image) ? document.data.seo_image.url + '&fm=webp&lossless=true' : setup.data.seo_image.url + '&fm=webp&lossless=true'
