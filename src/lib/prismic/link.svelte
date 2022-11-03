@@ -2,8 +2,8 @@
 <!-- Deals with empty ones -->
 
 <script>
-  import { linkResolver } from "$lib/prismic/setup/linkResolver"
-  import { page } from "$app/stores"
+  import { linkResolver } from "$lib/prismic/setup"
+	import { page } from "$app/stores"
   import { createEventDispatcher } from "svelte"
 
   export let document
@@ -11,7 +11,7 @@
 
   export let classes = ""
   export let prefetch = ""  // empty string for on
-  export let reload = ""    // off for disabled
+  export let reload = "off"    // off for disabled
 
   const dispatch = createEventDispatcher()
 
@@ -42,3 +42,9 @@
 {:else}
   <slot></slot>
 {/if}
+
+<style lang="postcss">
+  .active {
+    @apply underline underline-offset-4;
+  }
+</style>

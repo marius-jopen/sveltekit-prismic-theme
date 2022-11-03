@@ -4,8 +4,8 @@
 	import { isFilled } from '@prismicio/helpers'
 
 	// Get data from setup and current parent page
-	export let document
 	export let setup
+	export let document
 	export let divider = '|'
 	export let withTitle = true
 

@@ -5,8 +5,6 @@
 	export let data
 
 	const { setup, document } = data
-
-	console.log(data)
 </script>
 
 <Seo {setup} {document} />
