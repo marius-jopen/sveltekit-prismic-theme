@@ -1,9 +1,7 @@
 <script>
-	// Import the function to read the URL
 	import { page } from '$app/stores'
 	import { asText, isFilled } from '@prismicio/helpers'
 
-	// Get data from setup and current parent page
 	export let setup
 	export let document
 	export let divider = '|'
@@ -22,16 +20,13 @@
 	let language = setup.seo_language
 	let url = $page.url.href
 
-	/** Title */
 	let title = asText(document.data.seo_title)
 		? asText(document.data.seo_title) + ` ${divider} ${asText(websiteTitle)}` : asText(document.data.title)
 			? asText(document.data.title) + ` ${divider} ${asText(websiteTitle)}` : asText(setup.data.seo_title)
 
-	/** Description */
 	let description = asText(document.data.seo_description)
 		? asText(setup.data.seo_description) : asText(setup.data.seo_description)
 
-	/** Image */
 	let imageUrl = isFilled.image(document.data.seo_image) ? document.data.seo_image.url + '&fm=webp&lossless=true' : setup.data.seo_image.url + '&fm=webp&lossless=true'
 	let imageWidth = isFilled.image(document.data.seo_image) ? document.data.seo_image.dimensions.width : 0
 	let imageHeight = isFilled.image(document.data.seo_image) ? document.data.seo_image.dimensions.height : 0
@@ -40,6 +35,7 @@
 
 <svelte:head>
 	<html lang={language} />
+
 	<title>{title}</title>
 
 	<meta name="siteUrl" content={url} />

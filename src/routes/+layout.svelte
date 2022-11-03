@@ -1,7 +1,7 @@
 <script>
 	import "../app.postcss"
-	import Header from "$lib/modules/header.svelte"
-	import Footer from "$lib/modules/footer.svelte"
+	import Header from "$lib/prismic/modules/header.svelte"
+	import Footer from "$lib/prismic/modules/footer.svelte"
 	import { namespace } from '$lib/prismic/setup/index' // Import the prismic repo name
 
 	export let data

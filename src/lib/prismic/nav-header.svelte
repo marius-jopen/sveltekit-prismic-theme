@@ -1,6 +1,6 @@
 <script>
-	import Link from "$lib/prismic/link.svelte"
-	import Text from "$lib/prismic/text.svelte"
+	import Link from "$lib/prismic/atoms/link.svelte"
+	import Text from "$lib/prismic/atoms/text.svelte"
 	export let setup
 </script>
 

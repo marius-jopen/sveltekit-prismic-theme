@@ -1,8 +1,8 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte";
-  import Link from "$lib/prismic/link.svelte"
-  import Text from "$lib/prismic/text.svelte"
+  import Link from "$lib/prismic/atoms/link.svelte"
+  import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let data
 

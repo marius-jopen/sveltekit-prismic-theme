@@ -1,6 +1,6 @@
 <script>
 	import Container from "$lib/tools/container.svelte"
-	import Text from "$lib/prismic/text.svelte"
+	import Text from "$lib/prismic/atoms/text.svelte"
 	import Video from "$lib/tools/video/index.svelte"
 
 	export let text = ''

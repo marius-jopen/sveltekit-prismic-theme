@@ -1,15 +1,12 @@
 <script>
-  // Import function which helps to display the richtext which we receive from Prismic
 	import { asText, asHTML, isFilled } from '@prismicio/helpers'
 
-	// Get data from parent
 	export let field // A Prismic rich text field or a simple string
 	export let inline = false
 	export let classes = ""
 	export let prepend = ""
 	export let append = ""
 </script>
-
 
 {#if $$slots.default}
   <div class="{classes}">

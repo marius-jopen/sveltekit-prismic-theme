@@ -5,7 +5,6 @@ export async function load({params }) {
   const api = createClient()
 
   const { uid } = params
-  console.log(uid)
   const document = await api.getByUID('page', uid)
 
   if (document) {
