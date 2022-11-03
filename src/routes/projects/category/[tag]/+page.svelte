@@ -1,15 +1,21 @@
 <script>
-	import Seo from "$lib/prismic/seo.svelte"
-  import Container from "$lib/tools/container.svelte";
+	// import Seo from "$lib/prismic/seo.svelte"
+  // import Container from "$lib/tools/container.svelte";
+  import Text from "$lib/prismic/text.svelte"
 
 	export let data
 
-	const { setup, document } = data
+	const { setup, documents } = data
+
 </script>
 
-<Seo {setup} {document} />
+<!-- <Seo {setup} {document} /> -->
 
-<Container>
+{#each documents as document}
+  <Text field={document.data.title} />
+{/each}
+
+<!-- <Container>
 	<div>
 		Selected Category
 	</div>
@@ -32,4 +38,4 @@
 			Pink
 		</a>
 	</div>
-</Container>
+</Container> -->

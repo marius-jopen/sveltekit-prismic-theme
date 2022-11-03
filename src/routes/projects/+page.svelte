@@ -1,6 +1,8 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte";
+  import Link from "$lib/prismic/link.svelte"
+  import Text from "$lib/prismic/text.svelte"
 
 	export let data
 
@@ -37,9 +39,12 @@
 		Projects
 
 		{#each document.data.items as item}
-			<a href="/projects/{item.item.data.uid}" class="block">
-				{item.item.data.title}
-			</a>
+      <div class="block">
+        <!-- {console.log(item.item)} -->
+        <Link document={item.item}>
+          <Text field={item.item.data.title} />
+        </Link>
+      </div>
 		{/each}
 	</div>
 </Container>
