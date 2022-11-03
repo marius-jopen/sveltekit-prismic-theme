@@ -13,7 +13,6 @@
 	export let src720p = ''
 	export let src1080p = ''
 	export let srcVideo = ''
-
 	export let slice
 
 	if(slice) {

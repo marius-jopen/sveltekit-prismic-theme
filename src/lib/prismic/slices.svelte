@@ -2,7 +2,6 @@
 	import Slice from '$lib/prismic/slice.svelte'
   import { page } from "$app/stores"
 
-	// Get the data from the parent component
 	export let slices
 
   const props = {

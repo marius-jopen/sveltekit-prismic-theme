@@ -1,12 +1,10 @@
 <script>
   import { dev } from "$app/environment"
 	import Comment from "$lib/tools/comment.svelte"
-
 	import ImageBox from "$lib/prismic/slices/image-slice.svelte"
 	import TextBox from "$lib/prismic/slices/text-slice.svelte"
 	import VideoBox from "$lib/prismic/slices/video-slice.svelte"
 
-	// Get the data from the parent component
 	export let slice
 
 	const mappings = {
