@@ -2,7 +2,7 @@
 <!-- Deals with empty ones -->
 
 <script>
-  import { linkResolver } from "$lib/utilities/prismic"
+  import { linkResolver } from "$lib/prismic/setup/linkResolver"
   import { page } from "$app/stores"
   import { createEventDispatcher } from "svelte"
 

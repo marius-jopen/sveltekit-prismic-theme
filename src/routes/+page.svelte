@@ -1,6 +1,6 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
-	import Slices from "$lib/prismic/slices.svelte"
+  import Container from "$lib/tools/container.svelte"
 
 	export let data
 
@@ -9,4 +9,8 @@
 
 <Seo {setup} {document} />
 
-<Slices slices={document.data.body} />
+<Container>
+	<div>
+		{document.data.title}
+	</div>
+</Container>

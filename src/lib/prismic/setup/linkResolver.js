@@ -4,14 +4,12 @@ export default function (doc) {
   if (doc.link_type === 'Web') {
     return doc.url
   } else {
-    switch (doc.type) {  
-      // case ('project'):
-      //   return (`/${doc.uid}`)
-
-      // case ('info'):
-      //   return ('/page/info')
-  
-      // case ('home'):
+    switch (doc.type) {
+      case ('project'):
+        return (`/projects/${doc.uid}`)
+			case ('page'):
+				return (`${doc.uid}`)
+      case ('home'):
       default:
         return '/'
     }

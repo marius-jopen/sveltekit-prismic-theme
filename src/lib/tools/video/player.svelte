@@ -48,6 +48,6 @@ bind:currentTime={time}
 {loop}
 {controls}
 playsinline >
-		<source {src} type="video/mp4" />
-		Your browser does not support the video tag.
+	<source {src} type="video/mp4" />
+	Your browser does not support the video tag.
 </video>
