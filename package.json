@@ -34,6 +34,7 @@
   "dependencies": {
     "@prismicio/client": "^6.7.1",
     "@prismicio/helpers": "^2.3.3",
+    "cookie": "^0.5.0",
     "encoding": "^0.1.13",
     "lodash": "^4.17.21",
     "prismic-dom": "^2.2.6",

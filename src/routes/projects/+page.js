@@ -1,7 +1,7 @@
-import createClient from "$lib/prismic/setup/client"
+import createClient from "$lib/prismic/client"
 
-export async function load({ parent }) {
-	const api = await createClient()
+export async function load({ parent, fetch, request }) {
+	const api = await createClient({ fetch, request })
 
 	// Get shared data
   const p = await parent()

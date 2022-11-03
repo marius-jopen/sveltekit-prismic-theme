@@ -2,11 +2,9 @@
 	// import Seo from "$lib/prismic/seo.svelte"
   // import Container from "$lib/tools/container.svelte";
   import Text from "$lib/prismic/atoms/text.svelte"
-
 	export let data
 
-	const { setup, documents } = data
-
+	const { documents } = data
 </script>
 
 <!-- <Seo {setup} {document} /> -->

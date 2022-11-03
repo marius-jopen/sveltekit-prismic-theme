@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit'
-import createClient from "$lib/prismic/setup/client"
+import createClient from "$lib/prismic/client"
 
-export async function load ({ parent }) { // used to be `stuff`
-  const api = await createClient()
+export async function load ({ parent, fetch, request }) { // used to be `stuff`
+  const api = await createClient({ fetch, request })
   const data = await parent()
   const document = await api.getSingle('home'); // Home information
 

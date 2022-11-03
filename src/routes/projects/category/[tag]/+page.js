@@ -1,11 +1,11 @@
 import { error } from '@sveltejs/kit'
 import { titleCase, kebabCase } from '$lib/tools/strings'
 import * as prismic from '@prismicio/client'
-import createClient from '$lib/prismic/setup/client'
+import createClient from '$lib/prismic/client'
 
-export async function load ({ params }) {
+export async function load ({ params, fetch, request }) {
   const { tag } = params
-  const api = await createClient()
+  const api = await createClient({ fetch, request })
 
   // make different cases
   const cases = [
@@ -18,7 +18,6 @@ export async function load ({ params }) {
 
   
   if (response) {
-    console.log('response', response)
     return { documents: response }
   }
 
