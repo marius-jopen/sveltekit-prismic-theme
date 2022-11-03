@@ -5,6 +5,8 @@
 	export let items
 	export let type
 
+	let itemClasses = 'bg-neutral-100 hover:bg-neutral-200 transition-colors px-6 py-0.5 rounded-xl'
+
 	// Define variables which are used for the filter
 	let filterItemsRaw = []
 
@@ -25,16 +27,12 @@
 </script>
 
 <div class="flex gap-2 pb-6 justify-center">
-	<div>
-		Categories:
-	</div>
-
-	<Link href="/{type}">
+	<Link href="/{type}" classes="{itemClasses}">
 		All
 	</Link>
 
 	{#each filteredItems as filterItem}
-		<Link href="/{type}/category/{kebabCase(filterItem.toLowerCase())}">
+		<Link classes="{itemClasses}" href="/{type}/category/{kebabCase(filterItem.toLowerCase())}">
 			{filterItem}
 		</Link>
 	{/each}

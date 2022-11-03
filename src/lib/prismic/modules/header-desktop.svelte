@@ -10,7 +10,7 @@
 		<Text plain field={setup.data.title} />
 	</a>
 
-	<div class="flex gap-2">
+	<div class="flex gap-3">
 		<Navigation {setup} />
 	</div>
 </header>

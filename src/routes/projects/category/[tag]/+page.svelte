@@ -13,7 +13,7 @@
 <Seo {setup} {document} />
 
 <Container>
-	<Text classes="h4 text-center pb-2" plain field={document.data.title} />
+	<Text classes="h4 text-center pb-6" plain field={document.data.title} />
 	<Categories type='projects' items={document.data.items} />
 
 	<div class="sm:flex flex-wrap">
