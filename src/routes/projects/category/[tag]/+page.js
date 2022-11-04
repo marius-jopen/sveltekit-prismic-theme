@@ -5,6 +5,7 @@ import createClient from '$lib/prismic/client'
 
 export async function load ({ params, fetch, request }) {
   const { tag } = params
+
   const api = await createClient({ fetch, request })
 
   // make different cases
