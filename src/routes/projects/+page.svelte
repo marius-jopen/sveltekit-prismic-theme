@@ -28,8 +28,16 @@
 <Seo {setup} {document} />
 
 <Container>
-	<Text classes="h4 text-center pb-6" plain field={document.data.title} />
-	<Categories type='projects' {category} {categories} />
+	<Text
+    classes="h4 text-center pb-6"
+    plain
+    field={document.data.title}
+  />
+	<Categories
+    type='projects'
+    {category}
+    {categories}
+  />
 
 	<div class="sm:flex flex-wrap">
 		{#each filtered as item (item.item.uid)}
