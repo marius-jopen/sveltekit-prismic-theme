@@ -1,5 +1,6 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
+  import Categories from "$lib/prismic/modules-basic/categories.svelte"
   import Container from "$lib/tools/container.svelte"
   import Projects from '$lib/prismic/modules-basic/projects.svelte'
   import Text from "$lib/prismic/atoms/text.svelte"
@@ -26,7 +27,19 @@
 
 <Seo {setup} {document} />
 
+<Container>
+	<Text
+    classes="h4 text-center pb-6"
+    plain
+    field={document.data.title}
+  />
+	<Categories
+    type='projects'
+    {category}
+    {categories}
+  />
+</Container>
+
 <Container saos='' paddingBottom='pb-0'>
-	<Text classes="h4 text-center pb-8" plain field={document.data.title} />
-	<Projects {document} />
+	<Projects items={filtered} />
 </Container>

@@ -1,11 +1,11 @@
 <script>
 	import ProjectItem from "./project-item.svelte"
 
-	export let document
+	export let items
 </script>
 
 <div class="sm:flex flex-wrap">
-	{#each document.data.items as item}
+	{#each items as item (item.item.uid)}
 		<ProjectItem item={item.item} />
 	{/each}
 </div>
