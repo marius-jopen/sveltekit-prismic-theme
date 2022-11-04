@@ -12,6 +12,9 @@
   export let classes = ""
   export let prefetch = ""  // empty string for on
   export let reload = "off"    // off for disabled
+  export let activeClass = "underline"
+
+  let active = false
 
   const dispatch = createEventDispatcher()
 
@@ -23,16 +26,13 @@
     dispatch('click', e)
   }
 
-  let active = false
-
   $: active = href === $page.url.pathname
 </script>
 
 {#if href}
   <a
     {href}
-    class:active
-    class="cursor-pointer {classes}"
+    class="cursor-pointer {classes} {active ? activeClass : ''}"
     on:click={handleClick}
     data-sveltekit-prefetch={prefetch}
     data-sveltekit-reload={reload}

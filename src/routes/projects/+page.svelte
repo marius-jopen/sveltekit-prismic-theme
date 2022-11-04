@@ -1,12 +1,29 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte"
+  import ProjectItem from "$lib/prismic/modules/project-item.svelte"
+  import Categories from "$lib/prismic/categories.svelte"
   import Projects from '$lib/prismic/modules-basic/projects.svelte'
   import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let data
 
-	const { setup, document } = data
+	let {
+    category,
+    categories,
+    setup,
+    document,
+    filtered
+  } = data
+
+  $: {
+    if (data) {
+      category = data.category
+      setup = data.setup
+      document = data.document
+      filtered = data.filtered
+    }
+  }
 </script>
 
 <Seo {setup} {document} />
