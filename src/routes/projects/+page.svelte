@@ -7,17 +7,32 @@
 
 	export let data
 
-	const { setup, document } = data
+	let {
+    category,
+    categories,
+    setup,
+    document,
+    filtered
+  } = data
+
+  $: {
+    if (data) {
+      category = data.category
+      setup = data.setup
+      document = data.document
+      filtered = data.filtered
+    }
+  }
 </script>
 
 <Seo {setup} {document} />
 
 <Container>
 	<Text classes="h4 text-center pb-6" plain field={document.data.title} />
-	<Categories type='projects' items={document.data.items} />
+	<Categories type='projects' {category} {categories} />
 
 	<div class="sm:flex flex-wrap">
-		{#each document.data.items as item}
+		{#each filtered as item (item.item.uid)}
 			<ProjectItem item={item.item} />
 		{/each}
 	</div>

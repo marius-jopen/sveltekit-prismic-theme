@@ -10,3 +10,16 @@ export function titleCase (str) {
 export function kebabCase (str) {
   return str.replaceAll(' ', '-')
 }
+
+export function unKebabCase (str) {
+  return str.replaceAll('-', ' ')
+}
+
+/** Make an array with all case versions for the given string */
+export function makeCases (str) {
+  return [
+    unKebabCase(titleCase(str)),
+    unKebabCase(str.toLowerCase()),
+    unKebabCase(str.toUpperCase())
+  ]
+}
