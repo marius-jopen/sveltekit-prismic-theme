@@ -1,5 +1,5 @@
 <script>
-	import ProjectItem from "$lib/prismic/modules-basic/item-project.svelte"
+	import ItemProject from "$lib/prismic/modules-basic/item-project.svelte"
 	import Container from "$lib/tools/container.svelte"
 
 	export let items
@@ -8,7 +8,7 @@
 <Container>
 	<div class="sm:flex flex-wrap">
 		{#each items as item (item.item.uid)}
-			<ProjectItem item={item.item} />
+			<ItemProject item={item.item} />
 		{/each}
 	</div>
 </Container>

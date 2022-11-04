@@ -1,5 +1,5 @@
 <script>
-	import ProductItem from "$lib/prismic/modules-basic/item-product.svelte"
+	import ItemBlogPost from "$lib/prismic/modules-basic/item-blog-post.svelte"
 	import Container from "$lib/tools/container.svelte"
 
 	export let items
@@ -8,7 +8,7 @@
 <Container>
 	<div class="sm:flex flex-wrap">
 		{#each items as item (item.item.uid)}
-			<ProductItem item={item.item} />
+			<ItemBlogPost item={item.item} />
 		{/each}
 	</div>
 </Container>
