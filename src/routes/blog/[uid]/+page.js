@@ -5,7 +5,7 @@ export async function load({ fetch, params, request }) {
   const { uid } = params
 
   const api = createClient({ fetch, request })
-  const document = await api.getByUID('project', uid)
+  const document = await api.getByUID('blog_post', uid)
 
   if (document) {
     return { document }
