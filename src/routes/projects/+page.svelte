@@ -1,8 +1,6 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte"
-  import ProjectItem from "$lib/prismic/modules/project-item.svelte"
-  import Categories from "$lib/prismic/categories.svelte"
   import Projects from '$lib/prismic/modules-basic/projects.svelte'
   import Text from "$lib/prismic/atoms/text.svelte"
 
