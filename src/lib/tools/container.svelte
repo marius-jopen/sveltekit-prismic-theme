@@ -1,22 +1,19 @@
 <script>
 	import Saos from "saos"
 
-	export let bgColor = 'white'
-	export let textColor = 'black'
-	export let paddingTop = 'pt-8'
-	export let paddingBottom = 'pb-8'
-	export let paddingX = 'px-8'
+	export let pt = 'pt-4'
+	export let pb = 'pb-4'
+	export let px = 'px-8'
 	export let width = 'width-empty'
 	export let saos = 'slide-in-bottom 0.5s both'
-	export let border = ''
 	export let active = true
 	export let classes =''
 </script>
 
 {#if active}
-	<div class="{classes} {bgColor} {textColor} {paddingTop} {paddingBottom} {border}">
+	<div class="{pt} {pb} {classes}">
 		<Saos animation={saos} >
-			<div class=" {width == 'screen' ? '' : width + ' ' + paddingX} mx-auto">
+			<div class=" {width == 'screen' ? '' : width + ' ' + px} mx-auto">
 				<slot />
 			</div>
 		</Saos>

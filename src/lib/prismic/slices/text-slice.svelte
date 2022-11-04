@@ -3,7 +3,6 @@
 	import Text from "$lib/prismic/atoms/text.svelte";
 
 	export let text
-	export let bgColor = ''
 	export let centered = ''
 	export let width = ''
 	export let slice
@@ -15,6 +14,6 @@
 	}
 </script>
 
-<Container {bgColor} {width} >
+<Container {width} >
 	<Text field={text} classes="{centered ? 'text-center' : ''}" />
 </Container>

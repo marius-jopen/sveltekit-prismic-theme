@@ -5,7 +5,6 @@
 
 	export let text = ''
 	export let poster = ''
-	export let bgColor = ''
 	export let width = ''
 	export let src240p = ''
 	export let src360p = ''
@@ -28,7 +27,7 @@
 	}
 </script>
 
-<Container {bgColor} {width} >
+<Container {width} >
 	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-center" />
 </Container>

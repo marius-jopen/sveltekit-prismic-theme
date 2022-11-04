@@ -4,7 +4,6 @@
 	import Image from "$lib/prismic/atoms/image.svelte"
 
 	export let text = ''
-	export let bgColor = ''
 	export let width = ''
 	export let src = ''
 	export let slice
@@ -16,7 +15,7 @@
 	}
 </script>
 
-<Container {bgColor} {width} >
+<Container {width} >
 	<Image {src} classes="rounded-3xl" />
 	<Text field={text} classes="text-center" />
 </Container>

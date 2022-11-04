@@ -1,14 +1,14 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Categories from "$lib/prismic/modules-basic/categories.svelte"
-  import Container from "$lib/tools/container.svelte"
   import Projects from '$lib/prismic/modules-basic/projects.svelte'
   import Text from "$lib/prismic/atoms/text.svelte"
+	import Container from "$lib/tools/container.svelte"
 
 	export let data
 
-	let {
-    category,
+	// START CATEGORIES FILTER -> REACTIVE
+	let { category,
     categories,
     setup,
     document,
@@ -23,23 +23,14 @@
       filtered = data.filtered
     }
   }
+	// END CATEGORIES FILTER -> REACTIVE
 </script>
 
 <Seo {setup} {document} />
 
-<Container>
-	<Text
-    classes="h4 text-center pb-6"
-    plain
-    field={document.data.title}
-  />
-	<Categories
-    type='projects'
-    {category}
-    {categories}
-  />
+<Container pt='pt-16'>
+	<Text classes="h4 text-center" plain field={document.data.title} />
 </Container>
 
-<Container saos='' paddingBottom='pb-0'>
-	<Projects items={filtered} />
-</Container>
+<Categories type='projects' {category} {categories} />
+<Projects items={filtered} />
