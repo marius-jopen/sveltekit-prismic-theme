@@ -3,7 +3,7 @@
   import Text from "$lib/prismic/atoms/text.svelte"
 	import Image from "$lib/prismic/atoms/image.svelte"
   import Container from "$lib/tools/container.svelte"
-	import Price from '$lib/prismic/modules-basic/price.svelte'
+	import Price from '$lib/prismic/addons/price.svelte'
 
 	export let item
 </script>
