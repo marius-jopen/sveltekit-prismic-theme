@@ -1,6 +1,6 @@
 import * as prismic from '@prismicio/client'
 
-import { namespace, routes } from "../setup"
+import { namespace, routes } from "./setup"
 
 const accessToken = '' // If your repository is private, add an access token
 

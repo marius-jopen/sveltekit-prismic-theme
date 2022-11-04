@@ -1,6 +1,5 @@
 import * as prismic from '@prismicio/client'
 import * as cookie from 'cookie'
-
 import createClient from '$lib/prismic/client'
 
 export async function GET({ url, fetch, request }) {

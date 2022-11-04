@@ -2,7 +2,7 @@
 	import Hamburger from 'svelte-hamburgers'
 	import { fade } from 'svelte/transition'
 	import Text from "$lib/prismic/atoms/text.svelte"
-	import Navigation from "$lib/prismic/nav-header.svelte"
+	import Navigation from "$lib/prismic/modules/navigation.svelte"
 
 	export let setup
 
@@ -39,7 +39,7 @@
 {#if open == true}
 	<div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-white flex-col justify-center" transition:fade>
 		<div class="flex flex-col text-center -mt-20 leading-8" on:click="{close}">
-			<Navigation {setup} />
+			<Navigation document={setup.data.navigation_header} />
 		</div>
 	</div>
 {/if}

@@ -1,9 +1,8 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte"
-  import ProjectItem from "$lib/prismic/project-item.svelte"
+  import ProjectItem from "$lib/prismic/modules/project-item.svelte"
   import Text from "$lib/prismic/atoms/text.svelte"
-	import Categories from "$lib/prismic/categories.svelte"
 
 	export let data
 
@@ -39,6 +38,7 @@
     {categories}
   />
 
+<Container>
 	<div class="sm:flex flex-wrap">
 		{#each filtered as item (item.item.uid)}
 			<ProjectItem item={item.item} />

@@ -2,10 +2,10 @@
 	import Link from "$lib/prismic/atoms/link.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
 
-	export let setup
+	export let document
 </script>
 
-{#each setup.data.navigation_header as { title, link }}
+{#each document as { title, link }}
 	<Link document={link}>
 		<Text inline field={title} />
 	</Link>

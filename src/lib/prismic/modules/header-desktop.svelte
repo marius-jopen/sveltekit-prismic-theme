@@ -1,5 +1,5 @@
 <script>
-	import Navigation from "$lib/prismic/nav-header.svelte"
+	import Navigation from "$lib/prismic/modules/navigation.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let setup
@@ -11,6 +11,6 @@
 	</a>
 
 	<div class="flex gap-3">
-		<Navigation {setup} />
+		<Navigation document={setup.data.navigation_header} />
 	</div>
 </header>
