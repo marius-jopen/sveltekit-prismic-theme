@@ -21,6 +21,7 @@
 		{src.url}?&w={width}&fm=webp&lossless=true&dpr=3 3x
 	"
 	src="{src.url}?&w={width}&fm=webp&lossless=true"
-	alt="{src.alt}" width={width}
+	alt="{src.alt}"
+	width={width}
 	class="{classes} w-full absolute z-10 top-0 left-0 transition-opacity duration-500 opacity-0 {loaded ? 'opacity-100' : ''}">
 </div>
