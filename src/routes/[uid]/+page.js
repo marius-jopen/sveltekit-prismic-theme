@@ -7,7 +7,7 @@ export async function load({ params, fetch, request }) {
 
   try {
     const document = await api.getByUID('page', uid)
-    
+
     return { document }
   } catch (e) {
     // Show user the page not found error
