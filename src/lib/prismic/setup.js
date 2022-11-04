@@ -14,6 +14,14 @@ export const routes = [
     type: 'project',
     path: '/projects/:uid',
   },
+	{
+    type: 'blog_post',
+    path: '/blog/:uid',
+  },
+	{
+    type: 'product',
+    path: '/products/:uid',
+  },
 ]
 
 export function linkResolver (doc) {
@@ -25,6 +33,14 @@ export function linkResolver (doc) {
         return '/projects'
       case ('project'):
         return `/projects/${doc.uid}`
+			case ('blog_posts'):
+				return '/blog'
+			case ('blog_post'):
+				return `/blog/${doc.uid}`
+			case ('products'):
+				return '/shop'
+			case ('product'):
+				return `/shop/${doc.uid}`
 			case ('page'):
 				return `/${doc.uid}`
       case ('home'):

@@ -1,5 +1,5 @@
 <script>
-	import ProjectItem1 from "$lib/prismic/modules-extended/project-item-1.svelte"
+	import ProjectItem1 from "$lib/prismic/modules-extended/item-project-1.svelte"
 	import Container from "$lib/tools/container.svelte"
 
 	export let items
