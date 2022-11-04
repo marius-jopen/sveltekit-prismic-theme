@@ -37,6 +37,7 @@
     {category}
     {categories}
   />
+</Container>
 
 <Container>
 	<div class="sm:flex flex-wrap">
