@@ -87,7 +87,7 @@
 
 <div bind:offsetWidth={width} class="relative {classes}">
 	{#if controls}
-		<div class="absolute bottom-0 z-10 bg-white flex px-2 py-1 w-full justify-center transition-opacity opacity-0 {ui ? 'opacity-100' : ''}">
+		<div class="absolute bottom-0 z-10 bg-background-1 flex px-2 py-1 w-full justify-center transition-opacity opacity-0 {ui ? 'opacity-100' : ''}">
 			<Button bind:paused />
 			<Time bind:time />
 			<Progress bind:time bind:duration />

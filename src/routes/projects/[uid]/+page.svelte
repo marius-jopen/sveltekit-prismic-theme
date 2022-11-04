@@ -11,10 +11,7 @@
 
 <Seo {setup} {document} />
 
-<Container width='width-lg' paddingBottom='pb-0' paddingTop='pt-20'>
-	<Image src={document.data.thumbnail} classes="rounded-3xl" />
-</Container>
-
-<Container>
+<Container width='width-lg' paddingTop='pt-20'>
+	<Image src={document.data.thumbnail} classes="rounded-3xl mb-4" />
 	<Text classes="h4 text-center" plain field={document.data.title} />
 </Container>

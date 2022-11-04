@@ -9,6 +9,11 @@ module.exports = {
 			fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
       },
+			colors: {
+			  'background-1': 'rgb(255 255 255)',
+			  'fonts-1': 'rgb(30 30 30)',
+			  'lines-1': 'rgba(205,205,205,1)',
+			},
 		}
   },
   plugins: []

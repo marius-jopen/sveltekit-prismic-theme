@@ -1,5 +1,8 @@
 <script>
   import { page } from '$app/stores';
+	import Container from "$lib/tools/container.svelte"
 </script>
 
-<h1>{$page.status}: {$page.error.message}</h1>
+<Container classes="text-center">
+	{$page.status}: {$page.error.message}
+</Container>

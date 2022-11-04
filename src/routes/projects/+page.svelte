@@ -1,7 +1,7 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Container from "$lib/tools/container.svelte"
-  import ProjectItem from "$lib/prismic/modules/project-item.svelte"
+  import Projects from '$lib/prismic/modules-basic/projects.svelte'
   import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let data
@@ -12,13 +12,6 @@
 <Seo {setup} {document} />
 
 <Container saos='' paddingBottom='pb-0'>
-	<Text classes="h4 text-center" plain field={document.data.title} />
-</Container>
-
-<Container>
-	<div class="sm:flex flex-wrap">
-		{#each document.data.items as item}
-			<ProjectItem item={item.item} />
-		{/each}
-	</div>
+	<Text classes="h4 text-center pb-8" plain field={document.data.title} />
+	<Projects {document} />
 </Container>

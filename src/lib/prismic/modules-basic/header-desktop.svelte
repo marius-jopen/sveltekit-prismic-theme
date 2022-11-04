@@ -1,5 +1,5 @@
 <script>
-	import Navigation from "$lib/prismic/modules/navigation.svelte"
+	import Navigation from "$lib/prismic/modules-basic/navigation.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let setup

@@ -2,7 +2,7 @@
 	import Hamburger from 'svelte-hamburgers'
 	import { fade } from 'svelte/transition'
 	import Text from "$lib/prismic/atoms/text.svelte"
-	import Navigation from "$lib/prismic/modules/navigation.svelte"
+	import Navigation from "$lib/prismic/modules-basic/navigation.svelte"
 
 	export let setup
 
@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/collapse.css" />
 </svelte:head>
 
-<div class="{height} sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-white justify-between cursor-pointer pt-2">
+<div class="{height} sm:hidden flex top-0 fixed w-screen z-50 px-2 bg-background-1 justify-between cursor-pointer pt-2">
 	<a data-sveltekit-prefetch on:click="{close}" class="pt-2 pl-2" href="/">
 		<Text plain field={setup.data.title} />
 	</a>
@@ -37,13 +37,13 @@
 </div>
 
 {#if open == true}
-	<div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-white flex-col justify-center" transition:fade>
+	<div class="flex sm:hidden top-12 h-screen fixed w-screen z-50 bg-background-1 flex-col justify-center" transition:fade>
 		<div class="flex flex-col text-center -mt-20 leading-8" on:click="{close}">
 			<Navigation document={setup.data.navigation_header} />
 		</div>
 	</div>
 {/if}
 
-<div class="{height} block sm:hidden bg-white w-full">
+<div class="{height} block sm:hidden bg-background-1 w-full">
 	&nbsp;
 </div>
