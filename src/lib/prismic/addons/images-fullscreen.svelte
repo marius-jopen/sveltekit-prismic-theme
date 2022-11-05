@@ -9,6 +9,13 @@
 	let fullscreen = false
 	let locked = ""
 
+	// Function which opens the fullscreen and locks the body
+	// Can be called from outside
+	export function openFullscreen() {
+		fullscreen = true
+		locked = "overflow-y-hidden"
+	}
+
 	// Function which gets called on keystroke and if it is the ECS key
 	// close the fullscreen
 	function handleKeydown(event) {
@@ -18,33 +25,16 @@
 		}
 	}
 
-	// Function which opens the fullscreen and locks the body
-	function openFullscreen() {
-		fullscreen = true
-		locked = "overflow-y-hidden"
-		console.log("open")
-	}
-
 	// Function which closes the fullscreen and unlocks the body
 	function closeFullscreen() {
 		fullscreen = false
 		locked = ""
-		console.log("closed")
 	}
 </script>
 
 <Body class="{locked}" />
 
 <svelte:window on:keydown={handleKeydown}/>
-
-<div class="relative cursor-zoom-in" on:click="{openFullscreen}">
-	{#each imageList as item}
-		<div class="relative">
-			<Text field={item.image_caption_images} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
-			<Image src={item.image_images} />
-		</div>
-	{/each}
-</div>
 
 {#if fullscreen}
 	<div class="fixed w-full h-screen bg-background z-50 top-0 left-0" >

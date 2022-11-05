@@ -25,11 +25,11 @@
 {#if height}
 	<div class="border-b border-lines-1">
 		<Container saos="" classes="border-b border-red-300 relative w-full" styles="height: {height}px">
-			<div class="w-full top-0 left-0 absolute z-20 flex flex-col text-white justify-center" style="height: {height}px">
+			<div class="w-full top-0 left-0 absolute z-10 flex flex-col text-white justify-center" style="height: {height}px">
 				<Text field={text} classes="text-center" />
 			</div>
 
-			<Image {src} classes="w-full {height} object-cover" styles="height: {height}px"/>
+			<Image {src} classes="w-full {height} z-0 object-cover" styles="height: {height}px"/>
 		</Container>
 	</div>
 {/if}

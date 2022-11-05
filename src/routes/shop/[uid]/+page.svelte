@@ -1,7 +1,7 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
   import Text from "$lib/prismic/atoms/text.svelte"
-	import ImageList from "$lib/prismic/addons/image-list.svelte"
+	import ImageList from "$lib/prismic/addons/images-list.svelte"
 	import LayoutColumn from "$lib/tools/layout-column.svelte"
 	import LayoutAccordeon from "$lib/tools/layout-accordeon.svelte"
 	import Price from "$lib/prismic/addons/price.svelte"

@@ -7,6 +7,18 @@ export const routes = [
     path: '/',
   },
 	{
+    type: 'projects',
+    path: '/projects',
+  },
+	{
+    type: 'products',
+    path: '/shop',
+  },
+	{
+    type: 'blog_posts',
+    path: '/blog',
+  },
+	{
     type: 'page',
     path: '/:uid',
   },
