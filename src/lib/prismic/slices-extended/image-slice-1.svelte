@@ -15,17 +15,21 @@
 		width = slice.primary.width_image
 	}
 
-	let height = ''
+	let height
 
 	vhMinusHeader.subscribe(value => {
-		height = value;
+		height = value
 	})
 </script>
 
-<Container classes="w-full" styles="height: {height}px">
-	<div class="w-full h-full top-0 left-0 absolute z-20 flex flex-col text-white justify-center" styles="height: {height}px">
-		<Text field={text} classes="text-center" />
-	</div>
+{#if height}
+	<div class="border-b border-lines-1">
+		<Container saos="" classes="border-b border-red-300 relative w-full" styles="height: {height}px">
+			<div class="w-full top-0 left-0 absolute z-20 flex flex-col text-white justify-center" style="height: {height}px">
+				<Text field={text} classes="text-center" />
+			</div>
 
-	<Image {src} classes="w-full {height} object-cover" styles="height: {height}px"/>
-</Container>
+			<Image {src} classes="w-full {height} object-cover" styles="height: {height}px"/>
+		</Container>
+	</div>
+{/if}

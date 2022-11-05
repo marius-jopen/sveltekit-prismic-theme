@@ -10,5 +10,5 @@
 
 <Seo {document} {setup} />
 
-<Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
+<!-- <Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} /> -->
 <Slices slices={document.data.body} />
