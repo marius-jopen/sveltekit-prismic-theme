@@ -4,7 +4,7 @@
 
 	export let text
 	export let centered = ''
-	export let width = ''
+	export let width = 'width-2xl'
 	export let slice
 
 	if(slice) {
@@ -14,6 +14,6 @@
 	}
 </script>
 
-<Container {width} >
+<Container classes="{width} pb-4" >
 	<Text field={text} classes="{centered ? 'text-center' : ''}" />
 </Container>

@@ -11,7 +11,7 @@
 
 <Seo {setup} {document} />
 
-<Container width='width-lg' pt='pt-20'>
+<Container classes='width-3xl py-20'>
 	<Image src={document.data.thumbnail} classes="rounded-3xl mb-4" />
 	<Text classes="h4 text-center" plain field={document.data.title} />
 </Container>

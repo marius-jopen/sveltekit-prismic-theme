@@ -1,14 +1,14 @@
 <script>
-	import ItemProject from "$lib/prismic/modules-basic/item-project.svelte"
+	import ItemProduct from "$lib/prismic/modules/item-product.svelte"
 	import Container from "$lib/tools/container.svelte"
 
 	export let items
 </script>
 
-<Container>
+<Container classes="width-7xl">
 	<div class="sm:flex flex-wrap">
 		{#each items as item (item.item.uid)}
-			<ItemProject item={item.item} />
+			<ItemProduct item={item.item} />
 		{/each}
 	</div>
 </Container>

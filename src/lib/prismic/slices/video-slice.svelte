@@ -5,7 +5,7 @@
 
 	export let text = ''
 	export let poster = ''
-	export let width = ''
+	export let width = 'width-2xl'
 	export let src240p = ''
 	export let src360p = ''
 	export let src540p = ''
@@ -27,7 +27,7 @@
 	}
 </script>
 
-<Container {width} >
+<Container classes="{width} pb-4" >
 	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-center" />
 </Container>

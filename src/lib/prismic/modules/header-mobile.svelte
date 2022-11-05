@@ -2,7 +2,7 @@
 	import Hamburger from 'svelte-hamburgers'
 	import { fade } from 'svelte/transition'
 	import Text from "$lib/prismic/atoms/text.svelte"
-	import Navigation from "$lib/prismic/modules-basic/navigation.svelte"
+	import Navigation from "$lib/prismic/modules/navigation.svelte"
 
 	export let setup
 

@@ -30,20 +30,22 @@
                 "text-align": "left"
               },
               "button": {
-                "font-family": "Helvetica, Arial, sans-serif",
-                "font-size": "1.875rem",
-                "font-weight": "700",
-                "padding-top": "10px",
-                "padding-bottom": "10px",
-                "padding-left": "0px",
-                "padding-right": "0px",
-                "color": "black",
+                "font-family": "Inter, Arial, sans-serif",
+                "font-size": "1rem",
+								"letter-spacing": "0.05em",
+								"text-transform": "uppercase",
+                "font-weight": "500",
+                "padding-top": "8px",
+                "padding-bottom": "8px",
+                "padding-left": "20px",
+                "padding-right": "20px",
+                "color": "white",
                 "border-radius": "0px",
                 ":hover": {
-                  "color": "black",
-                  "background-color": "white"
+                  "color": "white",
+                  "background-color": "black"
                 },
-                "background-color": "white",
+                "background-color": "black",
                 ":focus": {
                   "background-color": "white"
                 },
@@ -261,4 +263,30 @@
   });
 </script>
 
-<div id="product" />
+<div id="product" class="px-6 pt-2 pb-8" />
+
+<style lang="postcss">
+	:global(.shopify-buy-frame.shopify-buy-frame--toggle.is-sticky.is-active) {
+		position: fixed !important;
+		right: 0;
+		top: -10px !important;
+		transition: none !important;
+		height: 100px !important;
+	}
+
+	:global(.shopify-buy-frame.shopify-buy-frame--toggle.is-sticky.is-active iframe) {
+		height: 100vh !important;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100px !important;
+	}
+
+  .button-container {
+    @apply opacity-0 transition-all h-0;
+  }
+
+  .button-container.active {
+    @apply opacity-100 h-auto;
+  }
+</style>

@@ -12,7 +12,7 @@
   export let classes = ""
   export let prefetch = ""  // empty string for on
   export let reload = "off"    // off for disabled
-  export let activeClass = "underline"
+  export let activeClass = "underline underline-offset-2"
 
   let active = false
 

@@ -10,6 +10,6 @@
 
 <Seo {setup} {document} />
 
-<Container>
+<Container classes='width-4xl py-4'>
 	<Text plain field={document.data.title} />
 </Container>

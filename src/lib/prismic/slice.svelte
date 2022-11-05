@@ -4,11 +4,13 @@
 	import ImageBox from "$lib/prismic/slices/image-slice.svelte"
 	import TextBox from "$lib/prismic/slices/text-slice.svelte"
 	import VideoBox from "$lib/prismic/slices/video-slice.svelte"
+	import ImageBox1 from "$lib/prismic/slices-extended/image-slice-1.svelte"
 
 	export let slice
 
 	const mappings = {
 		image: ImageBox,
+		image1: ImageBox1,
 		text: TextBox,
 		video: VideoBox
 	}
@@ -19,7 +21,11 @@
 <div class="slice">
   <Comment comment={slice.slice_type} />
 
-  <svelte:component this={mappings[slice.slice_type]} {slice} />
+	{#if slice.slice_label == null}
+  	<svelte:component this={mappings[slice.slice_type]} {slice} />
+	{:else}
+		<svelte:component this={mappings[slice.slice_type + slice.slice_label]} {slice} />
+	{/if}
 
   {#if dev && missingSlice(slice.slice_type)}
     <pre>Missing module for {slice.slice_type}</pre>

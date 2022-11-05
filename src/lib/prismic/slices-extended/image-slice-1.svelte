@@ -1,0 +1,31 @@
+<script>
+	import Container from "$lib/tools/container.svelte"
+	import Text from "$lib/prismic/atoms/text.svelte"
+	import Image from "$lib/prismic/atoms/image.svelte"
+	import { vhMinusHeader } from '$lib/prismic/stores'
+
+	export let text = ''
+	export let width = 'width-2xl'
+	export let src = ''
+	export let slice
+
+	if(slice) {
+		src = slice.primary.image_image
+		text = slice.primary.image_caption_image
+		width = slice.primary.width_image
+	}
+
+	let height = ''
+
+	vhMinusHeader.subscribe(value => {
+		height = value;
+	})
+</script>
+
+<Container classes="w-full" styles="height: {height}px">
+	<div class="w-full h-full top-0 left-0 absolute z-20 flex flex-col text-white justify-center" styles="height: {height}px">
+		<Text field={text} classes="text-center" />
+	</div>
+
+	<Image {src} classes="w-full {height} object-cover" styles="height: {height}px"/>
+</Container>

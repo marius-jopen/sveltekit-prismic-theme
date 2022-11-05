@@ -1,7 +1,7 @@
 <!-- A custom cursor -->
 
 <script>
-  import { mouseX, mouseY } from '$lib/utilities/layout'
+  import { mouseX, mouseY } from '$lib/prismic/stores'
   import { spring } from 'svelte/motion';
   import { onMount, onDestroy } from "svelte"
   import { browser } from "$app/env"

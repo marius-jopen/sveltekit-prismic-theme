@@ -24,9 +24,9 @@
 	</span>
 
 	<span slot="right">
-		<Text classes="px-4 pt-4 pb-4" plain field={document.data.title} />
+		<Text classes="px-6 pt-4 pb-4" plain field={document.data.title} />
 
-		<div class="px-4 pb-4 border-b border-lines-1">
+		<div class="px-6 pb-4 border-b border-lines-1">
 			<Price item={document} />
 
 			<div>
@@ -40,10 +40,10 @@
 			</div>
 		</div>
 
-		<Text classes="px-4 py-4 border-b border-lines-1" plain field={document.data.description} />
+		<Text classes="px-6 py-4 border-b border-lines-1" plain field={document.data.description} />
 
 		<ShopifyBuyButton productUID={'6696421818576'} />
-		<!-- <div id='product'></div> -->
+
 		<LayoutAccordeon inputHeadline={'Details'} >
 			<Text plain field={document.data.details} />
 		</LayoutAccordeon>

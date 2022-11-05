@@ -1,9 +1,15 @@
 <script>
-	import Navigation from "$lib/prismic/modules-basic/navigation.svelte"
+	import Navigation from "$lib/prismic/modules/navigation.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
+	import { headerHeight } from '$lib/prismic/stores'
 
 	export let setup
+
+	let height = '0'
+
+	$: headerHeight.set(height)
 </script>
+
 
 <header class="justify-between px-2 py-2 hidden sm:flex">
 	<a href="/">
