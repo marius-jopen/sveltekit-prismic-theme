@@ -1,6 +1,7 @@
 <script>
   import Text from "$lib/prismic/atoms/text.svelte"
-	import ImageList from "$lib/prismic/modules/images-list.svelte"
+	import GalleryList from "$lib/prismic/modules/gallery-list.svelte"
+	import GallerySlider from "../modules/gallery-slider.svelte"
 	import LayoutColumn from "$lib/tools/layout-column.svelte"
 	import LayoutAccordeon from "$lib/tools/layout-accordeon.svelte"
 	import Price from "$lib/prismic/modules/price.svelte"
@@ -13,11 +14,11 @@
 
 <LayoutColumn>
 	<span slot="mobile">
-		<ImageList imageList={document.data.images} />
+		<GallerySlider input={document.data.images} />
 	</span>
 
 	<span slot="left">
-		<ImageList imageList={document.data.images} />
+		<GalleryList input={document.data.images} />
 	</span>
 
 	<span slot="right">

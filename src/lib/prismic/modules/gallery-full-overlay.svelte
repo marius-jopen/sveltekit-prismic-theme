@@ -3,7 +3,7 @@
 	import Image from "$lib/prismic/atoms/image.svelte"
 	import { Body } from 'svelte-body';
 
-	export let imageList
+	export let input
 
 	let keyCode
 	let fullscreen = false
@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="overflow-y-scroll h-screen cursor-zoom-out" on:click="{closeFullscreen}">
-			{#each imageList as item, key}
+			{#each input as item, key}
 				<div class="relative" id="if-{key}">
 					<Text field={item.image_caption_images} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
 					<Image src={item.image_images} />
