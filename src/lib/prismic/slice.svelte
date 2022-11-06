@@ -8,6 +8,7 @@
 	import ImageBox1 from "$lib/prismic/slices-extended/image-slice-1.svelte"
 	import Headline from "$lib/prismic/slices/headline-slice.svelte"
 	import Headline1 from "$lib/prismic/slices-extended/headline-slice-1.svelte"
+	import Gallery from "$lib/prismic/slices/gallery-slice.svelte"
 
 	export let slice
 
@@ -18,7 +19,8 @@
 		text1: TextBox1,
 		video: VideoBox,
 		headline: Headline,
-		headline1: Headline1
+		headline1: Headline1,
+		gallery: Gallery
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)

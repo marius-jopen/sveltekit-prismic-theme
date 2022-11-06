@@ -1,6 +1,7 @@
 <script>
   export let src
 	export let classes
+	export let classesOuter
 	export let styles
 
 	let width
@@ -11,7 +12,7 @@
 	}
 </script>
 
-<div bind:offsetWidth={width} class="w-full relative">
+<div bind:offsetWidth={width} class="w-full relative {classesOuter}" >
 	<img src="{src.url}?&w=50&blur=50" alt="{src.alt}" style={styles} width={width} class="{classes} w-full">
 
 	<img

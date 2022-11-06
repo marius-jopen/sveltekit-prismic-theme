@@ -281,12 +281,4 @@
 		right: 0px;
 		height: 100px !important;
 	}
-
-  .button-container {
-    @apply opacity-0 transition-all h-0;
-  }
-
-  .button-container.active {
-    @apply opacity-100 h-auto;
-  }
 </style>

@@ -1,7 +1,7 @@
 <script>
   import Text from "$lib/prismic/atoms/text.svelte"
 	import GalleryList from "$lib/prismic/modules/gallery-list.svelte"
-	import GallerySlider from "../modules/gallery-slider.svelte"
+	import GallerySlider1 from "$lib/prismic/modules-extended/gallery-slider-1.svelte"
 	import LayoutColumn from "$lib/tools/layout-column.svelte"
 	import LayoutAccordeon from "$lib/tools/layout-accordeon.svelte"
 	import Price from "$lib/prismic/modules/price.svelte"
@@ -10,11 +10,13 @@
   export let data
 
 	const { document} = data
+
+	console.log(document.data.images)
 </script>
 
 <LayoutColumn>
 	<span slot="mobile">
-		<GallerySlider input={document.data.images} />
+		<GallerySlider1 input={document.data.images} />
 	</span>
 
 	<span slot="left">
