@@ -8,5 +8,4 @@
 </script>
 
 <Seo {setup} {document} />
-
 <HomeSingle {data} />

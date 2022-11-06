@@ -1,9 +1,9 @@
 <script>
   import Text from "$lib/prismic/atoms/text.svelte"
-	import ImageList from "$lib/prismic/addons/images-list.svelte"
+	import ImageList from "$lib/prismic/modules/images-list.svelte"
 	import LayoutColumn from "$lib/tools/layout-column.svelte"
 	import LayoutAccordeon from "$lib/tools/layout-accordeon.svelte"
-	import Price from "$lib/prismic/addons/price.svelte"
+	import Price from "$lib/prismic/modules/price.svelte"
 	import ShopifyBuyButton from "$lib/tools/shopify-buy-button.svelte"
 
   export let data
