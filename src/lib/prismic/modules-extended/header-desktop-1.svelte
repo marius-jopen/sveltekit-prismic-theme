@@ -11,8 +11,8 @@
 </script>
 
 <header bind:clientHeight={height} class="fixed top-0 w-full z-20 hidden sm:block bg-background-1">
-	<div class="border-b border-lines-1 px-4 h-8 pt-[4px] uppercase">
-		<a class="w-1/2" href="/">
+	<div class="border-b border-lines-1 px-4 h-8 flex justify-center flex-col uppercase">
+		<a class="w-1/2 headline-1" href="/">
 			<Text plain field={setup.data.title} />
 		</a>
 
@@ -25,7 +25,7 @@
 		</div>
 	</div>
 
-	<div class="border-b border-lines-1 px-4 uppercase tracking-wider text-xs pt-[7.5px] h-8 ">
+	<div class="border-b border-lines-1 px-4 paragraph-1 text-xs flex justify-center flex-col h-8 ">
 		<div class="flex gap-3">
 			<Navigation document={setup.data.navigation_header} />
 		</div>

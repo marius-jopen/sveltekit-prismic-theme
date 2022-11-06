@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+
+	/* INTER */
+
 	@font-face {
     font-family: 'Inter';
-    src: url('/fonts/Inter-ExtraBold.woff2') format('woff2'),
-        url('/fonts/Inter-ExtraBold.woff') format('woff');
+    src: url('/fonts/inter/Inter-ExtraBold.woff2') format('woff2'),
+        url('/fonts/inter/Inter-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -13,8 +16,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Bold.woff2') format('woff2'),
-				url('/fonts/Inter-Bold.woff') format('woff');
+		src: url('/fonts/inter/Inter-Bold.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Bold.woff') format('woff');
 		font-weight: bold;
 		font-style: normal;
 		font-display: swap;
@@ -22,8 +25,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Black.woff2') format('woff2'),
-				url('/fonts/Inter-Black.woff') format('woff');
+		src: url('/fonts/inter/Inter-Black.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Black.woff') format('woff');
 		font-weight: 900;
 		font-style: normal;
 		font-display: swap;
@@ -31,8 +34,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Light.woff2') format('woff2'),
-				url('/fonts/Inter-Light.woff') format('woff');
+		src: url('/fonts/inter/Inter-Light.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Light.woff') format('woff');
 		font-weight: 300;
 		font-style: normal;
 		font-display: swap;
@@ -40,8 +43,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-ExtraLight.woff2') format('woff2'),
-				url('/fonts/Inter-ExtraLight.woff') format('woff');
+		src: url('/fonts/inter/Inter-ExtraLight.woff2') format('woff2'),
+				url('/fonts/inter/Inter-ExtraLight.woff') format('woff');
 		font-weight: 200;
 		font-style: normal;
 		font-display: swap;
@@ -49,8 +52,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Medium.woff2') format('woff2'),
-				url('/fonts/Inter-Medium.woff') format('woff');
+		src: url('/fonts/inter/Inter-Medium.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Medium.woff') format('woff');
 		font-weight: 500;
 		font-style: normal;
 		font-display: swap;
@@ -58,8 +61,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-SemiBold.woff2') format('woff2'),
-				url('/fonts/Inter-SemiBold.woff') format('woff');
+		src: url('/fonts/inter/Inter-SemiBold.woff2') format('woff2'),
+				url('/fonts/inter/Inter-SemiBold.woff') format('woff');
 		font-weight: 600;
 		font-style: normal;
 		font-display: swap;
@@ -67,8 +70,8 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Thin.woff2') format('woff2'),
-				url('/fonts/Inter-Thin.woff') format('woff');
+		src: url('/fonts/inter/Inter-Thin.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Thin.woff') format('woff');
 		font-weight: 100;
 		font-style: normal;
 		font-display: swap;
@@ -76,35 +79,137 @@
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/fonts/Inter-Regular.woff2') format('woff2'),
-				url('/fonts/Inter-Regular.woff') format('woff');
+		src: url('/fonts/inter/Inter-Regular.woff2') format('woff2'),
+				url('/fonts/inter/Inter-Regular.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
 	}
 
+	/* GARAMOND */
+
+	@font-face {
+    font-family: 'EB Garamond';
+    src: url('/fonts/garamond/EBGaramond-BoldItalic.woff2') format('woff2'),
+        url('/fonts/garamond/EBGaramond-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-ExtraBold.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-ExtraBold.woff') format('woff');
+			font-weight: bold;
+			font-style: normal;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-Bold.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-Bold.woff') format('woff');
+			font-weight: bold;
+			font-style: normal;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-Italic.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-Italic.woff') format('woff');
+			font-weight: normal;
+			font-style: italic;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-ExtraBoldItalic.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-ExtraBoldItalic.woff') format('woff');
+			font-weight: bold;
+			font-style: italic;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-Medium.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-Medium.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-MediumItalic.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-MediumItalic.woff') format('woff');
+			font-weight: 500;
+			font-style: italic;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-Regular.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-SemiBold.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-SemiBold.woff') format('woff');
+			font-weight: 600;
+			font-style: normal;
+			font-display: swap;
+	}
+
+	@font-face {
+			font-family: 'EB Garamond';
+			src: url('/fonts/garamond/EBGaramond-SemiBoldItalic.woff2') format('woff2'),
+					url('/fonts/garamond/EBGaramond-SemiBoldItalic.woff') format('woff');
+			font-weight: 600;
+			font-style: italic;
+			font-display: swap;
+	}
+
+	/* FONT STYLES */
+
 	h1, .h1 {
-		@apply text-6xl;
+		@apply text-6xl headline-1;
 	}
 
 	h2, .h2 {
-		@apply text-5xl;
+		@apply text-5xl headline-1;
 	}
 
 	h3, .h3 {
-		@apply text-4xl;
+		@apply text-4xl headline-1;
 	}
 
 	h4, .h4 {
-		@apply text-3xl;
+		@apply text-3xl headline-1;
 	}
 
 	h5, .h5 {
-		@apply text-2xl;
+		@apply text-2xl headline-1;
 	}
 
 	h6, .h6 {
-		@apply text-xl;
+		@apply text-xl headline-1;
+	}
+
+	.headline-1 {
+		@apply font-black uppercase;
+	}
+
+	.paragraph-1 {
+		@apply uppercase tracking-widest;
 	}
 
 	ul li {
@@ -118,6 +223,8 @@
 	p a {
 		@apply underline decoration-1 underline-offset-4;
 	}
+
+	/* ANIMATIONS */
 
 	@keyframes slide-in-bottom {
 		0% {

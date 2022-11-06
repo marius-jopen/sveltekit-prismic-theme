@@ -26,6 +26,7 @@
     "svelte": "^3.46.4",
     "svelte-hamburgers": "^3.0.1",
     "svelte-preprocess": "^4.10.7",
+    "svelte-scrollto": "^0.2.0",
     "sveltekit-autoimport": "^1.6.9",
     "tailwindcss": "^3.2.1"
   },

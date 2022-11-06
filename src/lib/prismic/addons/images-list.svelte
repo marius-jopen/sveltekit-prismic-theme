@@ -8,9 +8,9 @@
 	let bind
 </script>
 
-<div class="relative cursor-zoom-in" on:click={() => bind.openFullscreen()}>
-	{#each imageList as item}
-		<div class="relative">
+<div class="relative cursor-zoom-in">
+	{#each imageList as item, key}
+		<div class="relative" on:click={() => bind.openFullscreen(key)}>
 			<Text field={item.image_caption_images} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
 			<Image src={item.image_images} />
 		</div>

@@ -1,10 +1,12 @@
 <script>
   import { dev } from "$app/environment"
 	import Comment from "$lib/tools/comment.svelte"
-	import ImageBox from "$lib/prismic/slices/image-slice.svelte"
 	import TextBox from "$lib/prismic/slices/text-slice.svelte"
 	import VideoBox from "$lib/prismic/slices/video-slice.svelte"
+	import ImageBox from "$lib/prismic/slices/image-slice.svelte"
 	import ImageBox1 from "$lib/prismic/slices-extended/image-slice-1.svelte"
+	import Headline from "$lib/prismic/slices/headline-slice.svelte"
+	import Headline1 from "$lib/prismic/slices-extended/headline-slice-1.svelte"
 
 	export let slice
 
@@ -12,7 +14,9 @@
 		image: ImageBox,
 		image1: ImageBox1,
 		text: TextBox,
-		video: VideoBox
+		video: VideoBox,
+		headline: Headline,
+		headline1: Headline1
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)

@@ -15,7 +15,7 @@
 </script>
 
 <div class="-mt-px">
-	<div on:click={toggleAccordeon} class="uppercase tracking-wider text-xs cursor-pointer border-t border-b border-lines-1 px-6 py-3">
+	<div on:click={toggleAccordeon} class="paragraph-1 text-xs cursor-pointer border-t border-b border-lines-1 px-6 py-3">
 		{inputHeadline}
 	</div>
 

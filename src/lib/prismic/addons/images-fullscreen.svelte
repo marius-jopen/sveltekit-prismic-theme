@@ -11,14 +11,14 @@
 
 	// Function which opens the fullscreen and locks the body
 	// Can be called from outside
-	export function openFullscreen() {
+	export function openFullscreen(value) {
 		fullscreen = true
 		locked = "overflow-y-hidden"
 	}
 
 	// Function which gets called on keystroke and if it is the ECS key
 	// close the fullscreen
-	function handleKeydown(event) {
+	function handleKeydown() {
 		if(keyCode = 27) {
 			fullscreen = false
 			locked = ""
@@ -43,8 +43,8 @@
 		</div>
 
 		<div class="overflow-y-scroll h-screen cursor-zoom-out" on:click="{closeFullscreen}">
-			{#each imageList as item}
-				<div class="relative">
+			{#each imageList as item, key}
+				<div class="relative" id="if-{key}">
 					<Text field={item.image_caption_images} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
 					<Image src={item.image_images} />
 				</div>
