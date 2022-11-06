@@ -1,7 +1,7 @@
 <script>
 	import Seo from "$lib/prismic/seo.svelte"
-  import Text from "$lib/prismic/atoms/text.svelte"
-	import Slices from "$lib/prismic/slices.svelte"
+  import PageSingle from "$lib/prismic/pages/page-single.svelte"
+	import PageSingle1 from "$lib/prismic/pages-extended/page-single-1.svelte";
 
   export let data
 
@@ -10,5 +10,5 @@
 
 <Seo {document} {setup} />
 
-<!-- <Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} /> -->
-<Slices slices={document.data.body} />
+<!-- <PageSingle {data} /> -->
+<PageSingle1 {data} />

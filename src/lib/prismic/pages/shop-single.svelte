@@ -5,7 +5,9 @@
 	import Price from "$lib/prismic/addons/price.svelte"
 	import ShopifyBuyButton from "$lib/tools/shopify-buy-button.svelte"
 
-  export let document
+	export let data
+
+	const { document} = data
 </script>
 
 <LayoutColumn>

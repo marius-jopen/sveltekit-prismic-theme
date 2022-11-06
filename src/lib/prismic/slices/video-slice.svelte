@@ -23,11 +23,11 @@
 		srcVideo = slice.primary.video_video
 		poster = slice.primary.video_poster_video.url+"?&w=800&fm=webp&lossless=true"
 		text = slice.primary.video_caption_video
-		width = slice.primary.width_video
+		width = slice.primary.width_video ? slice.primary.width_video : width
 	}
 </script>
 
-<Container classes="{width} pb-4" >
+<Container classes="{width} pt-4 pb-8" >
 	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-center" />
 </Container>

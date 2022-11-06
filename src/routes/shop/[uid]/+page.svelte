@@ -9,5 +9,5 @@
 </script>
 
 <Seo {setup} {document} />
-<!-- <ShopSingle {document} /> -->
-<ShopSingle1 {document} />
+<!-- <ShopSingle {data} /> -->
+<ShopSingle1 {data} />

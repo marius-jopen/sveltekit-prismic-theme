@@ -2,6 +2,7 @@
   import { dev } from "$app/environment"
 	import Comment from "$lib/tools/comment.svelte"
 	import TextBox from "$lib/prismic/slices/text-slice.svelte"
+	import TextBox1 from "$lib/prismic/slices-extended/text-slice-1.svelte"
 	import VideoBox from "$lib/prismic/slices/video-slice.svelte"
 	import ImageBox from "$lib/prismic/slices/image-slice.svelte"
 	import ImageBox1 from "$lib/prismic/slices-extended/image-slice-1.svelte"
@@ -14,6 +15,7 @@
 		image: ImageBox,
 		image1: ImageBox1,
 		text: TextBox,
+		text1: TextBox1,
 		video: VideoBox,
 		headline: Headline,
 		headline1: Headline1

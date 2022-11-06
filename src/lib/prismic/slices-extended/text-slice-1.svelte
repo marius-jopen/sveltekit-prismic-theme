@@ -14,6 +14,8 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8" >
-	<Text field={text} classes="{centered ? 'text-center' : ''}" />
-</Container>
+<div class="pt-4 pb-6 border-b border-lines-1 px-4">
+	<Container classes="{width}" >
+		<Text field={text} classes="{centered ? 'text-center' : ''}" />
+	</Container>
+</div>

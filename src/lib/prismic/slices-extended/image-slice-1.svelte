@@ -12,7 +12,7 @@
 	if(slice) {
 		src = slice.primary.image_image
 		text = slice.primary.image_caption_image
-		width = slice.primary.width_image
+		width = slice.primary.width_image ? slice.primary.width_image : width
 	}
 
 	let height
