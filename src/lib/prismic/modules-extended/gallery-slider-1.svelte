@@ -6,8 +6,6 @@
 
 	export let input
 
-	console.log(input)
-
 	let splideSlider
 	let slideIndex = 1
 	let totalSlides = input.length

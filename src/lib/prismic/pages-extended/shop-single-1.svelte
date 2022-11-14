@@ -10,8 +10,6 @@
   export let data
 
 	const { document} = data
-
-	console.log(document.data.images)
 </script>
 
 <LayoutColumn>

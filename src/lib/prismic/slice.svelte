@@ -9,6 +9,9 @@
 	import Headline from "$lib/prismic/slices/headline-slice.svelte"
 	import Headline1 from "$lib/prismic/slices-extended/headline-slice-1.svelte"
 	import Gallery from "$lib/prismic/slices/gallery-slice.svelte"
+	import TextListSlice from "$lib/prismic/slices/text-list-slice.svelte"
+	import TextListSlice1 from "$lib/prismic/slices-extended/text-list-slice-1.svelte"
+	import TextListSlice2 from "$lib/prismic/slices-extended/text-list-slice-2.svelte"
 
 	export let slice
 
@@ -20,7 +23,10 @@
 		video: VideoBox,
 		headline: Headline,
 		headline1: Headline1,
-		gallery: Gallery
+		gallery: Gallery,
+		text_list: TextListSlice,
+		text_list1: TextListSlice1,
+		text_list2: TextListSlice2
 	}
 
   const missingSlice = (key) => !Object.keys(mappings).includes(key)
