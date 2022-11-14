@@ -5,17 +5,13 @@
 
 	export let data
 
-  let { document, setup, uid } = data
+	$: data
 
-  $: {
-    document = data.document
-    setup = data.setup
-    uid = data.uid
-  }
+	const { document, setup } = data
 </script>
 
-{#key uid}
-  <Seo {document} {setup} />
-
-  <PageSingle1 {data} />
+{#key data}
+	<Seo {document} {setup} />
+	<!-- <PageSingle {data} /> -->
+	<PageSingle1 {data} />
 {/key}
