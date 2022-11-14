@@ -22,10 +22,6 @@
     href = linkResolver(document)
   }
 
-  const handleClick = (e) => {
-    dispatch('click', e)
-  }
-
   $: active = href === $page.url.pathname
 </script>
 
@@ -33,7 +29,6 @@
   <a
     {href}
     class="cursor-pointer {classes} {active ? activeClass : ''}"
-    on:click={handleClick}
     data-sveltekit-prefetch={prefetch}
     data-sveltekit-reload={reload}
   >
