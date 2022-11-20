@@ -16,8 +16,9 @@
 		width = slice.primary.width_text ? slice.primary.width_text : width
 	}
 
-	let glossary
 	const glossaryList = []
+
+	let glossary
 	let posX = ''
 	let posY = ''
 	let active = false
@@ -35,8 +36,10 @@
 
 			// Create Object and push to array
 			var obj = {}
+
 			obj["name"] = element.outerText
 			obj["uid"] = kebabCase(element.outerText.toLowerCase())
+
 			glossaryList.push(obj)
 		})
 
@@ -72,6 +75,7 @@
 
 	function getContent(itemUid) {
 		let currentitem = glossaryItems.find(i => i.uid == itemUid)
+
 		return currentitem
 	}
 </script>
