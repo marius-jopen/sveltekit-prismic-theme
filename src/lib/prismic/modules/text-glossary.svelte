@@ -10,21 +10,14 @@
 	export let text
 	export let centered = ''
 	export let width = 'width-2xl'
-	export let classes = ""
 
 	const glossaryList = []
 	let glossary
 	let posX = ''
 	let posY = ''
-	let activeDesktop = false
-	let activeMobile = false
+	let active = false
 	let glossaryItems
 	let id
-	let innerWidth
-
-	glossaryAll.subscribe(value => {
-		glossaryItems = value
-	})
 
 	onMount(() => {
 		glossary = document.querySelectorAll('.glossary')
@@ -49,42 +42,29 @@
 		glossary.forEach(function (element) {
 			element = document.getElementById(kebabCase(element.outerText.toLowerCase()))
 
-			if(innerWidth > 640) {
-				element.addEventListener('mousemove', e => mouseEnter(e, element))
-				element.addEventListener('mouseleave', e => mouseLeave(e, element))
-			}
-
-			if(innerWidth < 640) {
-				element.addEventListener('click', e => mouseClickOpen(e, element))
-			}
+			element.addEventListener('mousemove', e => mouseEnter(e, element))
+			element.addEventListener('mouseleave', e => mouseLeave(e, element))
 
 			return () => {
 				element.removeEventListener('mousemove', mouseEnter())
 				element.removeEventListener('mouseleave', mouseLeave())
-				element.removeEventListener('click', mouseClickOpen())
 			}
 		})
   })
 
+	glossaryAll.subscribe(value => {
+		glossaryItems = value
+	})
+
 	function mouseEnter(e, element) {
 		posX = e.clientX
 		posY = e.clientY
-		activeDesktop = true
+		active = true
 		id = (kebabCase(element.outerText.toLowerCase()))
 	}
 
 	function mouseLeave() {
-		activeDesktop = false
-	}
-
-	function mouseClickOpen(e, element) {
-		posY = e.clientY
-		activeMobile = true
-		id = (kebabCase(element.outerText.toLowerCase()))
-	}
-
-	function mouseClickClose(e, element) {
-		activeMobile = false
+		active = false
 	}
 
 	function getContent(itemUid) {
@@ -94,11 +74,9 @@
 	}
 </script>
 
-<svelte:window bind:innerWidth />
-
 {#each glossaryList as item}
-	{#if activeDesktop && item.uid == id}
-		<div transition:fade="{{duration: 200 }}" class="bg-neutral-200 hidden sm:block z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style='top: {posY}px; left: {posX}px;'>
+	{#if active && item.uid == id}
+		<div transition:fade="{{duration: 200 }}" class="bg-neutral-200 z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style='top: {posY}px; left: {posX}px;'>
 			<div class="pb-2">
 				{item.name}
 			</div>
@@ -107,35 +85,14 @@
 			<Text field={getContent(item.uid).data.description} classes="pt-2" />
 		</div>
 	{/if}
-
-	{#if activeMobile && item.uid == id}
-		<div on:click={mouseClickClose} transition:fade="{{duration: 200 }}" class="block sm:hidden z-40 -mt-4 absolute w-full left-0" style='top: {posY}px;'>
-			<div class="mx-auto w-11/12 rounded-2xl  px-4 py-3 bg-neutral-200  ">
-				<div class="pb-2">
-					{item.name}
-				</div>
-
-				<Image src={getContent(item.uid).data.thumbnail} classes="rounded-3xl" />
-				<Text field={getContent(item.uid).data.description} classes="pt-2" />
-			</div>
-		</div>
-	{/if}
 {/each}
 
-<Container classes="{width} pt-4 pb-8m glossary-slice {classes}" >
+<Container classes="{width} pt-4 pb-8m glossary-slice" >
 	<Text field={text} classes="{centered ? 'text-center' : ''}" />
 </Container>
 
 <style lang="postcss">
-	@media screen and (min-width: 640px) {
-		:global(.glossary-slice	.glossary) {
-			@apply cursor-none bg-neutral-200 rounded-full px-4;
-		}
-	}
-
-	@media screen and (max-width: 640px) {
-		:global(.glossary-slice	.glossary) {
-			@apply bg-neutral-200 rounded-full px-4;
-		}
+	:global(.glossary-slice	.glossary) {
+		@apply cursor-none bg-neutral-200 rounded-full px-4;
 	}
 </style>

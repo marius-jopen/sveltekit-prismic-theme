@@ -21,7 +21,6 @@
 	} = data
 
 	let innerHeight = ''
-	let innerWidth = ''
 
 	$: vh.set(innerHeight)
 	$: glossaryAll.set(glossary_items)
@@ -37,7 +36,7 @@
 	<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo={namespace}"></script>
 </svelte:head>
 
-<svelte:window bind:innerHeight bind:innerWidth />
+<svelte:window bind:innerHeight />
 
 <HeaderDesktop {setup} />
 <HeaderMobile {setup} />
