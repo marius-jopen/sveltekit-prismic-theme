@@ -13,7 +13,7 @@
 
 	const {
 		setup,
-		glossary_items,
+		glossary,
 		shop,
 		blog,
 		projects,
@@ -23,7 +23,7 @@
 	let innerHeight = ''
 
 	$: vh.set(innerHeight)
-	$: glossaryAll.set(glossary_items)
+	$: glossaryAll.set(glossary)
 	$: shopAll.set(shop)
 	$: blogAll.set(blog)
 	$: projectsAll.set(projects)
