@@ -13,4 +13,4 @@
 	}
 </script>
 
-<TextGlossary {text} {centered} {width} />
+<TextGlossary {text} {centered} {width} classes={"px-4"} />
