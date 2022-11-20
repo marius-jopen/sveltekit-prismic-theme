@@ -59,4 +59,8 @@
 	.width-7xl {
 		@apply max-w-none md:max-w-7xl mx-auto;
 	}
+
+	.width-full {
+		@apply max-w-none md:max-w-none mx-auto;
+	}
 </style>

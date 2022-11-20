@@ -3,13 +3,15 @@
 	import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let text
+	export let width = 'width-2xl'
 	export let slice
 
 	if(slice) {
 		text = slice.primary.title_headline
+		width = slice.primary.width_headline ? slice.primary.width_headline : width
 	}
 </script>
 
-<Container classes="pt-4 pb-8" >
+<Container classes="{width} pt-4 pb-8" >
 	<Text field={text} classes="text-center" />
 </Container>
