@@ -2,7 +2,6 @@
 	import Navigation from "$lib/prismic/modules/navigation.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
 	import { headerHeight } from '$lib/prismic/stores'
-	import Search from "$lib/prismic/modules/search.svelte";
 
 	export let setup
 
@@ -18,8 +17,6 @@
 	</a>
 
 	<div class="flex gap-3">
-		<Search />
-
 		<Navigation document={setup.data.navigation_header} />
 
 		<div>

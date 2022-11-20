@@ -18,15 +18,8 @@
 	let posY = ''
 	let activeDesktop = false
 	let activeMobile = false
-	let glossaryItems
 	let id
 	let innerWidth
-
-	glossaryAll.subscribe(value => {
-		glossaryItems = value
-	})
-
-	console.log(glossaryItems)
 
 	onMount(() => {
 		glossary = document.querySelectorAll('.glossary')
@@ -90,7 +83,7 @@
 	}
 
 	function getContent(itemUid) {
-		let currentitem = glossaryItems.find(i => i.uid == itemUid)
+		let currentitem = $glossaryAll.find(i => i.uid == itemUid)
 
 		return currentitem
 	}
