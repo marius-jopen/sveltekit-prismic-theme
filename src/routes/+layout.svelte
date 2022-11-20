@@ -7,15 +7,16 @@
 	import Footer from "$lib/prismic/modules/footer.svelte"
 	import Footer1 from "$lib/prismic/modules-extended/footer-1.svelte"
 	import { namespace } from '$lib/prismic/setup' // Import the prismic repo name
-	import { vh } from '$lib/prismic/stores'
+	import { vh, glossaryAll } from '$lib/prismic/stores'
 
 	export let data
 
-	const { setup } = data
+	const { setup, glossary_items } = data
 
 	let innerHeight = ''
 
 	$: vh.set(innerHeight)
+	$: glossaryAll.set(glossary_items)
 </script>
 
 <svelte:head>

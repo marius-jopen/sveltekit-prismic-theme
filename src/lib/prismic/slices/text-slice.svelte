@@ -1,6 +1,6 @@
 <script>
 	import Container from "$lib/tools/container.svelte"
-	import Text from "$lib/prismic/atoms/text.svelte";
+	import Text from "$lib/prismic/atoms/text.svelte"
 
 	export let text
 	export let centered = ''

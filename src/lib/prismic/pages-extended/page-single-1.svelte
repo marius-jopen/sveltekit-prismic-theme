@@ -6,4 +6,4 @@
   const { document } = data
 </script>
 
-<Slices slices={document.data.body} />
+<Slices data slices={document.data.body} />

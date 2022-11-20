@@ -25,5 +25,5 @@
 </script>
 
 <Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
-<Categories type='blog_post' {category} {categories} />
+<!-- <Categories type='blog_post' {category} {categories} /> -->
 <ItemsGlossaryItem items={filtered} />
