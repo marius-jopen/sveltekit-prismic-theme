@@ -280,5 +280,6 @@
 		top: 0px;
 		right: 0px;
 		height: 100px !important;
+		width: 50px !important;
 	}
 </style>

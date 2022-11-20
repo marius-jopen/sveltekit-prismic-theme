@@ -10,4 +10,4 @@
 
 <Seo {setup} {document} />
 <ShopSingle {data} />
-<ShopSingle1 {data} />
+<!-- <ShopSingle1 {data} /> -->

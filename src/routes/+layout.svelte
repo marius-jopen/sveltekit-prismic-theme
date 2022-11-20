@@ -6,19 +6,31 @@
 	import HeaderMobile1 from "$lib/prismic/modules-extended/header-mobile-1.svelte"
 	import Footer from "$lib/prismic/modules/footer.svelte"
 	import Footer1 from "$lib/prismic/modules-extended/footer-1.svelte"
-	import { namespace } from '$lib/prismic/setup' // Import the prismic repo name
-	import { vh, vw, glossaryAll } from '$lib/prismic/stores'
+	import { namespace } from '$lib/prismic/setup'
+	import { vh, glossaryAll, shopAll, blogAll, projectsAll, pagesAll } from '$lib/prismic/stores'
 
 	export let data
 
-	const { setup, glossary_items } = data
+	const {
+		setup,
+		glossary_items,
+		shop,
+		blog,
+		projects,
+		pages
+	} = data
 
 	let innerHeight = ''
 	let innerWidth = ''
 
-	$: vw.set(innerWidth)
 	$: vh.set(innerHeight)
 	$: glossaryAll.set(glossary_items)
+	$: shopAll.set(shop)
+	$: blogAll.set(blog)
+	$: projectsAll.set(projects)
+	$: pagesAll.set(pages)
+
+	console.log(data)
 </script>
 
 <svelte:head>
