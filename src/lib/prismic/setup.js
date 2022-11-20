@@ -19,6 +19,10 @@ export const routes = [
     path: '/blog',
   },
 	{
+    type: 'glossary_items',
+    path: '/glossary',
+  },
+	{
     type: 'page',
     path: '/:uid',
   },
@@ -29,6 +33,10 @@ export const routes = [
 	{
     type: 'blog_post',
     path: '/blog/:uid',
+  },
+	{
+    type: 'glossary_item',
+    path: '/glossary/:uid',
   },
 	{
     type: 'product',
@@ -49,6 +57,10 @@ export function linkResolver (doc) {
 				return '/blog'
 			case ('blog_post'):
 				return `/blog/${doc.uid}`
+			case ('glossary_items'):
+				return '/glossary'
+			case ('glossary_item'):
+				return `/glossary/${doc.uid}`
 			case ('products'):
 				return '/shop'
 			case ('product'):

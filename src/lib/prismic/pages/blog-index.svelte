@@ -1,7 +1,7 @@
 <script>
   import Categories from "$lib/prismic/modules/categories.svelte"
   import Text from "$lib/prismic/atoms/text.svelte"
-  import ItemsProduct from '$lib/prismic/modules/items-product.svelte'
+	import ItemsBlogPost from "$lib/prismic/modules/items-blog-post.svelte";
 
 	export let data
 
@@ -26,4 +26,4 @@
 
 <Text classes="h4 text-center pt-16 pb-8" plain field={document.data.title} />
 <Categories type='blog_post' {category} {categories} />
-<ItemsProduct items={filtered} />
+<ItemsBlogPost items={filtered} />
