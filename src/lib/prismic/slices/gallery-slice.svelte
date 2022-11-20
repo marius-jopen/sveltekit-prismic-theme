@@ -9,7 +9,7 @@
 
 	if(slice) {
 		gallerySlider = slice.items
-		width = slice.primary.width_gallery ? slice.primary.width_gallerye : width
+		width = slice.primary.width_gallery ? slice.primary.width_gallery : width
 	}
 </script>
 

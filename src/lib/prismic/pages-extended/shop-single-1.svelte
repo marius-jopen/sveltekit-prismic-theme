@@ -23,23 +23,8 @@
 
 	<span slot="right">
 		<Text classes="headline-1 px-6 pt-6 pb-6" plain field={document.data.title} />
-
-		<div class="px-6 pb-6 border-b border-lines-1">
-			<Price item={document} />
-
-			<div>
-				{#if document.data.few_pieces_left}
-					Few Pieces Left
-				{/if}
-
-				{#if document.data.on_sale}
-					On Sale
-				{/if}
-			</div>
-		</div>
-
+		<Price item={document} classes="px-6 pb-4"/>
 		<Text classes="px-6 py-6 border-b border-lines-1" plain field={document.data.description} />
-
 		<ShopifyBuyButton productUID={'6696421818576'} />
 
 		<LayoutAccordeon inputHeadline={'Details'} >

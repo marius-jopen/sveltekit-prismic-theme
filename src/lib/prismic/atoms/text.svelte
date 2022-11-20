@@ -29,7 +29,7 @@
         {`${prepend} `}{@html asHTML(field)}{` ${append}`}
       </div>
 		{/if}
-	{:else}
+	{:else if isFilled.field}
     <div class="{classes}" style="{styles}">
         {`${prepend} `}{field}{` ${append}`}
     </div>

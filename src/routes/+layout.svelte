@@ -24,14 +24,14 @@
 
 <svelte:window bind:innerHeight />
 
-<!-- <HeaderDesktop {setup} /> -->
-<HeaderDesktop1 {setup} />
-<!-- <HeaderMobile {setup} /> -->
-<HeaderMobile1 {setup} />
+<HeaderDesktop {setup} />
+<HeaderMobile {setup} />
+<!-- <HeaderDesktop1 {setup} /> -->
+<!-- <HeaderMobile1 {setup} /> -->
 
 <div class="wrapper min-h-screen">
 	<slot />
 </div>
 
-<!-- <Footer {setup} /> -->
-<Footer1 {setup} />
+<Footer {setup} />
+<!-- <Footer1 {setup} /> -->

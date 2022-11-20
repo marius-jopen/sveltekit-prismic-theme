@@ -45,8 +45,8 @@
 		<div class="overflow-y-scroll h-screen cursor-zoom-out" on:click="{closeFullscreen}">
 			{#each input as item, key}
 				<div class="relative" id="if-{key}">
-					<Text field={item.image_caption_images} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
-					<Image src={item.image_images} />
+					<Text field={item.image_caption_gallery} classes="text-white absolute bottom-3 right-4 z-20 uppercase tracking-widest text-xs pointer-events-none" />
+					<Image src={item.image_gallery} />
 				</div>
 			{/each}
 		</div>

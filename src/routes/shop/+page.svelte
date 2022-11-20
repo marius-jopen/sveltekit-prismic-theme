@@ -9,5 +9,5 @@
 </script>
 
 <Seo {setup} {document} />
-<!-- <ShopIndex {data} /> -->
-<ShopIndex1 {data} />
+<ShopIndex {data} />
+<!-- <ShopIndex1 {data} /> -->

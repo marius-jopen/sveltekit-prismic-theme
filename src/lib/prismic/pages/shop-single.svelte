@@ -22,21 +22,7 @@
 
 	<span slot="right">
 		<Text classes="px-6 pt-4 pb-4" plain field={document.data.title} />
-
-		<div class="px-6 pb-4 flex">
-			<Price item={document} />
-
-			<div>
-				{#if document.data.few_pieces_left}
-					Few Pieces Left
-				{/if}
-
-				{#if document.data.on_sale}
-					On Sale
-				{/if}
-			</div>
-		</div>
-
+		<Price item={document} classes="px-6 pb-4"/>
 		<Text classes="px-6 py-4" plain field={document.data.description} />
 		<Text plain classes="px-6 text-xs" field={document.data.details} />
 		<ShopifyBuyButton productUID={'6696421818576'} />
