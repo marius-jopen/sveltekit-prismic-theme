@@ -27,7 +27,6 @@
     "svelte-hamburgers": "^3.0.1",
     "svelte-preprocess": "^4.10.7",
     "svelte-scrollto": "^0.2.0",
-    "svelte-typeahead": "^4.4.1",
     "sveltekit-autoimport": "^1.6.9",
     "tailwindcss": "^3.2.1"
   },

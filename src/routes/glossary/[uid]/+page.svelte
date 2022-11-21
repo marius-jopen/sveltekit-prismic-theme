@@ -7,5 +7,7 @@
   const { setup, document } = data
 </script>
 
-<Seo {setup} {document} />
-<BlogSingle {data} />
+{#key data}
+	<Seo {setup} {document} />
+	<BlogSingle {data} />
+{/key}

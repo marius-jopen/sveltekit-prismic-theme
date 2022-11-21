@@ -7,5 +7,7 @@
   const { setup, document } = data
 </script>
 
-<Seo {setup} {document} />
-<ProjectSingle {data} />
+{#key data}
+	<Seo {setup} {document} />
+	<ProjectSingle {data} />
+{/key}

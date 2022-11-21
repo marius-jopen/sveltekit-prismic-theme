@@ -8,6 +8,8 @@
   const { setup, document } = data
 </script>
 
-<Seo {setup} {document} />
-<ShopSingle {data} />
-<!-- <ShopSingle1 {data} /> -->
+{#key data}
+	<Seo {setup} {document} />
+	<ShopSingle {data} />
+	<!-- <ShopSingle1 {data} /> -->
+{/key}
