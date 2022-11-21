@@ -4,6 +4,7 @@
 	import LayoutAccordeon1 from "$lib/tools/layout-accordeon-1.svelte"
 
 	export let document
+	export let closeAccordeonToggle = false
 
 	const documentIndexed = []
 	const navigation = []
@@ -57,13 +58,21 @@
 			}
 		}
 	})
+
+	function closeAccordeon() {
+		if(closeAccordeonToggle == false) {
+			closeAccordeonToggle = true
+		} else {
+			closeAccordeonToggle = false
+		}
+	}
 </script>
 
 <div class="flex flex-col">
 	{#each navigation as item}
 		{#if item.status == 'normal'}
-			<div class="w-full flex flex-row justify-center">
-				<Link document={item.link} classes="button-1 inline-block mb-4">
+			<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
+				<Link document={item.link} classes="button-1 inline-block mb-4" >
 					<Text inline field={item.title} />
 				</Link>
 			</div>
@@ -72,8 +81,8 @@
 		{#if item.status == 'parent'}
 			<LayoutAccordeon1 inputHeadline={item.title} >
 				{#each item.children as i}
-					<div class="w-full flex flex-row justify-center">
-						<Link document={i.link} classes="button-1 inline-block mb-4">
+					<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
+						<Link document={i.link} classes="button-1 inline-block mb-4" >
 							<Text inline field={i.title} />
 						</Link>
 					</div>

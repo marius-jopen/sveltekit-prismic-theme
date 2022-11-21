@@ -4,6 +4,7 @@
 
 	export let inputHeadline
 	export let plus = true
+	export let close
 
 	let accordeonState = false
 
@@ -14,7 +15,14 @@
 			accordeonState = false
 		}
 	}
+
+	function closeAccordeon() {
+		accordeonState = false
+	}
+
+	$: close, closeAccordeon()
 </script>
+
 <div class="-mt-px">
 	<div on:click={toggleAccordeon}>
 		<div class="flex gap-8 mb-4 w-full flex-row justify-center">
