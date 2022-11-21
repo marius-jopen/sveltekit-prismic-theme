@@ -62,21 +62,17 @@
 <div class="flex flex-col">
 	{#each navigation as item}
 		{#if item.status == 'normal'}
-			<div class="w-full flex flex-row justify-center">
-				<Link document={item.link} classes="button-1 inline-block mb-4">
-					<Text inline field={item.title} />
-				</Link>
-			</div>
+			<Link document={item.link}>
+				<Text inline field={item.title} />
+			</Link>
 		{/if}
 
 		{#if item.status == 'parent'}
 			<LayoutAccordeon1 inputHeadline={item.title} >
 				{#each item.children as i}
-					<div class="w-full flex flex-row justify-center">
-						<Link document={i.link} classes="button-1 inline-block mb-4">
-							<Text inline field={i.title} />
-						</Link>
-					</div>
+					<Link document={i.link}>
+						<Text inline field={i.title} />
+					</Link>
 				{/each}
 			</LayoutAccordeon1>
 		{/if}
