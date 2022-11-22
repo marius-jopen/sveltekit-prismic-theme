@@ -1,5 +1,5 @@
-import { makeCases } from '$lib/tools/strings'
-import createClient from "$lib/prismic/client"
+import { makeCases } from '$lib/tools/functions/strings'
+import createClient from "$lib/prismic/functionality/client"
 
 export async function load({
   url,

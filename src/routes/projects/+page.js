@@ -1,5 +1,5 @@
-import { makeCases } from '$lib/tools/strings'
-import createClient from "$lib/prismic/client"
+import { makeCases } from '$lib/tools/functions/strings'
+import createClient from "$lib/prismic/functionality/client"
 
 export async function load({
   url,
@@ -7,14 +7,14 @@ export async function load({
   fetch,
   request
 }) {
-  
+
   const p = await parent()
 	const { setup } = p
-  
+
   const api = await createClient({ fetch, request })
   const category = url.searchParams.get('category') || false
   const cases = category ? makeCases(category) : false
-  
+
   // Page specific data
 	const document = await api.getSingle('projects', {
     graphQuery: `{
@@ -30,10 +30,10 @@ export async function load({
 			}
 		}`
 	})
-  
+
   // Set the array of items to show
   let filtered = document.data.items
-  
+
   // Extract categories from tags
   const categories = [...new Set(document.data.items.map(({ item }) => item.tags).flat())].sort()
 

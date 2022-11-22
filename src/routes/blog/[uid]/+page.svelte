@@ -1,6 +1,6 @@
 <script>
-	import Seo from "$lib/prismic/seo.svelte"
-  import BlogSingle from "$lib/prismic/pages/blog-single.svelte"
+	import Seo from "$lib/prismic/functionality/seo.svelte"
+  import BlogSingle from "$lib/prismic/pages/blog-single/blog-single.svelte"
 
   export let data
 

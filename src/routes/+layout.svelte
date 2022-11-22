@@ -1,14 +1,14 @@
 <script>
 	import "../app.postcss"
-	import HeaderDesktop from "$lib/prismic/modules/header-desktop.svelte"
-	import HeaderDesktop1 from "$lib/prismic/modules-extended/header-desktop-1.svelte"
-	import HeaderDesktop2 from "$lib/prismic/modules-extended/header-desktop-2.svelte"
-  import HeaderMobile from "$lib/prismic/modules/header-mobile.svelte"
-	import HeaderMobile1 from "$lib/prismic/modules-extended/header-mobile-1.svelte"
-	import Footer from "$lib/prismic/modules/footer.svelte"
-	import Footer1 from "$lib/prismic/modules-extended/footer-1.svelte"
-	import { namespace } from '$lib/prismic/setup'
-	import { vh, glossaryAll } from '$lib/prismic/stores'
+	import HeaderDesktop from "$lib/prismic/modules/header-desktop/header-desktop.svelte"
+	import HeaderDesktop1 from "$lib/prismic/modules/header-desktop/header-desktop-1.svelte"
+	import HeaderDesktop2 from "$lib/prismic/modules/header-desktop/header-desktop-2.svelte"
+  import HeaderMobile from "$lib/prismic/modules/header-mobile/header-mobile.svelte"
+	import HeaderMobile1 from "$lib/prismic/modules/header-mobile/header-mobile-1.svelte"
+	import Footer from "$lib/prismic/modules/footer/footer.svelte"
+	import Footer1 from "$lib/prismic/modules/footer/footer-1.svelte"
+	import { namespace } from '$lib/prismic/functionality/setup'
+	import { vh, glossaryAll } from '$lib/prismic/functionality/stores'
 
 	export let data
 
