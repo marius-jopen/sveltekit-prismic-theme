@@ -22,7 +22,7 @@
 	</span>
 
 	<span slot="right">
-		<Text classes="headline-1 px-6 pt-6 pb-6" plain field={document.data.title} />
+		<Text classes="px-6 pt-6 pb-6" plain field={document.data.title} />
 		<Price item={document} classes="px-6 pb-4"/>
 		<Text classes="px-6 py-6 border-b border-lines-1" plain field={document.data.description} />
 		<ShopifyBuyButton productUID={'6696421818576'} />

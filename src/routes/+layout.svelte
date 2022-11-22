@@ -1,5 +1,6 @@
 <script>
 	import "../app.postcss"
+	import "../fonts.css"
 	import { namespace } from '$lib/prismic/functionality/setup'
 	import { vh, glossaryAll } from '$lib/prismic/functionality/stores'
 	import Layout from "$lib/prismic/layout/layout.svelte"

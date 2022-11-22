@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Container saosOff classes="{width} pt-4 pb-8 px-4 text-feature-slice-1" >
+<Container saosOff classes="{width} pt-4 pb-8 pr-4 text-feature-slice-1" >
 	<LayoutAccordeon2 inputHeadline={title} >
 		<div class="pt-4 pb-4 px-4">
 			<Text field={text_1} classes="pb-4" />

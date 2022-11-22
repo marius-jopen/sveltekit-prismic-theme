@@ -10,6 +10,6 @@
 	}
 </script>
 
-<Container classes="headline-1 uppercase px-4 h-8 border-b border-lines-1 flex justify-center flex-col w-full" >
+<Container classes="uppercase px-4 h-8 border-b border-lines-1 flex justify-center flex-col w-full" >
 	<Text field={text} plain classes="text-center" />
 </Container>

@@ -22,7 +22,7 @@
 		<div class="right-box w-3/12 float-left sm:sticky border-lines-1 border-r" style="top: {height}px;">
 			<div class="px-4 py-3">
 				{#each input as item, index}
-					<div class="paragraph-1 text-xs pb-2.5 cursor-pointer" on:click="{e => scrollToContent(index)}">
+					<div class="p1 text-xs pb-2.5 cursor-pointer" on:click="{e => scrollToContent(index)}">
 						<Text plain field={item.title_text_list} />
 					</div>
 				{/each}
@@ -31,7 +31,7 @@
 
 		<div class="w-9/12 float-left relative h-full">
 			{#each input as item, index}
-				<div class="headline-1 uppercase px-4 h-8 border-b border-lines-1 flex justify-center text-center flex-col w-full index-{index}" id="index-"{index}>
+				<div class="uppercase px-4 h-8 border-b border-lines-1 flex justify-center text-center flex-col w-full index-{index}" id="index-"{index}>
 						<Text plain field={item.title_text_list} />
 				</div>
 

@@ -24,16 +24,16 @@
 	$: close, closeAccordeon()
 </script>
 
-<div class="w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
+<div class="w-full {background ? 'pt-6' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
 	<div class="-mt-px">
 		<div on:click={toggleAccordeon}>
-			<div class="flex gap-8 mb-4 w-full flex-row justify-center">
-				<div class="button-1 inline-block cursor-pointer">
+			<div class="flex gap-4 mb-4 w-full flex-row justify-center">
+				<div class="button-2 inline-block cursor-pointer">
 					<Text inline field={inputHeadline} />
 				</div>
 
 				{#if plus}
-					<div class="button-1 w-12 text-center px-4 inline-block cursor-pointer">
+					<div class="button-2 w-12 text-center px-4 inline-block cursor-pointer">
 						{#if accordeonState}
 							-
 						{:else}

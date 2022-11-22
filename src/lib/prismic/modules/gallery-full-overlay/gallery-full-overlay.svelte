@@ -38,7 +38,7 @@
 
 {#if fullscreen}
 	<div class="fixed w-full h-screen bg-background z-50 top-0 left-0" >
-		<div class="text-white text-xs paragraph-1 fixed top-1.5  left-3 pt-2 pr-4 cursor-pointer z-50" on:click="{closeFullscreen}">
+		<div class="text-white text-xs p1 fixed top-1.5  left-3 pt-2 pr-4 cursor-pointer z-50" on:click="{closeFullscreen}">
 			Close
 		</div>
 

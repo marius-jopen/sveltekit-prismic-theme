@@ -12,15 +12,14 @@
 	$: headerHeight.set(height)
 </script>
 
-
 <header>
 	<div class="fixed z-50 w-full flex flex-row justify-center">
-		<LayoutAccordeon1 background plus={false} inputHeadline={setup.data.title} {close} >
+		<LayoutAccordeon1 background inputHeadline={setup.data.title} {close} >
 			<Navigation2 document={setup.data.navigation_header} bind:closeAccordeonToggle={close} />
 		</LayoutAccordeon1>
 	</div>
 </header>
 
-<div class="hidden sm:block h-16">
+<div class="hidden sm:block h-24">
 	&nbsp;
 </div>

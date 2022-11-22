@@ -9,10 +9,19 @@
 </script>
 
 <HeaderDesktop2 {setup} />
-<HeaderMobile1 {setup} />
 
-<div class="wrapper min-h-screen">
-	<slot />
+<div class="wrapper min-h-screen flex bg-background-1">
+	<div class="w-2/12">
+		left
+	</div>
+
+	<div class="w-8/12 bg-background-2 rounded-2xl mb-8 overflow-hidden">
+		<slot />
+
+		<Footer {setup} />
+	</div>
+
+	<div class="w-2/12">
+		right
+	</div>
 </div>
-
-<Footer {setup} />

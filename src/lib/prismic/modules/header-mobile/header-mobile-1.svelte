@@ -32,7 +32,7 @@
 		/>
 	</div>
 
-	<div class="pointer-events-none absolute w-full justify-center flex z-0 paragraph-1 text-xs pt-1">
+	<div class="pointer-events-none absolute w-full justify-center flex z-0 p1 text-xs pt-1">
 		<Text plain field={setup.data.title} />
 	</div>
 

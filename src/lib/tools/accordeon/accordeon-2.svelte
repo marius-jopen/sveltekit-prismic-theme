@@ -18,15 +18,15 @@
 </script>
 
 <div class="bg-neutral-200 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
-	<div class="bg-red-200 w-6" />
+	<div class="bg-gradient-to-b from-red-200 to-blue-200 w-4" />
 
 	<div class="w-full">
 		<div on:click={toggleAccordeon}>
 			<div class="flex w-full flex-row justify-between cursor-pointer px-4 pt-3 pb-3">
-				<Text inline field={inputHeadline} classes="headline-1" />
+				<Text inline field={inputHeadline} classes="h6" />
 
 				{#if plus}
-					<div class=" bg-white rounded-full h-6 w-6 pt-1 flex justify-center">
+					<div class="mt-[2px] bg-white rounded-full h-6 w-6 pt-1 flex justify-center">
 						<svg class="h-4 transition-transform {accordeonState ? 'rotate-180' : 'rotate-0'}" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 35L24 12L47 35" stroke="black" stroke-width="4"/>
 						</svg>

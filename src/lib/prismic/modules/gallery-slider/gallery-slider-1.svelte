@@ -80,7 +80,7 @@
 		</div>
 	{/if}
 
-	<div class="bottom-1 text-white paragraph-1 text-xs left-0 px-6 flex w-full justify-between py-2 absolute ">
+	<div class="bottom-1 text-white p1 text-xs left-0 px-6 flex w-full justify-between py-2 absolute ">
 		<div>
 			{currentCaption}
 		</div>
