@@ -5,7 +5,6 @@
 	export let inputHeadline
 	export let plus = true
 	export let background = false
-	export let close
 
 	let accordeonState = false
 
@@ -16,29 +15,21 @@
 			accordeonState = false
 		}
 	}
-
-	function closeAccordeon() {
-		accordeonState = false
-	}
-
-	$: close, closeAccordeon()
 </script>
 
-<div class="w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
-	<div class="-mt-px">
+<div class="bg-neutral-200 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
+	<div class="bg-red-200 w-6" />
+
+	<div class="w-full">
 		<div on:click={toggleAccordeon}>
-			<div class="flex gap-8 mb-4 w-full flex-row justify-center">
-				<div class="button-1 inline-block cursor-pointer">
-					<Text inline field={inputHeadline} />
-				</div>
+			<div class="flex w-full flex-row justify-between cursor-pointer px-4 pt-3 pb-3">
+				<Text inline field={inputHeadline} classes="headline-1" />
 
 				{#if plus}
-					<div class="button-1 w-12 text-center px-4 inline-block cursor-pointer">
-						{#if accordeonState}
-							-
-						{:else}
-							+
-						{/if}
+					<div class=" bg-white rounded-full h-6 w-6 pt-1 flex justify-center">
+						<svg class="h-4 transition-transform {accordeonState ? 'rotate-180' : 'rotate-0'}" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 35L24 12L47 35" stroke="black" stroke-width="4"/>
+						</svg>
 					</div>
 				{/if}
 			</div>

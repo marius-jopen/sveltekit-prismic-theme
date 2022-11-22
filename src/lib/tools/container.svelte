@@ -2,6 +2,7 @@
 	import Saos from "saos"
 
 	export let saos = 'slide-in-bottom 0.5s both'
+	export let saosOff = true
 	export let active = true
 	export let styles =''
 	export let classes =''
@@ -9,9 +10,13 @@
 
 {#if active}
 	<div class="{classes}" style="{styles}">
-		<Saos animation={saos} >
-			<slot />
-		</Saos>
+		{#if saosOff}
+				<slot />
+		{:else}
+			<Saos animation={saos} >
+				<slot />
+			</Saos>
+			{/if}
 	</div>
 {/if}
 

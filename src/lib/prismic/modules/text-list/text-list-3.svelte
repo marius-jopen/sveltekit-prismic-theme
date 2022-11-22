@@ -1,6 +1,6 @@
 <script>
 	import Text from '$lib/prismic/atoms/text.svelte'
-	import LayoutAccordeon from "$lib/tools/accordeon.svelte"
+	import LayoutAccordeon from "$lib/tools/accordeon/accordeon.svelte"
 	import { asText } from '@prismicio/helpers'
 
 	export let input

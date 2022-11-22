@@ -1,7 +1,7 @@
 <script>
 	import Container from "$lib/tools/container.svelte"
 	import Text from "$lib/prismic/atoms/text.svelte"
-	import LayoutAccordeon2 from "$lib/tools/accordeon-2.svelte"
+	import LayoutAccordeon2 from "$lib/tools/accordeon/accordeon-2.svelte"
 
 	export let title
 	export let text_1
@@ -17,9 +17,22 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8 px-4" >
+<Container saosOff classes="{width} pt-4 pb-8 px-4 text-feature-slice-1" >
 	<LayoutAccordeon2 inputHeadline={title} >
-		<Text field={text_1} />
-		<Text field={text_2} />
+		<div class="pt-4 pb-4 px-4">
+			<Text field={text_1} classes="pb-4" />
+			<Text field={text_2} classes="text-xs" />
+		</div>
 	</LayoutAccordeon2>
 </Container>
+
+
+<style lang="postcss">
+	:global(.text-feature-slice-1 .block-img) {
+		@apply py-3;
+	}
+
+	:global(.text-feature-slice-1 .block-img img) {
+		@apply rounded-2xl;
+	}
+</style>
