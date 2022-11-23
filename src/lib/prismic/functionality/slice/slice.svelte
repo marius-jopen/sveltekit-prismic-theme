@@ -16,6 +16,7 @@
 	import TextList2 from "$lib/prismic/slices/text-list-slice/text-list-slice-2.svelte"
 	import Cta from "$lib/prismic/slices/cta-slice/cta-slice.svelte"
 	import Embed from "$lib/prismic/slices/embed-slice/embed-slice.svelte"
+	import Embed1 from "$lib/prismic/slices/embed-slice/embed-slice-1.svelte"
 	import TextFeature from "$lib/prismic/slices/text-feature-slice/text-feature-slice.svelte"
 	import TextFeature1 from "$lib/prismic/slices/text-feature-slice/text-feature-slice-1.svelte"
 
@@ -37,6 +38,7 @@
 		text_list2: TextList2,
 		cta: Cta,
 		embed: Embed,
+		embed1: Embed1,
 		text_feature: TextFeature,
 		text_feature1: TextFeature1
 	}

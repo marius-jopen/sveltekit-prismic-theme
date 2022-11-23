@@ -13,4 +13,4 @@
 	}
 </script>
 
-<TextGlossary {text} {centered} {width} classes={"px-4"} />
+<TextGlossary {text} {centered} {width} classes={"px-8"} color='bg-red-200' />

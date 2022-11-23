@@ -5,6 +5,7 @@
 	export let inputHeadline
 	export let plus = true
 	export let background = false
+	export let color = ''
 
 	let accordeonState = false
 
@@ -17,8 +18,8 @@
 	}
 </script>
 
-<div class="bg-neutral-200 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
-	<div class="bg-gradient-to-b from-red-200 to-blue-200 w-4" />
+<div class="bg-neutral-100 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
+	<div class="{color} w-4" />
 
 	<div class="w-full">
 		<div on:click={toggleAccordeon}>

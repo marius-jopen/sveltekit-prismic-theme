@@ -11,6 +11,7 @@
 	export let centered = ''
 	export let width = 'width-2xl'
 	export let classes = ""
+	export let color = "bg-neutral-200"
 
 	const glossaryList = []
 	let glossary
@@ -93,7 +94,7 @@
 
 {#each glossaryList as item}
 	{#if activeDesktop && item.uid == id}
-		<div transition:fade="{{duration: 200 }}" class="bg-neutral-200 hidden sm:block z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style='top: {posY}px; left: {posX}px;'>
+		<div transition:fade="{{duration: 200 }}" class="{color} hidden sm:block z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style='top: {posY}px; left: {posX}px;'>
 			<div class="pb-2">
 				{item.name}
 			</div>
@@ -105,7 +106,7 @@
 
 	{#if activeMobile && item.uid == id}
 		<div on:click={mouseClickClose} transition:fade="{{duration: 200 }}" class="block sm:hidden z-40 -mt-4 absolute w-full left-0" style='top: {posY}px;'>
-			<div class="mx-auto w-11/12 rounded-2xl  px-4 py-3 bg-neutral-200  ">
+			<div class="mx-auto w-11/12 rounded-2xl  px-4 py-3 {color}  ">
 				<div class="pb-2">
 					{item.name}
 				</div>
@@ -124,13 +125,13 @@
 <style lang="postcss">
 	@media screen and (min-width: 640px) {
 		:global(.glossary-slice	.glossary) {
-			@apply cursor-none bg-neutral-200 rounded-full px-4;
+			@apply cursor-none bg-red-200 rounded-full px-4;
 		}
 	}
 
 	@media screen and (max-width: 640px) {
 		:global(.glossary-slice	.glossary) {
-			@apply bg-neutral-200 rounded-full px-4;
+			@apply bg-red-200 rounded-full px-4;
 		}
 	}
 </style>

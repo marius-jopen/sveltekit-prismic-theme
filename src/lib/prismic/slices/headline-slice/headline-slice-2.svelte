@@ -24,7 +24,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8" >
+<Container classes="{width} pt-4 pb-3" >
 	<div class="text-center">
 		{#if style}
 		<div class="flex justify-center h2">
