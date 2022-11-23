@@ -23,7 +23,7 @@
 	<div class="w-full">
 		<div on:click={toggleAccordeon}>
 			<div class="flex w-full flex-row justify-between cursor-pointer px-4 pt-3 pb-3">
-				<Text inline field={inputHeadline} classes="h6" />
+				<Text inline field={inputHeadline} classes="h3" />
 
 				{#if plus}
 					<div class="mt-[2px] bg-white rounded-full h-6 w-6 pt-1 flex justify-center">

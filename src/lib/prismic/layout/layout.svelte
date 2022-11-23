@@ -13,7 +13,7 @@
 <HeaderDesktop {setup} />
 <HeaderMobile {setup} />
 
-<div class="wrapper min-h-screen">
+<div class="wrapper min-h-screen p1">
 	<slot />
 </div>
 

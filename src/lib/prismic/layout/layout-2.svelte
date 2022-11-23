@@ -11,7 +11,7 @@
 
 <HeaderDesktop2 {setup} />
 
-<div class="wrapper min-h-screen flex bg-background-1">
+<div class="wrapper min-h-screen flex bg-background-1 p1">
 	<div class="w-2/12">
 		left
 	</div>

@@ -1,6 +1,5 @@
 <script>
 	import Navigation2 from "$lib/prismic/modules/navigation/navigation-2.svelte"
-	import Text from "$lib/prismic/atoms/text.svelte"
 	import { headerHeight } from '$lib/prismic/functionality/stores'
 	import LayoutAccordeon1 from "$lib/tools/accordeon/accordeon-1.svelte"
 
@@ -13,7 +12,7 @@
 </script>
 
 <header>
-	<div class="fixed z-50 w-full flex flex-row justify-center">
+	<div class="fixed z-50 w-full flex flex-row justify-center ut1">
 		<LayoutAccordeon1 background inputHeadline={setup.data.title} {close} >
 			<Navigation2 document={setup.data.navigation_header} bind:closeAccordeonToggle={close} />
 		</LayoutAccordeon1>
