@@ -5,7 +5,7 @@
 
 	export let caption = ''
 	export let embedCode = ''
-	export let width = 'width-2xl'
+	export let width = 'width-full'
 	export let slice
 
 	if(slice) {

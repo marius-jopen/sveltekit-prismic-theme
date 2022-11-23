@@ -3,7 +3,7 @@
 
 	export let text
 	export let centered = ''
-	export let width = 'width-2xl'
+	export let width = 'width-full'
 	export let slice
 
 	if(slice) {

@@ -66,7 +66,7 @@
 	}
 
 	.width-full {
-		@apply max-w-none md:max-w-none mx-auto;
+		@apply max-w-none md:max-w-none mx-auto w-full;
 	}
 
 	@keyframes -global-slide-in-bottom {

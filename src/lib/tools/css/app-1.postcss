@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+	/* NOTES */
+
+	/*
+	Colors in use
+
+	amber-600
+	amber-400
+	amber-200
+
+	red-700
+	red-400
+	red-200
+
+	blue-800
+	blue-500
+	blue-200
+	*/
+
 	/* INTER */
 
 	@font-face {
@@ -180,11 +198,11 @@
 	/* LISTS */
 
 	ul li, .li1 {
-		@apply list-disc;
+		@apply p2 list-disc;
 	}
 
 	ol li, .li1 {
-		@apply list-decimal;
+		@apply p2 list-decimal;
 	}
 
 	/* LINKS */
@@ -212,15 +230,15 @@
 	/* HEADLINES */
 
 	h1, .h1 {
-		@apply text-[22pt] sm:text-[28pt] leading-[22pt] sm:leading-[28pt] font-type1;
+		@apply text-[22pt] sm:text-[28pt] leading-[22pt] sm:leading-[28pt] font-type1 font-semibold;
 	}
 
 	h2, .h2 {
-		@apply text-[22pt] leading-[22pt] font-type1;
+		@apply text-[22pt] leading-[22pt] font-type1 font-semibold;
 	}
 
 	h3, .h3 {
-		@apply text-[18pt] sm:text-[22pt] leading-[28pt] sm:leading-[22pt] font-type1;
+		@apply text-[18pt] sm:text-[22pt] leading-[28pt] sm:leading-[22pt] font-type1 font-semibold;
 	}
 
 	/* h4, .h4 {

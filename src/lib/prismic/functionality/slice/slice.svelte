@@ -9,6 +9,7 @@
 	import Image1 from "$lib/prismic/slices/image-slice/image-slice-1.svelte"
 	import Headline from "$lib/prismic/slices/headline-slice/headline-slice.svelte"
 	import Headline1 from "$lib/prismic/slices/headline-slice/headline-slice-1.svelte"
+	import Headline2 from "$lib/prismic/slices/headline-slice/headline-slice-2.svelte"
 	import Gallery from "$lib/prismic/slices/gallery-slice/gallery-slice.svelte"
 	import TextList from "$lib/prismic/slices/text-list-slice/text-list-slice.svelte"
 	import TextList1 from "$lib/prismic/slices/text-list-slice/text-list-slice-1.svelte"
@@ -29,6 +30,7 @@
 		video: Video,
 		headline: Headline,
 		headline1: Headline1,
+		headline2: Headline2,
 		gallery: Gallery,
 		text_list: TextList,
 		text_list1: TextList1,

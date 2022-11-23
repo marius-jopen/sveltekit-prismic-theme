@@ -5,7 +5,7 @@
 
 	export let text = ''
 	export let poster = ''
-	export let width = 'width-2xl'
+	export let width = 'width-full'
 	export let src240p = ''
 	export let src360p = ''
 	export let src540p = ''

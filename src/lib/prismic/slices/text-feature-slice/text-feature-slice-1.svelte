@@ -6,7 +6,7 @@
 	export let title
 	export let text_1
 	export let text_2
-	export let width = 'width-2xl'
+	export let width = 'width-full'
 	export let slice
 
 	if(slice) {
@@ -21,7 +21,7 @@
 	<LayoutAccordeon2 inputHeadline={title} >
 		<div class="pt-4 pb-4 px-4">
 			<Text field={text_1} classes="pb-4" />
-			<Text inline field={text_2} classes="p2" />
+			<Text field={text_2} classes="p2" />
 		</div>
 	</LayoutAccordeon2>
 </Container>
