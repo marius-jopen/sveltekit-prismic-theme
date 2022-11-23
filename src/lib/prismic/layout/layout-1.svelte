@@ -1,4 +1,6 @@
 <script>
+	import "$lib/tools/css/app-1.postcss"
+
 	import HeaderDesktop1 from "$lib/prismic/modules/header-desktop/header-desktop-1.svelte"
 	import HeaderMobile1 from "$lib/prismic/modules/header-mobile/header-mobile-1.svelte"
 	import Footer1 from "$lib/prismic/modules/footer/footer-1.svelte"

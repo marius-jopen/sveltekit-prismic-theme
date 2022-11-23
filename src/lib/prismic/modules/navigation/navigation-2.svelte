@@ -72,7 +72,7 @@
 	{#each navigation as item}
 		{#if item.status == 'normal'}
 			<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
-				<Link document={item.link} classes="button-2 inline-block mb-4" >
+				<Link document={item.link} classes="button-1 inline-block mb-4" >
 					<Text inline field={item.title} />
 				</Link>
 			</div>
@@ -82,7 +82,7 @@
 			<LayoutAccordeon1 inputHeadline={item.title} >
 				{#each item.children as i}
 					<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
-						<Link document={i.link} classes="button-2 inline-block mb-4" >
+						<Link document={i.link} classes="button-1 inline-block mb-4" >
 							<Text inline field={i.title} />
 						</Link>
 					</div>

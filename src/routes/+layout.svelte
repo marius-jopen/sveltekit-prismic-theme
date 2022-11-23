@@ -1,8 +1,7 @@
 <script>
-	import "../app.postcss"
-	import "../fonts.css"
 	import { namespace } from '$lib/prismic/functionality/setup'
 	import { vh, glossaryAll } from '$lib/prismic/functionality/stores'
+
 	import Layout from "$lib/prismic/layout/layout.svelte"
 	import Layout1 from "$lib/prismic/layout/layout-1.svelte"
 	import Layout2 from "$lib/prismic/layout/layout-2.svelte"

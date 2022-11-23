@@ -2,7 +2,7 @@
 	import Saos from "saos"
 
 	export let saos = 'slide-in-bottom 0.5s both'
-	export let saosOff = true
+	export let saosOff = false
 	export let active = true
 	export let styles =''
 	export let classes =''
@@ -67,5 +67,16 @@
 
 	.width-full {
 		@apply max-w-none md:max-w-none mx-auto;
+	}
+
+	@keyframes -global-slide-in-bottom {
+		0% {
+			transform: translateY(20px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
 	}
 </style>
