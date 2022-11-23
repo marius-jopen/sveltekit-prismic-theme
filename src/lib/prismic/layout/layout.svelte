@@ -1,5 +1,5 @@
 <script>
-	import "$lib/tools/css/app-1.postcss"
+	import "$lib/tools/css/app.postcss"
 
 	import HeaderDesktop from "$lib/prismic/modules/header-desktop/header-desktop.svelte"
 	import HeaderMobile from "$lib/prismic/modules/header-mobile/header-mobile.svelte"
