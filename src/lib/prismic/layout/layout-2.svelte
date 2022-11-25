@@ -11,18 +11,18 @@
 
 <HeaderDesktop2 {setup} />
 
-<div class="wrapper min-h-screen flex bg-background-1 p1">
-	<div class="w-2/12">
+<div class="wrapper min-h-screen flex md:bg-background-1 p1">
+	<div class="hidden md:block w-2/12">
 		left
 	</div>
 
-	<div class="w-8/12 bg-background-2 rounded-2xl mb-8 overflow-hidden">
+	<div class="w-full md:w-8/12 bg-background-2 md:rounded-2xl mb-8 md:overflow-hidden">
 		<slot />
 
 		<Footer {setup} />
 	</div>
 
-	<div class="w-2/12">
+	<div class="hidden md:block w-2/12">
 		right
 	</div>
 </div>
