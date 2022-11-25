@@ -16,7 +16,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8 px-4" >
+<Container classesInner="{width} pt-4 pb-8 px-4" >
 	<Text field={title} classes="text-center pb-4" />
 
 	<div class="flex gap-4">

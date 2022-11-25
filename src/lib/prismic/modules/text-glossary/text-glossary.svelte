@@ -118,7 +118,7 @@
 	{/if}
 {/each}
 
-<Container classes="{width} pt-4 pb-8m glossary-slice {classes}" >
+<Container classesInner="{width} pt-4 pb-8m glossary-slice {classes}" >
 	<Text field={text} classes="{centered ? 'text-center' : ''}" />
 </Container>
 

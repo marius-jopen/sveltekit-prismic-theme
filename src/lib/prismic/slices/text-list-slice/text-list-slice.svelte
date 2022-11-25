@@ -13,6 +13,6 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8" >
+<Container classesInner="{width} pt-4 pb-8" >
 	<TextList input={textList} />
 </Container>

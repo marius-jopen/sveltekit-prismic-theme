@@ -18,7 +18,7 @@
 	}
 </script>
 
-<div class="bg-neutral-100 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
+<div class="bg-background-3 flex rounded-r-2xl w-full {background ? 'pt-4' : ''} {background && accordeonState ? 'bg-gradient-to-b from-background-1' : ''} ">
 	<div class="{color} w-4" />
 
 	<div class="w-full">

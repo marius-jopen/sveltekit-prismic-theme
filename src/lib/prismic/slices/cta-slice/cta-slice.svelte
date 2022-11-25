@@ -19,7 +19,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8 px-4" >
+<Container classesInner="{width} pt-4 pb-8 px-4" >
 	<div class="flex gap-4 {flip ? 'flex-row' : 'flex-row-reverse'}">
 		<Text field={text} classes="w-1/2" />
 

@@ -9,7 +9,7 @@
   export let activeClass = 'bg-neutral-700 text-white'
 </script>
 
-<Container classes="pb-4">
+<Container classesInner="pb-4">
 	<div class="flex gap-2 pb-6 justify-center">
 		<a
 			href="/{type}"

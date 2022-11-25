@@ -27,7 +27,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8" >
+<Container classesInner="{width} pt-4 pb-8" >
 	<Video {src240p} {src360p} {src540p} {src720p} {src1080p} {srcVideo} {poster} classes="rounded-3xl overflow-hidden" muted loop autoplay />
 	<Text field={text} classes="text-center" />
 </Container>

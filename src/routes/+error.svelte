@@ -3,6 +3,6 @@
 	import Container from "$lib/tools/container.svelte"
 </script>
 
-<Container classes="text-center">
+<Container classesInner="text-center">
 	{$page.status}: {$page.error.message}
 </Container>

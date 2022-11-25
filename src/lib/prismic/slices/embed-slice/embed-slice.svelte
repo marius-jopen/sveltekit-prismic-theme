@@ -15,7 +15,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8 px-4" >
+<Container classesInner="{width} pt-4 pb-8 px-4" >
 	<Embed {embedCode} classes="rounded-2xl" />
 
 	<Text field={caption} classes="pt-2" />

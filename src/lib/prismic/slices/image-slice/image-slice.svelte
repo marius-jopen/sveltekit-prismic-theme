@@ -15,7 +15,7 @@
 	}
 </script>
 
-<Container classes="{width} pt-4 pb-8" >
+<Container classesInner="{width} pt-4 pb-8" >
 	<Image {src} classes="rounded-3xl" />
 	<Text field={text} classes="text-center" />
 </Container>

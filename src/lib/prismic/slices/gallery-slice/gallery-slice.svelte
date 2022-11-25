@@ -13,6 +13,6 @@
 	}
 </script>
 
-<Container classes="{width}">
+<Container classesInner="{width}">
 	<GallerySlider1 input={gallerySlider} />
 </Container>

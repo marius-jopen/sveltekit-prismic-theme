@@ -7,34 +7,33 @@
 	export let width = 'width-2xl'
 	export let slice
 
-	let styleColor = 'text-blue-200'
+	const styles = {
+		'0': 'text-blue-200',
+		'1': 'text-red-200',
+		'2': 'text-amber-200',
+		'3': 'text-blue-200 bg-background-3',
+		'4': 'text-red-200 bg-background-3',
+		'5': 'text-amber-200 bg-background-3'
+	}
 
 	if(slice) {
 		text = slice.primary.title_headline
 		style = slice.primary.style_headline
 		width = slice.primary.width_headline ? slice.primary.width_headline : width
 	}
-
-	if (style == 'style-1') {
-		styleColor = 'text-blue-200'
-	} else if (style == 'style-2') {
-		styleColor = 'text-amber-200'
-	} else if (style == 'style-3') {
-		styleColor = 'text-blue-200'
-	}
 </script>
 
-<Container classes="{width} pt-4 pb-3" >
+<Container classesInnerInner="{width}" classesOuter="{styles[style]} pt-4 pb-3" >
 	<div class="text-center">
 		{#if style}
 		<div class="flex justify-center h2">
-			<div class="circles {styleColor}">
+			<div class="circles">
 				⬤
 			</div>
 
-			<Text plain field={text} classes="h2" />
+			<Text plain field={text} classes="h2 text-fonts-1" />
 
-			<div class="circles {styleColor}">
+			<div class="circles">
 				⬤
 			</div>
 		</div>

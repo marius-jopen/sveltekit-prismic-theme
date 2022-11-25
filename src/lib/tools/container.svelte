@@ -5,19 +5,26 @@
 	export let saosOff = false
 	export let active = true
 	export let styles =''
-	export let classes =''
+	export let classesOuter =''
+	export let classesInner ='w-full'
 </script>
 
 {#if active}
-	<div class="{classes}" style="{styles}">
-		{#if saosOff}
+	{#if saosOff}
+		<div class="{classesOuter}">
+			<div class="{classesInner}" style="{styles}">
 				<slot />
-		{:else}
+			</div>
+		</div>
+	{:else}
+		<div class="{classesOuter}">
 			<Saos animation={saos} >
-				<slot />
+				<div class="{classesInner}" style="{styles}">
+					<slot />
+				</div>
 			</Saos>
-			{/if}
-	</div>
+		</div>
+	{/if}
 {/if}
 
 <style lang="postcss">

@@ -5,7 +5,7 @@
 	export let items
 </script>
 
-<Container classes="width-7xl">
+<Container classesInner="width-7xl">
 	<div class="sm:flex flex-wrap">
 		{#each items as item (item.item.uid)}
 			<ItemProject item={item.item} />

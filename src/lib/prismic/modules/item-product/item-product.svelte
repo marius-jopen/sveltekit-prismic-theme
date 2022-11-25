@@ -8,7 +8,7 @@
 	export let item
 </script>
 
-<Container classes="sm:w-1/2 lg:w-1/3 px-4 pb-8">
+<Container classesOuter="sm:w-1/2 lg:w-1/3 px-4 pb-8">
 	<Link document={item}>
 		<Image src={item.data.thumbnail} classes="rounded-3xl mb-2 hover:scale-[1.01] transition-transform" />
 
