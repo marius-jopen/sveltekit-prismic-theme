@@ -72,7 +72,7 @@
 	{#each navigation as item}
 		{#if item.status == 'normal'}
 			<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
-				<Link document={item.link} classes="button-1 inline-block mb-4" >
+				<Link activeClass='' document={item.link} classes="rounded-full bg-white hover:bg-gradient-to-r from-red-200 to-blue-200 px-8 py-0.5 shadow-md inline-block mb-4" >
 					<Text inline field={item.title} />
 				</Link>
 			</div>
@@ -82,7 +82,7 @@
 			<LayoutAccordeon1 inputHeadline={item.title} >
 				{#each item.children as i}
 					<div class="w-full flex flex-row justify-center" on:click={closeAccordeon} >
-						<Link document={i.link} classes="button-1 inline-block mb-4" >
+						<Link activeClass='' document={i.link} classes="shadow-md rounded-full bg-white hover:bg-gradient-to-r from-red-200 to-blue-200 px-6 py-0.5 inline-block mb-4" >
 							<Text inline field={i.title} />
 						</Link>
 					</div>
@@ -91,9 +91,3 @@
 		{/if}
 	{/each}
 </div>
-
-<style lang="postcss">
-	.button-1 {
-		@apply w-fit bg-gradient-to-r from-red-200 to-blue-200 rounded-full px-8 py-2;
-	}
-</style>

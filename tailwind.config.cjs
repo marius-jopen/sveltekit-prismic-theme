@@ -17,6 +17,17 @@ module.exports = {
 			  'fonts-1': 'rgb(30 30 30)',
 			  'lines-1': 'rgba(205,205,205,1)'
 			},
+			backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
+			transitionDuration: {
+        '2000': '2000ms',
+				'4000': '4000ms',
+      }
 		}
   },
   plugins: []
