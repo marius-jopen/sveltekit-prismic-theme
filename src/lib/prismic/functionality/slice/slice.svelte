@@ -4,6 +4,7 @@
 	import Text from "$lib/prismic/slices/text-slice/text-slice.svelte"
 	import Text1 from "$lib/prismic/slices/text-slice/text-slice-1.svelte"
 	import Text2 from "$lib/prismic/slices/text-slice/text-slice-2.svelte"
+	import Text3 from "$lib/prismic/slices/text-slice/text-slice-3.svelte"
 	import Video from "$lib/prismic/slices/video-slice/video-slice.svelte"
 	import Image from "$lib/prismic/slices/image-slice/image-slice.svelte"
 	import Image1 from "$lib/prismic/slices/image-slice/image-slice-1.svelte"
@@ -16,6 +17,8 @@
 	import TextList2 from "$lib/prismic/slices/text-list-slice/text-list-slice-2.svelte"
 	import Cta from "$lib/prismic/slices/cta-slice/cta-slice.svelte"
 	import Cta1 from "$lib/prismic/slices/cta-slice/cta-slice-1.svelte"
+	import Cta2 from "$lib/prismic/slices/cta-slice/cta-slice-2.svelte"
+	import Downloads from "$lib/prismic/slices/downloads-slice/downloads-slice.svelte"
 	import Embed from "$lib/prismic/slices/embed-slice/embed-slice.svelte"
 	import Embed1 from "$lib/prismic/slices/embed-slice/embed-slice-1.svelte"
 	import TextFeature from "$lib/prismic/slices/text-feature-slice/text-feature-slice.svelte"
@@ -29,6 +32,7 @@
 		text: Text,
 		text1: Text1,
 		text2: Text2,
+		text3: Text3,
 		video: Video,
 		headline: Headline,
 		headline1: Headline1,
@@ -39,8 +43,10 @@
 		text_list2: TextList2,
 		cta: Cta,
 		cta1: Cta1,
+		cta2: Cta2,
 		embed: Embed,
 		embed1: Embed1,
+		downloads: Downloads,
 		text_feature: TextFeature,
 		text_feature1: TextFeature1
 	}

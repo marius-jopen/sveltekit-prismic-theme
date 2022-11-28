@@ -22,7 +22,5 @@
 		<Footer {setup} />
 	</div>
 
-	<div class="hidden md:block w-2/12">
-		right
-	</div>
+	<div class="hidden md:block w-2/12" />
 </div>
