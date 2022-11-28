@@ -12,7 +12,7 @@
 	}
 </script>
 
-<Container classesOuter="pt-4 pb-6 border-b border-lines-1 px-4" classesInner="width-full flex flex-wrap" >
+<Container classesOuter="pt-4 pb-6 px-4" classesInner="width-full flex flex-wrap" >
 	{#each downloads as item}
 		<div class="flex gap-4 flex-col w-full sm:w-1/2">
 			<div class="flex flex-col justify-center w-full">

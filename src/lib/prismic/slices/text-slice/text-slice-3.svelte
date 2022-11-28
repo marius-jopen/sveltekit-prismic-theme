@@ -24,7 +24,7 @@
 
 <div class="w-full h-2 bg-gradient-to-r {styles[style]}" />
 
-<Container classesOuter="pt-4 pb-6 border-b border-lines-1 px-4" classesInner="{width}" >
+<Container classesOuter="pt-4 pb-6 px-4" classesInner="{width}" >
 	<Text field={text} classes="{centered ? 'text-center' : ''}" />
 </Container>
 
