@@ -24,5 +24,5 @@
 	// END CATEGORIES FILTER -> REACTIVE
 </script>
 
-<Text classes="h2 text-center pt-6 pb-10" plain field={document.data.title} />
+<Text classes="h1 text-center pt-6 pb-10" plain field={document.data.title} />
 <ItemsGlossaryItem1 items={filtered} />

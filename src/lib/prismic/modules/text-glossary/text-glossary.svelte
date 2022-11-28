@@ -94,7 +94,7 @@
 
 {#each glossaryList as item}
 	{#if activeDesktop && item.uid == id}
-		<div transition:fade="{{duration: 200 }}" class="{color} hidden sm:block z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style='top: {posY}px; left: {posX}px;'>
+		<div transition:fade="{{duration: 200 }}" class="{color} hidden sm:block z-40 -mt-2 -ml-4 pointer-events-none rounded-2xl absolute px-4 py-3 w-1/5" style=' left: {posX}px;'>
 			<div class="pb-2">
 				{item.name}
 			</div>

@@ -54,3 +54,9 @@
 		{/if}
 	</div>
 </div>
+
+<style lang="postcss">
+	.button-1 {
+		@apply w-fit bg-gradient-to-r from-red-200 to-blue-200 rounded-full px-8 py-2;
+	}
+</style>
