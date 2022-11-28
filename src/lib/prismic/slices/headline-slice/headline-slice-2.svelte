@@ -8,12 +8,14 @@
 	export let slice
 
 	const styles = {
-		'0': 'text-blue-200',
-		'1': 'text-red-200',
-		'2': 'text-amber-200',
-		'3': 'text-blue-200 bg-background-3',
-		'4': 'text-red-200 bg-background-3',
-		'5': 'text-amber-200 bg-background-3'
+		'0': 'big',
+		'1': 'small',
+		'2': 'text-blue-200',
+		'3': 'text-red-200',
+		'4': 'text-amber-200',
+		'5': 'text-blue-200 bg-background-3',
+		'6': 'text-red-200 bg-background-3',
+		'7': 'text-amber-200 bg-background-3'
 	}
 
 	if(slice) {
@@ -25,21 +27,25 @@
 
 <Container classesInnerInner="{width}" classesOuter="{styles[style]} pt-4 pb-3" >
 	<div class="text-center">
-		{#if style}
-		<div class="flex justify-center h2">
-			<div class="circles">
-				⬤
-			</div>
+		<div class="flex justify-center {styles[style] == 'big' ? 'h1' : 'h2'}">
+			{#if styles[style] == 'big' || styles[style] == 'small'}
+				<div />
+			{:else}
+				<div class="circles">
+					⬤
+				</div>
+			{/if}
 
-			<Text plain field={text} classes="h2 text-fonts-1" />
+			<Text plain field={text} classes="text-fonts-1" />
 
-			<div class="circles">
-				⬤
-			</div>
+			{#if styles[style] == 'big' || styles[style] == 'small'}
+				<div />
+			{:else}
+				<div class="circles">
+					⬤
+				</div>
+			{/if}
 		</div>
-		{:else}
-			<Text field={text} />
-		{/if}
 	</div>
 </Container>
 
