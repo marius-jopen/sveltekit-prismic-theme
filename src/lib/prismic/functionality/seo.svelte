@@ -34,8 +34,6 @@
 </script>
 
 <svelte:head>
-	<html lang={language} />
-
 	<title>{title}</title>
 
 	<meta name="siteUrl" content={url} />
@@ -43,10 +41,10 @@
 	<meta name="description" content={description} />
 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
-	<meta name=”twitter:card” content=”summary_large_image”>
-	<meta name=”twitter:title” content={title}>
-	<meta name=”twitter:description” content={description}>
-	<meta name=”twitter:image” content={imageUrl}>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content={title}>
+	<meta name="twitter:description" content={description}>
+	<meta name="twitter:image" content={imageUrl}>
 
 	<meta property="og:site_name" content={title} />
 	<meta property="og:locale" content={language} />
